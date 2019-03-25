@@ -35,7 +35,7 @@
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                       <li class="has-children">
-                        <a href="program.html">Creating Community</a>
+                        <a href="CUED-InHomeForm.aspx">Creating Community</a>
                         <ul class="dropdown arrow-top">
                           <li><a href="CUED-InHomeForm.aspx">Student</a></li>
                           <li><a href="CUED-InHomeForm.aspx">Teacher</a></li>
