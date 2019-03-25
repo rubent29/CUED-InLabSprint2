@@ -9,7 +9,7 @@ using System.Web.ApplicationServices;
 
 public partial class Login_v3_LoginForm : System.Web.UI.Page
 {
-    string LastUpdatedBy = "Ruben Torrico";
+    string LastUpdatedBy = "Ruben Torico";
     string LastUpdated = DateTime.Today.ToString();
 
     //create sql connection and links application to adventureworks database
