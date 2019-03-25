@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="LoginForm.aspx.cs" Inherits="Login_v3_LoginForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="CreateUserForm.aspx.cs" Inherits="CreateUserForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
- 
+    
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -37,14 +37,14 @@
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
-						Log in
+						Create an Account
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
                         <asp:TextBox 
                             ID="Username" 
                             class="input100"
-                            placeholder="Username"
+                            placeholder="Enter Username"
                             runat="server">
                         </asp:TextBox>
 <%--						<input class="input100" type="text" name="username" placeholder="Username">--%>
@@ -55,14 +55,25 @@
                         <asp:TextBox 
                             ID="Password" 
                             class="input100"
-                            placeholder="Password"
+                            placeholder="Enter Password"
                             runat="server">
                         </asp:TextBox>
 <%--						<input class="input100" type="password" name="pass" placeholder="Password">--%>
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
-					<div class="contact100-form-checkbox">
+<%--                   <div class="wrap-input100 validate-input" data-validate="Enter password">
+                             <asp:TextBox 
+                            ID="ConfirmPassword" 
+                            class="input100"
+                            placeholder="Confirm Password"
+                            runat="server">
+                        </asp:TextBox>
+				   <input class="input100" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>--%>
+
+                   <div class="contact100-form-checkbox">
 						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 						<label class="label-checkbox100" for="ckb1">
 							Remember me
@@ -70,19 +81,14 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-				        <asp:Button ID="Login" 
+				        <asp:Button ID="CreateAccount" 
                             runat="server" 
                             class="login100-form-btn"
-                            Text="Login" OnClick="Login_Click" />
+                            Text="Create Account" OnClick="Create_Click" />
 					</div>
 
 					<div class="text-center p-t-90">
 						<a class="txt1" href="#">
-                            <asp:LinkButton 
-                                ID="ForgetPasswordLink" 
-                                runat="server" OnClick="ForgetPasswordLink_Click">	Forgot Password?
-                            </asp:LinkButton>
-
 
                             <br />
 						 <asp:Label ID="lblStatus" runat="server"></asp:Label>

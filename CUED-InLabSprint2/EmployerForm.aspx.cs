@@ -49,8 +49,8 @@ public partial class EmployerForm1 : System.Web.UI.Page
 
         DBconnection.Open();
 
-        string student = "insert into [dbo].[Employer] values (@firstName, @lastName, @companyName, @companyEmail, @streetAddress, @city, @state, @country, @zipCode, @passwordOne, @passwordTwo, @lastUpdatedBy, @lastUpdated)";
-        SqlCommand insertEmployer = new SqlCommand(student, DBconnection);
+        string employerInfo = "insert into [dbo].[Employer] values (@firstName, @lastName, @companyName, @companyEmail, @streetAddress, @city, @state, @country, @zipCode, @passwordOne, @passwordTwo, @lastUpdatedBy, @lastUpdated)";
+        SqlCommand insertEmployer = new SqlCommand(employerInfo, DBconnection);
         insertEmployer.Parameters.AddWithValue("@firstName", emp.getFirstName());
         insertEmployer.Parameters.AddWithValue("@lastName", emp.getLastName());
         insertEmployer.Parameters.AddWithValue("@companyName", emp.getCompanyName());
