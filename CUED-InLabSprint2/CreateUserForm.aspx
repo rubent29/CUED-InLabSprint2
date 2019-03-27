@@ -40,6 +40,29 @@
 						Create an Account
 					</span>
 
+                  <div class="wrap-input100 validate-input" data-validate = "Enter username">
+                        <asp:TextBox 
+                            ID="FirstName" 
+                            class="input100"
+                            placeholder="Enter First Name"
+                            runat="server">
+                        </asp:TextBox>
+
+<%--						<input class="input100" type="text" name="username" placeholder="Username">--%>
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Enter username">
+                        <asp:TextBox 
+                            ID="LastName" 
+                            class="input100"
+                            placeholder="Enter Last Name"
+                            runat="server">
+                        </asp:TextBox>
+<%--						<input class="input100" type="text" name="username" placeholder="Username">--%>
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
                         <asp:TextBox 
                             ID="Username" 

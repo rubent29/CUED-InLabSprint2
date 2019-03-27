@@ -15,7 +15,7 @@ public partial class JobPostingForm : System.Web.UI.Page
 
     //create sql connection and links application to adventureworks database
     System.Data.SqlClient.SqlConnection DBconnection = new System.Data.SqlClient.SqlConnection();
-    String ConnectionString = "Data Source=localhost;Initial Catalog = CuedInEmployer; Integrated Security = True";
+    String ConnectionString = "Data Source=localhost;Initial Catalog = CuedIn; Integrated Security = True";
 
     protected void Page_Load(object sender, EventArgs e)
     {
