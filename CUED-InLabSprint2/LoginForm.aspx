@@ -37,7 +37,7 @@
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
-						Log in
+						CuedIn
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
@@ -75,7 +75,15 @@
                             class="login100-form-btn"
                             Text="Login" OnClick="Login_Click" />
 					</div>
+                	<div class="text-center p-t-90">
+						<a class="txt1" href="#">
+                            <asp:LinkButton 
+                                ID="CreateAccount" 
+                                runat="server" OnClick="ForgetPasswordLink_Click">	Create Account
+                            </asp:LinkButton>
 
+
+                            <br />
 					<div class="text-center p-t-90">
 						<a class="txt1" href="#">
                             <asp:LinkButton 
