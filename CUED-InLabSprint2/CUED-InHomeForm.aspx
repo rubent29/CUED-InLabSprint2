@@ -72,7 +72,7 @@
                     ID="RegisterButton" 
                     class="btn btn-outline-primary py-2 px-4"
                     runat="server" 
-                    Text="Register Your Business!" OnClick="RegisterButton_Click" />
+                    Text="Create Your Business Account" OnClick="RegisterButton_Click" />
             </div>
           </div>
         </div> 
