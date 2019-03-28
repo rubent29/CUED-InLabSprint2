@@ -50,23 +50,31 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="index.html">CUED - <strong>In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="CUED-InHomeForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
                   <div class="container">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
-                    <ul class="site-menu js-clone-nav d-none d-lg-block">
-                        <a href="CUED-InHomeForm.aspx">JobPostings</a>
-            
-						<li><a href="CUED-InHomeForm.aspx">Resources</a></li>
-                        <li><a href="CUED-InHomeForm.aspx">News</a></li>
-                        <li><a href="CUED-InHomeForm.aspx">About</a></li>
+                  <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-					
-                      <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
-					  </ul>  
+                        <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
+						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
+                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
+
+                        <li class="has-children">
+                        <a href="CUED-InHomeForm.aspx">Account     </a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Subscription</a></li>
+                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
+                        </ul>
+                         <li><a href="#"></a></li>
+					  </ul> 
                   </div>
                 </nav>
               </div>
@@ -80,7 +88,7 @@
     <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_b1_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>My Subscriptions</h1>
+          <h1>Subscription Information</h1>
           <span class="caption d-block text-white"></span>
         </div>
       </div>

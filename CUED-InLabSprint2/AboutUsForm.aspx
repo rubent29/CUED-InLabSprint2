@@ -47,7 +47,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeForm.aspx">Cued<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="CUED-InHomeForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">

@@ -51,28 +51,31 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeForm.aspx">CUED - <strong>In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="CUED-InHomeForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
                   <div class="container">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
-                    <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li class="has-children">
-                        <a href="program.html">Creating Community</a>
+                        <ul class="site-menu js-clone-nav d-none d-lg-block">
+
+                        <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
+						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
+                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
+
+                        <li class="has-children">
+                        <a href="CUED-InHomeForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeForm.aspx">Student</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Teacher</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Parent</a></li>
-                            <li><a href="CUED-InHomeForm.aspx">School</a></li>
-							<li><a href="EmployerForm.aspx">Employer</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
                         </ul>
-						<li><a href="CUED-InHomeForm.aspx">Resources</a></li>
-                      <li><a href="CUED-InHomeForm.aspx">News</a></li>
-                      <li><a href="AboutUsForm.aspx.aspx">About</a></li>
-                      <li><a href="JobPostingForm.aspx">Job Postings</a></li>
-					  </ul>  
+                         <li><a href="#"></a></li>
+					  </ul> 
                   </div>
                 </nav>
               </div>
@@ -97,56 +100,6 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
 
-            <!--<form action="#" class="p-5 bg-white">
-
-              <div class="row form-group">
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="FirstName">First Name</label>
-                  <input type="text" id="FirstName" class="form-control" placeholder="First Name">
-                </div>
-              </div>
-			  <div class="row form-group">
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="LastName">Last Name</label>
-                  <input type="text" id="LastName" class="form-control" placeholder="Last Name">
-                </div>
-              </div>	
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="font-weight-bold" for="CompanyName">Company Name</label>
-                  <input type="email" id="CompanyName" class="form-control" placeholder="Company Name">
-                </div>
-              </div>
-
-
-              <div class="row form-group">
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="CompanyEmail">Company Email</label>
-                  <input type="text" id="CompanyEmail" class="form-control" placeholder="Company Email">
-                </div>
-              </div>
-			<div class="row form-group">
-                <div class="col-md-12 mb-3 mb-md-0">
-                  <label class="font-weight-bold" for="CompanyEmail">Company Email</label>
-                  <input type="text" id="CompanyEmail" class="form-control" placeholder="Company Email">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="font-weight-bold" for="message">Message</label> 
-                  <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Say hello to us"></textarea>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <input type="submit" value="Send Message" class="btn btn-primary text-white px-4 py-2">
-                </div>
-              </div>
-
-  
-            </form> -->
 			  <form>
   <div class="form-group">
   </div>				  
@@ -244,7 +197,7 @@
   </div>
  <div class="form-group">
   </div>	
-<%-- <p><a href="account.html" class="btn btn-primary rounded text-white px-4">Submit</a></p>--%>
+
 
 <asp:Button 
     ID="Insert_Button" 
@@ -290,31 +243,30 @@
             <h3 class="footer-heading mb-4 text-white">About</h3>
 			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
 <p>Email: info@cued-in.com</p>
-            <p><a href="event.html" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+            <p><a href="CUED-InHomeForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-                  <ul class="list-unstyled">
-					  <li><a href="CUED-InHomeForm.aspx">Creating Community</a></li>
-					  <li><a href="CUED-InHomeForm.aspx">Resources</a></li>
-                      <li><a href="CUED-InHomeForm.aspx">News</a></li>
-                      <li><a href="AboutUsForm.aspx.aspx">About</a></li>
-                      <li><a href="JobPostingForm.aspx">Job Postings</a></li>
+             <ul class="list-unstyled">
+					 <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
+						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
+                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
+
+                        <li class="has-children">
+                        <a href="CUED-InHomeForm.aspx">Account     </a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
+                        </ul>
+                         <li><a href="#"></a></li>
                   </ul>
 				  
-				  
-              </div>
-              <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white"></h3>
-                  <ul class="list-unstyled">
-					      <li><a href="program.html">Student</a></li>
-                          <li><a href="program.html">Teacher</a></li>
-                          <li><a href="program.html">Parent</a></li>
-                          <li><a href="program.html">School</a></li>
-					     <li><a href="EmployerForm.aspx">Employer</a></li>
-                  </ul>
               </div>
             </div>
           </div>
