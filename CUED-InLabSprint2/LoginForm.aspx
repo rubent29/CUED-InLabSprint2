@@ -79,21 +79,21 @@
 						<a class="txt1" href="#">
                             <asp:LinkButton 
                                 ID="CreateAccount" 
-                                runat="server" OnClick="CreateAccount_Click">	Create Account
+                                runat="server" 
+                                OnClick="CreateAccount_Click">Create Account
                             </asp:LinkButton>
-
-
-                          
-					<div class="text-center p-t-90">
-						<a class="txt1" href="#">
+                                    <br />
                             <asp:LinkButton 
                                 ID="ForgetPasswordLink" 
-                                runat="server" OnClick="ForgetPasswordLink_Click">	Forgot Password?
+                                runat="server" 
+                                OnClick="ForgetPasswordLink_Click">	Forgot Password?
                             </asp:LinkButton>
-
-
+                          
                             <br />
-						 <asp:Label ID="lblStatus" runat="server"></asp:Label>
+						 <asp:Label ID="lblStatus" 
+                             runat="server">
+
+						 </asp:Label>
 
 
 
