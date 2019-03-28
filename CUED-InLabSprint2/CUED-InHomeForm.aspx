@@ -89,7 +89,7 @@
             <p class="mb-5"><img src="imagesForForms/teacher_help2.jpg" alt="Image" class="img-fluid"></p>
           </div>
           <div class="col-lg-5 ml-auto">
-            <h2 class="site-section-heading mb-3">Why CUED-In?h2>
+            <h2 class="site-section-heading mb-3">Why CUED-In? </h2>
             <p>Need to get connected to the next generation of the local workforce? Have job vacancies or opportunities for high school students to learn about your industry?</p>
             <p class="mb-4 site-section-lower"> Benefits include</p>
 			  
