@@ -16,4 +16,9 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
     {
         Response.Redirect("EmployerForm.aspx");
     }
+
+    protected void login_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("LoginForm.aspx");
+    }
 }
