@@ -1,17 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="CUED-InHomeForm.aspx.cs" Inherits="CUED_InHomeForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .auto-style1 {
-            background-color: #FFFF00;
-        }
-    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
+  <body>
+  
   <div class="site-wrap">
 
-    
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -37,6 +33,7 @@
                   <div class="container">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
+                   
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
 
                         <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
@@ -55,7 +52,6 @@
                         </ul>
                          <li><a href="#"></a></li>
 					  </ul> 
-
                   </div>
                 </nav>
               </div>
@@ -68,7 +64,7 @@
     <!-- <div style="height: 113px;"></div> -->
   
       
-      <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_img.jpg" data-aos="fade" data-stellar-background-ratio="0.5">
+ <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_img.jpg" data-aos="fade" data-stellar-background-ratio="0.5">
          <div class="container"> 
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
@@ -93,6 +89,7 @@
           </div>
         </div> 
       </div>  
+
 
  
 	 
@@ -206,7 +203,7 @@
                 <img src="imagesForForms/apprentice.jpg" alt="Image" class="img-fluid">
                 <div class="media-image-body">
                   <h2>4. Inform</h2>
-                  <p>Attach PDF application or web-link for students to apply to your opportunities.</p>
+                  <p>Attach pdf application or web-link for students to apply to your opportunities.</p>
       
                 </div>
               </div>
@@ -267,30 +264,21 @@
           <div class="col-md-4">
             <h3 class="footer-heading mb-4 text-white">About</h3>
 			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
-            <p>Email: info@cued-in.com</p>
-            <p><a href="CUED-InHomeForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+<p>Email: info@cued-in.com</p>
+            <p><a href="event.html" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
                   <ul class="list-unstyled">
-                        <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
-						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
-
-                        <li class="has-children">
-                        <a href="CUED-InHomeForm.aspx">Account     </a>
-                        <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
-                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
-                        </ul>
-                         <li><a href="#"></a></li>
-					  </ul> 
+					  <li><a href="CUED-InHomeForm.aspx">Creating Community</a></li>
+					  <li><a href="CUED-InHomeForm.aspx">Resources</a></li>
+                      <li><a href="CUED-InHomeForm.aspx">News</a></li>
+                      <li><a href="CUED-InHomeForm.aspx">About</a></li>
+                      <li><a href="JobPostingForm.aspx">Job Postings</a></li>
+                  </ul>
+				  
 				  
               </div>
               <div class="col-md-6">
@@ -300,7 +288,7 @@
                           <li><a href="CUED-InHomeForm.aspx">Teacher</a></li>
                           <li><a href="CUED-InHomeForm.aspx">Parent</a></li>
                           <li><a href="CUED-InHomeForm.aspx">School</a></li>
-						  <li><a href="EmployerForm.aspx">Employer</a></li>
+							<li><a href="EmployerForm.aspx">Employer</a></li>
                   </ul>
               </div>
             </div>
@@ -346,6 +334,5 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-
 </asp:Content>
 
