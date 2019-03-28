@@ -61,6 +61,9 @@ public partial class CreateUserForm : System.Web.UI.Page
                 setPass.Parameters.Add(new SqlParameter("@Password", PasswordHash.HashPassword(Password.Text))); // hash entered password
                 setPass.ExecuteNonQuery();
 
+            Session["FirstName"] = FirstName.Text;
+            Session["LastName"] = LastName.Text;
+
                 DBconnection.Close();
 
                 lblStatus.Text = "User committed!";

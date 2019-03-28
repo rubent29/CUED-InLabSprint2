@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="CUED-InHomeForm.aspx.cs" Inherits="CUED_InHomeForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style1 {
+            background-color: #FFFF00;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -80,6 +85,9 @@
                     class="btn btn-outline-primary py-2 px-4"
                     runat="server" 
                     Text="CREATE AN ACCOUNT" OnClick="RegisterButton_Click" />
+                <strong>
+                <asp:Label ID="Label1" runat="server" CssClass="auto-style1" Text="Label"></asp:Label>
+                </strong>
             </div>
           </div>
         </div> 
