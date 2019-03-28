@@ -34,7 +34,7 @@
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                       <li class="has-children">
-                        <a href="CUED-InHomeForm.aspx">Creating Community</a>
+                        <a href="CUED-InHomeForm.aspx">Post an Opportunity</a>
                         <ul class="dropdown arrow-top">
                           <li><a href="CUED-InHomeForm.aspx">Student</a></li>
                           <li><a href="CUED-InHomeForm.aspx">Teacher</a></li>
@@ -43,10 +43,10 @@
 							<li><a href="EmployerForm.aspx">Employer</a></li>
                         </ul>
 
-						<li><a href="CUED-InHomeForm.aspx">Resources</a></li>
-                        <li><a href="CUED-InHomeForm.aspx">News</a></li>
+						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
+                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
-                        <li><a href="JobPostingForm.aspx">Job Postings</a></li>
+                        <li><a href="JobPostingForm.aspx">Account</a></li>
 					  </ul>  
                   </div>
                 </nav>
