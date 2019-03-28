@@ -88,7 +88,7 @@ a {
 
 	margin-top: 10px;
   position: relative;
-  top: -20px; }
+  top: -71px; }
   .btn:hover, .btn:active, .btn:focus {
     outline: none;
     -webkit-box-shadow: none !important;
@@ -615,7 +615,8 @@ a {
 
 .text-white{
 	color: lightgray;
-    left: 0px;
+    left: -11px;
+    width: 128px;
 }
 .text-white-opacity-5 {
   color: rgba(255, 255, 255, 0.5); }

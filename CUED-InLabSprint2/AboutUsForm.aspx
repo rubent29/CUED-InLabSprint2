@@ -47,38 +47,30 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="index.html">Cued<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="CUED-InHomeForm.aspx">Cued<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
                   <div class="container">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+                         <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                    <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li class="has-children">
-                        <a href="program.html">Program</a>
+                        <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
+						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
+                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
+
+                        <li class="has-children">
+                        <a href="CUED-InHomeForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="program.html">Body Building</a></li>
-                          <li><a href="program.html">Morning Energy</a></li>
-                          <li><a href="program.html">Stretching</a></li>
-                          <li class="has-children">
-                            <a href="program.html">Sub Menus</a>
-                            <ul class="dropdown">
-                              <li><a href="program.html">Swimming</a></li>
-                              <li><a href="program.html">Boxing</a></li>
-                              <li><a href="program.html">Running</a></li>
-                              <li><a href="program.html">Jogging</a></li>
-                              
-                            </ul>
-                          </li>
-
+                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
                         </ul>
-                      </li>
-                      <li><a href="trainers.html">Our Trainers</a></li>
-                      <li><a href="events.html">News</a></li>
-                      <li class="active"><a href="about.html">About</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                         <li><a href="#"></a></li>
+					  </ul> 
                   </div>
                 </nav>
               </div>
@@ -107,7 +99,7 @@
           <div class="col-lg-5 ml-auto">
             <h2 class="site-section-heading mb-3">Our Story</h2>
             <p>
-CUED-In Inc. was founded in 2015 by talking with counselors, parents, teachers, and students. We saw that there was no platform out there that connects the student to local opportunities (jobs, internships, shadowing). Also, other platforms point students to just college bound careers. We want to bring everything together because all careers are needed no matter if it takes you to college or a technical school. So CUED-In was formed and is an app and web-based platform that promotes a career focused, community connected future by showing students various pathways to a career. We bring all the key players—students, parents, counselors, career coaches, teachers, and businesses—onto one platform, enhancing communication and eliminating the need for multiple websites. Having everyone on the same page promotes seamless, informed, and financially savvy decisions while helping students keep an eye on the ultimate goal that a college or technical school degree provides—a career.</p>
+                CUED-In Inc. was founded in 2015 by talking with counselors, parents, teachers, and students. We saw that there was no platform out there that connects the student to local opportunities (jobs, internships, shadowing). Also, other platforms point students to just college bound careers. We want to bring everything together because all careers are needed no matter if it takes you to college or a technical school. So CUED-In was formed and is an app and web-based platform that promotes a career focused, community connected future by showing students various pathways to a career. We bring all the key players—students, parents, counselors, career coaches, teachers, and businesses—onto one platform, enhancing communication and eliminating the need for multiple websites. Having everyone on the same page promotes seamless, informed, and financially savvy decisions while helping students keep an eye on the ultimate goal that a college or technical school degree provides—a career.</p>
             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit explicabo odio officiis autem minima quibusdam.</p>
             <p><a href="#" class="btn btn-outline-primary py-2 px-4">Join Our Club</a></p>
           </div>
@@ -128,7 +120,7 @@ CUED-In Inc. was founded in 2015 by talking with counselors, parents, teachers, 
               <img src="https://d1r2jio0ygi9fo.cloudfront.net/wp-content/uploads/2017/04/05115043/seth-498x476.jpg"" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
               <h2 class="h5 mb-4 text-white">SETH MARSH FOUNDER/CEO</h2>
               <p class="text-white mb-5 lead">&ldquo;Seth has a degree in Business Administration. He started working for a Virginia public university in January 2014. While working in the business office, he discovered that the majority of students and parents he talked to were remarkably uninformed about their career options and financial/debt issues related to their education. In June 2015 he went to pursue his vision for a better career planning and community focused tool for high school students before they graduate. CUED-In was born to reach this vision.
-&rdquo;</p>
+                &rdquo;</p>
             </div>
           </div>
           <div class="col-md-6 text-center mb-5">
@@ -258,6 +250,9 @@ CUED-In Inc. was founded in 2015 by talking with counselors, parents, teachers, 
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
+
+
+
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
                   <ul class="list-unstyled">
                     <li><a href="#">Home</a></li>

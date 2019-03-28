@@ -59,8 +59,8 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
 
                         if (PasswordHash.ValidatePassword(Password.Text, storedHash)) // if the entered password matches what is stored, it will show success
                         {
-                        Session["FirstName"] = FirstName.Text;
-                        Session["LastName"] = LastName.Text;
+                        //Session["FirstName"] = FirstName.Text;
+                        //Session["LastName"] = LastName.Text;
                         lblStatus.Text = "Success!";
                             Response.Redirect("CUED-InHomeForm.aspx");
                             //this.Hide();

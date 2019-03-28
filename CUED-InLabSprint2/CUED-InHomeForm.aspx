@@ -51,10 +51,11 @@
                           <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
                           <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
                           <li><a href="CUED-InHomeForm.aspx">Subscription</a></li>
+                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
-
 					  </ul> 
+
                   </div>
                 </nav>
               </div>
@@ -86,7 +87,7 @@
                     runat="server" 
                     Text="CREATE AN ACCOUNT" OnClick="RegisterButton_Click" />
                 <strong>
-                <asp:Label ID="Label1" runat="server" CssClass="auto-style1" Text="Label"></asp:Label>
+<%--                <asp:Label ID="Label1" runat="server" CssClass="auto-style1" Text="Label"></asp:Label>--%>
                 </strong>
             </div>
           </div>
@@ -205,7 +206,7 @@
                 <img src="imagesForForms/apprentice.jpg" alt="Image" class="img-fluid">
                 <div class="media-image-body">
                   <h2>4. Inform</h2>
-                  <p>Attach pdf application or web-link for students to apply to your opportunities.</p>
+                  <p>Attach PDF application or web-link for students to apply to your opportunities.</p>
       
                 </div>
               </div>
@@ -266,21 +267,30 @@
           <div class="col-md-4">
             <h3 class="footer-heading mb-4 text-white">About</h3>
 			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
-<p>Email: info@cued-in.com</p>
-            <p><a href="event.html" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+            <p>Email: info@cued-in.com</p>
+            <p><a href="CUED-InHomeForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
                   <ul class="list-unstyled">
-					  <li><a href="CUED-InHomeForm.aspx">Creating Community</a></li>
-					  <li><a href="CUED-InHomeForm.aspx">Resources</a></li>
-                      <li><a href="CUED-InHomeForm.aspx">News</a></li>
-                      <li><a href="AboutUsForm.aspx">About</a></li>
-                      <li><a href="JobPostingForm.aspx">Job Postings</a></li>
-                  </ul>
-				  
+                        <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
+						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
+                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
+
+                        <li class="has-children">
+                        <a href="CUED-InHomeForm.aspx">Account     </a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
+                        </ul>
+                         <li><a href="#"></a></li>
+					  </ul> 
 				  
               </div>
               <div class="col-md-6">
@@ -290,7 +300,7 @@
                           <li><a href="CUED-InHomeForm.aspx">Teacher</a></li>
                           <li><a href="CUED-InHomeForm.aspx">Parent</a></li>
                           <li><a href="CUED-InHomeForm.aspx">School</a></li>
-							<li><a href="EmployerForm.aspx">Employer</a></li>
+						  <li><a href="EmployerForm.aspx">Employer</a></li>
                   </ul>
               </div>
             </div>
