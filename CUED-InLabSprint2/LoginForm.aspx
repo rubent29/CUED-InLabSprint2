@@ -79,11 +79,11 @@
 						<a class="txt1" href="#">
                             <asp:LinkButton 
                                 ID="CreateAccount" 
-                                runat="server" OnClick="ForgetPasswordLink_Click">	Create Account
+                                runat="server" OnClick="CreateAccount_Click">	Create Account
                             </asp:LinkButton>
 
 
-                            <br />
+                          
 					<div class="text-center p-t-90">
 						<a class="txt1" href="#">
                             <asp:LinkButton 
