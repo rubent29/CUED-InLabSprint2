@@ -47,7 +47,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="index.html">Cross<strong>fits</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="index.html">Cued<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -92,7 +92,7 @@
     <div class="site-blocks-cover inner-page" style="background-image: url(https://d1r2jio0ygi9fo.cloudfront.net/uploads/2018/10/About-Us-hero-Shenandoah-Valley-Picture.jpg)";" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>About Cued-In</h1>
+          <h1>About Us</h1>
         </div>
       </div>
     </div>  
@@ -102,11 +102,12 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <p class="mb-5"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></p>
+            <p class="mb-5"><img src="imagesForForms/CuedIn_logo-large(1)(2).jpg" alt="Image" class="img-fluid"></p>
           </div>
           <div class="col-lg-5 ml-auto">
-            <h2 class="site-section-heading mb-3">The Club</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ad, tempora incidunt accusantium. Similique magni quaerat beatae illo aliquid. Libero non ipsa nisi, corporis architecto incidunt rem repellendus asperiores numquam!</p>
+            <h2 class="site-section-heading mb-3">Our Story</h2>
+            <p>
+CUED-In Inc. was founded in 2015 by talking with counselors, parents, teachers, and students. We saw that there was no platform out there that connects the student to local opportunities (jobs, internships, shadowing). Also, other platforms point students to just college bound careers. We want to bring everything together because all careers are needed no matter if it takes you to college or a technical school. So CUED-In was formed and is an app and web-based platform that promotes a career focused, community connected future by showing students various pathways to a career. We bring all the key players—students, parents, counselors, career coaches, teachers, and businesses—onto one platform, enhancing communication and eliminating the need for multiple websites. Having everyone on the same page promotes seamless, informed, and financially savvy decisions while helping students keep an eye on the ultimate goal that a college or technical school degree provides—a career.</p>
             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit explicabo odio officiis autem minima quibusdam.</p>
             <p><a href="#" class="btn btn-outline-primary py-2 px-4">Join Our Club</a></p>
           </div>
@@ -167,7 +168,7 @@
           </div>
           <div class="col-md-6 text-center mb-5">
             <div class="p-3">
-              <img src="https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/emily1-498x476.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
+              <img src="https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/Mark-Graham-498x476.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
               <h2 class="h5 mb-4 text-white">MARK GRAHAM</h2>
               <p class="text-white mb-5 lead">&ldquo;Mark has been a practicing CPA since 1980 with extensive experience in business and personal taxation, senior management consulting, project and business valuations, litigation support, and not-for-profit consulting. He is the managing and senior partner of Graham and Poirot, CPAs, LLC. He also serves as a full time lecturer at Department of Finance and Business Law at James Madison University teaching seniors. He has prior eight year experience as CFO and corporate treasurer of a three campus continuing care retirement community. Mark has been involved in the community in multiple ways. He is the Eagle Scout  and current Scoutmaster (28-year tenure) BSA Troop 72, Harrisonburg, Virginia. He also servers on the Council of the Boy Scouts of America. He is married to former Martha Kent Bell, novelist, for 41 years with four grown children and six grandchildren.&rdquo;</p>
             </div>

@@ -70,7 +70,7 @@
                         </ul>
 						<li><a href="CUED-InHomeForm.aspx">Resources</a></li>
                       <li><a href="CUED-InHomeForm.aspx">News</a></li>
-                      <li><a href="CUED-InHomeForm.aspx">About</a></li>
+                      <li><a href="AboutUsForm.aspx.aspx">About</a></li>
                       <li><a href="JobPostingForm.aspx">Job Postings</a></li>
 					  </ul>  
                   </div>
@@ -300,7 +300,7 @@
 					  <li><a href="CUED-InHomeForm.aspx">Creating Community</a></li>
 					  <li><a href="CUED-InHomeForm.aspx">Resources</a></li>
                       <li><a href="CUED-InHomeForm.aspx">News</a></li>
-                      <li><a href="CUED-InHomeForm.aspx">About</a></li>
+                      <li><a href="AboutUsForm.aspx.aspx">About</a></li>
                       <li><a href="JobPostingForm.aspx">Job Postings</a></li>
                   </ul>
 				  
