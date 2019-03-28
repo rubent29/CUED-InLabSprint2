@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <body>
-  
+
   <div class="site-wrap">
 
     
@@ -35,7 +34,7 @@
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                       <li class="has-children">
-                        <a href="CUED-InHomeForm.aspx">Creating Community</a>
+                        <a href="CUED-InHomeForm.aspx">Post an Opportunity</a>
                         <ul class="dropdown arrow-top">
                           <li><a href="CUED-InHomeForm.aspx">Student</a></li>
                           <li><a href="CUED-InHomeForm.aspx">Teacher</a></li>
@@ -44,10 +43,10 @@
 							<li><a href="EmployerForm.aspx">Employer</a></li>
                         </ul>
 
-						<li><a href="CUED-InHomeForm.aspx">Resources</a></li>
-                        <li><a href="CUED-InHomeForm.aspx">News</a></li>
+						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
+                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
-                        <li><a href="JobPostingForm.aspx">Job Postings</a></li>
+                        <li><a href="JobPostingForm.aspx">Account</a></li>
 					  </ul>  
                   </div>
                 </nav>
@@ -65,14 +64,20 @@
          <div class="container"> 
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1>CUED-In</h1>
-              <span class="caption d-block text-black">Career <strong>Focused.</strong> Community <strong>Centered.</strong></span>
+              <h1>Employer</h1>
+                <span class="caption d-block text-black"><strong>Join the Cued-In</strong> <strong>Community.</strong></span>
+     
+                <asp:Button 
+                    ID="Login" 
+                    class="btn btn-outline-primary py-2 px-4"
+                    runat="server" 
+                    Text="LOGIN" OnClick="login_Click" />
      
                 <asp:Button 
                     ID="RegisterButton" 
                     class="btn btn-outline-primary py-2 px-4"
                     runat="server" 
-                    Text="Create Your Business Account" OnClick="RegisterButton_Click" />
+                    Text="CREATE AN ACCOUNT" OnClick="RegisterButton_Click" />
             </div>
           </div>
         </div> 
