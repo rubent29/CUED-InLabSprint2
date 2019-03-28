@@ -33,21 +33,23 @@
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li class="has-children">
-                        <a href="CUED-InHomeForm.aspx">Post an Opportunity</a>
-                        <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeForm.aspx">Student</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Teacher</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Parent</a></li>
-                            <li><a href="CUED-InHomeForm.aspx">School</a></li>
-							<li><a href="EmployerForm.aspx">Employer</a></li>
-                        </ul>
 
+                        <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
 						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
                         <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
-                        <li><a href="JobPostingForm.aspx">Account</a></li>
-					  </ul>  
+
+                        <li class="has-children">
+                        <a href="CUED-InHomeForm.aspx">Account     </a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
+                          <li><a href="CUED-InHomeForm.aspx">Subscription</a></li>
+                        </ul>
+                         <li><a href="#"></a></li>
+
+					  </ul> 
                   </div>
                 </nav>
               </div>
