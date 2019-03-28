@@ -64,14 +64,20 @@
          <div class="container"> 
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1>CUED-In</h1>
-              <span class="caption d-block text-black">Career <strong>Focused.</strong> Community <strong>Centered.</strong></span>
+              <h1>Employer</h1>
+                <span class="caption d-block text-black"><strong>Join the Cued-In</strong> <strong>Community.</strong></span>
+     
+                <asp:Button 
+                    ID="Login" 
+                    class="btn btn-outline-primary py-2 px-4"
+                    runat="server" 
+                    Text="LOGIN" OnClick="login_Click" />
      
                 <asp:Button 
                     ID="RegisterButton" 
                     class="btn btn-outline-primary py-2 px-4"
                     runat="server" 
-                    Text="Create Your Business Account" OnClick="RegisterButton_Click" />
+                    Text="CREATE AN ACCOUNT" OnClick="RegisterButton_Click" />
             </div>
           </div>
         </div> 
