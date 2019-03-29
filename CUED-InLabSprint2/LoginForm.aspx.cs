@@ -7,8 +7,24 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Web.ApplicationServices;
 
+//Login_v3_LoginForm form = new Login_v3_LoginForm()
+
+//public partial class Login_v3_LoginForm : System.Web.UI.Page
+//{
+//    public Login_v3_LoginForm(string text)
+//    {
+//        LoginFormText.Text = text;
+//    }
+//}
+
 public partial class Login_v3_LoginForm : System.Web.UI.Page
 {
+
+    //public Login_v3_LoginForm()
+    //{
+        
+    //}
+
     string LastUpdatedBy = "Ruben Torico";
     string LastUpdated = DateTime.Today.ToString();
 
@@ -46,7 +62,7 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                 System.Data.SqlClient.SqlCommand findPass = new System.Data.SqlClient.SqlCommand();
                 findPass.Connection = sc;
                 // SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
-                findPass.CommandText = "select Password from Account where Username = @Username";
+                findPass.CommandText = "select Password from Account1 where Username = @Username";
                 findPass.Parameters.Add(new SqlParameter("@Username", Username.Text));
 
                 SqlDataReader reader = findPass.ExecuteReader(); // create a reader
@@ -63,7 +79,6 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                         //Session["LastName"] = LastName.Text;
                         lblStatus.Text = "Success!";
                             Response.Redirect("CUED-InHomeForm.aspx");
-                            //this.Hide();
                             //RegisterButton.Visible = false;
                         }
                         else
@@ -73,7 +88,37 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                 else // if the username doesn't exist, it will show failure
                     lblStatus.Text = "Login failed.";
 
-                sc.Close();
+            //SqlDataReader loginReader =
+            //SqlDataReader loginReader = findPass.ExecuteReader();
+            sc.Close();
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //sc.Open();
+            //System.Data.SqlClient.SqlCommand loginReader = new System.Data.SqlClient.SqlCommand();
+            //loginReader.Connection = sc;
+            //loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer1;";
+
+            //SqlDataReader reader1 = loginReader.ExecuteReader();
+            //// SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
+            ////loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer1;";
+            //while(reader1.Read())
+            //{
+               
+            //    string name = reader1["FirstName"].ToString() + " " + reader1["LastName"].ToString() + " " + reader1["CompanyEmail"].ToString();
+            //    lblStatus.Text = name;
+            //}
+
+
+
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //lblStatus.Text += reader["FirstName"].ToString();
+            //lblStatus.Text += reader["LastName"].ToString();
+            //lblStatus.Text += reader["CompanyEmail"].ToString();
+            //string textValueReturned = loginReader.ExecuteScalar().ToString();
+            //lblStatus.Text = textValueReturned;
+            //loginReader.Parameters.Add(new SqlParameter("@Username", Username.Text));
+
+
             //}
             //catch
             //{
