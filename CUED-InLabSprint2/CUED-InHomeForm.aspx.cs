@@ -27,11 +27,11 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         sc.Open();
         System.Data.SqlClient.SqlCommand loginReader = new System.Data.SqlClient.SqlCommand();
         loginReader.Connection = sc;
-        loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer1;";
+        loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer;";
 
         SqlDataReader reader1 = loginReader.ExecuteReader();
         // SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
-        //loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer1;";
+        //loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer;";
         while (reader1.Read())
         {
 

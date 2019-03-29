@@ -62,7 +62,7 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                 System.Data.SqlClient.SqlCommand findPass = new System.Data.SqlClient.SqlCommand();
                 findPass.Connection = sc;
                 // SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
-                findPass.CommandText = "select Password from Account1 where Username = @Username";
+                findPass.CommandText = "select Password from Account where Username = @Username";
                 findPass.Parameters.Add(new SqlParameter("@Username", Username.Text));
 
                 SqlDataReader reader = findPass.ExecuteReader(); // create a reader
@@ -95,11 +95,11 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
             //sc.Open();
             //System.Data.SqlClient.SqlCommand loginReader = new System.Data.SqlClient.SqlCommand();
             //loginReader.Connection = sc;
-            //loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer1;";
+            //loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer;";
 
             //SqlDataReader reader1 = loginReader.ExecuteReader();
             //// SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
-            ////loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer1;";
+            ////loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer;";
             //while(reader1.Read())
             //{
                

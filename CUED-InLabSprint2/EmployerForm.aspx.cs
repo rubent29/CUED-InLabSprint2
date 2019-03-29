@@ -51,7 +51,7 @@ public partial class EmployerForm1 : System.Web.UI.Page
 
             DBconnection.Open();
 
-            string employerInfo = "insert into [dbo].[Employer1] values (@firstName, @lastName, @companyName, @companyEmail, @streetAddress, @city, @state, @country, @zipCode, @passwordOne, @passwordTwo, @lastUpdatedBy, @lastUpdated)";
+            string employerInfo = "insert into [dbo].[Employer] values (@firstName, @lastName, @companyName, @companyEmail, @streetAddress, @city, @state, @country, @zipCode, @passwordOne, @passwordTwo, @lastUpdatedBy, @lastUpdated)";
             SqlCommand insertEmployer = new SqlCommand(employerInfo, DBconnection);
             insertEmployer.Parameters.AddWithValue("@firstName", emp.getFirstName());
             insertEmployer.Parameters.AddWithValue("@lastName", emp.getLastName());
@@ -77,7 +77,7 @@ public partial class EmployerForm1 : System.Web.UI.Page
                 setPass.Connection = DBconnection;
 
                 // INSERT PASSWORD RECORD AND CONNECT TO USER
-                setPass.CommandText = "insert into[dbo].[Account1] values (@Username, @Password)";
+                setPass.CommandText = "insert into[dbo].[Account] values (@Username, @Password)";
                 setPass.Parameters.Add(new SqlParameter("@Username", CompanyEmail.Text));
                 setPass.Parameters.Add(new SqlParameter("@Password", PasswordHash.HashPassword(PasswordOne.Text))); // hash entered password
                 setPass.ExecuteNonQuery();
