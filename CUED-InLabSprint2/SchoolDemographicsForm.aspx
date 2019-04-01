@@ -1,11 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="JobPostingForm.aspx.cs" Inherits="JobPostingForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SchoolDemographicsForm.aspx.cs" Inherits="SchoolDemographics" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
@@ -29,9 +26,11 @@
     <link rel="stylesheet" href="css/style.css">
     
   </head>
-  <body>
+<%--  <body style="background-image: url('images/bg.jpg');">--%>
   
   <div class="site-wrap">
+
+    
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -58,9 +57,9 @@
                   <div class="container">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
-                        <ul class="site-menu js-clone-nav d-none d-lg-block">
+                  <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
+                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
                         <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
@@ -71,7 +70,7 @@
                           <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -86,10 +85,11 @@
     </div>
   
  
-    <div class="site-blocks-cover inner-page" style="background-image: url(imagesForForms/teacher_help.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_b1_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>Post an Opportunity</h1>
+          <h1>School Demographics</h1>
+          <span class="caption d-block text-white"></span>
         </div>
       </div>
     </div>  
@@ -97,172 +97,44 @@
     <div class="py-5 bg-light">
       <div class="container">
         <div class="row">
-       
           <div class="col-md-12 col-lg-8 mb-5">
-
-			  <form>
-  <div class="form-group">
-  </div>				  
-  <div class="form-group">
-    <label for="JobTitle">Job Title</label>
-      <br />
-    <asp:TextBox 
-        ID="JobTitle" 
-        runat="server"
-        placeholder="Job Title"
-        Width="727px">
-    </asp:TextBox>
-
-  </div>
-<div class="form-group">
-    <label for="JobType">Job Type</label>
-    <br />
-                <asp:DropDownList ID="JobType" runat="server">
-                    <asp:ListItem>Part-Time</asp:ListItem>
-                    <asp:ListItem>Full-Time</asp:ListItem>
-                    <asp:ListItem>Internship</asp:ListItem>
-                    <asp:ListItem>Seasonal</asp:ListItem>
-                </asp:DropDownList>
-
-  </div>
-<div class="form-group">
-    <label for="CompanyName">Company Name</label>
-    <br />
-    <asp:TextBox 
-        ID="CompanyName" 
-        runat="server"
-        placeholder="Company Name"
-        Width="727px">
-    </asp:TextBox>
-
- </div>	
-	<div class="form-group">
-    <label for="City">City</label>
-        <br />
-    <asp:TextBox 
-        ID="City" 
-        runat="server"
-        placeholder="City"
-        Width="727px">
-    </asp:TextBox>
-
-    </div>
-	<div class="form-group">
-    <label for="State">State</label>
-        <br />
-    <asp:TextBox 
-        ID="State" 
-        runat="server"
-        placeholder="State"
-        Width="727px">
-    </asp:TextBox>
-
-  </div>
-	<div class="form-group">
-    <label for="PayStatus">PayStatus</label>
-        <br />
-                <asp:DropDownList ID="PayStatus" runat="server">
-                    <asp:ListItem>Unpaid</asp:ListItem>
-                    <asp:ListItem>Paid</asp:ListItem>
-                </asp:DropDownList>
-
-  </div>  
-<div class="form-group">
-    <label for="JobDescription">Job Description</label>
-        <br />
-    <asp:TextBox 
-        ID="JobDescription" 
-        runat="server"
-        placeholder="Brief Job Description"
-        Width="727px">
-    </asp:TextBox>
-
-        </div>
-	<div class="form-group">
-    <label for="Deadline">Deadline</label>
-        <br />
-    <asp:TextBox 
-        ID="Deadline" 
-        runat="server"
-        placeholder="MM/DD/YYYY"
-        Width="727px">
-    </asp:TextBox>
-          </div>
-
-<div class="form-group">
-  </div>
-<div class="form-group">
-  </div>
- <div class="form-group">
-  </div>
- <div class="form-group">
-  </div>	
-
-
-<asp:Button 
-    ID="Insert_Button" 
-    class="btn btn-primary rounded text-white px-4"
-    runat="server" Text="Submit" OnClick="Insert_Button_Click" />
-
-&nbsp;    
-<asp:Button 
-    ID="Populate" 
-    class="btn btn-primary rounded text-white px-4"
-    runat="server" Text="Populate" OnClick="Populate_Button_Click" />
-</form>
-
-          </div>
-
-          <div class="col-lg-4">
-            <div class="p-4 mb-3 bg-white">
-              <h3 class="h5 text-black mb-3">Contact Info</h3>
-              <p class="mb-0 font-weight-bold">Address</p>
-              <p class="mb-4">320 South Main Street Suite 2E, Harrisonburg, Virginia, USA</p>
-
-              <p class="mb-0 font-weight-bold">Phone</p>
-              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
-
-              <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">info@cued-in.com</a></p>
-
-            </div>
-            
-            
+          <div class='tableauPlaceholder' id='viz1554150312594' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CuedInTableauPage&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CuedInTableauPage&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CuedInTableauPage&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1554150312594');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
           </div>
         </div>
       </div>
     </div>
 
-    
-
-   <footer class="site-footer">
+    <footer class="site-footer">
       <div class="container">
-        
+
         <div class="row">
           <div class="col-md-4">
             <h3 class="footer-heading mb-4 text-white">About</h3>
-			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
-<p>Email: info@cued-in.com</p>
-            <p><a href="CUED-InHomeAccountForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam, placeat amet.</p>
+            <p><a href="#" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-             <ul class="list-unstyled">
-					 <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
-						<li><a href="CUED-InHomeAccountForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
-
-                        <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
-                        <ul class="dropdown arrow-top">         
-                            <li><a href="MasterPageForm.aspx">Log Out</a></li>
-                        </ul>
-                         <li><a href="#"></a></li>
+                  <ul class="list-unstyled">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                   </ul>
-				  
+              </div>
+              <div class="col-md-6">
+                <h3 class="footer-heading mb-4 text-white">Program</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
               </div>
             </div>
           </div>
@@ -272,9 +144,10 @@
             <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
               <div class="col-md-12">
                 <p>
-                  <a href="https://www.facebook.com/cuedin/" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                  <a href="https://twitter.com/cued__in" class="p-2"><span class="icon-twitter"></span></a>
-                  <a href="https://www.youtube.com/channel/UCVUOkypjiJHzMEo0oSHiPNw" class="p-2"><span class="icon-youtube"></span></a>
+                  <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                  <a href="#" class="p-2"><span class="icon-twitter"></span></a>
+                  <a href="#" class="p-2"><span class="icon-instagram"></span></a>
+                  <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
 
                 </p>
               </div>
@@ -310,9 +183,7 @@
 
   </body>
 
-</html>
+
 
 </asp:Content>
-
-
 

@@ -43,7 +43,7 @@
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
 
                         <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
-						<li><a href="CUED-InHomeAccountForm.aspx">School Demographics</a></li>
+						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
                         <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
