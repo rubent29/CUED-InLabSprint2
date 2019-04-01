@@ -85,7 +85,7 @@ public partial class EmployerForm1 : System.Web.UI.Page
                 DBconnection.Close();
 
                 labelStatus.Text = "User committed!";
-                Response.Redirect("CUED-InHomeForm.aspx", false);
+                Response.Redirect("CUED-InHomeAccountForm.aspx", false);
             }
             else
                 labelStatus.Text = "Passwords Do Not Match";

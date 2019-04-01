@@ -47,7 +47,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeForm.aspx">CUED<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -55,19 +55,19 @@
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
                          <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
-						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
+						<li><a href="MasterPageForm.aspx">School Demographics</a></li>
+                        <li><a href="MasterPageForm.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeForm.aspx">Account     </a>
+                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
                           <li><a href="SubscriptionForm.aspx">Subscription</a></li>
-                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
+                            <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
 					  </ul> 

@@ -254,7 +254,7 @@
 				  
               </div>
               <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Program</h3>
+                <h3 class="footer-heading mb-4 text-white"></h3>
       
               </div>
             </div>

@@ -10,7 +10,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeForm.aspx">CUED<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -19,19 +19,19 @@
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                       <li class="has-children">
-                        <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
-						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
+						<li><a href="CUED-InHomeAccountForm.aspx">School Demographics</a></li>
+                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeForm.aspx">Account     </a>
+                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
                           <li><a href="SubscriptionForm.aspx">Subscription</a></li>
-                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
+                            <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
 					  </ul> 
@@ -131,25 +131,24 @@
             <div class="row">
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-                  <ul class="list-unstyled">
-					  <li><a href="CUED-InHomeForm.aspx">Creating Community</a></li>
-					  <li><a href="CUED-InHomeForm.aspx">Resources</a></li>
-                      <li><a href="CUED-InHomeForm.aspx">News</a></li>
-                      <li><a href="AboutUsForm.aspx.aspx">About</a></li>
-                      <li><a href="JobPostingForm.aspx">Job Postings</a></li>
+               <ul class="list-unstyled">
+					 <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
+						<li><a href="CUED-InHomeAccountForm.aspx">School Demographics</a></li>
+                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
+
+                        <li class="has-children">
+                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+                            <li><a href="MasterPageForm.aspx">Log Out</a></li>
+                        </ul>
+                         <li><a href="#"></a></li>
                   </ul>
 				  
-				  
-              </div>
-              <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white"></h3>
-                  <ul class="list-unstyled">
-					      <li><a href="program.html">Student</a></li>
-                          <li><a href="program.html">Teacher</a></li>
-                          <li><a href="program.html">Parent</a></li>
-                          <li><a href="program.html">School</a></li>
-							<li><a href="EmployerForm.aspx">Employer</a></li>
-                  </ul>
               </div>
             </div>
           </div>

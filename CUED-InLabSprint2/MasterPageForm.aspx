@@ -247,7 +247,7 @@
             <h3 class="footer-heading mb-4 text-white">About</h3>
 			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
 <p>Email: info@cued-in.com</p>
-            <p><a href="CUED-InHomeForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+            <p><a href="MasterPageForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">

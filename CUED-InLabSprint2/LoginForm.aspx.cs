@@ -78,7 +78,7 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                         //Session["FirstName"] = FirstName.Text;
                         //Session["LastName"] = LastName.Text;
                         lblStatus.Text = "Success!";
-                            Response.Redirect("CUED-InHomeForm.aspx");
+                            Response.Redirect("CUED-InHomeAccountForm.aspx");
                             //RegisterButton.Visible = false;
                         }
                         else

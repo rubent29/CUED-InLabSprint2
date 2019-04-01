@@ -10,30 +10,22 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeForm.aspx">CUED<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="MasterPageForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
                   <div class="container">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
+                   
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
-						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
+                        <li><a href="MasterPageForm.aspx">Creating Community</a></li>
+						<li><a href="MasterPageForm.aspx">Resources</a></li>
+                        <li><a href="MasterPageForm.aspx">News</a></li>
+                        <li><a href="AboutUsForMasterPageForm.aspx">About</a></li>
+                        <li><a href="LoginForm.aspx">Log In</a></li>
 
-                        <li class="has-children">
-                        <a href="CUED-InHomeForm.aspx">Account     </a>
-                        <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
-                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
-                        </ul>
-                         <li><a href="#"></a></li>
 					  </ul> 
 
                   </div>
@@ -246,29 +238,20 @@
             <h3 class="footer-heading mb-4 text-white">About</h3>
 			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
 <p>Email: info@cued-in.com</p>
-            <p><a href="CUED-InHomeForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+            <p><a href="MasterPageForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-                  <ul class="list-unstyled">
-					 <li><a href="CUED-InHomeForm.aspx">Job Posting</a></li>
-						<li><a href="CUED-InHomeForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
-
-                        <li class="has-children">
-                        <a href="CUED-InHomeForm.aspx">Account     </a>
-                        <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
-                            <li><a href="CUED-InHomeForm.aspx">Log Out</a></li>
-                        </ul>
-                         <li><a href="#"></a></li>
+                 <ul class="list-unstyled">
+					  <li><a href="MasterPageForm.aspx">Creating Community</a></li>
+					  <li><a href="MasterPageForm.aspx">Resources</a></li>
+                      <li><a href="MasterPageForm.aspx">News</a></li>
+                      <li><a href="AboutUsForMasterPageForm.aspx">About</a></li>
                   </ul>
+				  
+				  
 				  
               </div>
               <div class="col-md-6">
