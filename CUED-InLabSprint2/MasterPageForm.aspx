@@ -61,7 +61,12 @@
             <div class="col-md-7 text-center" data-aos="fade">
               <h1>CUED-In</h1>
               <span class="caption d-block text-black">Career <strong>Focused.</strong> Community <strong>Centered.</strong></span>
-				<a href="EmployerForm.aspx.aspx"><button class="btn btn-outline-primary py-2 px-4"> Register Your Business! </button>	</a>
+                <asp:Button 
+                    ID="RegisterBusinessButton" 
+                    runat="server" 
+                    class="btn btn-outline-primary py-2 px-4"
+                    Text="Register Your Business!" 
+                    OnClick="RegisterBusinessButton_Click" />
             </div>
           </div>
         </div> 
