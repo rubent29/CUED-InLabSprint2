@@ -13,7 +13,7 @@ public partial class CreateUserForm : System.Web.UI.Page
 {
     //create sql connection and links application to adventureworks database
     System.Data.SqlClient.SqlConnection DBconnection = new System.Data.SqlClient.SqlConnection();
-    String ConnectionString = "Data Source=localhost;Initial Catalog = CuedInEmployer; Integrated Security = True";
+    String ConnectionString = "server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -38,7 +38,7 @@ public partial class CreateUserForm : System.Web.UI.Page
                 //try
                 //{
                 System.Data.SqlClient.SqlConnection DBconnection = new System.Data.SqlClient.SqlConnection();
-                DBconnection.ConnectionString = @"Server=LOCALHOST;Database=CuedIn;Trusted_Connection=Yes;"; // connect to PBKDF2 database
+                DBconnection.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;"; // connect to PBKDF2 database
                 lblStatus.Text = "Database Connection Successful";
 
                 DBconnection.Open();

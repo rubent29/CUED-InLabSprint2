@@ -22,7 +22,7 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
 
     //create sql connection and links application to adventureworks database
     System.Data.SqlClient.SqlConnection DBconnection = new System.Data.SqlClient.SqlConnection();
-    String ConnectionString = "Data Source=localhost;Initial Catalog = CuedInEmployer; Integrated Security = True";
+    String ConnectionString = "server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -47,7 +47,7 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
             //try
             //{
                 System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection();
-                sc.ConnectionString = @"Server=LOCALHOST;Database=CuedIn;Trusted_Connection=Yes;";
+                sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
                 lblStatus.Text = "Database Connection Successful";
 
                 sc.Open();
