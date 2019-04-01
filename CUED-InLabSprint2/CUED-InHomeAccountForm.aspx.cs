@@ -23,7 +23,8 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //RegisterButton.Visible = false;
         //Response.Write(Request.Form.Get("text"));
         System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection();
-        sc.ConnectionString = @"Server=LOCALHOST;Database=CuedIn;Trusted_Connection=Yes;";
+        sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com
+;database=CuedIn;uid=admin;password=dukedog19;";
         sc.Open();
         System.Data.SqlClient.SqlCommand loginReader = new System.Data.SqlClient.SqlCommand();
         loginReader.Connection = sc;
