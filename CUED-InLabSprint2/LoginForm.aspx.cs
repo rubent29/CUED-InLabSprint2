@@ -7,15 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Web.ApplicationServices;
 
-//Login_v3_LoginForm form = new Login_v3_LoginForm()
 
-//public partial class Login_v3_LoginForm : System.Web.UI.Page
-//{
-//    public Login_v3_LoginForm(string text)
-//    {
-//        LoginFormText.Text = text;
-//    }
-//}
 
 public partial class Login_v3_LoginForm : System.Web.UI.Page
 {

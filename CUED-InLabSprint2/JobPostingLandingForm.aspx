@@ -49,70 +49,24 @@
     <div class="site-blocks-cover inner-page" style="background-image: url(https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/group-of-students-join-hands.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>Register Business</h1>
-          <span class="caption d-block text-white">Get In Touch</span>
-        </div>
+          <h1>Job Postings</h1>
+          <span class="caption d-block text-white">Get In Touch<br />
+            <br />
+            <asp:Button ID="CreateAnOpportunity" 
+                runat="server" 
+                class="btn btn-primary rounded text-white px-4"
+                Text="Post a New Opportunity" />
+               &nbsp;
+
+            <asp:Button ID="ViewYourPosting" 
+                runat="server" 
+                class="btn btn-primary rounded text-white px-4"
+                Text="View Your Posting" />
+            </span>
+        &nbsp;</div>
       </div>
     </div>  
 
-    <div class="py-5 bg-light">
-      <div class="container">
-        <div class="row">
-       
-          <div class="col-md-12 col-lg-8 mb-5">
-
-
- </div>
-<div class="form-group">
-  </div>
-<div class="form-group">
-  </div>
- <div class="form-group">
-  </div>
- <div class="form-group">
-  </div>	
-<%-- <p><a href="account.html" class="btn btn-primary rounded text-white px-4">Submit</a></p>--%>
-<asp:Button 
-    ID="CreateJobPosting_Button" 
-    class="btn btn-primary rounded text-white px-4"
-    runat="server" 
-    Text="Create a Job Posting" 
-    OnClick="CreateJobPosting_Button_Click" />
-
-&nbsp;    
-<asp:Button 
-    ID="ViewJobPosting_Button" 
-    class="btn btn-primary rounded text-white px-4"
-    runat="server" 
-    Text="View Your Job Postings" 
-    OnClick="ViewJobPosting_Butto_Click" />
-      
-     
-
-</form>
-              
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              
-          </div>
-
-          <div class="col-lg-4">
-            <div class="p-4 mb-3 bg-white">
-              <h3 class="h5 text-black mb-3">Contact Info</h3>
-              <p class="mb-0 font-weight-bold">Address</p>
-              <p class="mb-4">320 South Main Street Suite 2E, Harrisonburg, Virginia, USA</p>
-
-              <p class="mb-0 font-weight-bold">Phone</p>
-              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
-
-              <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">info@cued-in.com</a></p>
-
-            </div>
-            
-            
-          </div>
-        </div>
-      </div>
     </div>
 
     
@@ -124,8 +78,6 @@
           <div class="col-md-4">
             <h3 class="footer-heading mb-4 text-white">About</h3>
 			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
-<p>Email: info@cued-in.com</p>
-            <p><a href="event.html" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
@@ -139,13 +91,6 @@
 
                         <li class="has-children">
                         <a href="CUED-InHomeAccountForm.aspx">Account     </a>
-                        <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
-                            <li><a href="MasterPageForm.aspx">Log Out</a></li>
-                        </ul>
                          <li><a href="#"></a></li>
                   </ul>
 				  

@@ -19,7 +19,7 @@ public partial class JobPostingLandingForm : System.Web.UI.Page
 
     }
 
-    protected void ViewJobPosting_Butto_Click(object sender, EventArgs e)
+    protected void ViewJobPosting_Button_Click(object sender, EventArgs e)
     {
 
     }

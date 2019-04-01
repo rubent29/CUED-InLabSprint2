@@ -78,7 +78,10 @@
                 <span class="caption d-block text-black"><strong>Join the Cued-In</strong> <strong>Community.</strong></span>
 
                 <strong>
-                <asp:Label ID="Label1" runat="server" CssClass="auto-style1" Text="Label"></asp:Label>
+                <asp:Label ID="Label1" 
+                    runat="server" 
+                    CssClass="auto-style1" 
+                    Text="Label"></asp:Label>
                 </strong>
             </div>
           </div>
