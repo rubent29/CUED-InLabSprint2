@@ -55,7 +55,7 @@
             <asp:Button ID="CreateAnOpportunity" 
                 runat="server" 
                 class="btn btn-primary rounded text-white px-4"
-                Text="Post a New Opportunity" />
+                Text="Post a New Opportunity" OnClick="CreateAnOpportunity_Click" />
                &nbsp;
 
             <asp:Button ID="ViewYourPosting" 
@@ -67,7 +67,7 @@
       </div>
     </div>  
 
-    </div>
+
 
     
 

@@ -72,4 +72,6 @@ public partial class JobPostingForm : System.Web.UI.Page
         insertJobPosting.ExecuteNonQuery();
         DBconnection.Close();
     }
+
+
 }
