@@ -1,9 +1,50 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="JobPostingLandingForm.aspx.cs" Inherits="JobPostingLandingForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ViewPostingForm.aspx.cs" Inherits="ViewPostingForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <div class="site-navbar-wrap js-site-navbar bg-dark">
+        
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+    
+    
+    
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+    
+     
+    <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
         <div class="site-navbar bg-light">
@@ -17,8 +58,8 @@
                   <div class="container">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
-                    <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li class="has-children">
+                        <ul class="site-menu js-clone-nav d-none d-lg-block">
+
                         <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
 						<li><a href="CUED-InHomeAccountForm.aspx">School Demographics</a></li>
                         <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
@@ -35,7 +76,6 @@
                         </ul>
                          <li><a href="#"></a></li>
 					  </ul> 
-
                   </div>
                 </nav>
               </div>
@@ -44,30 +84,64 @@
         </div>
       </div>
     </div>
-                 
+  
  
-    <div class="site-blocks-cover inner-page" style="background-image: url(https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/group-of-students-join-hands.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page" style="background-image: url(imagesForForms/teacher_help.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>Job Postings</h1>
-          <span class="caption d-block text-white">Get In Touch<br />
-            <br />
-            <asp:Button ID="CreateAnOpportunity" 
-                runat="server" 
-                class="btn btn-primary rounded text-white px-4"
-                Text="Post a New Opportunity" OnClick="CreateAnOpportunity_Click" />
-               &nbsp;
-
-            <asp:Button ID="ViewYourPosting" 
-                runat="server" 
-                class="btn btn-primary rounded text-white px-4"
-                Text="View Your Posting" />
-            </span>
-        &nbsp;</div>
+          <h1>Post an Opportunity</h1>
+        </div>
       </div>
     </div>  
 
+    <div class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+       
+          <div class="col-md-12 col-lg-8 mb-5">
 
+<form>
+<div class="form-group">
+    </div>				  
+<div class="form-group">
+    </div>
+<div class="form-group">
+    </div>
+<div class="form-group">
+    </div>
+<div class="form-group">
+     </div>
+<div class="form-group">
+     </div>
+<div class="form-group">
+    </div>
+<div class="form-group">
+    </div>	
+
+
+</form>
+
+          </div>
+
+          <div class="col-lg-4">
+            <div class="p-4 mb-3 bg-white">
+              <h3 class="h5 text-black mb-3">Contact Info</h3>
+              <p class="mb-0 font-weight-bold">Address</p>
+              <p class="mb-4">320 South Main Street Suite 2E, Harrisonburg, Virginia, USA</p>
+
+              <p class="mb-0 font-weight-bold">Phone</p>
+              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+
+              <p class="mb-0 font-weight-bold">Email Address</p>
+              <p class="mb-0"><a href="#">info@cued-in.com</a></p>
+
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
 
     
 
@@ -78,12 +152,14 @@
           <div class="col-md-4">
             <h3 class="footer-heading mb-4 text-white">About</h3>
 			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
+<p>Email: info@cued-in.com</p>
+            <p><a href="CUED-InHomeAccountForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-               <ul class="list-unstyled">
+             <ul class="list-unstyled">
 					 <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
 						<li><a href="CUED-InHomeAccountForm.aspx">School Demographics</a></li>
                         <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
@@ -91,6 +167,9 @@
 
                         <li class="has-children">
                         <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <ul class="dropdown arrow-top">         
+                            <li><a href="MasterPageForm.aspx">Log Out</a></li>
+                        </ul>
                          <li><a href="#"></a></li>
                   </ul>
 				  
@@ -123,7 +202,7 @@
         </div>
       </div>
     </footer>
-
+  </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -139,8 +218,10 @@
 
   <script src="js/main.js"></script>
 
+  </body>
+
+</html>
+
 
 </asp:Content>
-
-
 

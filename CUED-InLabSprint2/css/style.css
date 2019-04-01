@@ -88,7 +88,7 @@ a {
 
 	margin-top: 10px;
   position: relative;
-  top: -20px; }
+  top: -3px; }
   .btn:hover, .btn:active, .btn:focus {
     outline: none;
     -webkit-box-shadow: none !important;
@@ -121,6 +121,8 @@ a {
 	color: #fff;
 	background-color: #102b3f;
 	border-color: #102b3f;
+    left: 0px;
+    height: 47px;
 }
 .btn-primary{
 	color: #fff;
@@ -615,7 +617,7 @@ a {
 
 .text-white{
 	color: lightgray;
-    left: 0px;
+    left: -66px;
 }
 .text-white-opacity-5 {
   color: rgba(255, 255, 255, 0.5); }

@@ -22,6 +22,7 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //Login.Visible = false;
         //RegisterButton.Visible = false;
         //Response.Write(Request.Form.Get("text"));
+
         System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection();
         sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com
 ;database=CuedIn;uid=admin;password=dukedog19;";
@@ -39,10 +40,6 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
             string name = "Welcome, " + reader1["FirstName"].ToString() + " " + reader1["LastName"].ToString();
             Label1.Text = name;
         }
-
-
-
-
 
     }
 

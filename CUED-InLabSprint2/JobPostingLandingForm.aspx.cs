@@ -12,17 +12,13 @@ public partial class JobPostingLandingForm : System.Web.UI.Page
 
     }
 
-
-
-    protected void CreateJobPosting_Button_Click(object sender, EventArgs e)
+    protected void ViewJobPosting_Button_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("ViewPostingForm.aspx", false);
     }
 
-    protected void ViewJobPosting_Butto_Click(object sender, EventArgs e)
+    protected void CreateAnOpportunity_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("JobPostingForm.aspx", false);
     }
-
-
 }
