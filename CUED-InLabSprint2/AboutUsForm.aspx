@@ -107,34 +107,34 @@
       </div>
     </div>
 
-    <div class="site-section bg-image" style="background-image: url('images/bg_2.jpg'); background-attachment: fixed;">
+    <div class="site-section bg-image" <%--style="background-image: url('images/bg_2.jpg'); --%>background-attachment: fixed;">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-12">
-            <h2 class="site-section-heading text-center text-white">Our Team</h2>
+            <h2 class="site-section-heading text-center text-blue">Our Team</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 text-center mb-5">
             <div class="p-3">
               <img src="https://d1r2jio0ygi9fo.cloudfront.net/wp-content/uploads/2017/04/05115043/seth-498x476.jpg"" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
-              <h2 class="h5 mb-4 text-white">SETH MARSH FOUNDER/CEO</h2>
-              <p class="text-white mb-5 lead">&ldquo;Seth has a degree in Business Administration. He started working for a Virginia public university in January 2014. While working in the business office, he discovered that the majority of students and parents he talked to were remarkably uninformed about their career options and financial/debt issues related to their education. In June 2015 he went to pursue his vision for a better career planning and community focused tool for high school students before they graduate. CUED-In was born to reach this vision.
+              <h2 class="h5 mb-4 text-blue">SETH MARSH FOUNDER/CEO</h2>
+              <p class="text-blue mb-5 lead">&ldquo;Seth has a degree in Business Administration. He started working for a Virginia public university in January 2014. While working in the business office, he discovered that the majority of students and parents he talked to were remarkably uninformed about their career options and financial/debt issues related to their education. In June 2015 he went to pursue his vision for a better career planning and community focused tool for high school students before they graduate. CUED-In was born to reach this vision.
                 &rdquo;</p>
             </div>
           </div>
           <div class="col-md-6 text-center mb-5">
             <div class="p-3">
               <img src="https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/emily1-498x476.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
-              <h2 class="h5 mb-4 text-white">EMILY MARSH, BUSINESS DEVELOPMENT</h2>
-              <p class="text-white mb-5 lead">&ldquo;Emily graduated Summa Cum Laude from Covenant College with a B.A. in Psychology. She earned her realtor’s license and worked as a marketing assistant and administrative aid for The Harrisonburg Homes Team. She now teaches pilates and assists the CUED-In team when needed.&rdquo;</p>
+              <h2 class="h5 mb-4 text-blue">EMILY MARSH, BUSINESS DEVELOPMENT</h2>
+              <p class="text-blue mb-5 lead">&ldquo;Emily graduated Summa Cum Laude from Covenant College with a B.A. in Psychology. She earned her realtor’s license and worked as a marketing assistant and administrative aid for The Harrisonburg Homes Team. She now teaches pilates and assists the CUED-In team when needed.&rdquo;</p>
             </div>
           </div>
           <div class="col-md-6 text-center mb-5">
             <div class="p-3">
               <img src="https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/john1-498x476.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
-              <h2 class="h5 mb-4 text-white">JOHN BARLOW, ED.D. , COO</h2>
-              <p class="text-white mb-5 lead">&ldquo;There are several factors that have led John Barlow to CUED-In. His own work history which includes manufacturing, warehousing, construction, and education demonstrated to him a community’s need for a diverse, well equipped workforce. As a parent and educator, he has counseled young people on career opportunities. He believes that communities will thrive when there is a stable, well-trained workforce from the skilled trades to the office.&rdquo;</p>
+              <h2 class="h5 mb-4 text-blue">JOHN BARLOW, ED.D. , COO</h2>
+              <p class="text-blue mb-5 lead">&ldquo;There are several factors that have led John Barlow to CUED-In. His own work history which includes manufacturing, warehousing, construction, and education demonstrated to him a community’s need for a diverse, well equipped workforce. As a parent and educator, he has counseled young people on career opportunities. He believes that communities will thrive when there is a stable, well-trained workforce from the skilled trades to the office.&rdquo;</p>
             </div>
           </div>
 
@@ -143,33 +143,33 @@
     </div>
     
       
-    <div class="site-section bg-image" style="background-image: url('images/bg_2.jpg'); background-attachment: fixed;">
+    <div class="site-section bg-image" <%--style="background-image: url('images/bg_2.jpg');--%> background-attachment: fixed;">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-12">
-            <h2 class="site-section-heading text-center text-white">Our Board of Directors</h2>
+            <h2 class="site-section-heading text-center text-blue">Our Board of Directors</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 text-center mb-5">
             <div class="p-3">
               <img src="https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/marshall-price2-498x476.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
-              <h2 class="h5 mb-4 text-white">MARSHALL PRICE</h2>
-              <p class="text-white mb-5 lead">&ldquo; Marshall Price recently retired as director of Massanutten Technical Center, a regional vocational center for Harrisonburg and Rockingham County. During his sixteen year tenure at MTC, high school enrollment at the center increased from 250 students to over 1000 students, the number of programs expanded from 15 to 21, and MTC became an award-winning regional vocational center for the State of Virginia. Prior to his time at MTC, Mr. Price served as an administrator for the Rockingham County Public Schools for 27 years. He has served on numerous boards including the Rockingham Memorial Hospital Foundation, Friendship Industries Executive Board, Explore More Children’s Museum, and he was appointed by the governor of Virginia to the Virginia State Board of Education for Corrections. He is a graduate of James Madison University where he received his Bachelors and Masters Degrees. He is a lifelong resident of Rockingham County. He and his wife, Gloria, have three grown children and four grandchildren.&rdquo;</p>
+              <h2 class="h5 mb-4 text-blue">MARSHALL PRICE</h2>
+              <p class="text-blue mb-5 lead">&ldquo; Marshall Price recently retired as director of Massanutten Technical Center, a regional vocational center for Harrisonburg and Rockingham County. During his sixteen year tenure at MTC, high school enrollment at the center increased from 250 students to over 1000 students, the number of programs expanded from 15 to 21, and MTC became an award-winning regional vocational center for the State of Virginia. Prior to his time at MTC, Mr. Price served as an administrator for the Rockingham County Public Schools for 27 years. He has served on numerous boards including the Rockingham Memorial Hospital Foundation, Friendship Industries Executive Board, Explore More Children’s Museum, and he was appointed by the governor of Virginia to the Virginia State Board of Education for Corrections. He is a graduate of James Madison University where he received his Bachelors and Masters Degrees. He is a lifelong resident of Rockingham County. He and his wife, Gloria, have three grown children and four grandchildren.&rdquo;</p>
             </div>
           </div>
           <div class="col-md-6 text-center mb-5">
             <div class="p-3">
               <img src="https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/Mark-Graham-498x476.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
-              <h2 class="h5 mb-4 text-white">MARK GRAHAM</h2>
-              <p class="text-white mb-5 lead">&ldquo;Mark has been a practicing CPA since 1980 with extensive experience in business and personal taxation, senior management consulting, project and business valuations, litigation support, and not-for-profit consulting. He is the managing and senior partner of Graham and Poirot, CPAs, LLC. He also serves as a full time lecturer at Department of Finance and Business Law at James Madison University teaching seniors. He has prior eight year experience as CFO and corporate treasurer of a three campus continuing care retirement community. Mark has been involved in the community in multiple ways. He is the Eagle Scout  and current Scoutmaster (28-year tenure) BSA Troop 72, Harrisonburg, Virginia. He also servers on the Council of the Boy Scouts of America. He is married to former Martha Kent Bell, novelist, for 41 years with four grown children and six grandchildren.&rdquo;</p>
+              <h2 class="h5 mb-4 text-blue">MARK GRAHAM</h2>
+              <p class="text-blue mb-5 lead">&ldquo;Mark has been a practicing CPA since 1980 with extensive experience in business and personal taxation, senior management consulting, project and business valuations, litigation support, and not-for-profit consulting. He is the managing and senior partner of Graham and Poirot, CPAs, LLC. He also serves as a full time lecturer at Department of Finance and Business Law at James Madison University teaching seniors. He has prior eight year experience as CFO and corporate treasurer of a three campus continuing care retirement community. Mark has been involved in the community in multiple ways. He is the Eagle Scout  and current Scoutmaster (28-year tenure) BSA Troop 72, Harrisonburg, Virginia. He also servers on the Council of the Boy Scouts of America. He is married to former Martha Kent Bell, novelist, for 41 years with four grown children and six grandchildren.&rdquo;</p>
             </div>
           </div>
           <div class="col-md-6 text-center mb-5">
             <div class="p-3">
               <img src="https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/john1-498x476.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
-              <h2 class="h5 mb-4 text-white">JOHN BARLOW, ED.D. , COO</h2>
-              <p class="text-white mb-5 lead">&ldquo;There are several factors that have led John Barlow to CUED-In. His own work history which includes manufacturing, warehousing, construction, and education demonstrated to him a community’s need for a diverse, well equipped workforce. As a parent and educator, he has counseled young people on career opportunities. He believes that communities will thrive when there is a stable, well-trained workforce from the skilled trades to the office.&rdquo;</p>
+              <h2 class="h5 mb-4 text-blue">JOHN BARLOW, ED.D. , COO</h2>
+              <p class="text-blue mb-5 lead">&ldquo;There are several factors that have led John Barlow to CUED-In. His own work history which includes manufacturing, warehousing, construction, and education demonstrated to him a community’s need for a diverse, well equipped workforce. As a parent and educator, he has counseled young people on career opportunities. He believes that communities will thrive when there is a stable, well-trained workforce from the skilled trades to the office.&rdquo;</p>
             </div>
           </div>
 
