@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="JobPostingForm.aspx.cs" Inherits="JobPostingForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ViewPostingForm.aspx.cs" Inherits="ViewPostingForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
+        
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -100,115 +100,25 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
 
-			  <form>
-  <div class="form-group">
-  </div>				  
-  <div class="form-group">
-    <label for="JobTitle">Job Title</label>
-      <br />
-    <asp:TextBox 
-        ID="JobTitle" 
-        runat="server"
-        placeholder="Job Title"
-        Width="727px">
-    </asp:TextBox>
-
-  </div>
+<form>
 <div class="form-group">
-    <label for="JobType">Job Type</label>
-    <br />
-                <asp:DropDownList ID="JobType" runat="server">
-                    <asp:ListItem>Part-Time</asp:ListItem>
-                    <asp:ListItem>Full-Time</asp:ListItem>
-                    <asp:ListItem>Internship</asp:ListItem>
-                    <asp:ListItem>Seasonal</asp:ListItem>
-                </asp:DropDownList>
-
-  </div>
+    </div>				  
 <div class="form-group">
-    <label for="CompanyName">Company Name</label>
-    <br />
-    <asp:TextBox 
-        ID="CompanyName" 
-        runat="server"
-        placeholder="Company Name"
-        Width="727px">
-    </asp:TextBox>
-
- </div>	
-	<div class="form-group">
-    <label for="City">City</label>
-        <br />
-    <asp:TextBox 
-        ID="City" 
-        runat="server"
-        placeholder="City"
-        Width="727px">
-    </asp:TextBox>
-
     </div>
-	<div class="form-group">
-    <label for="State">State</label>
-        <br />
-    <asp:TextBox 
-        ID="State" 
-        runat="server"
-        placeholder="State"
-        Width="727px">
-    </asp:TextBox>
-
-  </div>
-	<div class="form-group">
-    <label for="PayStatus">PayStatus</label>
-        <br />
-                <asp:DropDownList ID="PayStatus" runat="server">
-                    <asp:ListItem>Unpaid</asp:ListItem>
-                    <asp:ListItem>Paid</asp:ListItem>
-                </asp:DropDownList>
-
-  </div>  
 <div class="form-group">
-    <label for="JobDescription">Job Description</label>
-        <br />
-    <asp:TextBox 
-        ID="JobDescription" 
-        runat="server"
-        placeholder="Brief Job Description"
-        Width="727px">
-    </asp:TextBox>
-
-        </div>
-	<div class="form-group">
-    <label for="Deadline">Deadline</label>
-        <br />
-    <asp:TextBox 
-        ID="Deadline" 
-        runat="server"
-        placeholder="MM/DD/YYYY"
-        Width="727px">
-    </asp:TextBox>
-          </div>
-
+    </div>
 <div class="form-group">
-  </div>
+    </div>
 <div class="form-group">
-  </div>
- <div class="form-group">
-  </div>
- <div class="form-group">
-  </div>	
+     </div>
+<div class="form-group">
+     </div>
+<div class="form-group">
+    </div>
+<div class="form-group">
+    </div>	
 
 
-<asp:Button 
-    ID="Insert_Button" 
-    class="btn btn-primary rounded text-white px-4"
-    runat="server" Text="Submit" OnClick="Insert_Button_Click" />
-
-&nbsp;    
-<asp:Button 
-    ID="Populate" 
-    class="btn btn-primary rounded text-white px-4"
-    runat="server" Text="Populate" OnClick="Populate_Button_Click" />
 </form>
 
           </div>
@@ -312,7 +222,6 @@
 
 </html>
 
+
 </asp:Content>
-
-
 

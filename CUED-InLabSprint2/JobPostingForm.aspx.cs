@@ -70,6 +70,8 @@ public partial class JobPostingForm : System.Web.UI.Page
 
 
         insertJobPosting.ExecuteNonQuery();
+        Response.Redirect("ViewPostingForm.aspx", false);
+
         DBconnection.Close();
     }
 
