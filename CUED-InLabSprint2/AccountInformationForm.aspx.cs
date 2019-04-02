@@ -9,6 +9,11 @@ public partial class AccountInformation : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //if (Session["companyEmail"] == null)
+        //{
+        //    Response.Redirect("MasterPageForm.aspx");
+        //}
     }
+
+
 }

@@ -10,8 +10,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <body>
-  
+
   <div class="site-wrap">
 
 
@@ -50,7 +49,7 @@
                         <li class="has-children">
                         <a href="CUED-InHomeAccountForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
+                          <li><a href="AccountInformationForm.aspx">Account Information</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
                           <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
                           <li><a href="SubscriptionForm.aspx">Subscription</a></li>
