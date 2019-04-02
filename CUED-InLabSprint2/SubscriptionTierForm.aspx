@@ -117,13 +117,14 @@
                 <li>Monthly Backups</li>
                 <li>Palo Protection</li>
               </ul>
+                <br />
               <div class="table_btn">
                     <asp:Button 
                         ID="FreeTierButton" 
-                        Class="btn"
+                        class="btn btn-primary rounded text-white px-4"
                         runat="server" 
                         Text="Try Now" />
-               <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Try Now</a>
+<%--                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Try Now</a>--%>
               </div>
             </div>
           </div>
@@ -141,8 +142,15 @@
                 <li>Monthly Backups</li>
                 <li>Palo Protection</li>
               </ul>
+          
+                <br />
               <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                <asp:Button 
+                        ID="PremiumTierButton"  
+                        runat="server"
+                        class="btn btn-primary rounded text-white px-4"
+                        Text="Buy Now" OnClick="PremiumTierButton_Click" />
+<%--                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>--%>
               </div>
             </div>
           </div>
