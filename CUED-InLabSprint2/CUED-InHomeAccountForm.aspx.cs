@@ -20,7 +20,7 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //newCmd.CommandText = "Select Username from Account where username = '" + (string)(Session)["username"] + "'";
         //DBconnection.Close();
         //Label1.Text = "Welcome" + (string)(Session)["username"];
-        Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();
+      //  Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();
         //if (Session["Username"] != null) // || Session["LastName"] != null)
         //{
         //    Label1.Text = "Login Successful. Welcome, " + Session["username"].ToString(); //+ " " + Session["LastName"].ToString();
