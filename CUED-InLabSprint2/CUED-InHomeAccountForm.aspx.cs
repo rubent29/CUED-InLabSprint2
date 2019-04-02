@@ -6,11 +6,16 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Web.Security;
 
 public partial class CUED_InHomeForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if ((HttpContext.Current.Request.UrlReferrer == null))
+        {
+            Response.Redirect("LoginForm.aspx");
+        }
         //System.Data.SqlClient.SqlConnection DBconnection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString;"].ConnectionString);
         //String ConnectionString = "server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
 
@@ -20,7 +25,28 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //newCmd.CommandText = "Select Username from Account where username = '" + (string)(Session)["username"] + "'";
         //DBconnection.Close();
         //Label1.Text = "Welcome" + (string)(Session)["username"];
-        Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();
+        if (!IsPostBack)
+        {
+            Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();
+        }
+        else if (IsPostBack)
+        {
+            Label1.Visible = false;
+        }
+
+        if (Session["Username"] == null)
+        {
+            Response.Redirect("LoginForm.aspx");
+        }
+
+
+
+        //if ((HttpContext.Current.Request.UrlReferrer == null))
+        //{
+        //    Response.Redirect("LoginForm.aspx");
+        //}
+
+
         //if (Session["Username"] != null) // || Session["LastName"] != null)
         //{
         //    Label1.Text = "Login Successful. Welcome, " + Session["username"].ToString(); //+ " " + Session["LastName"].ToString();
@@ -61,5 +87,22 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
     protected void login_Click(object sender, EventArgs e)
     {
         Response.Redirect("LoginForm.aspx");
+    }
+
+    //protected void Page_Unload(object sender, EventArgs e)
+    //{
+    //    Session.Clear();
+    //    HttpContext.Current.Response.Redirect("MasterPageForm.aspx");
+    //}
+    public void LoginLink_OnClick(object sender, EventArgs args)
+    {
+        FormsAuthentication.SignOut();
+        FormsAuthentication.RedirectToLoginPage();
+    }
+
+    protected void Page_Unload(object sender, EventArgs e)
+    {
+        Session.Abandon();
+        //Response.Cookies.Add(new HttpCookie(".ASPXFORMSAUTH", ""));
     }
 }
