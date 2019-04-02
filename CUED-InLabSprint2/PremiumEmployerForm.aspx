@@ -184,6 +184,7 @@
  <div class="form-group">
   </div>
  <div class="form-group">
+
      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="CPDL3NBPN92U6">
@@ -196,7 +197,7 @@
   </div>
                   <div class="form-group">
   </div>
-
+    <br />
 <asp:Button 
     ID="Insert_Button" 
     class="btn btn-primary rounded text-white px-4"
