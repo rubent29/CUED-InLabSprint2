@@ -1,14 +1,31 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SubscriptionForm.aspx.cs" Inherits="SubscriptionForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SubscriptionTierForm.aspx.cs" Inherits="css_SubscriptionTierForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-   
+
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="cssSubscription/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: eStartup
+    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= --> 
+
+    
 <%--  <body style="background-image: url('images/bg.jpg');">--%>
   
   <div class="site-wrap">
-
-    
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -18,9 +35,7 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
-    
-    
-     
+
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -62,63 +77,78 @@
       </div>
     </div>
   
- 
+<%-- 
     <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_b1_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>Subscription Information</h1>
+          <h1>Subscription Tiers</h1>
           <span class="caption d-block text-white"></span>
         </div>
       </div>
-    </div>  
+    </div>  --%>
 
     <div class="py-5 bg-light">
-      <div class="container">
-        <div class="row">
+<%--      <div class="container">--%>
+<%--        <div class="row">--%>
        
-          <div class="col-md-12 col-lg-8 mb-5">
-          
-<table style="width:100%">
-  <tr>
-    <th>Subscription</th>
-    <th>Status</th> 
-    <th>Next Payment</th>
-	<th>Total</th>  
-  </tr>
-  <tr>
-    <td>#2183</td>
-    <td>Active</td> 
-    <td>March 12, 2021</td>
-	<td>$0.00</td>  
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>March 12, 2021</td>
-  </tr>
-</table>
+<%--          <div class="col-md-12 col-lg-8 mb-5">--%>
+    <section id="pricing" class="padd-section text-center wow fadeInUp">
 
-          </div>
+    <div class="container">
+      <div class="section-title text-center">
 
-          <div class="col-lg-4">
-            <div class="p-4 mb-3 bg-white">
-              <h3 class="h5 text-black mb-3">Contact Info</h3>
-              <p class="mb-0 font-weight-bold">Address</p>
-              <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
-
-              <p class="mb-0 font-weight-bold">Phone</p>
-              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
-
-              <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
-
-            </div>
-            
-            
-          </div>
-        </div>
       </div>
     </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-6">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>Free Tier</h4>
+              <h2>$0.00/Mo.</h2>
+              <ul class="list-unstyled">
+                <li><b>4 GB</b> Ram</li>
+                <li><b>7/24</b> Tech Support</li>
+                <li><b>40 GB</b> SSD Cloud Storage</li>
+                <li>Monthly Backups</li>
+                <li>Palo Protection</li>
+              </ul>
+              <div class="table_btn">
+                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>Paid Tier</h4>
+              <h2>$14.99/Mo.</h2>
+              <ul class="list-unstyled">
+                <li><b>4 GB</b> Ram</li>
+                <li><b>7/24</b> Tech Support</li>
+                <li><b>40 GB</b> SSD Cloud Storage</li>
+                <li>Monthly Backups</li>
+                <li>Palo Protection</li>
+              </ul>
+              <div class="table_btn">
+                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+ 
+      </div>
+    </div>
+  </section>
+
+        </div>
+      </div>
+<%--    </div>--%>
 
     
 
@@ -200,7 +230,6 @@
 
   <script src="js/main.js"></script>
 
-  </body>
 
 
 </asp:Content>
