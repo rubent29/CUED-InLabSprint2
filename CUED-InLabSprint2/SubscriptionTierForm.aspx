@@ -149,7 +149,7 @@
                         ID="PremiumTierButton"  
                         runat="server"
                         class="btn btn-primary rounded text-white px-4"
-                        Text="Buy Now" OnClick="PremiumTierButton_Click" />
+                        Text="Subscribe Now" OnClick="PremiumTierButton_Click" />
 <%--                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>--%>
               </div>
             </div>
