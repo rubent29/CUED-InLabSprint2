@@ -51,40 +51,96 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                 sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
                 lblStatus.Text = "Database Connection Successful";
 
-                sc.Open();
-            string sql = "Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'"; ///////
-           // SqlCommand cmd = sc.CreateCommand();
-           // cmd.CommandType = CommandType.Text;
-           SqlCommand cmd = new SqlCommand(sql, sc);
-            string output = cmd.ExecuteScalar().ToString();
+                //sc.Open();
 
-            if (output == "1")
+
+           
+            SqlCommand cmd = new SqlCommand("Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'", sc);
+            cmd.Parameters.AddWithValue("@username", Username.Text);
+            cmd.Parameters.AddWithValue("@password", Password.Text);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            sc.Open();
+            int i = cmd.ExecuteNonQuery();
+            sc.Close();
+            if (dt.Rows.Count > 0)
             {
+                sc.Open();
                 Session["username"] = Username.Text;
+                cmd.CommandText = "Select FirstName from Employer where CompanyEmail = @Username";
+                string fname = (string)cmd.ExecuteScalar();
+                HttpContext.Current.Session["FirstName"] = fname;
+                sc.Close();
+                sc.Open();
+                cmd.CommandText = "Select LastName from Employer where CompanyEmail = @Username";
+                string lname = (string)cmd.ExecuteScalar();
+                Session["LastName"] = lname;
+                sc.Close();
+                //Response.Redirect("Redirectform.aspx");
+                //Session.RemoveAll();
             }
-              
+            sc.Open();
 
-           // //if(cmd.ExecuteScalar().ToString() == "1")
-           // //{
-           // //    Session["Username"] = Username.Text;
-           // //    Response.Redirect("CUED-InHomeAccountForm.aspx");
-           // //}
-           // cmd.CommandText = "Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'";
-           // cmd.ExecuteNonQuery();
-           // SqlDataAdapter da = new SqlDataAdapter(cmd);
-           // //da.SelectCommand = cmd;
-           // DataTable Account = new DataTable();
-           //// DataSet ds = new DataSet();
-           // da.Fill(Account);
-           // foreach(DataRow dr in  Account.Rows)
-           // {
-           //     Session["username"] = dr["username"].ToString();
-           // }
+
+
+
+
+
+            //string sql = "Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'"; ///////
+            //DBconnection.Open();
+            ////SqlDataAdapter sda = new SqlDataAdapter("Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'", sc);
+            //DataTable dt = new DataTable();
+            ////DataSet ds = new DataSet();
+            ////sda.Fill(dt);
+            //SqlCommand cmd = new SqlCommand(sql, DBconnection);
+            //cmd.Parameters.AddWithValue("@Username", Username.Text);
+            //cmd.Parameters.AddWithValue("@Password", Password.Text);
+            //int i;
+            //i = Convert.ToInt16(cmd.ExecuteScalar());
+            //if (i == 1)
+            //{
+            //    Session["username"] = Username.Text;
+            //}
+            //DBconnection.Close();
+            //if(dt.Rows.Count.ToString() == "1")
+            //if (ds.Tables(0).Rows.Count > 0)
+            //{
+            //    Session["username"] = Username.Text;
+            //    Session["username"] = ds.Tables(0).Rows(0)(0).ToString();
+            //}
+            // SqlCommand cmd = sc.CreateCommand();
+            // cmd.CommandType = CommandType.Text;
+            //SqlCommand cmd = new SqlCommand(sql, sc);
+            //string output = cmd.ExecuteScalar().ToString();
+
+            //if (output == "1")
+            //{
+            //    Session["username"] = Username.Text;
+            //}
+
+
+            // //if(cmd.ExecuteScalar().ToString() == "1")
+            // //{
+            // //    Session["Username"] = Username.Text;
+            // //    Response.Redirect("CUED-InHomeAccountForm.aspx");
+            // //}
+            // cmd.CommandText = "Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'";
+            // cmd.ExecuteNonQuery();
+            // SqlDataAdapter da = new SqlDataAdapter(cmd);
+            // //da.SelectCommand = cmd;
+            // DataTable Account = new DataTable();
+            //// DataSet ds = new DataSet();
+            // da.Fill(Account);
+            // foreach(DataRow dr in  Account.Rows)
+            // {
+            //     Session["username"] = dr["username"].ToString();
+            // }
             //String username;
             //String password;
             //username = dt.Tables[0].Rows[0]["username"].ToString();
             //password = dt.Tables[0].Rows[0]["password"].ToString();
-            //if(username == Username.Text && password == Password.Text)
+            //if (username == Username.Text && password == Password.Text)
             //{
             //    Session["username"] = username;
             //    Response.Redirect("CUED-InHomeAccountForm.aspx");
@@ -109,7 +165,18 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                         //Session["LastName"] = LastName.Text;
                         lblStatus.Text = "Success!";
                             Response.Redirect("CUED-InHomeAccountForm.aspx");
-                            //RegisterButton.Visible = false;
+                        //RegisterButton.Visible = false;
+
+
+
+
+                        System.Data.SqlClient.SqlCommand getUsername = new System.Data.SqlClient.SqlCommand();
+                        getUsername.Connection = sc;
+                        sc.Open();
+                        getUsername.CommandText = "Select Username from Account where Username = @Username";
+                        getUsername.Parameters.AddWithValue("@Username", Username.Text);
+                        Session["Username"] = getUsername.ExecuteScalar();
+                        sc.Close();
                         }
                         else
                             lblStatus.Text = "Password is wrong.";
