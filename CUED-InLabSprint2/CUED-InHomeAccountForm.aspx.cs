@@ -5,27 +5,27 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class CUED_InHomeForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if (Session["FirstName"] != null || Session["LastName"] != null)
-        //{
-        //    Label1.Text = "Login Successful. Welcome, " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();
-        //}
-        //else
-        //{
-        //    Label1.Text = "Login unsuccessful";
-        //}
+        if (Session["Username"] != null) // || Session["LastName"] != null)
+        {
+            Label1.Text = "Login Successful. Welcome, " + Session["username"].ToString() + " " + Session["LastName"].ToString();
+        }
+        else
+        {
+            Label1.Text = "Login unsuccessful";
+        }
 
         //Login.Visible = false;
         //RegisterButton.Visible = false;
         //Response.Write(Request.Form.Get("text"));
 
         System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection();
-        sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com
-;database=CuedIn;uid=admin;password=dukedog19;";
+        sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
         sc.Open();
         System.Data.SqlClient.SqlCommand loginReader = new System.Data.SqlClient.SqlCommand();
         loginReader.Connection = sc;

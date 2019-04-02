@@ -38,9 +38,7 @@
 
 					<span class="login100-form-title p-b-34 p-t-27">
 						Cued-In
-					</span>
-
-					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+					</span><div class="wrap-input100 validate-input" data-validate = "Enter username">
                         <asp:TextBox 
                             ID="Username" 
                             class="input100"
@@ -53,9 +51,11 @@
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
                         <asp:TextBox 
-                            ID="Password" 
+                            ID="Password"
+                            Type ="password"
                             class="input100"
                             placeholder="Password"
+                            PasswordChar="*"
                             runat="server">
                         </asp:TextBox>
 <%--						<input class="input100" type="password" name="pass" placeholder="Password">--%>

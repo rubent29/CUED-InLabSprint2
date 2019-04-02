@@ -4,9 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using System.Data.SqlClient;
 using System.Web.ApplicationServices;
-
+using System.Configuration;
 
 
 public partial class Login_v3_LoginForm : System.Web.UI.Page
@@ -51,7 +52,44 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                 lblStatus.Text = "Database Connection Successful";
 
                 sc.Open();
-                System.Data.SqlClient.SqlCommand findPass = new System.Data.SqlClient.SqlCommand();
+            string sql = "Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'"; ///////
+           // SqlCommand cmd = sc.CreateCommand();
+           // cmd.CommandType = CommandType.Text;
+           SqlCommand cmd = new SqlCommand(sql, sc);
+            string output = cmd.ExecuteScalar().ToString();
+
+            if (output == "1")
+            {
+                Session["username"] = Username.Text;
+            }
+              
+
+           // //if(cmd.ExecuteScalar().ToString() == "1")
+           // //{
+           // //    Session["Username"] = Username.Text;
+           // //    Response.Redirect("CUED-InHomeAccountForm.aspx");
+           // //}
+           // cmd.CommandText = "Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'";
+           // cmd.ExecuteNonQuery();
+           // SqlDataAdapter da = new SqlDataAdapter(cmd);
+           // //da.SelectCommand = cmd;
+           // DataTable Account = new DataTable();
+           //// DataSet ds = new DataSet();
+           // da.Fill(Account);
+           // foreach(DataRow dr in  Account.Rows)
+           // {
+           //     Session["username"] = dr["username"].ToString();
+           // }
+            //String username;
+            //String password;
+            //username = dt.Tables[0].Rows[0]["username"].ToString();
+            //password = dt.Tables[0].Rows[0]["password"].ToString();
+            //if(username == Username.Text && password == Password.Text)
+            //{
+            //    Session["username"] = username;
+            //    Response.Redirect("CUED-InHomeAccountForm.aspx");
+            //}
+            System.Data.SqlClient.SqlCommand findPass = new System.Data.SqlClient.SqlCommand();
                 findPass.Connection = sc;
                 // SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
                 findPass.CommandText = "select Password from Account where Username = @Username";
@@ -92,9 +130,9 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
             //SqlDataReader reader1 = loginReader.ExecuteReader();
             //// SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
             ////loginReader.CommandText = "Select FirstName, LastName, CompanyEmail from Employer;";
-            //while(reader1.Read())
+            //while (reader1.Read())
             //{
-               
+
             //    string name = reader1["FirstName"].ToString() + " " + reader1["LastName"].ToString() + " " + reader1["CompanyEmail"].ToString();
             //    lblStatus.Text = name;
             //}
