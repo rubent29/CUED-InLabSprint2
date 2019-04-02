@@ -116,7 +116,12 @@
                 <li>Palo Protection</li>
               </ul>
               <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                    <asp:Button 
+                        ID="FreeTierButton" 
+                        Class="btn"
+                        runat="server" 
+                        Text="Try Now" />
+<%--                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Try Now</a>--%>
               </div>
             </div>
           </div>
@@ -125,7 +130,7 @@
         <div class="col-md-6 col-lg-6">
           <div class="block-pricing">
             <div class="table">
-              <h4>Paid Tier</h4>
+              <h4>Premium Tier</h4>
               <h2>$14.99/Mo.</h2>
               <ul class="list-unstyled">
                 <li><b>4 GB</b> Ram</li>
