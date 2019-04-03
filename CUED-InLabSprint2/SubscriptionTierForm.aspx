@@ -162,12 +162,9 @@
             </div>
         </div>
     </div>
-              </section>
+   
         </div>
-        </div>
-</div>
 
-    
 
     <footer class="site-footer">
       <div class="container">

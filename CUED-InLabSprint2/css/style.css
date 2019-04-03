@@ -59,7 +59,10 @@ a {
   position: relative;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-  background: #fff; }
+  background: #fff;
+    top: 5px;
+    left: -1041px;
+}
   .site-wrap:before {
     -webkit-transition: .3s all ease-in-out;
     -o-transition: .3s all ease-in-out;
@@ -88,7 +91,7 @@ a {
 
 	margin-top: 10px;
   position: relative;
-  top: -20px; }
+  top: 84px; }
   .btn:hover, .btn:active, .btn:focus {
     outline: none;
     -webkit-box-shadow: none !important;
@@ -615,7 +618,8 @@ a {
 
 .text-white{
 	color: lightgray;
-    left: 0px;
+    left: -567px;
+    height: 49px;
 }
 .text-white-opacity-5 {
   color: rgba(255, 255, 255, 0.5); }

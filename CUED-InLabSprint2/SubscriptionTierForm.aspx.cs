@@ -15,7 +15,10 @@ public partial class css_SubscriptionTierForm : System.Web.UI.Page
         //}
     }
 
-
+    protected void FreeTierButton_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("EmployerForm.aspx", false);
+    }
 
     protected void PremiumTierButton_Click(object sender, EventArgs e)
     {

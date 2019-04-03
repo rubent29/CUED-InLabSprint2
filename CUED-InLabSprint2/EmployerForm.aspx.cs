@@ -34,6 +34,30 @@ public partial class EmployerForm1 : System.Web.UI.Page
 
     protected void Insert_Button_Click(object sender, EventArgs e)
     {
+
+
+
+        DBconnection.Open();
+        SqlCommand checkuserNameDB = new SqlCommand("SELECT COUNT (*) FROM [dbo].[Account] WHERE ([userName] = @userName)", DBconnection);
+        checkuserNameDB.Parameters.AddWithValue("@userName", HttpUtility.HtmlEncode(CompanyEmail.Text));
+        int userNameNum = (int)checkuserNameDB.ExecuteScalar();
+
+
+        DBconnection.Close();
+
+        if (userNameNum > 0)
+        {
+            //checks if name and code exists
+            EmailLabel.Text = "Email Unavailable";
+        }
+
+
+
+
+        DBconnection.Close();
+
+
+
         if (FirstName.Text != "" && LastName.Text != "" && CompanyName.Text != "" && CompanyEmail.Text != "" && StreetAddress.Text != "" && City.Text != "" && Country.Text != ""
             && ZipCode.Text != "" && PasswordOne.Text != "" && PasswordTwo.Text != "")
         {

@@ -16,35 +16,6 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         {
             Response.Redirect("LoginForm.aspx");
         }
-
-        if(!Page.IsPostBack)
-        {
-            if(Session["username"] == null)
-            {
-                HttpContext.Current.Response.Write("<script> alert('Your session is expired.'); window.location.href = 'Sign_in.aspx");
-            }
-            else
-            {
-                HttpContext.Current.Response.Cache.SetExpires(DateTime.UtcNow.AddDays(-1));
-                HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
-                HttpContext.Current.Response.Cache.SetNoStore();
-
-                HttpContext.Current.Response.ClearHeaders();
-                HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
-                HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
-            }
-        }
-
-        HttpContext.Current.Response.Cache.SetExpires(DateTime.UtcNow.AddDays(-1));
-        HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
-        HttpContext.Current.Response.Cache.SetNoStore();
-
-        HttpContext.Current.Response.ClearHeaders();
-        HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
-        HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
-        //HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-        //HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
-        //HttpContext.Current.Response.AddHeader("Expires", "0");
         //System.Data.SqlClient.SqlConnection DBconnection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString;"].ConnectionString);
         //String ConnectionString = "server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
 
@@ -54,9 +25,7 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //newCmd.CommandText = "Select Username from Account where username = '" + (string)(Session)["username"] + "'";
         //DBconnection.Close();
         //Label1.Text = "Welcome" + (string)(Session)["username"];
-        Label1.BackColor = System.Drawing.Color.Transparent;
-        //Label1.Text = "Welcome, " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString(); //THIS WAS THE CODE THAT WAS SHOWING THE CORRECT NAMES, BUT KEPT GIVING ERRORS; DO NOT DELETE/////////////////////////////////////////
-        Label1.Text = "Welcome, " + (string)(Session)["FirstName"] + " " + (string)(Session)["LastName"];
+        Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();
         //if (Session["Username"] != null) // || Session["LastName"] != null)
         //{
         //    Label1.Text = "Login Successful. Welcome, " + Session["username"].ToString(); //+ " " + Session["LastName"].ToString();

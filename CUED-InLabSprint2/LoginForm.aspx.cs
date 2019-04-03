@@ -79,6 +79,7 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
             }
             sc.Open();
 
+
             //string sql = "Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'"; ///////
             //DBconnection.Open();
             ////SqlDataAdapter sda = new SqlDataAdapter("Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'", sc);
