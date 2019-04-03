@@ -128,9 +128,9 @@
               <h4>Premium Tier</h4>
               <h2>$14.99/Mo.</h2>
               <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
+                <li><b>All Benefits of Free Tier</b></li>
+                <li><b>Track Your Applicants</b></li>
+                <li><b>View School Demographics</b> </li>
                 <li>Monthly Backups</li>
                 <li>Palo Protection</li>
               </ul>
