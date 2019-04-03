@@ -131,12 +131,19 @@
 <div class="form-group">
     <label for="CompanyName">Company Name</label>
     <br />
-    <asp:TextBox 
-        ID="CompanyName" 
-        runat="server"
-        placeholder="Company Name"
-        Width="727px">
-    </asp:TextBox>
+
+<asp:DropDownList 
+    runat="server" 
+    DataSourceID="SqlDataSource1" 
+    DataTextField="CompanyName" 
+    DataValueField="EmployerID" 
+    ID="CompanyName">
+
+</asp:DropDownList>
+
+
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" SelectCommand="SELECT [CompanyName], [EmployerID] FROM [Employer]"></asp:SqlDataSource>
+
 
  </div>	
 	<div class="form-group">

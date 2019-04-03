@@ -131,12 +131,11 @@
         Width="727px">
     </asp:TextBox>
 
-    <asp:Label 
-        ID="EmailLabel" 
-        runat="server"
-        Text="">
-
-    </asp:Label>
+   <%-- <asp:Label ID="txtUserName" runat="server" AutoPostBack="true" OnTextChanged="txtUserName_TextChanged"
+        ControlToValidate="CompanyEmail" 
+        ForeColor="Red"
+        ValidationGroup="SubmitGroup"
+        ErrorMessage="Email is already used"/>--%>
 
     <asp:RequiredFieldValidator 
         ID="EmailValidator" 

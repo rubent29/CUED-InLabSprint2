@@ -15,7 +15,7 @@ public partial class ViewPostingForm : System.Web.UI.Page
         }
 
 
-        DetailsView1.Visible = true;
+        GridView1.Visible = true;
 
 
     }

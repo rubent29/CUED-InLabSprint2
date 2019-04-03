@@ -52,7 +52,7 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
 
                 //sc.Open();
 
-            SqlCommand cmd = new SqlCommand("Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'", sc);
+            SqlCommand cmd = new SqlCommand("Select count(*) from Account where username = @username AND password = @password", sc); //this needs to be a parameterized query
             cmd.Parameters.AddWithValue("@username", Username.Text);
             cmd.Parameters.AddWithValue("@password", Password.Text);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
