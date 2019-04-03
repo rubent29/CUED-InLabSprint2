@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="EditAccountForm.aspx.cs" Inherits="EditAccountForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="EditAccount.aspx.cs" Inherits="EditAccount" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-       <div class="site-wrap">
+    <div class="site-wrap">
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -69,6 +69,13 @@
         Width="727px">
     </asp:TextBox>
 
+      <asp:RequiredFieldValidator 
+          ID="FirstNameValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="FirstName" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
+
   </div>
 <div class="form-group">
     <label for="LastName">Last Name</label>
@@ -79,6 +86,14 @@
         placeholder="Last Name"
         Width="727px">
     </asp:TextBox>
+
+    <asp:RequiredFieldValidator 
+        ID="LastNameValidator" 
+        runat="server" 
+        ErrorMessage="Required" 
+        ForeColor="Red" 
+        ValidationGroup="SubmitGroup" 
+        ControlToValidate="LastName"></asp:RequiredFieldValidator>
 
   </div>
 <div class="form-group">
@@ -91,6 +106,14 @@
         Width="727px">
     </asp:TextBox>
 
+    <asp:RequiredFieldValidator 
+        ID="CompanyNameValidator" 
+        runat="server" 
+        ErrorMessage="Required" 
+        ForeColor="Red" 
+        ValidationGroup="SubmitGroup" 
+        ControlToValidate="CompanyName"></asp:RequiredFieldValidator>
+
  </div>
 <div class="form-group">
     <label for="CompanyEmail">Company Email</label>
@@ -101,6 +124,32 @@
         placeholder="Company Email"
         Width="727px">
     </asp:TextBox>
+
+    <asp:Label 
+        ID="EmailLabel" 
+        runat="server"
+        Text="">
+
+    </asp:Label>
+
+    <asp:RequiredFieldValidator 
+        ID="EmailValidator" 
+        runat="server" 
+        ErrorMessage="Required" 
+        ValidationGroup="SubmitGroup" 
+        ControlToValidate="CompanyEmail" 
+        ForeColor="Red">
+
+    </asp:RequiredFieldValidator>
+
+    <asp:RegularExpressionValidator ID="EmailFormatValidator" 
+        runat="server" 
+        ErrorMessage="Use a Valid Email" 
+        ControlToValidate="CompanyEmail" 
+        ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+        ForeColor="Red">
+
+    </asp:RegularExpressionValidator>
 
  </div>		
 <div class="form-group">
@@ -113,6 +162,16 @@
         Width="727px">
     </asp:TextBox>
 
+    <asp:RequiredFieldValidator 
+        ID="StreetValidator" 
+        runat="server" 
+        ErrorMessage="Required" 
+        ForeColor="Red" 
+        ControlToValidate="StreetAddress" 
+        ValidationGroup="SubmitGroup">
+
+    </asp:RequiredFieldValidator>
+
   </div>
 	<div class="form-group">
     <label for="City">City</label>
@@ -123,6 +182,16 @@
         placeholder="City"
         Width="727px">
     </asp:TextBox>
+
+        <asp:RequiredFieldValidator 
+            ID="CityValidator" 
+            runat="server" 
+            ControlToValidate="City" 
+            ErrorMessage="Required" 
+            ForeColor="Red" 
+            ValidationGroup="SubmitGroup">
+
+        </asp:RequiredFieldValidator>
 
     </div>
 	<div class="form-group">
@@ -135,6 +204,15 @@
         Width="727px">
     </asp:TextBox>
 
+        <asp:RequiredFieldValidator 
+            ID="StateValidator" 
+            runat="server" 
+            ErrorMessage="Required" 
+            ControlToValidate="State" 
+            ForeColor="Red" ValidationGroup="SubmitGroup">
+
+        </asp:RequiredFieldValidator>
+
   </div>
 	<div class="form-group">
     <label for="ZipCodeInput">Zipcode</label>
@@ -145,6 +223,16 @@
         placeholder="Zip Code"
         Width="727px">
     </asp:TextBox>
+
+        <asp:RequiredFieldValidator 
+            ID="ZipValidator" 
+            runat="server" 
+            ControlToValidate="ZipCode" 
+            ErrorMessage="Required" 
+            ForeColor="Red" 
+            ValidationGroup="SubmitGroup">
+
+        </asp:RequiredFieldValidator>
 
   </div>  
   <div class="form-group">
@@ -166,6 +254,30 @@
         placeholder="Enter Password"
         Width="727px">
     </asp:TextBox>
+          
+        
+        
+        
+        
+        <asp:RequiredFieldValidator ID="Password1Validator" 
+            runat="server" 
+            ErrorMessage="Required" 
+            ControlToValidate="PasswordOne" 
+            ForeColor="Red" 
+            ValidationGroup="SubmitGroup">
+
+        </asp:RequiredFieldValidator>
+        
+        <asp:RegularExpressionValidator 
+              ID="PasswordValidator" 
+              runat="server" 
+              ErrorMessage="Password must be 8-10 characters long with at least one numeric,  alphabet & 1 special character." 
+              ForeColor="Red" 
+              Display="Dynamic" 
+              ValidationExpression="(?=^.{8,10}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&*()_+}{&quot;:;'?/>.<,])(?!.*\s).*$" 
+              ControlToValidate="PasswordOne">
+
+          </asp:RegularExpressionValidator>
           </div>
 	<div class="form-group">
     <label for="Password">Confirm Password</label>
@@ -176,6 +288,74 @@
         placeholder="Confirm Password"
         Width="727px">
     </asp:TextBox>
+        <asp:RequiredFieldValidator 
+            ID="Password2Validator" 
+            runat="server" 
+            ControlToValidate="PasswordTwo" 
+            ErrorMessage="Required" 
+            ForeColor="Red" 
+            ValidationGroup="SubmitGroup">
+
+        </asp:RequiredFieldValidator>
+        <asp:CompareValidator 
+            ID="Password2MatchValidator"
+            runat="server" 
+            ControlToCompare="PasswordOne" 
+            ControlToValidate="PasswordTwo" 
+            Display="Dynamic" 
+            ErrorMessage="Password Must Match" 
+            ForeColor="Red">
+
+        </asp:CompareValidator>
+
+  <div class="form-group">
+    <label for="SecurityQuestion">Security Question:</label>
+      <br />
+    <asp:TextBox 
+        ID="TextBoxQuestion" 
+        runat="server"
+        placeholder="Security Question"
+        Width="727px">
+    </asp:TextBox>
+
+    <asp:RequiredFieldValidator 
+            ID="RequiredFieldValidator1" 
+            runat="server" 
+            ControlToValidate="TextBoxQuestion" 
+            ErrorMessage="Required" 
+            ForeColor="Red" 
+            ValidationGroup="SubmitGroup">
+
+        </asp:RequiredFieldValidator>
+
+
+  </div>
+<div class="form-group">
+    <label for="Answer">Answer: </label>
+    <br />
+    <asp:TextBox 
+        ID="TextBoxAnswer" 
+        runat="server"
+        placeholder="Answer"
+        Width="727px">
+    </asp:TextBox>
+
+        <asp:RequiredFieldValidator 
+            ID="RequiredFieldValidator2" 
+            runat="server" 
+            ControlToValidate="TextBoxAnswer" 
+            ErrorMessage="Required" 
+            ForeColor="Red" 
+            ValidationGroup="SubmitGroup">
+
+        </asp:RequiredFieldValidator>
+
+  </div>
+
+
+
+
+
  </div>
 <div class="form-group">
   </div>
@@ -190,19 +370,21 @@
 <asp:Button 
     ID="SaveChanges_Button" 
     class="btn btn-primary rounded text-white px-4"
-    runat="server" Text="Save Changes" OnClick="SaveChanges_Button_Click" />
-
-&nbsp;  
-<asp:Label 
-    ID="EditLabel" 
     runat="server" 
-    Text="Label">
-</asp:Label>  
+    Text="Save Changes" 
+    OnClick="SaveChanges_Button_Click"  
+    ValidationGroup="SubmitGroup" />
 
+&nbsp;    
 </form>
               
               &nbsp;&nbsp;&nbsp;&nbsp;
-        
+              <asp:Label 
+                  ID="EditLabel" 
+                  runat="server" 
+                  Text="">
+
+              </asp:Label>
 
           </div>
 
@@ -303,9 +485,7 @@
   <script src="js/main.js"></script>
 
 
-
-
-
-
 </asp:Content>
+
+
 

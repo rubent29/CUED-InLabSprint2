@@ -25,7 +25,7 @@ public class Employer
 
     public static int numOfEmployers;
 
-    public Employer(String firstName, String lastName, String companyName, String companyEmail, String streetAddress, String city, String state, String country, String zipCode, String passwordOne, String passwordTwo, String LastUpdatedBy, String LastUpdated, String question, String answer)
+    public Employer(String firstName, String lastName, String companyName, String companyEmail, String streetAddress, String city, String state, String country, String zipCode, String passwordOne, String passwordTwo, String question, String answer, String LastUpdatedBy, String LastUpdated)
     {
         setEmployerID(numOfEmployers);
         setFirstName(firstName);
@@ -117,6 +117,7 @@ public class Employer
     {
         return (this.answer);
     }
+
     public string getLastUpdatedBy()
     {
         return (this.LastUpdatedBy);
@@ -208,6 +209,5 @@ public class Employer
     {
         this.LastUpdated = DateTime.Today.ToShortDateString();
     }
-
 
 }

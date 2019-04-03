@@ -177,10 +177,11 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;
+
     <asp:Button 
         ID="LoginAgainButton" 
         runat="server" 
-        Text="Button" 
+        Text="Log In Again to Edit" 
         OnClick="LoginAgainButton_Click" />
 
 
