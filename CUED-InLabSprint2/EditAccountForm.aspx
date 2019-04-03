@@ -190,7 +190,7 @@
 <asp:Button 
     ID="SaveChanges_Button" 
     class="btn btn-primary rounded text-white px-4"
-    runat="server" Text="Submit" OnClick="SaveChanges_Button_Click" />
+    runat="server" Text="Save Changes" OnClick="SaveChanges_Button_Click" />
 
 &nbsp;  
 <asp:Label 
