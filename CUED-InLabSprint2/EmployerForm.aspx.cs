@@ -53,7 +53,7 @@ protected void Insert_Button_Click(object sender, EventArgs e)
 
         DBconnection.Open();
 
-        string employerInfo = "insert into [dbo].[Employer] values (@firstName, @lastName, @companyName, @companyEmail, @streetAddress, @city, @state, @country, @zipCode, @passwordOne, @passwordTwo, @question, @answer, @lastUpdatedBy, @lastUpdated)";
+        string employerInfo = "insert into [dbo].[Employer] values (@firstName, @lastName, @companyName, @companyEmail, @streetAddress, @city, @state, @country, @zipCode, @tier, @passwordOne, @passwordTwo, @question, @answer, @lastUpdatedBy, @lastUpdated)";
         SqlCommand insertEmployer = new SqlCommand(employerInfo, DBconnection);
         insertEmployer.Parameters.AddWithValue("@firstName", emp.getFirstName());
         insertEmployer.Parameters.AddWithValue("@lastName", emp.getLastName());
@@ -64,6 +64,7 @@ protected void Insert_Button_Click(object sender, EventArgs e)
         insertEmployer.Parameters.AddWithValue("@state", emp.getState());
         insertEmployer.Parameters.AddWithValue("@country", emp.getCountry());
         insertEmployer.Parameters.AddWithValue("@zipCode", emp.getZipCode());
+            insertEmployer.Parameters.AddWithValue("@tier", "Free");
         insertEmployer.Parameters.AddWithValue("@passwordOne", emp.getPasswordOne());
         insertEmployer.Parameters.AddWithValue("@passwordTwo", emp.getPasswordTwo());
         insertEmployer.Parameters.AddWithValue("@question", emp.getQuestion());

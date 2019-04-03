@@ -16,6 +16,7 @@ public class Employer
     private string state;
     private string country;
     private string zipCode;
+    private string tier;
     private string passwordOne;
     private string passwordTwo;
     private string question;
@@ -208,6 +209,16 @@ public class Employer
     public void setLastUpdated(string newLastUpdated)
     {
         this.LastUpdated = DateTime.Today.ToShortDateString();
+    }
+
+    public string getTier()
+    {
+        return this.tier;
+    }
+
+    public void setTier(String tier)
+    {
+        this.tier = tier;
     }
 
 }

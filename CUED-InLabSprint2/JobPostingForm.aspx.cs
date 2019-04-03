@@ -59,7 +59,7 @@ public partial class JobPostingForm : System.Web.UI.Page
 
         DBconnection.Open();
 
-        string student = "insert into [dbo].[JobPosting] values (@jobTitle, @jobType, @companyName, @location, @payStatus, @jobDescription, @dateCreated, @deadline, @lastUpdatedBy, @lastUpdated)";
+        string student = "insert into [dbo].[JobPosting] values (@jobTitle, @jobType, @companyName, @location, @payStatus, @jobDescription, @dateCreated, @deadline, @EmployerID, @lastUpdatedBy, @lastUpdated)";
         SqlCommand insertJobPosting = new SqlCommand(student, DBconnection);
         insertJobPosting.Parameters.AddWithValue("@jobTitle", posting.getJobTitle());
         insertJobPosting.Parameters.AddWithValue("@jobType", posting.getJobType());
@@ -69,6 +69,7 @@ public partial class JobPostingForm : System.Web.UI.Page
         insertJobPosting.Parameters.AddWithValue("@jobDescription", posting.getJobDescription());
         insertJobPosting.Parameters.AddWithValue("@dateCreated", posting.getDateCreated());
         insertJobPosting.Parameters.AddWithValue("@deadline", posting.getDeadline());
+        insertJobPosting.Parameters.AddWithValue("@EmployerID", 1);
         insertJobPosting.Parameters.AddWithValue("@lastUpdatedBy", posting.getLastUpdatedBy());
         insertJobPosting.Parameters.AddWithValue("@lastUpdated", posting.getLastUpdated());
 

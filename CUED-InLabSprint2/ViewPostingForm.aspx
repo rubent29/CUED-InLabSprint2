@@ -112,34 +112,31 @@
         ID="DetailsView1" 
         runat="server" 
         AutoGenerateRows="False" 
-        DataKeyNames="PostingID" 
         DataSourceID="AwsDataSource" 
         Height="50px" 
-        Width="125px">
+        Width="516px">
         <Fields>
             <asp:BoundField DataField="PostingID" HeaderText="PostingID" InsertVisible="False" ReadOnly="True" SortExpression="PostingID" />
             <asp:BoundField DataField="JobTitle" HeaderText="JobTitle" SortExpression="JobTitle" />
-            <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
             <asp:BoundField DataField="JobType" HeaderText="JobType" SortExpression="JobType" />
+            <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
             <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
             <asp:BoundField DataField="PayStatus" HeaderText="PayStatus" SortExpression="PayStatus" />
             <asp:BoundField DataField="JobDescription" HeaderText="JobDescription" SortExpression="JobDescription" />
             <asp:BoundField DataField="DateCreated" HeaderText="DateCreated" SortExpression="DateCreated" />
             <asp:BoundField DataField="Deadline" HeaderText="Deadline" SortExpression="Deadline" />
             <asp:BoundField DataField="EmployerID" HeaderText="EmployerID" SortExpression="EmployerID" />
+
         </Fields>
     </asp:DetailsView>
     <asp:SqlDataSource 
         ID="AwsDataSource" 
         runat="server" 
         ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" 
-        SelectCommand="SELECT [PostingID], [JobTitle], [CompanyName], [JobType], [Location], [PayStatus], [JobDescription], [DateCreated], [Deadline], [EmployerID] FROM [JobPosting] WHERE ([CompanyName] = @CompanyName)">
-        <SelectParameters>
-            <asp:SessionParameter 
-                Name="CompanyName" 
-                SessionField="EmployerID" 
-                Type="String" />
-        </SelectParameters>
+        SelectCommand="SELECT        JobPosting.PostingID, JobPosting.JobTitle, JobPosting.JobType, JobPosting.CompanyName, JobPosting.Location, JobPosting.PayStatus, JobPosting.JobDescription, JobPosting.DateCreated, 
+                         JobPosting.Deadline, JobPosting.EmployerID, Employer.EmployerID AS Expr1
+FROM            JobPosting LEFT OUTER JOIN
+                         Employer ON JobPosting.EmployerID = Employer.EmployerID">
     </asp:SqlDataSource>
     </div>
 <div class="form-group">
