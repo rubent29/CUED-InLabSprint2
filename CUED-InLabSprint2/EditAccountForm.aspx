@@ -192,17 +192,17 @@
     class="btn btn-primary rounded text-white px-4"
     runat="server" Text="Submit" OnClick="SaveChanges_Button_Click" />
 
-&nbsp;    
+&nbsp;  
+<asp:Label 
+    ID="EditLabel" 
+    runat="server" 
+    Text="Label">
+</asp:Label>  
 
 </form>
               
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <asp:Label 
-                  ID="labelStatus" 
-                  runat="server" 
-                  Text="">
-
-              </asp:Label>
+        
 
           </div>
 
