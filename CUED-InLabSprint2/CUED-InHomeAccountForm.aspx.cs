@@ -86,4 +86,9 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //Session.Abandon();
         //Response.Cookies.Add(new HttpCookie(".ASPXFORMSAUTH", ""));
     }
+
+    protected void Log_Out(object sender, EventArgs e)
+    {
+        Session.Abandon(); //Do we need this/is this correct??
+    }
 }
