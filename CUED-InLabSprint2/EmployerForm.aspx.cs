@@ -101,7 +101,43 @@ protected void Insert_Button_Click(object sender, EventArgs e)
     }
     else
         labelStatus.Text = "Fill all fields.";
-}
+
+
+        System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection();
+        sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
+
+        SqlCommand cmd = new SqlCommand("Select count(*) from Employer where CompanyEmail = @Username AND Password = @Password", sc); //this needs to be a parameterized query
+        cmd.Parameters.AddWithValue("@username", CompanyEmail.Text);
+        cmd.Parameters.AddWithValue("@password", PasswordOne.Text);
+        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+        DataTable dt = new DataTable();
+        sda.Fill(dt);
+        sc.Open();
+        int i = cmd.ExecuteNonQuery();
+        sc.Close();
+        if (dt.Rows.Count > 0)
+        {
+            sc.Open();
+            Session["username"] = CompanyEmail.Text;
+            cmd.CommandText = "Select FirstName from Employer where CompanyEmail = @Username";
+            string fname = (string)cmd.ExecuteScalar();
+            HttpContext.Current.Session["FirstName"] = fname;
+
+            sc.Close();
+
+            sc.Open();
+            cmd.CommandText = "Select LastName from Employer where CompanyEmail = @Username";
+            string lname = (string)cmd.ExecuteScalar();
+            Session["LastName"] = lname;
+            sc.Close();
+            //Response.Redirect("Redirectform.aspx");
+            //Session.RemoveAll();
+        }
+
+
+
+
+    }
 
 protected void Populate_Button_Click(object sender, EventArgs e)
 {
