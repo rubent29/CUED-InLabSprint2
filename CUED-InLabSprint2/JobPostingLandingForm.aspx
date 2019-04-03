@@ -62,7 +62,8 @@
             <asp:Button ID="ViewYourPosting" 
                 runat="server" 
                 class="btn btn-primary rounded text-white px-4"
-                Text="View Your Posting" />
+                Text="View Your Posting" 
+                OnClick="ViewYourPosting_Click" />
             </span>
         &nbsp;</div>
       </div>
