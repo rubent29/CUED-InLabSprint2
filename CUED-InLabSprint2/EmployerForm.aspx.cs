@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.Configuration;
 using System.Web.ApplicationServices;
 
 public partial class EmployerForm1 : System.Web.UI.Page
@@ -45,10 +46,22 @@ protected void Insert_Button_Click(object sender, EventArgs e)
                                 HttpUtility.HtmlEncode(Country.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(ZipCode.Text.Trim()), HttpUtility.HtmlEncode(PasswordOne.Text.Trim()), HttpUtility.HtmlEncode(PasswordTwo.Text.Trim())
                                 ,(TextBoxQuestion.Text.Trim()), (TextBoxAnswer.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
 
+            //DataTable dt2 = new DataTable();
+
+            //SqlDataAdapter da = new SqlDataAdapter("Select CompanyEmail from Employer where CompanyEmail = @Username", DBconnection);
+
+            //da.Fill(dt2);
+
+            //if (dt2.Rows.Count > 0)
+
+            //{
+
+                
+
+            //}
 
 
-
-        System.Data.SqlClient.SqlCommand MaxStudent = new System.Data.SqlClient.SqlCommand();
+            System.Data.SqlClient.SqlCommand MaxStudent = new System.Data.SqlClient.SqlCommand();
         MaxStudent.Connection = DBconnection;
 
         DBconnection.Open();
@@ -102,7 +115,6 @@ protected void Insert_Button_Click(object sender, EventArgs e)
     else
         labelStatus.Text = "Fill all fields.";
 
-
         System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection();
         sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
 
@@ -155,4 +167,32 @@ protected void Populate_Button_Click(object sender, EventArgs e)
         TextBoxQuestion.Text = "What is your school's mascot?";
         TextBoxAnswer.Text = "Duke Dog";
     }
+
+    //protected void txtUserName_TextChanged(object sender, EventArgs e)
+    //{
+    //    string constr = WebConfigurationManager.ConnectionStrings[@"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;"].ConnectionString;
+    //    SqlConnection con = new SqlConnection(constr);
+    //    SqlCommand cmd = new SqlCommand("select CompanyEmail from Employer where CompanyEmail = @CompanyEmail", con);
+    //    cmd.Parameters.AddWithValue("@CompanyEmail", CompanyEmail.Text);
+    //    bool is_exists = false;
+    //    try
+    //    {
+    //        con.Open();
+    //        is_exists = cmd.ExecuteScalar() == null ? false : true;
+    //    }
+    //    catch (Exception ex)
+    //    {
+            
+    //    }
+    //    finally
+    //    {
+    //        con.Close();
+    //    }
+    //    if (is_exists)
+    //    {
+    //        txtUserName.Text = "This UserName is already exists. Please Choose another one";
+    //        CompanyEmail.Focus();
+    //    }
+    //}
+
 }
