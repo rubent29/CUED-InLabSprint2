@@ -18,4 +18,9 @@ public partial class MasterPageForm : System.Web.UI.Page
     {
         Response.Redirect("SubscriptionTierForm.aspx", false);
     }
+
+    protected void RegisterStudentButton_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AddStudent.aspx", false);
+    }
 }

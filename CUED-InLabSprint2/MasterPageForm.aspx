@@ -67,6 +67,12 @@
                     class="btn btn-outline-primary py-2 px-4"
                     Text="Register Your Business!" 
                     OnClick="RegisterBusinessButton_Click" />
+                <asp:Button 
+                    ID="RegisterBusinessButton0" 
+                    runat="server" 
+                    class="btn btn-outline-primary py-2 px-4"
+                    Text="Create Your Student Profile!" 
+                    OnClick="RegisterStudentButton_Click" />
             </div>
           </div>
         </div> 
