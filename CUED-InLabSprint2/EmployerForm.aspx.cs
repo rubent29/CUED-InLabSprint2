@@ -42,9 +42,8 @@ protected void Insert_Button_Click(object sender, EventArgs e)
 
         Employer emp = new Employer(HttpUtility.HtmlEncode(FirstName.Text.Trim()), HttpUtility.HtmlEncode(LastName.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.Text.Trim()),
                                 HttpUtility.HtmlEncode(CompanyEmail.Text.Trim()), HttpUtility.HtmlEncode(StreetAddress.Text.Trim()), HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()),
-                                HttpUtility.HtmlEncode(Country.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(ZipCode.Text.Trim()), HttpUtility.HtmlEncode(PasswordOne.Text.Trim()), HttpUtility.HtmlEncode(PasswordTwo.Text.Trim()),
-                                HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated),
-                                HttpUtility.HtmlEncode(TextBoxQuestion.Text.Trim()), HttpUtility.HtmlEncode(TextBoxAnswer.Text.Trim()));
+                                HttpUtility.HtmlEncode(Country.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(ZipCode.Text.Trim()), HttpUtility.HtmlEncode(PasswordOne.Text.Trim()), HttpUtility.HtmlEncode(PasswordTwo.Text.Trim())
+                                ,HttpUtility.HtmlEncode(TextBoxQuestion.Text.Trim()), HttpUtility.HtmlEncode(TextBoxAnswer.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
 
 
 
@@ -54,7 +53,7 @@ protected void Insert_Button_Click(object sender, EventArgs e)
 
         DBconnection.Open();
 
-        string employerInfo = "insert into [dbo].[Employer] values (@firstName, @lastName, @companyName, @companyEmail, @streetAddress, @city, @state, @country, @zipCode, @passwordOne, @passwordTwo, @lastUpdatedBy, @lastUpdated, @question, @answer)";
+        string employerInfo = "insert into [dbo].[Employer] values (@firstName, @lastName, @companyName, @companyEmail, @streetAddress, @city, @state, @country, @zipCode, @passwordOne, @passwordTwo, @question, @answer, @lastUpdatedBy, @lastUpdated)";
         SqlCommand insertEmployer = new SqlCommand(employerInfo, DBconnection);
         insertEmployer.Parameters.AddWithValue("@firstName", emp.getFirstName());
         insertEmployer.Parameters.AddWithValue("@lastName", emp.getLastName());
@@ -67,10 +66,11 @@ protected void Insert_Button_Click(object sender, EventArgs e)
         insertEmployer.Parameters.AddWithValue("@zipCode", emp.getZipCode());
         insertEmployer.Parameters.AddWithValue("@passwordOne", emp.getPasswordOne());
         insertEmployer.Parameters.AddWithValue("@passwordTwo", emp.getPasswordTwo());
-        insertEmployer.Parameters.AddWithValue("@lastUpdatedBy", emp.getLastUpdatedBy());
-        insertEmployer.Parameters.AddWithValue("@lastUpdated", emp.getLastUpdated());
         insertEmployer.Parameters.AddWithValue("@question", emp.getQuestion());
         insertEmployer.Parameters.AddWithValue("@answer", emp.getAnswer());
+        insertEmployer.Parameters.AddWithValue("@lastUpdatedBy", emp.getLastUpdatedBy());
+        insertEmployer.Parameters.AddWithValue("@lastUpdated", emp.getLastUpdated());
+
 
         insertEmployer.ExecuteNonQuery();
         DBconnection.Close();
@@ -85,6 +85,7 @@ protected void Insert_Button_Click(object sender, EventArgs e)
             setPass.CommandText = "insert into[dbo].[Account] values (@Username, @Password)";
             setPass.Parameters.Add(new SqlParameter("@Username", CompanyEmail.Text));
             setPass.Parameters.Add(new SqlParameter("@Password", PasswordHash.HashPassword(PasswordOne.Text))); // hash entered password
+
             setPass.ExecuteNonQuery();
 
             DBconnection.Close();
