@@ -28,7 +28,7 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
 
 
 
-        /*Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();*/ //UNCOMMENT OR FIX THIS GIVING ERROR
+      /*  Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();*/ //UNCOMMENT OR FIX THIS GIVING ERROR
 
 
 

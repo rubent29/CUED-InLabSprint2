@@ -68,7 +68,9 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                 cmd.CommandText = "Select FirstName from Employer where CompanyEmail = @Username";
                 string fname = (string)cmd.ExecuteScalar();
                 HttpContext.Current.Session["FirstName"] = fname;
+     
                 sc.Close();
+
                 sc.Open();
                 cmd.CommandText = "Select LastName from Employer where CompanyEmail = @Username";
                 string lname = (string)cmd.ExecuteScalar();

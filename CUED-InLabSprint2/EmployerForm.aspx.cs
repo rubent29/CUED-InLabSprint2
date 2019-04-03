@@ -64,9 +64,9 @@ protected void Insert_Button_Click(object sender, EventArgs e)
         insertEmployer.Parameters.AddWithValue("@state", emp.getState());
         insertEmployer.Parameters.AddWithValue("@country", emp.getCountry());
         insertEmployer.Parameters.AddWithValue("@zipCode", emp.getZipCode());
-            insertEmployer.Parameters.AddWithValue("@tier", "Free");
-        insertEmployer.Parameters.AddWithValue("@passwordOne", emp.getPasswordOne());
-        insertEmployer.Parameters.AddWithValue("@passwordTwo", emp.getPasswordTwo());
+        insertEmployer.Parameters.AddWithValue("@tier", "Free");
+        insertEmployer.Parameters.AddWithValue("@passwordOne", PasswordHash.HashPassword(emp.getPasswordOne()));
+        insertEmployer.Parameters.AddWithValue("@passwordTwo", PasswordHash.HashPassword(emp.getPasswordTwo()));
         insertEmployer.Parameters.AddWithValue("@question", emp.getQuestion());
         insertEmployer.Parameters.AddWithValue("@answer", emp.getAnswer());
         insertEmployer.Parameters.AddWithValue("@lastUpdatedBy", emp.getLastUpdatedBy());
