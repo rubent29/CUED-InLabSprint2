@@ -50,14 +50,24 @@ public partial class JobPostingForm : System.Web.UI.Page
 
     protected void Insert_Button_Click(object sender, EventArgs e)
     {
-        JobPosting posting = new JobPosting(HttpUtility.HtmlEncode(JobTitle.Text.Trim()), HttpUtility.HtmlEncode(JobType.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.Text.Trim()),
+
+
+
+
+        DBconnection.Open();
+
+        JobPosting posting = new JobPosting(HttpUtility.HtmlEncode(JobTitle.Text.Trim()), HttpUtility.HtmlEncode(JobType.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.SelectedItem.Text.Trim()),
                             HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(PayStatus.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(JobDescription.Text.Trim()),
                             HttpUtility.HtmlEncode(DateCreated), HttpUtility.HtmlEncode(Deadline.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
 
-        System.Data.SqlClient.SqlCommand MaxPosting = new System.Data.SqlClient.SqlCommand();
-        MaxPosting.Connection = DBconnection;
+        //System.Data.SqlClient.SqlCommand MaxPosting = new System.Data.SqlClient.SqlCommand();
+        //MaxPosting.Connection = DBconnection;
+        //string empID = "Select (EmployerID) from [dbo].[Employer] where EmployerID =  (Select Max(EmployerID) from [dbo].[JobPosting])";
+        //SqlCommand empIDFinder = new SqlCommand(empID, DBconnection);
+        //int EmployerID = Convert.ToInt32(empIDFinder.ExecuteScalar());
+        
 
-        DBconnection.Open();
+
 
         string student = "insert into [dbo].[JobPosting] values (@jobTitle, @jobType, @companyName, @location, @payStatus, @jobDescription, @dateCreated, @deadline, @EmployerID, @lastUpdatedBy, @lastUpdated)";
         SqlCommand insertJobPosting = new SqlCommand(student, DBconnection);
@@ -69,7 +79,7 @@ public partial class JobPostingForm : System.Web.UI.Page
         insertJobPosting.Parameters.AddWithValue("@jobDescription", posting.getJobDescription());
         insertJobPosting.Parameters.AddWithValue("@dateCreated", posting.getDateCreated());
         insertJobPosting.Parameters.AddWithValue("@deadline", posting.getDeadline());
-        insertJobPosting.Parameters.AddWithValue("@EmployerID", 1);
+        insertJobPosting.Parameters.AddWithValue("@EmployerID", CompanyName.SelectedValue);
         insertJobPosting.Parameters.AddWithValue("@lastUpdatedBy", posting.getLastUpdatedBy());
         insertJobPosting.Parameters.AddWithValue("@lastUpdated", posting.getLastUpdated());
 
