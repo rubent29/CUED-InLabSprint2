@@ -12,10 +12,10 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if ((HttpContext.Current.Request.UrlReferrer == null))
-        {
-            Response.Redirect("LoginForm.aspx");
-        }
+        //if ((HttpContext.Current.Request.UrlReferrer == null))
+        //{
+        //    Response.Redirect("LoginForm.aspx");
+        //}
         //System.Data.SqlClient.SqlConnection DBconnection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString;"].ConnectionString);
         //String ConnectionString = "server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
 
@@ -25,7 +25,16 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //newCmd.CommandText = "Select Username from Account where username = '" + (string)(Session)["username"] + "'";
         //DBconnection.Close();
         //Label1.Text = "Welcome" + (string)(Session)["username"];
-        Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();
+
+
+
+        //Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString(); //UNCOMMENT
+
+
+
+
+
+
         //if (Session["Username"] != null) // || Session["LastName"] != null)
         //{
         //    Label1.Text = "Login Successful. Welcome, " + Session["username"].ToString(); //+ " " + Session["LastName"].ToString();

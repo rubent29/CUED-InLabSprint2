@@ -123,7 +123,7 @@
                         ID="FreeTierButton" 
                         class="btn btn-primary rounded text-white px-4"
                         runat="server" 
-                        Text="Try Now" />
+                        Text="Try Now" OnClick="FreeTierButton_Click1" />
 <%--                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Try Now</a>--%>
               </div>
             </div>
@@ -170,12 +170,9 @@
             </div>
         </div>
     </div>
-              </section>
+   
         </div>
-        </div>
-</div>
 
-    
 
     <footer class="site-footer">
       <div class="container">

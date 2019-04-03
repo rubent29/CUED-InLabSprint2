@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="EmployerForm.aspx.cs" Inherits="EmployerForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="EditAccountForm.aspx.cs" Inherits="EditAccountForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="site-wrap">
+       <div class="site-wrap">
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -188,15 +188,12 @@
 
 
 <asp:Button 
-    ID="Insert_Button" 
+    ID="SaveChanges_Button" 
     class="btn btn-primary rounded text-white px-4"
-    runat="server" Text="Submit" OnClick="Insert_Button_Click" />
+    runat="server" Text="Submit" OnClick="SaveChanges_Button_Click" />
 
 &nbsp;    
-<asp:Button 
-    ID="Populate" 
-    class="btn btn-primary rounded text-white px-4"
-    runat="server" Text="Populate" OnClick="Populate_Button_Click" />
+
 </form>
               
               &nbsp;&nbsp;&nbsp;&nbsp;
@@ -306,7 +303,9 @@
   <script src="js/main.js"></script>
 
 
+
+
+
+
 </asp:Content>
-
-
 
