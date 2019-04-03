@@ -172,5 +172,8 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
     protected void ForgetPasswordLink_Click(object sender, EventArgs e)
     {
 
+
+        Response.Redirect("ForgotPassword.aspx");
+
     }
 }
