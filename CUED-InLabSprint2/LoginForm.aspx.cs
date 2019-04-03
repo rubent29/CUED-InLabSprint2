@@ -38,7 +38,6 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                 //DisplayBox.Text = "Error connecting to Database";
             }
         }
-
     }
 
     protected void Login_Click(object sender, EventArgs e)
@@ -53,8 +52,6 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
 
                 //sc.Open();
 
-
-           
             SqlCommand cmd = new SqlCommand("Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'", sc);
             cmd.Parameters.AddWithValue("@username", Username.Text);
             cmd.Parameters.AddWithValue("@password", Password.Text);
@@ -81,10 +78,6 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                 //Session.RemoveAll();
             }
             sc.Open();
-
-
-
-
 
 
             //string sql = "Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'"; ///////
@@ -167,9 +160,6 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                             Response.Redirect("CUED-InHomeAccountForm.aspx");
                         //RegisterButton.Visible = false;
 
-
-
-
                         System.Data.SqlClient.SqlCommand getUsername = new System.Data.SqlClient.SqlCommand();
                         getUsername.Connection = sc;
                         sc.Open();
@@ -204,9 +194,6 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
             //    lblStatus.Text = name;
             //}
 
-
-
-
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //lblStatus.Text += reader["FirstName"].ToString();
             //lblStatus.Text += reader["LastName"].ToString();
@@ -226,10 +213,6 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
         }
     }
 
-
-
-
-
     protected void CreateAccount_Click(object sender, EventArgs e)
     {
 
@@ -240,6 +223,9 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
 
     protected void ForgetPasswordLink_Click(object sender, EventArgs e)
     {
+
+
+        Response.Redirect("ForgotPassword.aspx");
 
     }
 }

@@ -43,7 +43,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="MasterPageForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -52,21 +52,13 @@
 
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
-						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
+                        <li><a href="MasterPageForm.aspx">Creating Community</a></li>
+						<li><a href="MasterPageForm.aspx">Resources</a></li>
+                        <li><a href="MasterPageForm.aspx">News</a></li>
+                        <li><a href="AboutUsForMasterPageForm.aspx">About</a></li>
+                        <li><a href="LoginForm.aspx">Log In</a></li>
 
-                        <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
-                        <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Subscription</a></li>
-                            <li><a href="MasterPageForm.aspx">Log Out</a></li>
-                        </ul>
-                         <li><a href="#"></a></li>
+					 
 					  </ul> 
                   </div>
                 </nav>
@@ -87,9 +79,9 @@
       </div>
     </div>  --%>
 
-    <div class="py-2 bg-light text-center">
+    <div class="pt-5 bg-light text-center">
 
-        <h2> Subscription Levels</h2>
+        <h1 style="color:#102b3f;"> Subscription Levels</h1>
 <%--      <div class="container">--%>
 <%--        <div class="row">--%>
        
@@ -121,7 +113,7 @@
               <div class="table_btn">
                     <asp:Button 
                         ID="FreeTierButton" 
-                        class="btn btn-primary rounded text-white px-4"
+                        class="btn btn-primary rounded px-4"
                         runat="server" 
                         Text="Try Now" OnClick="FreeTierButton_Click1" />
 <%--                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Try Now</a>--%>
@@ -148,7 +140,7 @@
                 <asp:Button 
                         ID="PremiumTierButton"  
                         runat="server"
-                        class="btn btn-primary rounded text-white px-4"
+                        class="btn btn-primary rounded px-4"
                         Text="Subscribe Now" OnClick="PremiumTierButton_Click" />
 <%--                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>--%>
               </div>

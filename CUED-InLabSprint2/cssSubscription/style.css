@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+﻿
 /*
   Theme Name: eStartup
   Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
@@ -533,11 +533,11 @@ body.mobile-nav-active {
 # Sections
 --------------------------------------------------------------*/
 #donatePad {
-    padding-top: 25px;
+    padding-top: 40px;
 }
 
 #donateHead {
-    padding-top: 50px;
+    padding-top: 70px;
 }
 
 .padd-section {
@@ -1049,15 +1049,26 @@ body.mobile-nav-active {
         }
 
 #pricing .block-pricing .table .table_btn a {
-    background: #71c55d;
+    background: #81c341;
     color: #fff;
     margin: 0;
     display: inline-block;
 }
 
     #pricing .block-pricing .table .table_btn a:hover {
-        background: #55b03f;
+        background: none;
     }
+
+.btn_primary {
+    color: white;
+    background: #81c341;
+}
+
+    .btn_primary a:hover {
+        color: #81c341;
+        background: none;
+    }
+
 
     #pricing .block-pricing .table .table_btn a .fa {
         font-size: 13px;

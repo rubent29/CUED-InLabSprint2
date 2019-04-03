@@ -30,7 +30,7 @@
                         <ul class="dropdown arrow-top">
                           <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
+                          <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
                           <li><a href="SubscriptionForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
@@ -62,7 +62,8 @@
             <asp:Button ID="ViewYourPosting" 
                 runat="server" 
                 class="btn btn-primary rounded text-white px-4"
-                Text="View Your Posting" />
+                Text="View Your Posting" 
+                OnClick="ViewYourPosting_Click" />
             </span>
         &nbsp;</div>
       </div>

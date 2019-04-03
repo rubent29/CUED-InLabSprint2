@@ -85,7 +85,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <p class="mb-5"><img src="imagesForForms/CuedIn_logo-large(1)(2).jpg" alt="Image" class="img-fluid"></p>
+            <img src="imagesForForms/CuedIn_logo-large_(1)(2).jpg"  alt="Image" class="img-fluid px-5 mx-auto d-block" /> </img>
           </div>
           <div class="col-lg-5 ml-auto">
             <h2 class="site-section-heading mb-3">Our Story</h2>
@@ -98,7 +98,7 @@
       </div>
     </div>
 
-    <div class="site-section bg-image" style="background-image: url('images/bg_2.jpg'); background-attachment: fixed;">
+    <div class="site-section bg-image" style="background:#102b3f; "; background-attachment: fixed;">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-12">
@@ -133,8 +133,8 @@
       </div>  
     </div>
     
-      
-    <div class="site-section bg-image" style="background-image: url('images/bg_2.jpg'); background-attachment: fixed;">
+      <!-- ADD NEW IMAGE FOR BACKGROUND SECTION --> 
+    <div class="site-section bg-image" style="background-image: url(''); background-attachment: fixed;">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-12">

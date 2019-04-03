@@ -60,7 +60,7 @@
 
                         <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
+                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
                         <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
@@ -118,9 +118,12 @@
     <label for="JobType">Job Type</label>
     <br />
                 <asp:DropDownList ID="JobType" runat="server">
+                    <asp:ListItem>Shadowing</asp:ListItem>
+                    <asp:ListItem>Mentorship</asp:ListItem>
+                    <asp:ListItem>Internship</asp:ListItem>
+                    <asp:ListItem>Apprenticeship</asp:ListItem>
                     <asp:ListItem>Part-Time</asp:ListItem>
                     <asp:ListItem>Full-Time</asp:ListItem>
-                    <asp:ListItem>Internship</asp:ListItem>
                     <asp:ListItem>Seasonal</asp:ListItem>
                 </asp:DropDownList>
 

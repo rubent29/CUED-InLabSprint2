@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using System.Data.SqlClient;
 using System.Web.ApplicationServices;
 
@@ -29,22 +30,42 @@ public partial class EmployerForm1 : System.Web.UI.Page
                 //DisplayBox.Text = "Error connecting to Database";
             }
         }
-
     }
 
     protected void Insert_Button_Click(object sender, EventArgs e)
     {
+
+
+
+        DBconnection.Open();
+        SqlCommand checkuserNameDB = new SqlCommand("SELECT COUNT (*) FROM [dbo].[Account] WHERE ([userName] = @userName)", DBconnection);
+        checkuserNameDB.Parameters.AddWithValue("@userName", HttpUtility.HtmlEncode(CompanyEmail.Text));
+        int userNameNum = (int)checkuserNameDB.ExecuteScalar();
+
+
+        DBconnection.Close();
+
+        if (userNameNum > 0)
+        {
+            //checks if name and code exists
+            EmailLabel.Text = "Email Unavailable";
+        }
+
+
+
+
+        DBconnection.Close();
+
+
+
         if (FirstName.Text != "" && LastName.Text != "" && CompanyName.Text != "" && CompanyEmail.Text != "" && StreetAddress.Text != "" && City.Text != "" && Country.Text != ""
             && ZipCode.Text != "" && PasswordOne.Text != "" && PasswordTwo.Text != "")
         {
 
             Employer emp = new Employer(HttpUtility.HtmlEncode(FirstName.Text.Trim()), HttpUtility.HtmlEncode(LastName.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.Text.Trim()),
-                                    HttpUtility.HtmlEncode(CompanyEmail.Text.Trim()), HttpUtility.HtmlEncode(StreetAddress.Text.Trim()), HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()),
-                                    HttpUtility.HtmlEncode(Country.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(ZipCode.Text.Trim()), HttpUtility.HtmlEncode(PasswordOne.Text.Trim()), HttpUtility.HtmlEncode(PasswordTwo.Text.Trim()),
-                                    HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
-
-
-
+                                    HttpUtility.HtmlEncode(CompanyEmail.Text.Trim()), HttpUtility.HtmlEncode(StreetAddress.Text.Trim()), HttpUtility.HtmlEncode(City.Text.Trim()), 
+                                    HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(Country.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(ZipCode.Text.Trim()), 
+                                    HttpUtility.HtmlEncode(PasswordOne.Text.Trim()), HttpUtility.HtmlEncode(PasswordTwo.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
 
             System.Data.SqlClient.SqlCommand MaxStudent = new System.Data.SqlClient.SqlCommand();
             MaxStudent.Connection = DBconnection;
@@ -89,12 +110,59 @@ public partial class EmployerForm1 : System.Web.UI.Page
             }
             else
                 labelStatus.Text = "Passwords Do Not Match";
-
-
         }
         else
             labelStatus.Text = "Fill all fields.";
+
+        System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection();
+        sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
+
+        SqlCommand cmd = new SqlCommand("Select count(*) from Account where username = '" + CompanyEmail.Text + "' AND password = '" + PasswordOne.Text + "'", sc);
+        cmd.Parameters.AddWithValue("@username", CompanyEmail.Text);
+        cmd.Parameters.AddWithValue("@password", PasswordOne.Text);
+        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+        DataTable dt = new DataTable();
+        sda.Fill(dt);
+        sc.Open();
+        int i = cmd.ExecuteNonQuery();
+        sc.Close();
+        if (dt.Rows.Count > 0)
+        {
+            sc.Open();
+            Session["username"] = CompanyEmail.Text;
+            cmd.CommandText = "Select FirstName from Employer where CompanyEmail = @Username";
+            string fname = (string)cmd.ExecuteScalar();
+            HttpContext.Current.Session["FirstName"] = fname;
+            sc.Close();
+            sc.Open();
+            cmd.CommandText = "Select LastName from Employer where CompanyEmail = @Username";
+            string lname = (string)cmd.ExecuteScalar();
+            Session["LastName"] = lname;
+            sc.Close();
+            //Response.Redirect("Redirectform.aspx");
+            //Session.RemoveAll();
+        }
+        //Data validation??
+        //string username = CompanyEmail.Text;
+
+        //SqlConnection sqlConnection = new SqlConnection(@"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;");
+        //SqlCommand dv = new SqlCommand();
+        //dv.CommandType = CommandType.Text;
+        //dv.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+        //dv.CommandText = "SELECT * FROM Account WHERE username = @username";
+        //dv.Connection = sqlConnection;
+        //SqlDataReader reader = null;
+        //sqlConnection.Open();
+        //reader = dv.ExecuteReader();
+        //if (reader.Read())
+        //{
+        //    Label1.Text = "The username is already available, type a new one";
+        //    reader.Close();
+        //}
+        //sqlConnection.Close();
     }
+
+
 
     protected void Populate_Button_Click(object sender, EventArgs e)
     {

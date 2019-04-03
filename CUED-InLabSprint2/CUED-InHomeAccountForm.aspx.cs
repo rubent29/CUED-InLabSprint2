@@ -25,16 +25,7 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //newCmd.CommandText = "Select Username from Account where username = '" + (string)(Session)["username"] + "'";
         //DBconnection.Close();
         //Label1.Text = "Welcome" + (string)(Session)["username"];
-
-
-
-        //Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString(); //UNCOMMENT
-
-
-
-
-
-
+        Label1.Text = "Welcome " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();
         //if (Session["Username"] != null) // || Session["LastName"] != null)
         //{
         //    Label1.Text = "Login Successful. Welcome, " + Session["username"].ToString(); //+ " " + Session["LastName"].ToString();
@@ -90,7 +81,12 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
 
     protected void Page_Unload(object sender, EventArgs e)
     {
-        Session.Abandon();
+        //Session.Abandon();
         //Response.Cookies.Add(new HttpCookie(".ASPXFORMSAUTH", ""));
+    }
+
+    protected void Log_Out(object sender, EventArgs e)
+    {
+        Session.Abandon(); //Do we need this/is this correct??
     }
 }

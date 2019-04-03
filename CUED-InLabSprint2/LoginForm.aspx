@@ -45,9 +45,32 @@
                             placeholder="Username"
                             runat="server">
                         </asp:TextBox>
+             
+                        
+         
+
 <%--						<input class="input100" type="text" name="username" placeholder="Username">--%>
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
+                               <asp:RequiredFieldValidator 
+                            ID="UsernameValidator" 
+                            runat="server" 
+                            ErrorMessage="Required" 
+                            ForeColor="Red" ValidationGroup="LoginGroup" 
+                            ControlToValidate="Username">
+
+                        </asp:RequiredFieldValidator>
+
+                        <asp:RegularExpressionValidator 
+                            ID="EmailFormatvalidator" 
+                            runat="server" 
+                            ErrorMessage="Enter a valid email" 
+                            ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+                            ForeColor="Red" 
+                            ValidationGroup="LoginGroup" 
+                            ControlToValidate="Username">
+
+                        </asp:RegularExpressionValidator>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
                         <asp:TextBox 
@@ -58,10 +81,20 @@
                             PasswordChar="*"
                             runat="server">
                         </asp:TextBox>
+
+               
 <%--						<input class="input100" type="password" name="pass" placeholder="Password">--%>
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
+                         <asp:RequiredFieldValidator 
+                            ID="Required" 
+                            runat="server" 
+                            ErrorMessage="Required" 
+                            ForeColor="Red" 
+                            ValidationGroup="LoginGroup" 
+                            ControlToValidate="Password">
 
+                         </asp:RequiredFieldValidator>
 					<div class="contact100-form-checkbox">
 						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 						<label class="label-checkbox100" for="ckb1">
@@ -73,7 +106,8 @@
 				        <asp:Button ID="Login" 
                             runat="server" 
                             class="login100-form-btn"
-                            Text="Login" OnClick="Login_Click" />
+                            Text="Login" OnClick="Login_Click" 
+                            ValidationGroup="LoginGroup" />
 					</div>
                 	<div class="text-center p-t-90">
 						<a class="txt1" href="#">
@@ -94,7 +128,6 @@
                              runat="server">
 
 						 </asp:Label>
-
 
 
 						</a>
