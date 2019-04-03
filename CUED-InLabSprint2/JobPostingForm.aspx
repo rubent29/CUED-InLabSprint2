@@ -118,9 +118,12 @@
     <label for="JobType">Job Type</label>
     <br />
                 <asp:DropDownList ID="JobType" runat="server">
+                    <asp:ListItem>Shadowing</asp:ListItem>
+                    <asp:ListItem>Mentorship</asp:ListItem>
+                    <asp:ListItem>Internship</asp:ListItem>
+                    <asp:ListItem>Apprenticeship</asp:ListItem>
                     <asp:ListItem>Part-Time</asp:ListItem>
                     <asp:ListItem>Full-Time</asp:ListItem>
-                    <asp:ListItem>Internship</asp:ListItem>
                     <asp:ListItem>Seasonal</asp:ListItem>
                 </asp:DropDownList>
 
