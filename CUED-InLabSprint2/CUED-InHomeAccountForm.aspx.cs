@@ -16,6 +16,35 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         {
             Response.Redirect("LoginForm.aspx");
         }
+
+        if(!Page.IsPostBack)
+        {
+            if(Session["username"] == null)
+            {
+                HttpContext.Current.Response.Write("<script> alert('Your session is expired.'); window.location.href = 'Sign_in.aspx");
+            }
+            else
+            {
+                HttpContext.Current.Response.Cache.SetExpires(DateTime.UtcNow.AddDays(-1));
+                HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                HttpContext.Current.Response.Cache.SetNoStore();
+
+                HttpContext.Current.Response.ClearHeaders();
+                HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+                HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
+            }
+        }
+
+        HttpContext.Current.Response.Cache.SetExpires(DateTime.UtcNow.AddDays(-1));
+        HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+        HttpContext.Current.Response.Cache.SetNoStore();
+
+        HttpContext.Current.Response.ClearHeaders();
+        HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+        HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
+        //HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        //HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
+        //HttpContext.Current.Response.AddHeader("Expires", "0");
         //System.Data.SqlClient.SqlConnection DBconnection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString;"].ConnectionString);
         //String ConnectionString = "server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
 
@@ -60,26 +89,29 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
 
     }
 
-    protected void RegisterButton_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("EmployerForm.aspx");
-    }
+    //MAY NEED TO UNCOMMENT THE FOLLOWING 2 METHODS
 
-    protected void login_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("LoginForm.aspx");
-    }
+
+    //protected void RegisterButton_Click(object sender, EventArgs e)
+    //{
+    //    Response.Redirect("EmployerForm.aspx");
+    //}
+
+    //protected void login_Click(object sender, EventArgs e)
+    //{
+    //    Response.Redirect("LoginForm.aspx");
+    //}
 
     //protected void Page_Unload(object sender, EventArgs e)
     //{
     //    Session.Clear();
     //    HttpContext.Current.Response.Redirect("MasterPageForm.aspx");
     //}
-    public void LoginLink_OnClick(object sender, EventArgs args)
-    {
-        FormsAuthentication.SignOut();
-        FormsAuthentication.RedirectToLoginPage();
-    }
+    //public void LoginLink_OnClick(object sender, EventArgs args)
+    //{
+    //    FormsAuthentication.SignOut();
+    //    FormsAuthentication.RedirectToLoginPage();
+    //}
 
     protected void Page_Unload(object sender, EventArgs e)
     {
@@ -87,7 +119,7 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //Response.Cookies.Add(new HttpCookie(".ASPXFORMSAUTH", ""));
     }
 
-    protected void Log_Out(object sender, EventArgs e)
+    protected void LogOut_Click(object sender, EventArgs e)
     {
         Session.Abandon(); //Do we need this/is this correct??
     }
