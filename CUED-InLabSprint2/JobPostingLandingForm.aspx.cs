@@ -23,7 +23,7 @@ public partial class JobPostingLandingForm : System.Web.UI.Page
 
     protected void ViewYourPosting_Click(object sender, EventArgs e)
     {
-        Response.Redirect("JobPostingForm.aspx", false);
+        Response.Redirect("ViewPostingForm.aspx", false);
     }
 
 
