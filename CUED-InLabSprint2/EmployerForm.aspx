@@ -102,7 +102,7 @@
         Width="727px">
     </asp:TextBox>
 
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+<%--    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>--%>
 
  </div>		
 <div class="form-group">
@@ -165,6 +165,7 @@
     <asp:TextBox 
         ID="PasswordOne" 
         runat="server"
+        Type ="password"
         placeholder="Enter Password"
         Width="727px">
     </asp:TextBox>
@@ -175,6 +176,7 @@
     <asp:TextBox 
         ID="PasswordTwo" 
         runat="server"
+        Type ="password"
         placeholder="Confirm Password"
         Width="727px">
     </asp:TextBox>
