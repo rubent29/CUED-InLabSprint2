@@ -89,7 +89,7 @@
     <div class="site-blocks-cover inner-page" style="background-image: url();" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>Post an Opportunity</h1>
+          <h1>View Your Posts</h1>
         </div>
       </div>
     </div>  
@@ -106,16 +106,8 @@
 <div class="form-group">
     </div>
 <div class="form-group">
-    </div>
-<div class="form-group">
-    <asp:DetailsView 
-        ID="DetailsView1" 
-        runat="server" 
-        AutoGenerateRows="False" 
-        DataSourceID="AwsDataSource" 
-        Height="50px" 
-        Width="516px">
-        <Fields>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="AwsDataSource" Height="163px" Width="16px">
+        <Columns>
             <asp:BoundField DataField="PostingID" HeaderText="PostingID" InsertVisible="False" ReadOnly="True" SortExpression="PostingID" />
             <asp:BoundField DataField="JobTitle" HeaderText="JobTitle" SortExpression="JobTitle" />
             <asp:BoundField DataField="JobType" HeaderText="JobType" SortExpression="JobType" />
@@ -127,8 +119,16 @@
             <asp:BoundField DataField="Deadline" HeaderText="Deadline" SortExpression="Deadline" />
             <asp:BoundField DataField="EmployerID" HeaderText="EmployerID" SortExpression="EmployerID" />
 
-        </Fields>
-    </asp:DetailsView>
+
+
+
+
+
+
+        </Columns>
+    </asp:GridView>
+    </div>
+<div class="form-group">
     <asp:SqlDataSource 
         ID="AwsDataSource" 
         runat="server" 
@@ -153,22 +153,7 @@ FROM            JobPosting LEFT OUTER JOIN
 
           </div>
 
-          <div class="col-lg-4">
-            <div class="p-4 mb-3 bg-white">
-              <h3 class="h5 text-black mb-3">Contact Info</h3>
-              <p class="mb-0 font-weight-bold">Address</p>
-              <p class="mb-4">320 South Main Street Suite 2E, Harrisonburg, Virginia, USA</p>
-
-              <p class="mb-0 font-weight-bold">Phone</p>
-              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
-
-              <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">info@cued-in.com</a></p>
-
-            </div>
-            
-            
-          </div>
+     
         </div>
       </div>
     </div>
