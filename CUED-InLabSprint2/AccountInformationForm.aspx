@@ -22,11 +22,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
-
-
-
-
+   
 
     <table class="w-100">
         <tr>
@@ -60,13 +56,13 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style5">
+                </td>
+            <td class="auto-style3">
                 <asp:Label ID="CompanyNameLabel" runat="server" Text="CompanyName: "></asp:Label>
             </td>
-            <td>
-                <asp:Label ID="CompanyEmailLabel" runat="server" Text="Label"></asp:Label>
+            <td class="auto-style1">
+                <asp:Label ID="CompNameLabel" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -76,7 +72,7 @@
                 <asp:Label ID="Label27" runat="server" Text="Company Email: "></asp:Label>
             </td>
             <td>
-                <asp:Label ID="Label28" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="CompEmailLabel" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -181,10 +177,11 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;
+
     <asp:Button 
         ID="LoginAgainButton" 
         runat="server" 
-        Text="Button" 
+        Text="Log In Again to Edit" 
         OnClick="LoginAgainButton_Click" />
 
 

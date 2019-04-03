@@ -17,6 +17,6 @@ public partial class AccountInformationForm : System.Web.UI.Page
 
     protected void LoginAgainButton_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("EditAccountLoginForm.aspx");
     }
 }

@@ -313,6 +313,55 @@
             ForeColor="Red">
 
         </asp:CompareValidator>
+
+  <div class="form-group">
+    <label for="SecurityQuestion">Security Question:</label>
+      <br />
+    <asp:TextBox 
+        ID="TextBoxQuestion" 
+        runat="server"
+        placeholder="Security Question"
+        Width="727px">
+    </asp:TextBox>
+
+    <asp:RequiredFieldValidator 
+            ID="RequiredFieldValidator1" 
+            runat="server" 
+            ControlToValidate="TextBoxQuestion" 
+            ErrorMessage="Required" 
+            ForeColor="Red" 
+            ValidationGroup="SubmitGroup">
+
+        </asp:RequiredFieldValidator>
+
+
+  </div>
+<div class="form-group">
+    <label for="Answer">Answer: </label>
+    <br />
+    <asp:TextBox 
+        ID="TextBoxAnswer" 
+        runat="server"
+        placeholder="Answer"
+        Width="727px">
+    </asp:TextBox>
+
+        <asp:RequiredFieldValidator 
+            ID="RequiredFieldValidator2" 
+            runat="server" 
+            ControlToValidate="TextBoxAnswer" 
+            ErrorMessage="Required" 
+            ForeColor="Red" 
+            ValidationGroup="SubmitGroup">
+
+        </asp:RequiredFieldValidator>
+
+  </div>
+
+
+
+
+
  </div>
 <div class="form-group">
   </div>
