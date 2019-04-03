@@ -104,18 +104,18 @@ protected void Insert_Button_Click(object sender, EventArgs e)
 
 protected void Populate_Button_Click(object sender, EventArgs e)
 {
-    FirstName.Text = "John";
-    LastName.Text = "Doe";
-    CompanyName.Text = "ABC LLC";
-    CompanyEmail.Text = "abc@dukes.jmu.edu";
-    StreetAddress.Text = "123 Abc Street";
-    City.Text = "Harrisonburg";
-    State.Text = "VA";
-    Country.Text = "United States";
-    ZipCode.Text = "22801";
-    PasswordOne.Text = "abcabc";
-    PasswordTwo.Text = "abcabc";
-    TextBoxQuestion.Text = "What is your school's mascot?";
-    TextBoxAnswer.Text = "Duke Dog";
-}
+        FirstName.Text = "John";
+        LastName.Text = "Doe";
+        CompanyName.Text = "ABC LLC";
+        CompanyEmail.Text = "abc@dukes.jmu.edu";
+        StreetAddress.Text = "123 Abc Street";
+        City.Text = "Harrisonburg";
+        State.Text = "VA";
+        Country.Text = "United States";
+        ZipCode.Text = "22801";
+        PasswordOne.Text = "abcabc";
+        PasswordTwo.Text = "abcabc";
+        TextBoxQuestion.Text = "What is your school's mascot?";
+        TextBoxAnswer.Text = "Duke Dog";
+    }
 }

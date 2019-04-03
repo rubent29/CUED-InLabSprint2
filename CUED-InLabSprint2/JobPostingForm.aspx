@@ -204,13 +204,13 @@
 
 <asp:Button 
     ID="Insert_Button" 
-    class="btn btn-primary rounded text-white px-4"
+    class="btn btn-primary rounded px-4"
     runat="server" Text="Submit" OnClick="Insert_Button_Click" />
 
 &nbsp;    
 <asp:Button 
     ID="Populate" 
-    class="btn btn-primary rounded text-white px-4"
+    class="btn btn-primary rounded px-4"
     runat="server" Text="Populate" OnClick="Populate_Button_Click" />
 </form>
 

@@ -19,6 +19,26 @@ public partial class EditAccount : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
+        SqlConnection DBconnection = new SqlConnection("Data Source=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;Initial Catalog=CuedIn;Persist Security Info=True;User ID=admin;Password=dukedog19");
+        DBconnection.Open();
+        SqlCommand cmd = new SqlCommand("Select * from Employer where companyEmail = @companyEmail", DBconnection);
+
+        FirstName.Text = "John";
+        LastName.Text = "Doe";
+        CompanyName.Text = "ABC LLC";
+        CompanyEmail.Text = "abc@dukes.jmu.edu";
+        StreetAddress.Text = "123 Abc Street";
+        City.Text = "Harrisonburg";
+        State.Text = "VA";
+        Country.Text = "United States";
+        ZipCode.Text = "22801";
+        PasswordOne.Text = "abcabc";
+        PasswordTwo.Text = "abcabc";
+        TextBoxQuestion.Text = "What is your school's mascot?";
+        TextBoxAnswer.Text = "Duke Dog";
+
+
+
     }
 
     protected void SaveChanges_Button_Click(object sender, EventArgs e)
