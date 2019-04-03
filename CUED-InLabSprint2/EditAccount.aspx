@@ -19,14 +19,23 @@
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
                    
-                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+   <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="MasterPageForm.aspx">Creating Community</a></li>
-						<li><a href="MasterPageForm.aspx">Resources</a></li>
-                        <li><a href="MasterPageForm.aspx">News</a></li>
-                        <li><a href="AboutUsForMasterPageForm.aspx">About</a></li>
-                        <li><a href="LoginForm.aspx">Log In</a></li>
+                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
+						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
+                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
 
+                        <li class="has-children">
+                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="AccountInformationForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
+                          <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+                            <li><a href="MasterPageForm.aspx">Log Out</a></li>
+                        </ul>
+                         <li><a href="#"></a></li>
 					  </ul> 
 
                   </div>
@@ -38,15 +47,7 @@
       </div>
     </div>
   
- 
-    <div class="site-blocks-cover inner-page" style="background-image: url(https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/group-of-students-join-hands.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-7 text-center" data-aos="fade">
-          <h1>Register Business</h1>
-          <span class="caption d-block text-white">Get In Touch</span>
-        </div>
-      </div>
-    </div>  
+
 
     <div class="py-5 bg-light">
       <div class="container">
@@ -369,7 +370,7 @@
 
 <asp:Button 
     ID="SaveChanges_Button" 
-    class="btn btn-primary rounded text-white px-4"
+    class="btn btn-primary rounded px-4"
     runat="server" 
     Text="Save Changes" 
     OnClick="SaveChanges_Button_Click"  
