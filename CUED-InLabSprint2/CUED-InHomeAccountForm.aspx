@@ -4,7 +4,7 @@
 
     <style type="text/css">
         .auto-style1 {
-            background-color: #FFFF66;
+            background-color: #FFFFFF;
         }
     </style>
 
@@ -73,16 +73,14 @@
          <div class="container"> 
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1>Employer</h1>
-                <span class="caption d-block text-black"><strong>Join the Cued-In</strong> <strong>Community.</strong></span>
-
-                <strong>
+              <h1><strong>
                 <asp:Label ID="Label1" 
                     runat="server" 
                     CssClass="auto-style1" 
                     Text="Label"></asp:Label>
                 </strong>
-            </div>
+                </h1>
+                &nbsp;</div>
           </div>
         </div> 
       </div>  
