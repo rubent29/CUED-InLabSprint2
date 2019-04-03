@@ -248,10 +248,14 @@
 
     <div class="form-group">
         <label for="SchoolSelect">School</label>&nbsp;
+        <label for="Select Interests">Select Job Interests</label>&nbsp;
       <br />
-        <asp:DropDownList ID="School" runat="server" DataSourceID="SqlDataSource1" DataTextField="SchoolName" DataValueField="SchoolName">
+        <asp:DropDownList ID="School" runat="server" DataSourceID="SqlDataSource1" DataTextField="SchoolName" DataValueField="SchoolID">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CuedInConnectionString2 %>" SelectCommand="SELECT [SchoolName] FROM [School]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CuedInConnectionString2 %>" SelectCommand="SELECT [SchoolName], [SchoolID] FROM [School]"></asp:SqlDataSource>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:ListBox ID="StudentInterest" runat="server" DataSourceID="SqlDataSource2" DataTextField="IndustryArea" DataValueField="IndustryID" SelectionMode="Multiple"></asp:ListBox>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" SelectCommand="SELECT [IndustryArea], [IndustryID] FROM [Industry]"></asp:SqlDataSource>
         <br />
 
 

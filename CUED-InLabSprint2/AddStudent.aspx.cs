@@ -55,17 +55,19 @@ public partial class AddStudent1 : System.Web.UI.Page
         DBconnection.Close();
         int age = agecalc();
         
-
+        //Make sure form is filled out correctly
         if (FirstName.Text != "" && LastName.Text != "" && MiddleName.Text != "" && StudentEmail.Text != "" && StreetAddress.Text != "" && City.Text != "" && Country.Text != ""
-           && ZipCode.Text != "" && PasswordOne.Text != "" && PasswordTwo.Text != "" && DateOfBirth.Text !="" && Country.Text != "")
+           && ZipCode.Text != "" && PasswordOne.Text != "" && PasswordTwo.Text != "" && DateOfBirth.Text !="" && Country.Text != "" && StudentInterest.Text != "")
         {
-            //public Student( DateTime dob, int age, String zipCode, String passwordOne, String passwordTwo, String LastUpdatedBy, String LastUpdated)
+           
 
-
+            //Create Student Object
             Student stu = new Student(HttpUtility.HtmlEncode(FirstName.Text.Trim()), HttpUtility.HtmlEncode(LastName.Text.Trim()), HttpUtility.HtmlEncode(MiddleName.Text.Trim()),
                                     HttpUtility.HtmlEncode(StudentEmail.Text.Trim()), HttpUtility.HtmlEncode(StreetAddress.Text.Trim()), HttpUtility.HtmlEncode(City.Text.Trim()),
-                                    HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(Country.SelectedItem.Text.Trim()), //HttpUtiliy.HtmlEncode(School.SelectedItem.Te
-                                    DateTime.Parse(HttpUtility.HtmlEncode(DateOfBirth.Text.Trim())),int.Parse(HttpUtility.HtmlEncode(age)),
+                                    HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(Country.SelectedItem.Text.Trim()), 
+                                    int.Parse(HttpUtility.HtmlEncode(School.SelectedValue)),
+                                    DateTime.Parse(HttpUtility.HtmlEncode(DateOfBirth.Text.Trim())),
+                                    int.Parse(HttpUtility.HtmlEncode(age)),
                                     HttpUtility.HtmlEncode(ZipCode.Text.Trim()),HttpUtility.HtmlEncode(PasswordOne.Text.Trim()), 
                                     HttpUtility.HtmlEncode(PasswordTwo.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
 
@@ -75,8 +77,8 @@ public partial class AddStudent1 : System.Web.UI.Page
 
             DBconnection.Open();
 
-
-            string stuInfo = "insert into [dbo].[student] values (@firstName, @lastName, @middleName, @email, @streetAddress, @city, @state, @zipCode, @country, @DateOfBirth, @Age, @passwordOne, @passwordTwo, @lastUpdatedBy, @lastUpdated)";
+            //Insert Into Student Table
+            string stuInfo = "insert into [dbo].[student] values (@firstName, @lastName, @middleName, @email, @streetAddress, @city, @state, @zipCode, @country, @schoolID, @DateOfBirth, @Age, @passwordOne, @passwordTwo, @lastUpdatedBy, @lastUpdated)";
             SqlCommand insert = new SqlCommand(stuInfo, DBconnection);
             insert.Parameters.AddWithValue("@firstName", stu.getFirstName());
             insert.Parameters.AddWithValue("@lastName", stu.getLastName());
@@ -87,6 +89,7 @@ public partial class AddStudent1 : System.Web.UI.Page
             insert.Parameters.AddWithValue("@state", stu.getState());
             insert.Parameters.AddWithValue("@country", stu.getCountry());
             insert.Parameters.AddWithValue("@zipCode", stu.getZipCode());
+            insert.Parameters.AddWithValue("@schoolID", stu.getSchoolID());
             insert.Parameters.AddWithValue("@DateOfBirth", stu.getDateOfBirth());
             insert.Parameters.AddWithValue("@Age", stu.getAge());
             insert.Parameters.AddWithValue("@passwordOne", stu.getPasswordOne());
@@ -97,6 +100,25 @@ public partial class AddStudent1 : System.Web.UI.Page
             insert.ExecuteNonQuery();
             DBconnection.Close();
             DBconnection.Open();
+
+
+
+            //Insert into Student Interest Table
+            for (int i = 0; i < StudentInterest.Items.Count; i++)
+            {
+                if (StudentInterest.Items[i].Selected)
+                {
+
+                    String stuInterest = "Insert into [dbo].[StudentInterest] values (@StudentID, @IndustryID, @LastUpdatedBy, @LastUpdated)";
+                    SqlCommand insertStuInterest = new SqlCommand(stuInterest, DBconnection);
+                    insertStuInterest.Parameters.AddWithValue("@StudentID", stu.getStudentID());
+                    insertStuInterest.Parameters.AddWithValue("@IndustryID", StudentInterest.Items[i].Value);
+                    insertStuInterest.Parameters.AddWithValue("@LastUpdatedBy", stu.getLastUpdatedBy());
+                    insertStuInterest.Parameters.AddWithValue("@LastUpdated", stu.getLastUpdated());
+                    insertStuInterest.ExecuteNonQuery();
+                }
+            }
+
 
 
 
