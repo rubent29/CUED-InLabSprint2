@@ -9,10 +9,10 @@ public partial class css_SubscriptionTierForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if ((HttpContext.Current.Request.UrlReferrer == null))
-        {
-            Response.Redirect("LoginForm.aspx");
-        }
+        //if ((HttpContext.Current.Request.UrlReferrer == null))
+        //{
+        //    Response.Redirect("LoginForm.aspx");
+        //}
     }
 
     protected void FreeTierButton_Click(object sender, EventArgs e)

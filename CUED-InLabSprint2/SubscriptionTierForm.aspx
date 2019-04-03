@@ -87,9 +87,9 @@
       </div>
     </div>  --%>
 
-    <div class="py-2 bg-light text-center">
+    <div class="pt-5 bg-light text-center">
 
-        <h2> Subscription Levels</h2>
+        <h1 style="color:#102b3f;"> Subscription Levels</h1>
 <%--      <div class="container">--%>
 <%--        <div class="row">--%>
        
@@ -121,7 +121,7 @@
               <div class="table_btn">
                     <asp:Button 
                         ID="FreeTierButton" 
-                        class="btn btn-primary rounded text-white px-4"
+                        class="btn btn-primary rounded px-4"
                         runat="server" 
                         Text="Try Now" />
 <%--                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Try Now</a>--%>
@@ -148,7 +148,7 @@
                 <asp:Button 
                         ID="PremiumTierButton"  
                         runat="server"
-                        class="btn btn-primary rounded text-white px-4"
+                        class="btn btn-primary rounded px-4"
                         Text="Subscribe Now" OnClick="PremiumTierButton_Click" />
 <%--                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>--%>
               </div>

@@ -21,7 +21,8 @@ body {
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
-  color: #102b3f; }
+    color: #102b3f;
+}
 
 a {
 	color: #102b3f;
@@ -200,6 +201,8 @@ a {
   background: #000;
   -webkit-box-shadow: 20px 0 0 #000, -20px 0 0 #000;
   box-shadow: 20px 0 0 #000, -20px 0 0 #000; }
+
+
 
 .bg-image {
   background-size: cover;
