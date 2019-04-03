@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <div class="site-navbar-wrap js-site-navbar bg-dark">
+      <div class="site-wrap">
+    <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
         <div class="site-navbar bg-light">
@@ -19,7 +20,7 @@
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                       <li class="has-children">
-                        <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
+                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
                         <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>

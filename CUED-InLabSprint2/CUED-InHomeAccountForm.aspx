@@ -4,15 +4,14 @@
 
     <style type="text/css">
         .auto-style1 {
-            background-color: #FFFF66;
+            background-color: #FFFFFF;
         }
     </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <body>
-  
-  <div class="site-wrap">
+
+    <div class="site-wrap">
 
 
     <div class="site-mobile-menu">
@@ -50,7 +49,7 @@
                         <li class="has-children">
                         <a href="CUED-InHomeAccountForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
+                          <li><a href="AccountInformationForm.aspx">Account Information</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
                           <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
                           <li><a href="SubscriptionForm.aspx">Subscription</a></li>
@@ -74,16 +73,14 @@
          <div class="container"> 
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1>Employer</h1>
-                <span class="caption d-block text-black"><strong>Join the Cued-In</strong> <strong>Community.</strong></span>
-
-                <strong>
+              <h1><strong>
                 <asp:Label ID="Label1" 
                     runat="server" 
                     CssClass="auto-style1" 
                     Text="Label"></asp:Label>
                 </strong>
-            </div>
+                </h1>
+                &nbsp;</div>
           </div>
         </div> 
       </div>  

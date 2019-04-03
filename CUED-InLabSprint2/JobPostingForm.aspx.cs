@@ -23,6 +23,10 @@ public partial class JobPostingForm : System.Web.UI.Page
             try
             {
                 DBconnection.ConnectionString = ConnectionString;
+                if ((HttpContext.Current.Request.UrlReferrer == null))
+                {
+                    Response.Redirect("LoginForm.aspx");
+                }
             }
 
             catch (Exception)

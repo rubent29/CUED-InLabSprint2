@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+          <div class="site-wrap">
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -100,6 +101,8 @@
         placeholder="Company Email"
         Width="727px">
     </asp:TextBox>
+
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 
  </div>		
 <div class="form-group">
