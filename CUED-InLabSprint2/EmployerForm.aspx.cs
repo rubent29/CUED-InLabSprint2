@@ -92,9 +92,25 @@ protected void Insert_Button_Click(object sender, EventArgs e)
             setPass.ExecuteNonQuery();
 
             DBconnection.Close();
-
+                DBconnection.Open();
             labelStatus.Text = "User committed!";
-            Response.Redirect("CUED-InHomeAccountForm.aspx", false);
+
+                //SqlCommand com = new SqlCommand("Select EmployerID from Employer where EmployerID = (Select EmployerID from Employer where CompanyEmail = '" + CompanyEmail.Text + "')", DBconnection);
+                //SqlDataReader read = com.ExecuteReader();
+                //while (read.Read())
+                //{
+                //    Session["EmployerID"] = read.GetInt32(0);
+                //}
+                //DBconnection.Close();
+                //DBconnection.Open();
+                //SqlCommand name = new SqlCommand("Select FirstName from Employer where FirstName = (Select FirstName from Employer where CompanyEmail = '" + CompanyEmail.Text + "')", DBconnection);
+                //SqlDataReader nameRead = name.ExecuteReader();
+                //while (nameRead.Read())
+                //{
+                //    Session["firstName"] = nameRead.GetString(0);
+                //}
+                //Session["CreateUser"] = CompanyEmail.Text;
+                Response.Redirect("LoginForm.aspx");
         }
         else
             labelStatus.Text = "Passwords Do Not Match";

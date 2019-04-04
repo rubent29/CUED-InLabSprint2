@@ -50,8 +50,26 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                 sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
                 lblStatus.Text = "Database Connection Successful";
 
-                //sc.Open();
+            //sc.Open();
 
+            //string loginCheck = "Select count(*) from Account where username = @username AND password = @password";
+            //SqlCommand myloginCheckcmd = new SqlCommand(loginCheck, sc);
+            //var rdr = myloginCheckcmd.ExecuteReader();
+            //if (rdr.HasRows)
+            //{
+            //    while (rdr.Read())
+            //    {
+            //        Session["fname"] = rdr[0];
+            //        //Session["mname"] = rdr[1];
+            //        Session["lname"] = rdr[1];
+            //    }
+
+
+            //}
+
+            Session["Test"] = Username.Text;
+            Response.Redirect("CUED-InHomeAccountForm.aspx");
+        /*    
             SqlCommand cmd = new SqlCommand("Select count(*) from Account where username = @username AND password = @password", sc); //this needs to be a parameterized query
             cmd.Parameters.AddWithValue("@username", Username.Text);
             cmd.Parameters.AddWithValue("@password", Password.Text);
@@ -81,7 +99,7 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
             }
             sc.Open();
 
-
+    */
             //string sql = "Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'"; ///////
             //DBconnection.Open();
             ////SqlDataAdapter sda = new SqlDataAdapter("Select count(*) from Account where username = '" + Username.Text + "' AND password = '" + Password.Text + "'", sc);
@@ -156,6 +174,27 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
 
                         if (PasswordHash.ValidatePassword(Password.Text, storedHash)) // if the entered password matches what is stored, it will show success
                         {
+
+                        Session["UserSession"] = Username.Text;
+                        reader.Close();
+
+                        SqlCommand com = new SqlCommand("Select EmployerID from Employer where EmployerID = (Select EmployerID from Employer where CompanyEmail = '" + Username.Text + "')", sc);
+                        SqlDataReader read = com.ExecuteReader();
+                        while(read.Read())
+                        {
+                            Session["EmployerID"] = read.GetInt32(0);
+                        }
+                        sc.Close();
+                        sc.Open();
+                        SqlCommand name = new SqlCommand("Select FirstName from Employer where name = (Select FirstName from Employer where CompanyEmail = '" + Username.Text + "')", sc);
+                        SqlDataReader nameRead = name.ExecuteReader();
+                        while(nameRead.Read())
+                        {
+                            Session["firstName"] = nameRead.GetString(0);
+                        }
+                        Response.Redirect("CUED-InHomeAccountForm.aspx");
+
+
                         //Session["FirstName"] = FirstName.Text;
                         //Session["LastName"] = LastName.Text;
                         lblStatus.Text = "Success!";
