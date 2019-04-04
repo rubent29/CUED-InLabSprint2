@@ -40,7 +40,6 @@ public partial class JobPostingForm : System.Web.UI.Page
     {
         JobTitle.Text = "Carpenter Assistant";
         JobType.SelectedValue = "Full-TIme";
-        CompanyName.Text = "Southern Image Construction";
         City.Text = "Harrisonburg";
         State.Text = "VA";
         PayStatus.SelectedValue = "Paid";
@@ -50,9 +49,6 @@ public partial class JobPostingForm : System.Web.UI.Page
 
     protected void Insert_Button_Click(object sender, EventArgs e)
     {
-
-  
-
 
         DBconnection.Open();
 
