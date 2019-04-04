@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ViewPostingForm.aspx.cs" Inherits="ViewPostingForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FreeJobPostingForm.aspx.cs" Inherits="FreeJobPostingForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        
+  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -51,7 +51,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="FreeCuedInHomeForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -60,17 +60,16 @@
 
                         <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
-						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
+                        <li><a href="FreeJobPostingLandingForm.aspx">Job Posting</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="FreeCuedInHomeForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Account Information</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Applicants</a></li>
+                          <li><a href="FreeJobPostingLandingForm">Job Postings</a></li>
                           <li><a href="SubscriptionForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
@@ -86,10 +85,10 @@
     </div>
   
  
-    <div class="site-blocks-cover inner-page" style="background-image: url();" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page" style="background-image: url(imagesForForms/teacher_help.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>View Your Posts</h1>
+          <h1>Post an Opportunity</h1>
         </div>
       </div>
     </div>  
@@ -100,68 +99,166 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
 
-<form>
+			  <form>
+  <div class="form-group">
+  </div>				  
+  <div class="form-group">
+    <label for="JobTitle">Job Title</label>
+      <br />
+    <asp:TextBox 
+        ID="JobTitle" 
+        runat="server"
+        placeholder="Job Title"
+        Width="727px">
+    </asp:TextBox>
+
+  </div>
 <div class="form-group">
-    </div>				  
+    <label for="JobType">Job Type</label>
+    <br />
+                <asp:DropDownList ID="JobType" runat="server">
+                    <asp:ListItem>Shadowing</asp:ListItem>
+                    <asp:ListItem>Mentorship</asp:ListItem>
+                    <asp:ListItem>Internship</asp:ListItem>
+                    <asp:ListItem>Apprenticeship</asp:ListItem>
+                    <asp:ListItem>Part-Time</asp:ListItem>
+                    <asp:ListItem>Full-Time</asp:ListItem>
+                    <asp:ListItem>Seasonal</asp:ListItem>
+                </asp:DropDownList>
+
+  </div>
 <div class="form-group">
+    <label for="CompanyName">Company Name</label>
+    <br />
+
+<asp:DropDownList 
+    runat="server" 
+    DataSourceID="SqlDataSource1" 
+    DataTextField="CompanyName" 
+    DataValueField="EmployerID" 
+    ID="CompanyName">
+
+</asp:DropDownList>
+
+
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" SelectCommand="SELECT [CompanyName], [EmployerID] FROM [Employer]"></asp:SqlDataSource>
+
+
+ </div>	
+	<div class="form-group">
+    <label for="City">City</label>
+        <br />
+    <asp:TextBox 
+        ID="City" 
+        runat="server"
+        placeholder="City"
+        Width="727px">
+    </asp:TextBox>
+
     </div>
+	<div class="form-group">
+    <label for="State">State</label>
+        <br />
+    <asp:TextBox 
+        ID="State" 
+        runat="server"
+        placeholder="State"
+        Width="727px">
+    </asp:TextBox>
+
+  </div>
+	<div class="form-group">
+    <label for="PayStatus">PayStatus</label>
+        <br />
+                <asp:DropDownList ID="PayStatus" runat="server">
+                    <asp:ListItem>Unpaid</asp:ListItem>
+                    <asp:ListItem>Paid</asp:ListItem>
+                </asp:DropDownList>
+
+  </div>  
 <div class="form-group">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="AwsDataSource" Height="150px" Width="16px" DataKeyNames="PostingID,EmployerID1">
-        <Columns>
-            <asp:BoundField DataField="EmployerID" HeaderText="EmployerID" SortExpression="EmployerID" />
+    <label for="JobDescription">Job Description</label>
+        <br />
+    <asp:TextBox 
+        ID="JobDescription" 
+        runat="server"
+        placeholder="Brief Job Description"
+        Width="727px">
+    </asp:TextBox>
 
+        </div>
+	<div class="form-group">
+    <label for="Deadline">Deadline</label>
+        <br />
+    <asp:TextBox 
+        ID="Deadline" 
+        runat="server"
+        placeholder="MM/DD/YYYY"
+        Width="727px">
+    </asp:TextBox>
+          </div>
 
-
-
-
-
-
-            <asp:BoundField DataField="Deadline" HeaderText="Deadline" SortExpression="Deadline" />
-            <asp:BoundField DataField="DateCreated" HeaderText="DateCreated" SortExpression="DateCreated" />
-            <asp:BoundField DataField="JobDescription" HeaderText="JobDescription" SortExpression="JobDescription" />
-            <asp:BoundField DataField="PayStatus" HeaderText="PayStatus" SortExpression="PayStatus" />
-            <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
-            <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
-            <asp:BoundField DataField="JobType" HeaderText="JobType" SortExpression="JobType" />
-            <asp:BoundField DataField="JobTitle" HeaderText="JobTitle" SortExpression="JobTitle" />
-            <asp:BoundField DataField="PostingID" HeaderText="PostingID" InsertVisible="False" ReadOnly="True" SortExpression="PostingID" />
-
-
-
-
-
-
-
-
-        </Columns>
-    </asp:GridView>
-    </div>
 <div class="form-group">
-    <asp:SqlDataSource 
-        ID="AwsDataSource" 
-        runat="server" 
-        ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" 
-        SelectCommand="SELECT        JobPosting.EmployerID, JobPosting.Deadline, JobPosting.DateCreated, JobPosting.JobDescription, JobPosting.PayStatus, JobPosting.Location, JobPosting.CompanyName, JobPosting.JobType, 
-                         JobPosting.JobTitle, JobPosting.PostingID, Employer.EmployerID AS EmployerID, Employer.CompanyName AS CompanyName
-FROM            JobPosting INNER JOIN
-                         Employer ON JobPosting.EmployerID = Employer.EmployerID ">
-    </asp:SqlDataSource>
-    </div>
+    Job Requirements:
+        <br />
+  </div>
+   <div class="form-group">
+    <label for="JobRequirements">Minimum Age (if none please enter 0)</label>
+        <br />
+    <asp:TextBox 
+        ID="MinAge" 
+        runat="server"
+        placeholder="MM/DD/YYYY"
+        Width="727px">
+    </asp:TextBox>
+          </div>
+ <div class="form-group">
+    <label for="JobRequirements">Minimum GPA (if none please enter 0.0)</label>
+        <br />
+    <asp:TextBox 
+        ID="MinGPA" 
+        runat="server"
+        placeholder="MM/DD/YYYY"
+        Width="727px"></asp:TextBox>
+          </div>
 <div class="form-group">
-     </div>
-<div class="form-group">
-     </div>
-<div class="form-group">
-    </div>
-<div class="form-group">
-    </div>	
+  </div>
+ <div class="form-group">
+  </div>
+ <div class="form-group">
+  </div>	
 
 
+<asp:Button 
+    ID="Insert_Button" 
+    class="btn btn-primary rounded px-4"
+    runat="server" Text="Submit" OnClick="Insert_Button_Click" />
+
+&nbsp;    
+<asp:Button 
+    ID="Populate" 
+    class="btn btn-primary rounded px-4"
+    runat="server" Text="Populate" OnClick="Populate_Button_Click" />
 </form>
 
           </div>
 
-     
+          <div class="col-lg-4">
+            <div class="p-4 mb-3 bg-white">
+              <h3 class="h5 text-black mb-3">Contact Info</h3>
+              <p class="mb-0 font-weight-bold">Address</p>
+              <p class="mb-4">320 South Main Street Suite 2E, Harrisonburg, Virginia, USA</p>
+
+              <p class="mb-0 font-weight-bold">Phone</p>
+              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+
+              <p class="mb-0 font-weight-bold">Email Address</p>
+              <p class="mb-0"><a href="#">info@cued-in.com</a></p>
+
+            </div>
+            
+            
+          </div>
         </div>
       </div>
     </div>
@@ -183,13 +280,12 @@ FROM            JobPosting INNER JOIN
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
              <ul class="list-unstyled">
-					 <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
-						<li><a href="CUED-InHomeAccountForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
+					 <li><a href="FreeJobPostingLandingForm.aspx">Job Posting</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="FreeCuedInHomeForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">         
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
@@ -245,6 +341,7 @@ FROM            JobPosting INNER JOIN
 
 </html>
 
-
 </asp:Content>
+
+
 

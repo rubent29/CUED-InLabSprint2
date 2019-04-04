@@ -28,7 +28,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="FreeCuedInHomeForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -37,18 +37,17 @@
 
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
-						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
+                        <li><a href="FreeJobPostingLandingForm.aspx">Job Posting</a></li>
                         <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="FreeCuedInHomeForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Subscription</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Account Information</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Applicants</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Job Postings</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -86,17 +85,28 @@
 	<th>Total</th>  
   </tr>
   <tr>
-    <td>#2183</td>
-    <td>Active</td> 
-    <td>March 12, 2021</td>
+    <td>N/A</td>
+    <td>Inactive</td> 
+    <td>N/A</td>
 	<td>$0.00</td>  
   </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>March 12, 2021</td>
-  </tr>
+ 
 </table>
+              <br />
+              <br />
+              <br />
+
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;
+                   <asp:Button 
+                    ID="UpgradeTodayButton" 
+                    runat="server" 
+                    class="btn btn-outline-primary py-2 px-4"
+                    Text="Upgrade Today!" 
+                    OnClick="UpgradeButton_Click" />
+
 
           </div>
 

@@ -254,29 +254,14 @@
 
 
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Our Trainers</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">The Club</a></li>
-                    <li><a href="#">Privacy</a></li>
-                  </ul>
+  
               </div>
               <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Program</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#">Body Building</a></li>
-                    <li><a href="#">Morning Energy</a></li>
-                    <li><a href="#">Stretching</a></li>
-                    <li><a href="#">Weight Lifting</a></li>
-                  </ul>
+                <h3 class="footer-heading mb-4 text-white"></h3>
+
               </div>
             </div>
           </div>
-
-          
           <div class="col-md-2">
             <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
               <div class="col-md-12">

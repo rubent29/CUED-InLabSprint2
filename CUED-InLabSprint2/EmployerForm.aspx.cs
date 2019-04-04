@@ -92,6 +92,8 @@ protected void Insert_Button_Click(object sender, EventArgs e)
             setPass.ExecuteNonQuery();
 
             DBconnection.Close();
+                DBconnection.Open();
+            labelStatus.Text = "User committed!";
 
             labelStatus.Text = "User committed!";
             Response.Redirect("CUED-InHomeAccountForm.aspx", false);
