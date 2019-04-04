@@ -91,7 +91,7 @@
             <h2 class="site-section-heading mb-3">Our Story</h2>
             <p>
                 CUED-In Inc. was founded in 2015 by talking with counselors, parents, teachers, and students. We saw that there was no platform out there that connects the student to local opportunities (jobs, internships, shadowing). Also, other platforms point students to just college bound careers. We want to bring everything together because all careers are needed no matter if it takes you to college or a technical school. So CUED-In was formed and is an app and web-based platform that promotes a career focused, community connected future by showing students various pathways to a career. We bring all the key players—students, parents, counselors, career coaches, teachers, and businesses—onto one platform, enhancing communication and eliminating the need for multiple websites. Having everyone on the same page promotes seamless, informed, and financially savvy decisions while helping students keep an eye on the ultimate goal that a college or technical school degree provides—a career.</p>
-            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit explicabo odio officiis autem minima quibusdam.</p>
+            <p class="mb-4">We are located in the Shenandoah Valley of Virginia.</p>
             <p><a href="#" class="btn btn-outline-primary py-2 px-4">Join Our Club</a></p>
           </div>
         </div>
@@ -157,11 +157,11 @@
             </div>
           </div>
           <div class="col-md-6 text-center mb-5">
-            <div class="p-3">
+            <%--<div class="p-3">
               <img src="https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/john1-498x476.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
               <h2 class="h5 mb-4 text-black">JOHN BARLOW, ED.D. , COO</h2>
               <p class="text-black mb-5 lead">&ldquo;There are several factors that have led John Barlow to CUED-In. His own work history which includes manufacturing, warehousing, construction, and education demonstrated to him a community’s need for a diverse, well equipped workforce. As a parent and educator, he has counseled young people on career opportunities. He believes that communities will thrive when there is a stable, well-trained workforce from the skilled trades to the office.&rdquo;</p>
-            </div>
+            </div>--%>
           </div>
 
         </div>

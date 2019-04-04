@@ -125,8 +125,8 @@
             <asp:BoundField DataField="JobType" HeaderText="JobType" SortExpression="JobType" />
             <asp:BoundField DataField="JobTitle" HeaderText="JobTitle" SortExpression="JobTitle" />
             <asp:BoundField DataField="PostingID" HeaderText="PostingID" InsertVisible="False" ReadOnly="True" SortExpression="PostingID" />
-            <asp:BoundField DataField="EmployerID1" HeaderText="EmployerID1" InsertVisible="False" ReadOnly="True" SortExpression="EmployerID1" />
-<asp:BoundField DataField="CompanyName1" HeaderText="CompanyName1" SortExpression="CompanyName1"></asp:BoundField>
+            <asp:BoundField DataField="EmployerID" HeaderText="EmployerID" InsertVisible="False" ReadOnly="True" SortExpression="EmployerID" />
+<asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName"></asp:BoundField>
 
 
 
