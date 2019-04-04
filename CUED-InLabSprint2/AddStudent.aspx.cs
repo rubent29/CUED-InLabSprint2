@@ -92,8 +92,8 @@ public partial class AddStudent1 : System.Web.UI.Page
             insert.Parameters.AddWithValue("@schoolID", stu.getSchoolID());
             insert.Parameters.AddWithValue("@DateOfBirth", stu.getDateOfBirth());
             insert.Parameters.AddWithValue("@Age", stu.getAge());
-            insert.Parameters.AddWithValue("@passwordOne", stu.getPasswordOne());
-            insert.Parameters.AddWithValue("@passwordTwo", stu.getPasswordTwo());
+            insert.Parameters.AddWithValue("@passwordOne", PasswordHash.HashPassword(stu.getPasswordOne()));
+            insert.Parameters.AddWithValue("@passwordTwo", PasswordHash.HashPassword(stu.getPasswordTwo()));
             insert.Parameters.AddWithValue("@lastUpdatedBy", stu.getLastUpdatedBy());
             insert.Parameters.AddWithValue("@lastUpdated", stu.getLastUpdated());
 
