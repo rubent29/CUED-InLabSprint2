@@ -51,7 +51,7 @@
         <div class="col-md-7 text-center" data-aos="fade">
           <h1>Job Postings</h1>
           <span class="caption d-block text-white">Get In Touch<br />
-            <br />
+
             <asp:Button ID="CreateAnOpportunity" 
                 runat="server" 
                 class="btn btn-primary rounded text-white px-4"
@@ -63,14 +63,10 @@
                 class="btn btn-primary rounded text-white px-4"
                 Text="View Your Posting" 
                 OnClick="ViewYourPosting_Click" />
-            </span>
-        &nbsp;</div>
+            </span></div>
       </div>
     </div>  
 
-
-
-    
 
    <footer class="site-footer">
       <div class="container">
