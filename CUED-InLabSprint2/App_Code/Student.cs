@@ -49,7 +49,7 @@ public class Student
         numOfStudents++;
     }
 
-    public int getEmployerID()
+    public int getStudentID()
     {
         return (this.StudentID);
     }
@@ -99,6 +99,12 @@ public class Student
     {
         return (this.zipCode);
     }
+    public int getSchoolID()
+    {
+        return (this.schoolID);
+    }
+
+
     public DateTime getDateOfBirth()
     {
         return (this.DateOfBirth);
