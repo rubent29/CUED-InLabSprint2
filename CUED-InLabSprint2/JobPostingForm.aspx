@@ -200,7 +200,28 @@
           </div>
 
 <div class="form-group">
+    Job Requirements:
+        <br />
   </div>
+   <div class="form-group">
+    <label for="JobRequirements">Minimum Age (if none please enter 0)</label>
+        <br />
+    <asp:TextBox 
+        ID="MinAge" 
+        runat="server"
+        placeholder="MM/DD/YYYY"
+        Width="727px">
+    </asp:TextBox>
+          </div>
+ <div class="form-group">
+    <label for="JobRequirements">Minimum GPA (if none please enter 0.0)</label>
+        <br />
+    <asp:TextBox 
+        ID="MinGPA" 
+        runat="server"
+        placeholder="MM/DD/YYYY"
+        Width="727px"></asp:TextBox>
+          </div>
 <div class="form-group">
   </div>
  <div class="form-group">

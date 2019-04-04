@@ -134,6 +134,10 @@ public class Student
     }
 
 
+    public void setStudentId(int newStudentId)
+    {
+        this.StudentID = newStudentId;
+    }
 
 
     public void setFirstName(string newFirstName)

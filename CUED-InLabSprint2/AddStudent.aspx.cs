@@ -123,7 +123,7 @@ public partial class AddStudent1 : System.Web.UI.Page
 
 
 
-
+            Response.Redirect("StudentLandingForm.aspx", false);
         }
 
 
