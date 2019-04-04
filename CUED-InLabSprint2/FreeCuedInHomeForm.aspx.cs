@@ -9,7 +9,10 @@ public partial class FreeCuedInHomeForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if ((HttpContext.Current.Request.UrlReferrer == null))
+        {
+            Response.Redirect("LoginForm.aspx");
+        }
     }
 
     protected void UpgradeButton_Click(object sender, EventArgs e)
