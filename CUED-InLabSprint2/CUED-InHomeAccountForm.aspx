@@ -83,7 +83,7 @@
                     Dock="Fill"
                     runat="server" 
                     CssClass="auto-style1" 
-                    Text="Label" Width="1135px"></asp:Label>
+                    Text="Label"></asp:Label>
                 </strong>
                 </h1>
                 &nbsp;</div>

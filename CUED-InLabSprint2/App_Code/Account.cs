@@ -8,6 +8,8 @@ public class Account
     private int AccountID;
     private string username;
     private string password;
+    private string LastUpdatedBy;
+    private string LastUpdated;
 
     public static int numOfAccounts;
 
@@ -16,6 +18,7 @@ public class Account
         setAccountID(numOfAccounts);
         setUsername(username);
         setPassword(password);
+       
     }
 
     public int getAccountID()
@@ -32,8 +35,17 @@ public class Account
     {
         return (this.password);
     }
+    public string getLastUpdatedBy()
+    {
+        return (this.LastUpdatedBy);
+    }
 
-    public void setAccountID(int newNumOfAccounts)
+    public string getLastUpdated()
+    {
+        return (DateTime.Today.ToShortDateString());
+    }
+
+        public void setAccountID(int newNumOfAccounts)
     {
         this.AccountID = newNumOfAccounts;
     }
@@ -46,6 +58,17 @@ public class Account
     public void setPassword(string newPassword)
     {
         this.password = newPassword;
+    }
+
+    public void setLastUpdatedBy(string newLastUpdatedBy)
+    {
+        this.LastUpdatedBy = "Ruben Torrico";
+    }
+
+
+    public void setLastUpdated(string newLastUpdated)
+    {
+        this.LastUpdated = DateTime.Today.ToShortDateString();
     }
 
 }

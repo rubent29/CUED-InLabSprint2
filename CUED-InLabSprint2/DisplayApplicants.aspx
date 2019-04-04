@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ViewPostingForm.aspx.cs" Inherits="ViewPostingForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DisplayApplicants.aspx.cs" Inherits="ViewPostingForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -28,6 +28,8 @@
 
     <link rel="stylesheet" href="css/style.css">
     
+  </head>
+  <body>
   
   <div class="site-wrap">
 
@@ -104,26 +106,15 @@
 <div class="form-group">
     </div>
 <div class="form-group">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="AwsDataSource" Height="150px" Width="16px" DataKeyNames="PostingID,EmployerID1">
+    <asp:GridView ID="ApplicantTable" runat="server" AutoGenerateColumns="False" DataSourceID="AwsDataSource" Height="163px" Width="16px">
         <Columns>
-            <asp:BoundField DataField="EmployerID" HeaderText="EmployerID" SortExpression="EmployerID" />
-
-
-
-
-
-
-
-            <asp:BoundField DataField="Deadline" HeaderText="Deadline" SortExpression="Deadline" />
-            <asp:BoundField DataField="DateCreated" HeaderText="DateCreated" SortExpression="DateCreated" />
-            <asp:BoundField DataField="JobDescription" HeaderText="JobDescription" SortExpression="JobDescription" />
-            <asp:BoundField DataField="PayStatus" HeaderText="PayStatus" SortExpression="PayStatus" />
-            <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
-            <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
-            <asp:BoundField DataField="JobType" HeaderText="JobType" SortExpression="JobType" />
-            <asp:BoundField DataField="JobTitle" HeaderText="JobTitle" SortExpression="JobTitle" />
-            <asp:BoundField DataField="PostingID" HeaderText="PostingID" InsertVisible="False" ReadOnly="True" SortExpression="PostingID" />
-
+            <asp:BoundField DataField="ApplicantID" HeaderText="ApplicantID" InsertVisible="False" ReadOnly="True" SortExpression="ApplicantID" />
+            <asp:BoundField DataField="SchoolID" HeaderText="SchoolID" SortExpression="SchoolID" />
+            <asp:BoundField DataField="Age" HeaderText="Age" SortExpression="Age" />
+            <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
+            <asp:BoundField DataField="GPA" HeaderText="GPA" SortExpression="GPA" />
+            <asp:BoundField DataField="Counselor" HeaderText="Counselor" SortExpression="PayStatus" />
+           
 
 
 
@@ -139,10 +130,10 @@
         ID="AwsDataSource" 
         runat="server" 
         ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" 
-        SelectCommand="SELECT        JobPosting.EmployerID, JobPosting.Deadline, JobPosting.DateCreated, JobPosting.JobDescription, JobPosting.PayStatus, JobPosting.Location, JobPosting.CompanyName, JobPosting.JobType, 
-                         JobPosting.JobTitle, JobPosting.PostingID, Employer.EmployerID AS EmployerID, Employer.CompanyName AS CompanyName
-FROM            JobPosting INNER JOIN
-                         Employer ON JobPosting.EmployerID = Employer.EmployerID ">
+        SelectCommand="SELECT        JobPosting.PostingID, JobPosting.JobTitle, JobPosting.JobType, JobPosting.CompanyName, JobPosting.Location, JobPosting.PayStatus, JobPosting.JobDescription, JobPosting.DateCreated, 
+                         JobPosting.Deadline, JobPosting.EmployerID, Employer.EmployerID AS Expr1
+FROM            JobPosting LEFT OUTER JOIN
+                         Employer ON JobPosting.EmployerID = Employer.EmployerID">
     </asp:SqlDataSource>
     </div>
 <div class="form-group">
@@ -241,7 +232,7 @@ FROM            JobPosting INNER JOIN
 
   </body>
 
-
+</html>
 
 
 </asp:Content>
