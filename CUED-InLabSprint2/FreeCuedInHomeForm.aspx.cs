@@ -11,4 +11,9 @@ public partial class FreeCuedInHomeForm : System.Web.UI.Page
     {
 
     }
+
+    protected void UpgradeButton_Click(object sender, EventArgs e)
+    {
+
+    }
 }
