@@ -27,11 +27,28 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //Label1.Text = "Welcome" + (string)(Session)["username"];
 
 
-        //Label1.BackColor = System.Drawing.Color.Transparent;
+        Label1.BackColor = System.Drawing.Color.Transparent;
         //Label1.Text = "Welcome, " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString(); //UNCOMMENT OR FIX THIS GIVING ERROR
 
+        //if(Session["Test"] != null)
+        //{
+
+        //}
+
+        //string firstName = Session["firstName"].ToString();
+        //Label1.Text = "Welcome, " + firstName;
 
 
+        if(Session["Test"] != null)
+        {
+            Label1.Text = "Welcome, " + (Session["Test"].ToString());
+        }
+        else if(Session["CreateUser"] != null)
+        {
+            Label1.Text = "Welcome, " + (Session["CreateUser"].ToString());
+        }
+
+        //Label1.Text = "Welcome, " + (Session["Test"].ToString());
 
 
         //if (Session["Username"] != null) // || Session["LastName"] != null)
