@@ -108,7 +108,6 @@ public partial class AddStudent1 : System.Web.UI.Page
             {
                 if (StudentInterest.Items[i].Selected)
                 {
-
                     String stuInterest = "Insert into [dbo].[StudentInterest] values (@StudentID, @IndustryID, @LastUpdatedBy, @LastUpdated)";
                     SqlCommand insertStuInterest = new SqlCommand(stuInterest, DBconnection);
                     insertStuInterest.Parameters.AddWithValue("@StudentID", stu.getStudentID());
@@ -118,10 +117,6 @@ public partial class AddStudent1 : System.Web.UI.Page
                     insertStuInterest.ExecuteNonQuery();
                 }
             }
-
-
-
-
 
             Response.Redirect("StudentLandingForm.aspx", false);
         }

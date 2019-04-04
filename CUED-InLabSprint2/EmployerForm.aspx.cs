@@ -75,7 +75,7 @@ protected void Insert_Button_Click(object sender, EventArgs e)
             insertEmployer.ExecuteNonQuery();
             DBconnection.Close();
         
-        DBconnection.Open();
+            DBconnection.Open();
 
         if (PasswordOne.Text == PasswordTwo.Text)
         {
