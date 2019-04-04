@@ -18,6 +18,8 @@ public class JobPosting
     private string jobDescription;
     private string dateCreated;
     private string deadline;
+    private double GPA;
+    private int age;
     private string LastUpdatedBy;
     private string LastUpdated;
 
@@ -25,8 +27,8 @@ public class JobPosting
     public static int numOfPostings;
 
     public JobPosting(String jobTitle, String jobType, String companyName, String city, String state,
-                                        String payStatus, String jobDescription, String dateCreated, String deadline,
-                                                String LastUpdatedBy, String LastUpdated)
+                                       String payStatus, String jobDescription, String dateCreated, String deadline,
+                                       String LastUpdatedBy, String LastUpdated, double GPA, int age)
     {
         setPostingID(numOfPostings);
         setJobTitle(jobTitle);
@@ -40,6 +42,8 @@ public class JobPosting
         setDeadline(deadline);
         setLastUpdatedBy(LastUpdatedBy);
         setLastUpdated(LastUpdated);
+        setGPA(GPA);
+        setAge(age);
         numOfPostings++;
 
     }
@@ -109,6 +113,20 @@ public class JobPosting
         return (DateTime.Today.ToShortDateString());
 
     }
+    public double getGPA()
+    {
+        return (this.GPA);
+
+    }
+    public int getAge()
+    {
+        return (this.age);
+
+    }
+
+
+
+
 
     public void setPostingID(int newPostingID)
     {
@@ -174,6 +192,14 @@ public class JobPosting
         this.LastUpdated = DateTime.Today.ToShortDateString();
     }
 
+    public void setGPA(double gpa)
+    {
+        this.GPA = gpa;
+    }
+    public void setAge(int newAge)
+    {
+        this.age = newAge;
+    }
 }
 
 
