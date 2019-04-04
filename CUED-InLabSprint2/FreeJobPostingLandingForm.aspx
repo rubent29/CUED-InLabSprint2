@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="StudentLandingForm.aspx.cs" Inherits="StudentLandingForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FreeJobPostingLandingForm.aspx.cs" Inherits="FreeJobPostingLandingForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-      <div class="site-wrap">
+       <div class="site-wrap">
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -11,7 +11,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="FreeCuedInHomeForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -20,17 +20,17 @@
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                       <li class="has-children">
-                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
-<%--						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>--%>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
+                        <li><a href="FreeJobPostingForm.aspx">Job Posting</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">About</a></li>
 
-<%--                        <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
-                        <ul class="dropdown arrow-top">                       <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>--%>
+                        <li class="has-children">
+                        <a href="FreeCuedInHomeForm.aspx">Account     </a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="FreeCuedInHomeForm.aspx">Account Information</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Applicants</a></li>
+                          <li><a href="FreeJobPostingLandingForm.aspx">Job Postings</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -49,16 +49,20 @@
     <div class="site-blocks-cover inner-page" style="background-image: url(https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/group-of-students-join-hands.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>FINd your new career</h1>
+          <h1>Job Postings</h1>
           <span class="caption d-block text-white">Get In Touch<br />
             <br />
-               &nbsp;
-
-            <asp:Button ID="ViewPosting" 
+            <asp:Button ID="CreateAnOpportunity" 
                 runat="server" 
                 class="btn btn-primary rounded text-white px-4"
-                Text="View Job Opportunities" 
-                OnClick="ViewPosting_Click" />
+                Text="Post a New Opportunity" OnClick="CreateAnOpportunity_Click" />
+               &nbsp;
+
+            <asp:Button ID="ViewYourPosting" 
+                runat="server" 
+                class="btn btn-primary rounded text-white px-4"
+                Text="View Your Posting" 
+                OnClick="ViewYourPosting_Click" />
             </span>
         &nbsp;</div>
       </div>
@@ -81,13 +85,12 @@
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
                <ul class="list-unstyled">
-					 <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
-						<li><a href="CUED-InHomeAccountForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
+					 <li><a href="FreeJobPostingLandingForm.aspx">Job Posting</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="FreeCuedInHomeForm.aspx">Account     </a>
                          <li><a href="#"></a></li>
                   </ul>
 				  
@@ -138,6 +141,7 @@
 
 
 </asp:Content>
+
 
 
 
