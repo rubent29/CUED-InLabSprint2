@@ -10,9 +10,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
-    <div class="site-wrap">
-
+     <div class="site-wrap">
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -31,32 +29,31 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
+               <h2 class="mb-0 site-logo"><a href="FreeCuedInHomeForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
                   <div class="container">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
-                   
-                    <ul class="site-menu js-clone-nav d-none d-lg-block">
-
-                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
+                        <ul class="site-menu js-clone-nav d-none d-lg-block">
+                        <li><a href="FreeJobPostingLandingForm.aspx">Job Posting</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="FreeCuedInHomeForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="AccountInformationForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Account Information</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Applicants</a></li>
+                          <li><a href="FreeJobPostingLandingForm.aspx">Job Postings</a></li>
                           <li><a href="SubscriptionForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
-                            	<li><a href="">Upgrade Today!</a></li>
                          <li><a href="#"></a></li>
 					  </ul> 
+   
+
                   </div>
                 </nav>
               </div>
@@ -69,22 +66,47 @@
     <!-- <div style="height: 113px;"></div> -->
   
       
- <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_img.jpg" data-aos="fade" data-stellar-background-ratio="0.5">
+  
+             
+      <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_img.jpg" data-aos="fade" data-stellar-background-ratio="0.5">
          <div class="container"> 
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1><strong>
-                <asp:Label ID="Label1" 
+              <h1>CUED-In</h1>
+              <span class="caption d-block text-black">Career <strong>Focused.</strong> Community <strong>Centered.</strong></span>
+                          <h1><strong>
+                         <asp:Button 
+                    ID="UpgradeTodayButton" 
+                    runat="server" 
+                    class="btn btn-outline-primary py-2 px-4"
+                    Text="Upgrade Today!" 
+                    OnClick="UpgradeButton_Click" />
+<%--                <asp:Label ID="Label1" 
                     runat="server" 
                     CssClass="auto-style1" 
-                    Text="Label"></asp:Label>
+                    Text="Label"></asp:Label>--%>
                 </strong>
                 </h1>
-                &nbsp;</div>
+            </div>
           </div>
         </div> 
       </div>  
 
+
+  
+    <!-- <div style="height: 113px;"></div> -->
+  
+
+           
+
+  
+<%--           <h1><strong>
+              <asp:Label ID="Label1" 
+                    runat="server" 
+                    CssClass="auto-style1" 
+                    Text="Label"></asp:Label>
+                </strong>
+                </h1>--%>
 
  
 	 

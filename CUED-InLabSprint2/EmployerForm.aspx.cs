@@ -94,7 +94,7 @@ protected void Insert_Button_Click(object sender, EventArgs e)
             DBconnection.Close();
 
             labelStatus.Text = "User committed!";
-            Response.Redirect("CUED-InHomeAccountForm.aspx", false);
+            Response.Redirect("FreeCuedInHomeForm.aspx", false);
         }
         else
             labelStatus.Text = "Passwords Do Not Match";

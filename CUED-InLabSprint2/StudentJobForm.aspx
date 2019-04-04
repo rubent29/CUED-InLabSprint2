@@ -1,10 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ViewPostingForm.aspx.cs" Inherits="ViewPostingForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="StudentJobForm.aspx.cs" Inherits="StudentJobForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        
-    <meta charset="utf-8">
+        <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
@@ -60,18 +59,15 @@
 
                         <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
-						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
+                        <li><a href="StudentJobForm.aspx">Job Posting</a></li>
+
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
                         <a href="CUED-InHomeAccountForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
                           <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -89,7 +85,7 @@
     <div class="site-blocks-cover inner-page" style="background-image: url();" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>View Your Posts</h1>
+          <h1>View Opportunities</h1>
         </div>
       </div>
     </div>  
@@ -244,7 +240,5 @@ FROM            JobPosting INNER JOIN
   </body>
 
 </html>
-
-
 </asp:Content>
 
