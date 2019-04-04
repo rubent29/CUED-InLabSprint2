@@ -81,9 +81,12 @@ public partial class PremiumEmployerForm1 : System.Web.UI.Page
                 setPass.Connection = DBconnection;
 
                 // INSERT PASSWORD RECORD AND CONNECT TO USER
-                setPass.CommandText = "insert into[dbo].[Account] values (@Username, @Password)";
+                setPass.CommandText = "insert into[dbo].[Account] values (@Username, @Password, @LastUpdatedBy, @LastUpdated)";
                 setPass.Parameters.Add(new SqlParameter("@Username", CompanyEmail.Text));
-                setPass.Parameters.Add(new SqlParameter("@Password", PasswordHash.HashPassword(PasswordOne.Text))); // hash entered password
+                setPass.Parameters.Add(new SqlParameter("@Password", PasswordHash.HashPassword(PasswordOne.Text)));
+                setPass.Parameters.Add(new SqlParameter("@LastUpdatedBy", LastUpdatedBy));
+                setPass.Parameters.Add(new SqlParameter("@LastUpdated", @LastUpdated));
+
                 setPass.ExecuteNonQuery();
 
                 DBconnection.Close();
