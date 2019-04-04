@@ -77,7 +77,7 @@
                 <asp:Label ID="Label1" 
                     runat="server" 
                     CssClass="auto-style1" 
-                    Text="Label"></asp:Label>
+                    Text=""></asp:Label>
                 </strong>
                 </h1>
                 &nbsp;</div>
