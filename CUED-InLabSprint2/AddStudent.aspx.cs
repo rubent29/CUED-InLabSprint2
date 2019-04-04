@@ -108,9 +108,20 @@ public partial class AddStudent1 : System.Web.UI.Page
             {
                 if (StudentInterest.Items[i].Selected)
                 {
+                    
                     String stuInterest = "Insert into [dbo].[StudentInterest] values (@StudentID, @IndustryID, @LastUpdatedBy, @LastUpdated)";
                     SqlCommand insertStuInterest = new SqlCommand(stuInterest, DBconnection);
-                    insertStuInterest.Parameters.AddWithValue("@StudentID", stu.getStudentID());
+
+
+                    //Recieve StudentID from Student Table 
+                    DBconnection.Close();
+                    DBconnection.Open();
+                    String tier = "Select (StudentID) from [dbo].[Student] where Email = @Username";
+                    System.Data.SqlClient.SqlCommand tierFinder = new System.Data.SqlClient.SqlCommand(tier, DBconnection);
+                    tierFinder.Parameters.AddWithValue("@Username", StudentEmail.Text);
+                    int stuID = Convert.ToInt32(tierFinder.ExecuteScalar());
+                    //Use StudentID from DB to create Student Interests
+                    insertStuInterest.Parameters.AddWithValue("@StudentID", stuID);
                     insertStuInterest.Parameters.AddWithValue("@IndustryID", StudentInterest.Items[i].Value);
                     insertStuInterest.Parameters.AddWithValue("@LastUpdatedBy", stu.getLastUpdatedBy());
                     insertStuInterest.Parameters.AddWithValue("@LastUpdated", stu.getLastUpdated());
