@@ -6,11 +6,11 @@
             height: 29px;
         }
         .auto-style2 {
-            width: 154px;
+            width: 172px;
         }
         .auto-style3 {
             height: 29px;
-            width: 154px;
+            width: 172px;
         }
         .auto-style4 {
             width: 280px;
@@ -132,17 +132,17 @@
                 <asp:Label ID="Label12" runat="server" Text="Password: "></asp:Label>
             </td>
             <td>
-                <asp:Label ID="Label24" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label24" runat="server" Type ="Password" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
             <td class="auto-style4">
                 &nbsp;</td>
             <td class="auto-style2">
-                <asp:Label ID="Label13" runat="server" Text="Confirm Password: "></asp:Label>
+                <asp:Label ID="Label13" runat="server"  Text="Confirm Password: "></asp:Label>
             </td>
             <td>
-                <asp:Label ID="Label25" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label25" runat="server" Type ="Password" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>

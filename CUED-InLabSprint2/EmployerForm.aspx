@@ -257,6 +257,7 @@
         ID="PasswordOne" 
         runat="server"
         placeholder="Enter Password"
+        Type ="Password"
         Width="727px">
     </asp:TextBox>
           
@@ -291,6 +292,7 @@
         ID="PasswordTwo" 
         runat="server"
         placeholder="Confirm Password"
+        Type ="Password"
         Width="727px">
     </asp:TextBox>
         <asp:RequiredFieldValidator 
