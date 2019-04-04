@@ -37,58 +37,45 @@ protected void Page_Load(object sender, EventArgs e)
 
 protected void Insert_Button_Click(object sender, EventArgs e)
 {
-    if (FirstName.Text != "" && LastName.Text != "" && CompanyName.Text != "" && CompanyEmail.Text != "" && StreetAddress.Text != "" && City.Text != "" && Country.Text != ""
-        && ZipCode.Text != "" && PasswordOne.Text != "" && PasswordTwo.Text != "" && TextBoxQuestion.Text != "" && TextBoxAnswer.Text != "")
-    {
+        if (FirstName.Text != "" && LastName.Text != "" && CompanyName.Text != "" && CompanyEmail.Text != "" && StreetAddress.Text != "" && City.Text != "" && Country.Text != ""
+            && ZipCode.Text != "" && PasswordOne.Text != "" && PasswordTwo.Text != "" && TextBoxQuestion.Text != "" && TextBoxAnswer.Text != "")
+        {
 
-        Employer emp = new Employer(HttpUtility.HtmlEncode(FirstName.Text.Trim()), HttpUtility.HtmlEncode(LastName.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.Text.Trim()),
-                                HttpUtility.HtmlEncode(CompanyEmail.Text.Trim()), HttpUtility.HtmlEncode(StreetAddress.Text.Trim()), HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()),
-                                HttpUtility.HtmlEncode(Country.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(ZipCode.Text.Trim()), HttpUtility.HtmlEncode(PasswordOne.Text.Trim()), HttpUtility.HtmlEncode(PasswordTwo.Text.Trim())
-                                ,(TextBoxQuestion.Text.Trim()), (TextBoxAnswer.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
-
-            //DataTable dt2 = new DataTable();
-
-            //SqlDataAdapter da = new SqlDataAdapter("Select CompanyEmail from Employer where CompanyEmail = @Username", DBconnection);
-
-            //da.Fill(dt2);
-
-            //if (dt2.Rows.Count > 0)
-
-            //{
-
-                
-
-            //}
+            Employer emp = new Employer(HttpUtility.HtmlEncode(FirstName.Text.Trim()), HttpUtility.HtmlEncode(LastName.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.Text.Trim()),
+                                    HttpUtility.HtmlEncode(CompanyEmail.Text.Trim()), HttpUtility.HtmlEncode(StreetAddress.Text.Trim()), HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()),
+                                    HttpUtility.HtmlEncode(Country.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(ZipCode.Text.Trim()), HttpUtility.HtmlEncode(PasswordOne.Text.Trim()), HttpUtility.HtmlEncode(PasswordTwo.Text.Trim())
+                                    , (TextBoxQuestion.Text.Trim()), (TextBoxAnswer.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
 
 
             System.Data.SqlClient.SqlCommand MaxStudent = new System.Data.SqlClient.SqlCommand();
-        MaxStudent.Connection = DBconnection;
+            MaxStudent.Connection = DBconnection;
 
-        DBconnection.Open();
+            DBconnection.Open();
 
-        string employerInfo = "insert into [dbo].[Employer] values (@firstName, @lastName, @companyName, @companyEmail, @streetAddress, @city, @state, @country, @zipCode, @tier, @passwordOne, @passwordTwo, @question, @answer, @lastUpdatedBy, @lastUpdated)";
-        SqlCommand insertEmployer = new SqlCommand(employerInfo, DBconnection);
-        insertEmployer.Parameters.AddWithValue("@firstName", emp.getFirstName());
-        insertEmployer.Parameters.AddWithValue("@lastName", emp.getLastName());
-        insertEmployer.Parameters.AddWithValue("@companyName", emp.getCompanyName());
-        insertEmployer.Parameters.AddWithValue("@companyEmail", emp.getCompanyEmail());
-        insertEmployer.Parameters.AddWithValue("@streetAddress", emp.getStreetAddress());
-        insertEmployer.Parameters.AddWithValue("@city", emp.getCity());
-        insertEmployer.Parameters.AddWithValue("@state", emp.getState());
-        insertEmployer.Parameters.AddWithValue("@country", emp.getCountry());
-        insertEmployer.Parameters.AddWithValue("@zipCode", emp.getZipCode());
-        insertEmployer.Parameters.AddWithValue("@tier", "Free");
-        insertEmployer.Parameters.AddWithValue("@passwordOne", PasswordHash.HashPassword(emp.getPasswordOne()));
-        insertEmployer.Parameters.AddWithValue("@passwordTwo", PasswordHash.HashPassword(emp.getPasswordTwo()));
-        insertEmployer.Parameters.AddWithValue("@question", emp.getQuestion());
-        insertEmployer.Parameters.AddWithValue("@answer", emp.getAnswer());
-        insertEmployer.Parameters.AddWithValue("@lastUpdatedBy", emp.getLastUpdatedBy());
-        insertEmployer.Parameters.AddWithValue("@lastUpdated", emp.getLastUpdated());
+            string employerInfo = "insert into [dbo].[Employer] values (@firstName, @lastName, @companyName, @companyEmail, @streetAddress, @city, @state, @country, @zipCode, @tier, @passwordOne, @passwordTwo, @question, @answer, @lastUpdatedBy, @lastUpdated)";
+            SqlCommand insertEmployer = new SqlCommand(employerInfo, DBconnection);
+            insertEmployer.Parameters.AddWithValue("@firstName", emp.getFirstName());
+            insertEmployer.Parameters.AddWithValue("@lastName", emp.getLastName());
+            insertEmployer.Parameters.AddWithValue("@companyName", emp.getCompanyName());
+            insertEmployer.Parameters.AddWithValue("@companyEmail", emp.getCompanyEmail());
+            insertEmployer.Parameters.AddWithValue("@streetAddress", emp.getStreetAddress());
+            insertEmployer.Parameters.AddWithValue("@city", emp.getCity());
+            insertEmployer.Parameters.AddWithValue("@state", emp.getState());
+            insertEmployer.Parameters.AddWithValue("@country", emp.getCountry());
+            insertEmployer.Parameters.AddWithValue("@zipCode", emp.getZipCode());
+            insertEmployer.Parameters.AddWithValue("@tier", "Free");
+            insertEmployer.Parameters.AddWithValue("@passwordOne", PasswordHash.HashPassword(emp.getPasswordOne()));
+            insertEmployer.Parameters.AddWithValue("@passwordTwo", PasswordHash.HashPassword(emp.getPasswordTwo()));
+            insertEmployer.Parameters.AddWithValue("@question", emp.getQuestion());
+            insertEmployer.Parameters.AddWithValue("@answer", emp.getAnswer());
+            insertEmployer.Parameters.AddWithValue("@lastUpdatedBy", emp.getLastUpdatedBy());
+            insertEmployer.Parameters.AddWithValue("@lastUpdated", emp.getLastUpdated());
 
 
-        insertEmployer.ExecuteNonQuery();
-        DBconnection.Close();
-        DBconnection.Open();
+            insertEmployer.ExecuteNonQuery();
+            DBconnection.Close();
+        
+            DBconnection.Open();
 
         if (PasswordOne.Text == PasswordTwo.Text)
         {
@@ -96,9 +83,11 @@ protected void Insert_Button_Click(object sender, EventArgs e)
             setPass.Connection = DBconnection;
 
             // INSERT PASSWORD RECORD AND CONNECT TO USER
-            setPass.CommandText = "insert into[dbo].[Account] values (@Username, @Password)";
+            setPass.CommandText = "insert into[dbo].[Account] values (@Username, @Password, @LastUpdatedBy, @LastUpdated)";
             setPass.Parameters.Add(new SqlParameter("@Username", CompanyEmail.Text));
-            setPass.Parameters.Add(new SqlParameter("@Password", PasswordHash.HashPassword(PasswordOne.Text))); // hash entered password
+            setPass.Parameters.Add(new SqlParameter("@Password", PasswordHash.HashPassword(PasswordOne.Text)));
+            setPass.Parameters.Add(new SqlParameter("@LastUpdatedBy", emp.getLastUpdatedBy()));
+            setPass.Parameters.Add(new SqlParameter("@LastUpdated", emp.getLastUpdated()));
 
             setPass.ExecuteNonQuery();
 
@@ -145,11 +134,10 @@ protected void Insert_Button_Click(object sender, EventArgs e)
             //Response.Redirect("Redirectform.aspx");
             //Session.RemoveAll();
         }
+}
 
 
-
-
-    }
+ 
 
 protected void Populate_Button_Click(object sender, EventArgs e)
 {

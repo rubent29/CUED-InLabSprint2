@@ -156,6 +156,13 @@
 
     </asp:RegularExpressionValidator>
 
+
+	 <asp:Label ID="lblStatus" 
+                runat="server">
+     </asp:Label>
+
+
+
  </div>		
 <div class="form-group">
     <label for="StreetAddress">Street Address</label>

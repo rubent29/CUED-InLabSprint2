@@ -1,11 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPageForm.aspx.cs" Inherits="MasterPageForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FreeCuedInHomeForm.aspx.cs" Inherits="FreeCuedInHomeForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+    <style type="text/css">
+        .auto-style1 {
+            background-color: #FFFFFF;
+        }
+    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-     <body>
-  
-  <div class="site-wrap">
+
+    <div class="site-wrap">
+
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -24,7 +31,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="MasterPageForm.aspx">CUED<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -34,12 +41,21 @@
                    
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="MasterPageForm.aspx">Creating Community</a></li>
-						<li><a href="MasterPageForm.aspx">Resources</a></li>
-                        <li><a href="MasterPageForm.aspx">News</a></li>
-                        <li><a href="AboutUsForMasterPageForm.aspx">About</a></li>
-                        <li><a href="LoginForm.aspx">Log In</a></li>
+                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
+                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
 
+                        <li class="has-children">
+                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="AccountInformationForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
+                          <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+                            <li><a href="MasterPageForm.aspx">Log Out</a></li>
+                        </ul>
+                            	<li><a href="">Upgrade Today!</a></li>
+                         <li><a href="#"></a></li>
 					  </ul> 
                   </div>
                 </nav>
@@ -53,26 +69,18 @@
     <!-- <div style="height: 113px;"></div> -->
   
       
-    
-      <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_img.jpg" data-aos="fade" data-stellar-background-ratio="0.5">
+ <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_img.jpg" data-aos="fade" data-stellar-background-ratio="0.5">
          <div class="container"> 
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1>CUED-In</h1>
-              <span class="caption d-block text-black">Career <strong>Focused.</strong> Community <strong>Centered.</strong></span>
-                <asp:Button 
-                    ID="RegisterBusinessButton" 
+              <h1><strong>
+                <asp:Label ID="Label1" 
                     runat="server" 
-                    class="btn btn-outline-primary py-2 px-4"
-                    Text="Register Your Business!" 
-                    OnClick="RegisterBusinessButton_Click" />
-                <asp:Button 
-                    ID="RegisterBusinessButton0" 
-                    runat="server" 
-                    class="btn btn-outline-primary py-2 px-4"
-                    Text="Create Your Student Profile!" 
-                    OnClick="RegisterStudentButton_Click" />
-            </div>
+                    CssClass="auto-style1" 
+                    Text="Label"></asp:Label>
+                </strong>
+                </h1>
+                &nbsp;</div>
           </div>
         </div> 
       </div>  
@@ -87,7 +95,7 @@
             <p class="mb-5"><img src="imagesForForms/teacher_help2.jpg" alt="Image" class="img-fluid"></p>
           </div>
           <div class="col-lg-5 ml-auto">
-            <h2 class="site-section-heading mb-3">Why CUED-In?</h2>
+            <h2 class="site-section-heading mb-3">Why CUED-In? </h2>
             <p>Need to get connected to the next generation of the local workforce? Have job vacancies or opportunities for high school students to learn about your industry?</p>
             <p class="mb-4 site-section-lower"> Benefits include</p>
 			  
@@ -252,25 +260,10 @@
             <h3 class="footer-heading mb-4 text-white">About</h3>
 			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
 <p>Email: info@cued-in.com</p>
-            <p><a href="MasterPageForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+            <p><a href="CUED-InHomeAccountForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
-            <div class="row">
-              <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-                  <ul class="list-unstyled">
-					  <li><a href="MasterPageForm.aspx">Creating Community</a></li>
-					  <li><a href="MasterPageForm.aspx">Resources</a></li>
-                      <li><a href="MasterPageForm.aspx">News</a></li>
-                      <li><a href="AboutUsForMasterPageForm.aspx">About</a></li>
-                  </ul>
-				  
-				  
-              </div>
-              <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white"></h3>
-              </div>
-            </div>
+  
           </div>
 
           
@@ -313,6 +306,5 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-
 </asp:Content>
 
