@@ -159,7 +159,39 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                         //Session["FirstName"] = FirstName.Text;
                         //Session["LastName"] = LastName.Text;
                         lblStatus.Text = "Success!";
+
+                        sc.Close();
+                        sc.Open();
+                        //Redirect premium accounts to premium pages and free to free pages based on tier
+                        
+                        String tier = "Select (Tier) from [dbo].[Employer] where CompanyEmail = @Username";
+                        
+                        System.Data.SqlClient.SqlCommand tierFinder = new System.Data.SqlClient.SqlCommand(tier, sc);
+                        tierFinder.Parameters.AddWithValue("@Username", Username.Text);
+                        String accountTier = Convert.ToString(tierFinder.ExecuteScalar());
+                        if (accountTier == "Premium")
+                        {
                             Response.Redirect("CUED-InHomeAccountForm.aspx");
+                            sc.Close();
+                        }
+                        else
+                        {
+                           Response.Redirect("FreeCuedInHomeForm.aspx");
+                            sc.Close();
+                        }
+
+
+                        //String accountTier = tierFinder.ExecuteScalar();
+
+
+
+
+                      
+
+
+
+
+
                         //RegisterButton.Visible = false;
 
                         System.Data.SqlClient.SqlCommand getUsername = new System.Data.SqlClient.SqlCommand();

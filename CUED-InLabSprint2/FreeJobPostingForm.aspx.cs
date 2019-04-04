@@ -41,7 +41,7 @@ protected void Populate_Button_Click(object sender, EventArgs e)
 {
     JobTitle.Text = "Carpenter Assistant";
     JobType.SelectedValue = "Full-TIme";
- 
+    CompanyName.Text = "Southern Image Construction";
     City.Text = "Harrisonburg";
     State.Text = "VA";
     PayStatus.SelectedValue = "Paid";
