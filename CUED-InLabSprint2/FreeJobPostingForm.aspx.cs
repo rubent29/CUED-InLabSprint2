@@ -20,27 +20,28 @@ public partial class FreeJobPostingForm : System.Web.UI.Page
 
 protected void Page_Load(object sender, EventArgs e)
 {
-    //{
-    //    try
-    //    {
-    //        DBconnection.ConnectionString = ConnectionString;
-    //        if ((HttpContext.Current.Request.UrlReferrer == null))
-    //        {
-    //            Response.Redirect("LoginForm.aspx");
-    //        }
-    //    }
+        {
+            try
+            {
+                DBconnection.ConnectionString = ConnectionString;
+                //if ((HttpContext.Current.Request.UrlReferrer == null))
+                //{
+                //    Response.Redirect("LoginForm.aspx");
+                //}
+            }
 
-    //    catch (Exception)
-    //    {
-    //        //DisplayBox.Text = "Error connecting to Database";
-    //    }
-    //}
-}
+            catch (Exception)
+            {
+                //DisplayBox.Text = "Error connecting to Database";
+            }
+        }
+    }
 
 protected void Populate_Button_Click(object sender, EventArgs e)
 {
     JobTitle.Text = "Carpenter Assistant";
     JobType.SelectedValue = "Full-TIme";
+    CompanyName.Text = "Southern Image Construction";
     City.Text = "Harrisonburg";
     State.Text = "VA";
     PayStatus.SelectedValue = "Paid";
@@ -50,9 +51,6 @@ protected void Populate_Button_Click(object sender, EventArgs e)
 
 protected void Insert_Button_Click(object sender, EventArgs e)
 {
-
-
-
 
     DBconnection.Open();
 
