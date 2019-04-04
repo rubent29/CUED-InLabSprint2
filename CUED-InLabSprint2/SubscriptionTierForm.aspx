@@ -126,7 +126,7 @@
           <div class="block-pricing">
             <div class="table">
               <h4>Premium Tier</h4>
-              <h2>$14.99/Mo.</h2>
+              <h2>$4.99/Mo.</h2>
               <ul class="list-unstyled">
                 <li><b>All Benefits of Free Tier</b></li>
                 <li><b>Track Your Applicants</b></li>
