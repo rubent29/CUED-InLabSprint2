@@ -112,7 +112,7 @@
 
 
 
-
+            <%--should only see company's stuff--%>
 
             <asp:BoundField DataField="Deadline" HeaderText="Deadline" SortExpression="Deadline" />
             <asp:BoundField DataField="DateCreated" HeaderText="DateCreated" SortExpression="DateCreated" />
