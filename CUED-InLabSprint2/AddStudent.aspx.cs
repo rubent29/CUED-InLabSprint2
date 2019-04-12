@@ -8,6 +8,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.ApplicationServices;
 
+
+//need to add password hashing to this so they can log in
 public partial class AddStudent1 : System.Web.UI.Page
 {
     string LastUpdatedBy = "Ruben Torrico";

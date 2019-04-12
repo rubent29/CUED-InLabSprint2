@@ -192,6 +192,8 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
                         {
                             Session["firstName"] = nameRead.GetString(0);
                         }
+
+                        //need to redirect to different places depending on whether student or employer?
                         Response.Redirect("CUED-InHomeAccountForm.aspx");
 
 
@@ -221,13 +223,6 @@ public partial class Login_v3_LoginForm : System.Web.UI.Page
 
 
                         //String accountTier = tierFinder.ExecuteScalar();
-
-
-
-
-                      
-
-
 
 
 
