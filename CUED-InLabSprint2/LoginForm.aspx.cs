@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Web.ApplicationServices;
 using System.Configuration;
 
-
+//need to adjust for students logging in too
 public partial class Login_v3_LoginForm : System.Web.UI.Page
 {
 

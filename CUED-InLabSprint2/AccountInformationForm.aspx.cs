@@ -11,7 +11,9 @@ public partial class AccountInformationForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //get employer id info to call from sql
+        //maybe use gridview to display sql data? if not, set labels
+        //use session variable to get sql select?
     }
 
 
