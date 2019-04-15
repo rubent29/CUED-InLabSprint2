@@ -98,7 +98,7 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
 
-<form>
+
 <div class="form-group">
     </div>				  
 <div class="form-group">
@@ -203,7 +203,6 @@
 
   <script src="js/main.js"></script>
 
-  </body>
 
 
 

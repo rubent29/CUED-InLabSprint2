@@ -26,8 +26,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     
-  <body>
-  
+ 
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
