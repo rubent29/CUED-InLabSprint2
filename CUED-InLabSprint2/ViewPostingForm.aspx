@@ -104,47 +104,11 @@
 <div class="form-group">
     </div>
 <div class="form-group">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="AwsDataSource" Height="150px" Width="16px" DataKeyNames="PostingID,EmployerID1">
-        <Columns>
-            <asp:BoundField DataField="EmployerID" HeaderText="EmployerID" SortExpression="EmployerID" />
 
 
+<asp:GridView ID="GridView1" runat="server"></asp:GridView>
+    
 
-
-
-            <%--should only see company's stuff--%>
-
-            <asp:BoundField DataField="Deadline" HeaderText="Deadline" SortExpression="Deadline" />
-            <asp:BoundField DataField="DateCreated" HeaderText="DateCreated" SortExpression="DateCreated" />
-            <asp:BoundField DataField="JobDescription" HeaderText="JobDescription" SortExpression="JobDescription" />
-            <asp:BoundField DataField="PayStatus" HeaderText="PayStatus" SortExpression="PayStatus" />
-            <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
-            <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
-            <asp:BoundField DataField="JobType" HeaderText="JobType" SortExpression="JobType" />
-            <asp:BoundField DataField="JobTitle" HeaderText="JobTitle" SortExpression="JobTitle" />
-            <asp:BoundField DataField="PostingID" HeaderText="PostingID" InsertVisible="False" ReadOnly="True" SortExpression="PostingID" />
-
-
-
-
-
-
-
-
-        </Columns>
-    </asp:GridView>
-    </div>
-<div class="form-group">
-    <asp:SqlDataSource 
-        ID="AwsDataSource" 
-        runat="server" 
-        ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" 
-        SelectCommand="SELECT        JobPosting.EmployerID, JobPosting.Deadline, JobPosting.DateCreated, JobPosting.JobDescription, JobPosting.PayStatus, JobPosting.Location, JobPosting.CompanyName, JobPosting.JobType, 
-                         JobPosting.JobTitle, JobPosting.PostingID, Employer.EmployerID AS EmployerID, Employer.CompanyName AS CompanyName
-FROM            JobPosting INNER JOIN
-                         Employer ON JobPosting.EmployerID = Employer.EmployerID ">
-    </asp:SqlDataSource>
-    </div>
 <div class="form-group">
      </div>
 <div class="form-group">
