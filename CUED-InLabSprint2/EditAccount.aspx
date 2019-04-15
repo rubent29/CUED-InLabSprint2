@@ -1,15 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="EditAccount.aspx.cs" Inherits="EditAccount" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style1 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 16.66667%;
+            flex: 0 0 16.66667%;
+            max-width: 16.66667%;
+            left: 0px;
+            top: 0px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <script runat="server">
-        
-
-
+       
 
     </script>
-
 
     <div class="site-wrap">
     <div class="site-navbar-wrap js-site-navbar bg-dark">
@@ -18,8 +30,8 @@
         <div class="site-navbar bg-light">
           <div class="py-1">
             <div class="row align-items-center">
-              <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="MasterPageForm.aspx">CUED<strong>-In</strong></a></h2>
+              <div class="auto-style1">
+                <h2 class="mb-0 site-logo"><a href="Cued-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
