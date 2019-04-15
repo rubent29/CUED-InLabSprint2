@@ -18,7 +18,8 @@ public partial class AccountInformationForm : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if is !IsPostBack
+       // if (!IsPostBack) 
+      // if (Session["CreateUser"]!= null)
 
     {
 
@@ -55,8 +56,6 @@ public partial class AccountInformationForm : System.Web.UI.Page
 
 
             connection.Close();
-            //4/14: no build errors, but not showing any correct data w session variable
-            //think we need is!postback somewhere?
         }
     }
     protected void LoginAgainButton_Click(object sender, EventArgs e)
