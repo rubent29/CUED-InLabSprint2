@@ -5,6 +5,9 @@
     <style type="text/css">
         .auto-style1 {
             background-color: #FFFFFF;
+            font-size: smaller;
+            margin-left: 0px;
+            text-align: left;
         }
     </style>
 
@@ -74,10 +77,13 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
               <h1><strong>
-                <asp:Label ID="Label1" 
+                <asp:Label ID="Label1"
+                    AutoSize="False"
+                    TextAlign="MiddleCenter"
+                    Dock="Fill"
                     runat="server" 
                     CssClass="auto-style1" 
-                    Text=""></asp:Label>
+                    Text="Label"></asp:Label>
                 </strong>
                 </h1>
                 &nbsp;</div>
