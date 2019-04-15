@@ -106,7 +106,7 @@
 <div class="form-group">
 
 
-<asp:GridView ID="GridView1" runat="server"></asp:GridView>
+<asp:GridView ID="GridView1" runat="server" Height="16px" Width="16px"></asp:GridView>
     
 
 <div class="form-group">

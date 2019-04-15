@@ -9,16 +9,13 @@ using System.Data.SqlClient;
 using System.Web.ApplicationServices;
 using System.Configuration;
 
-
-public partial class AccountInformationForm : System.Web.UI.Page
+public partial class FreeAccountInformation : System.Web.UI.Page
 {
     //open sql connection: use webconfig
     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
-
-
     protected void Page_Load(object sender, EventArgs e)
     {
-    {
+        {
 
             string email = Session["Test"].ToString();
             //going to set labels using this session variable for the user email
@@ -55,9 +52,9 @@ public partial class AccountInformationForm : System.Web.UI.Page
             connection.Close();
         }
     }
+
     protected void LoginAgainButton_Click(object sender, EventArgs e)
     {
-        //should this go right to the editaccountinfo page? this seems uneccessary 
-        Response.Redirect("EditAccountLoginForm.aspx");
+
     }
 }

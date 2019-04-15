@@ -20,9 +20,7 @@ public partial class ViewPostingForm : System.Web.UI.Page
         {
             Response.Redirect("LoginForm.aspx");
         }
-
         BindGrid();
-
 
     }
 

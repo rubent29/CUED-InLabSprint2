@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AccountInformationForm.aspx.cs" Inherits="AccountInformationForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FreeAccountInformation.aspx.cs" Inherits="FreeAccountInformation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
+        <style type="text/css">
         .auto-style4 {
             width: 3px;
         }
@@ -44,8 +44,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-   
-
+    
 
     
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
@@ -94,7 +93,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="FreeCuedInHomeForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -103,18 +102,17 @@
 
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
-						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">About</a></li>
+                        <li><a href="FreeJobPostingLandingForm.aspx">Job Posting</a></li>
+                        <li><a href="FreeCuedInHomeForm.aspx">Review Applicants</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="FreeAccountInformation.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Subscription</a></li>
+                          <li><a href="FreeAccountInformation.aspx">Account Information</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Applicants</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Job Postings</a></li>
+                          <li><a href="FreeCuedInHomeForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -375,13 +373,6 @@
   <script src="js/main.js"></script>
 
   </body>
-
-
-
-
-
-
-
 
 
 </asp:Content>

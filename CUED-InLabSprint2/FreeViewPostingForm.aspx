@@ -63,9 +63,9 @@
                         <li><a href="FreeCuedInHomeForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="FreeCuedInHomeForm.aspx">Account     </a>
+                        <a href="FreeAccountInformation.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="FreeCuedInHomeForm.aspx">Account Information</a></li>
+                          <li><a href="FreeAccountInformation">Account Information</a></li>
                           <li><a href="FreeCuedInHomeForm.aspx">Applicants</a></li>
                           <li><a href="FreeCuedInHomeForm.aspx">Job Postings</a></li>
                           <li><a href="SubscriptionForm.aspx">Subscription</a></li>
@@ -186,7 +186,7 @@ FROM            JobPosting INNER JOIN
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="FreeAccountInformation.aspx">Account     </a>
                         <ul class="dropdown arrow-top">         
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
