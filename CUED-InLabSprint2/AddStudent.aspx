@@ -125,12 +125,10 @@
         Width="727px">
     </asp:TextBox>
 
-    <asp:Label 
-        ID="EmailLabel" 
-        runat="server"
-        Text="">
-
+    <asp:Label ID="lblStatus" 
+          runat="server">
     </asp:Label>
+
 
     <asp:RequiredFieldValidator 
         ID="EmailValidator" 
