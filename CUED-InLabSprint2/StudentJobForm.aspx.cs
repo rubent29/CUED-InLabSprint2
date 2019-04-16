@@ -50,4 +50,13 @@ public partial class StudentJobForm : System.Web.UI.Page
             }
         }
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        //get posting id number from textbox
+        //get studentid from session variable
+        //these two should go into jobapplications table
+
+        
+    }
 }

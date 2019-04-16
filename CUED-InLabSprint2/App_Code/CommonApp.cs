@@ -15,12 +15,13 @@ public class CommonApp
     private string experience;
     private string skills;
     private string email;
+    private int studentID;
     private string LastUpdatedBy;
     private string LastUpdated;
 
     public static int numOfApps;
 
-    public CommonApp(String school, String date, Double GPA, String experience, String skills, String email, String LastUpdatedBy, String LastUpdated)
+    public CommonApp(String school, String date, Double GPA, String experience, String skills, String email, int studentID, String LastUpdatedBy, String LastUpdated)
     {
         setCommonAppID(numOfApps);
         setSchool(school);
@@ -29,6 +30,7 @@ public class CommonApp
         setExperience(experience);
         setSkills(skills);
         setEmail(email);
+        setstudentID(studentID);
         numOfApps++;
     }
 
@@ -111,6 +113,11 @@ public class CommonApp
     public void setEmail(string newEmail)
     {
         this.email = newEmail;
+    }
+
+    public void setstudentID(int newID)
+    {
+        this.studentID = newID;
     }
 
     public void setLastUpdatedBy(string newLastUpdatedBy)

@@ -10,6 +10,9 @@ using System.Configuration;
 public partial class ReviewApplicants : System.Web.UI.Page
 {
     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
+    //to show applicants for selected post: need to use join statement to show common app for only this employer?
+    //will need to use join statement using jobapplication table: common app info using postingid and studentID?
+
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -24,6 +27,11 @@ public partial class ReviewApplicants : System.Web.UI.Page
     }
 
     public void BindGrid()
+
+    //right now: showing all applicants, not just those for this employer
+    
+    
+    
     {
         string email = Session["Test"].ToString();
 

@@ -67,7 +67,6 @@ public partial class JobPostingForm : System.Web.UI.Page
         int EmployerID = Convert.ToInt32(empIDFinder.ExecuteScalar());
 
 
-        //modify for common app: might need to create class
 
         string student = "insert into [dbo].[JobPosting] values (@jobTitle, @jobType, @companyName, @location, @payStatus, @jobDescription, @dateCreated, @deadline, @EmployerID, @Gpa, @Age, @lastUpdatedBy, @lastUpdated)";
     SqlCommand insertJobPosting = new SqlCommand(student, DBconnection);
