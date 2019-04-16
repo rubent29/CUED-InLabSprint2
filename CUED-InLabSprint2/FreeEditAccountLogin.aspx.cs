@@ -48,7 +48,7 @@ public partial class FreeEditAccountLogin : System.Web.UI.Page
                     Session["UserSession"] = Username.Text;
                     reader.Close();
 
-
+                    Response.Redirect("FreeEditAccount.aspx");
 
 
 
@@ -58,25 +58,9 @@ public partial class FreeEditAccountLogin : System.Web.UI.Page
                     sc.Open();
                     //Redirect premium accounts to premium pages and free to free pages based on tier
 
-                    String tier = "Select (Tier) from [dbo].[Employer] where CompanyEmail = @Username";
-
-                    System.Data.SqlClient.SqlCommand tierFinder = new System.Data.SqlClient.SqlCommand(tier, sc);
-                    tierFinder.Parameters.AddWithValue("@Username", Username.Text);
-                    String accountTier = Convert.ToString(tierFinder.ExecuteScalar());
-                    if (accountTier == "Premium")
-                    {
-                        Response.Redirect("FreeEditAccount.aspx");
-                        sc.Close();
-                    }
-                    else
-                    {
-                        Response.Redirect("FreeEditAccount.aspx");
-                        sc.Close();
-                    }
 
 
-
-
+                
                     System.Data.SqlClient.SqlCommand getUsername = new System.Data.SqlClient.SqlCommand();
                     getUsername.Connection = sc;
                     sc.Open();

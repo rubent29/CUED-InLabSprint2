@@ -100,7 +100,7 @@ public partial class FreeEditAccount : System.Web.UI.Page
 
         //shows the currency name has been edited
         updateEmployer.ExecuteNonQuery();
-        Response.Redirect("CUED-InHomeAccountForm.aspx");
+        Response.Redirect("FreeCuedInHomeForm.aspx");
         EditLabel.Visible = false;
         Response.Write("<font size=7 color=green>All Your Data is Saved.</font>");
 
