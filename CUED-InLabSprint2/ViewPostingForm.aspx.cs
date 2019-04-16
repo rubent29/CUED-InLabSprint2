@@ -32,7 +32,7 @@ public partial class ViewPostingForm : System.Web.UI.Page
 
         using (SqlConnection con = new SqlConnection(constr))
         {
-            using (SqlCommand cmd = new SqlCommand("select jobtitle, JobType, Location, paystatus, JobDescription, DateCreated, GPA, Age from jobposting where employerid = (select EmployerID from employer where CompanyEmail = '" + email + "');"))
+            using (SqlCommand cmd = new SqlCommand("select * from jobposting where employerid = (select EmployerID from employer where CompanyEmail = '" + email + "');"))
             //just need to fix this sql command so that it doesn't show employer id or last updated info
             using (SqlDataAdapter sda = new SqlDataAdapter())
             {

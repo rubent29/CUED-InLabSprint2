@@ -19,6 +19,7 @@ public partial class EditAccount : System.Web.UI.Page
     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
 
     String ConnectionString = "server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
+
     protected void Page_Load(object sender, EventArgs e)
     {
         {

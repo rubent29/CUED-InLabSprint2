@@ -25,7 +25,7 @@
                     <li class="has-children">
                         <a href="StudentLandingForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">               
-                            <li><a href="StudentLandingForm.aspx">Account Information</a></li>
+                            <li><a href="StudentAccountInformationForm.aspx">Account Information</a></li>
      
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
