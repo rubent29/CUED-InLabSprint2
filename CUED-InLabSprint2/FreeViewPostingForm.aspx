@@ -58,7 +58,13 @@
 
                         <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="FreeJobPostingLandingForm.aspx">Job Posting</a></li>			
+                         <li class="has-children">
+                        <a href="#">Job Postings</a>
+                        <ul class="dropdown arrow-top">
+                        <li><a href="FreeJobPostingForm.aspx">Post an Opportunity</a></li>
+                        <li><a href="FreeViewPostingForm.aspx">View Your Postings</a></li>
+                        </ul>
+                             
                         <li><a href="FreeCuedInHomeForm.aspx">Review Applicants</a></li>
                         <li><a href="FreeCuedInHomeForm.aspx">About</a></li>
 
@@ -66,9 +72,7 @@
                         <a href="FreeAccountInformation.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
                           <li><a href="FreeAccountInformation">Account Information</a></li>
-                          <li><a href="FreeCuedInHomeForm.aspx">Applicants</a></li>
-                          <li><a href="FreeCuedInHomeForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -97,13 +101,25 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
 
-<form>
+
 <div class="form-group">
     </div>				  
 <div class="form-group">
     </div>
 <div class="form-group">
-    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <AlternatingRowStyle BackColor="White" />
+        <EditRowStyle BackColor="#2461BF" />
+        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#EFF3FB" />
+        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+    </asp:GridView>
     </div>
 <div class="form-group">
      </div>

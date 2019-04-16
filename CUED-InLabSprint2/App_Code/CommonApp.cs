@@ -71,7 +71,7 @@ public class CommonApp
 
     public string getLastUpdatedBy()
     {
-        return (this.LastUpdatedBy);
+        return ("Ruben");
     }
 
     public string getLastUpdated()

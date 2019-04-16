@@ -9,8 +9,7 @@ using System.Data.SqlClient;
 using System.Web.ApplicationServices;
 using System.Configuration;
 
-
-public partial class EditAccount : System.Web.UI.Page
+public partial class FreeEditAccount : System.Web.UI.Page
 {
     string LastUpdatedBy = "Ruben Torrico";
     string LastUpdated = DateTime.Today.ToString();
@@ -20,10 +19,12 @@ public partial class EditAccount : System.Web.UI.Page
 
     String ConnectionString = "server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
 
+
+
     protected void Page_Load(object sender, EventArgs e)
     {
         {
-       
+
             string email = Session["Test"].ToString();
             //going to set labels using this session variable for the user email
 
@@ -52,8 +53,8 @@ public partial class EditAccount : System.Web.UI.Page
                 Country.Text = ds.Tables[0].Rows[0].Field<string>(8); //country
                 ZipCode.Text = ds.Tables[0].Rows[0].Field<string>(9); //zip
                 TextBoxQuestion.Text = ds.Tables[0].Rows[0].Field<string>(10); //country
-             
-             //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
+
+                //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
 
             }
 
@@ -62,17 +63,25 @@ public partial class EditAccount : System.Web.UI.Page
         }
 
 
+
+
+
+
+
     }
+
 
     protected void SaveChanges_Button_Click(object sender, EventArgs e)
     {
         System.Data.SqlClient.SqlCommand updateEmployer = new System.Data.SqlClient.SqlCommand();
-      updateEmployer.Connection = connection;
+        updateEmployer.Connection = connection;
 
-        string email = Session["Test"].ToString();  
+        string email = Session["Test"].ToString();
 
         connection.Open();
-        updateEmployer.CommandText = "UPDATE [dbo].[Employer] SET [FirstName] = @newFirstName, [LastName] = @newLastName, [CompanyName] = @newCompanyName, [StreetAddress] = @newStreetAddress, [City] = @newCity, [State] = @newState, [ZipCode] = @newZipcode, [Country] = @newCountry, [Password] = @newPasswordOne, [PasswordConfirmation] = @newPasswordTwo, [SecurityQuestion] = @newQuestion, [SecurityAnswer] = @newAnswer, [LastUpdatedBy] = @newLastUpdatedBy, [LastUpdated] = @newLastUpdated WHERE CompanyEmail = '" + email + "'";
+        updateEmployer.CommandText = "UPDATE [dbo].[Employer] SET [FirstName] = @newFirstName, [LastName] = @newLastName, [CompanyName] = @newCompanyName, [StreetAddress] = @newStreetAddress" +
+                            ", [City] = @newCity, [State] = @newState, [ZipCode] = @newZipcode, [Country] = @newCountry, [Password] = @newPasswordOne, [PasswordConfirmation] = @newPasswordTwo" +
+                            ", [SecurityQuestion] = @newQuestion, [SecurityAnswer] = @newAnswer, [LastUpdatedBy] = @newLastUpdatedBy, [LastUpdated] = @newLastUpdated WHERE CompanyEmail = '" + email + "'";
 
         updateEmployer.Parameters.AddWithValue("@newFirstName", HttpUtility.HtmlEncode(FirstName.Text));
         updateEmployer.Parameters.AddWithValue("@newLastName", HttpUtility.HtmlEncode(LastName.Text));
@@ -91,12 +100,9 @@ public partial class EditAccount : System.Web.UI.Page
 
         //shows the currency name has been edited
         updateEmployer.ExecuteNonQuery();
-        Response.Redirect("CUED-InHomeAccountForm.aspx");
+        Response.Redirect("FreeCuedInHomeForm.aspx");
         EditLabel.Visible = false;
         Response.Write("<font size=7 color=green>All Your Data is Saved.</font>");
 
     }
-
-    
-
 }

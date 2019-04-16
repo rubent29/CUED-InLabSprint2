@@ -1,13 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ViewPostingForm.aspx.cs" Inherits="ViewPostingForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FreeReviewApplicants.aspx.cs" Inherits="FreeReviewApplicants" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+           <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+                 }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -28,8 +29,12 @@
 
     <link rel="stylesheet" href="css/style.css">
     
+
+<%--  <body style="background-image: url('images/bg.jpg');">--%>
   
   <div class="site-wrap">
+
+    
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -56,21 +61,21 @@
                   <div class="container">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
-                        <ul class="site-menu js-clone-nav d-none d-lg-block">
+                  <ul class="site-menu js-clone-nav d-none d-lg-block">
+
                         <li class="has-children">
                         <a href="#">Job Postings</a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="JobPostingForm.aspx">Post an Opportunity</a></li>
-                          <li><a href="ViewPostingForm.aspx">View Your Postings</a></li>
+                          <li><a href="FreeJobPostingForm.aspx">Post an Opportunity</a></li>
+                          <li><a href="FreeViewPostingForm.aspx">View Your Postings</a></li>
                         </ul>
-						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="ReviewApplicants.aspx">Review Applicants</a></li>
+                        <li><a href="FreeReviewApplicants.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
                         <a href="CUED-InHomeAccountForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
+                          <li><a href="FreeAccountInformation.aspx">Account Information</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -85,96 +90,61 @@
     </div>
   
  
-    <div class="site-blocks-cover inner-page" style="background-image: url();" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1>View Your Posts</h1>
+          <h1 class="auto-style1">Review Applicants</h1>
+                <br />
+                <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                    <AlternatingRowStyle BackColor="White" />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+
         </div>
       </div>
     </div>  
 
-    <div class="py-5 bg-light">
+ 
+
+    <footer class="site-footer">
       <div class="container">
-        <div class="row">
-       
-          <div class="col-md-12 col-lg-8 mb-5">
 
-
-<div class="form-group">
-    </div>				  
-<div class="form-group">
-    </div>
-<div class="form-group">
-
-
-<asp:GridView 
-    ID="GridView1"
-    runat="server" 
-    Height="58px" 
-    Width="129px" CellPadding="4" ForeColor="#333333" GridLines="None">
-    <AlternatingRowStyle BackColor="White" />
-    <EditRowStyle BackColor="#2461BF" />
-    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-    <RowStyle BackColor="#EFF3FB" />
-    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-    <SortedAscendingCellStyle BackColor="#F5F7FB" />
-    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-    <SortedDescendingCellStyle BackColor="#E9EBEF" />
-    <SortedDescendingHeaderStyle BackColor="#4870BE" />
-</asp:GridView>
-  </div>
-
-<div class="form-group">
-     </div>
-<div class="form-group">
-     </div>
-<div class="form-group">
-    </div>
-<div class="form-group">
-    </div>	
-
-
-
-
-          </div>
-
-     
-        </div>
-      </div>
-    </div>
-
-    
-
-   <footer class="site-footer">
-      <div class="container">
-        
         <div class="row">
           <div class="col-md-4">
             <h3 class="footer-heading mb-4 text-white">About</h3>
-			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
-<p>Email: info@cued-in.com</p>
-            <p><a href="CUED-InHomeAccountForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+            <p><a href="#" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-             <ul class="list-unstyled">
-					 <li><a href="CUED-InHomeAccountForm.aspx">Job Posting</a></li>
-						<li><a href="CUED-InHomeAccountForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsForm.aspx">About</a></li>
-
-                        <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
-                        <ul class="dropdown arrow-top">         
-                            <li><a href="MasterPageForm.aspx">Log Out</a></li>
-                        </ul>
-                         <li><a href="#"></a></li>
+                  <ul class="list-unstyled">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                   </ul>
-				  
+              </div>
+              <div class="col-md-6">
+                <h3 class="footer-heading mb-4 text-white">Program</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
               </div>
             </div>
           </div>
@@ -184,9 +154,10 @@
             <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
               <div class="col-md-12">
                 <p>
-                  <a href="https://www.facebook.com/cuedin/" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                  <a href="https://twitter.com/cued__in" class="p-2"><span class="icon-twitter"></span></a>
-                  <a href="https://www.youtube.com/channel/UCVUOkypjiJHzMEo0oSHiPNw" class="p-2"><span class="icon-youtube"></span></a>
+                  <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                  <a href="#" class="p-2"><span class="icon-twitter"></span></a>
+                  <a href="#" class="p-2"><span class="icon-instagram"></span></a>
+                  <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
 
                 </p>
               </div>
@@ -220,6 +191,7 @@
 
   <script src="js/main.js"></script>
 
+  </body>
 
 
 

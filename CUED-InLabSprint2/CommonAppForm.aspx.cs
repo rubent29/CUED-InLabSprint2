@@ -37,24 +37,24 @@ public partial class CommonAppForme : System.Web.UI.Page
 
     protected void Insert_Button_Click(object sender, EventArgs e)
     {
+        DBconnection.Open();
+
         string email = Session["Test"].ToString();
 
-        //need to insert correct student ID using session variable?
-        DBconnection.Open();
-        System.Data.SqlClient.SqlCommand MaxPosting = new System.Data.SqlClient.SqlCommand();
-        MaxPosting.Connection = DBconnection;
-        string stuID = "Select (StudentID) from [dbo].[student] where studentid = (select studentID from student where Email = '" + email + "');";
-        SqlCommand empIDFinder = new SqlCommand(stuID, DBconnection);
-        int ID = Convert.ToInt32(empIDFinder.ExecuteScalar()); //gets id of the student making it
+        System.Data.SqlClient.SqlCommand getStuID = new System.Data.SqlClient.SqlCommand();
+        getStuID.Connection = DBconnection;
+
+        string StuID = "Select (StudentID) from [dbo].[Student] WHERE Email =  '" + email + "'";
+        SqlCommand max = new SqlCommand(StuID, DBconnection);
+        int maxStudent = Convert.ToInt32(max.ExecuteScalar());
+
+        max.ExecuteNonQuery();
 
         CommonApp app = new CommonApp(HttpUtility.HtmlEncode(SchoolName.Text.Trim()), HttpUtility.HtmlEncode(Age.Text.Trim()), double.Parse(HttpUtility.HtmlEncode(GPA.Text.Trim())),
-                            HttpUtility.HtmlEncode(Experience.Text.Trim()), HttpUtility.HtmlEncode(Skills.Text.Trim()), HttpUtility.HtmlEncode(StudentEmail.Text.Trim()), ID,
+                            HttpUtility.HtmlEncode(Experience.Text.Trim()), HttpUtility.HtmlEncode(Skills.Text.Trim()), HttpUtility.HtmlEncode(StudentEmail.Text.Trim()), 
                             HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
-                         
 
-        
-
-        string comApp = "insert into [dbo].[CommonApp] values @School, @Age, @GPA, @Experience, @Skills, @Email, @StudentID, @lastUpdatedBy, @lastUpdated)";
+        string comApp = "insert into [dbo].[CommonApp] values (@School, @Age, @GPA, @Experience, @Skills, @Email, @StudentID, @lastUpdatedBy, @lastUpdated)";
         SqlCommand insertCommonApp = new SqlCommand(comApp, DBconnection);
         insertCommonApp.Parameters.AddWithValue("@School", app.getSchool());
         insertCommonApp.Parameters.AddWithValue("@Age", app.getDate());
@@ -62,7 +62,7 @@ public partial class CommonAppForme : System.Web.UI.Page
         insertCommonApp.Parameters.AddWithValue("@Experience", app.getExperience());
         insertCommonApp.Parameters.AddWithValue("@Skills", app.getSkills());
         insertCommonApp.Parameters.AddWithValue("@Email", app.getEmail());
-        insertCommonApp.Parameters.AddWithValue("@StudentID", app.setstudentID()); //get id of this student: errors here
+        insertCommonApp.Parameters.AddWithValue("@StudentID", maxStudent);
         insertCommonApp.Parameters.AddWithValue("@lastUpdatedBy", app.getLastUpdatedBy());
         insertCommonApp.Parameters.AddWithValue("@lastUpdated", app.getLastUpdated());
 
@@ -72,6 +72,18 @@ public partial class CommonAppForme : System.Web.UI.Page
 
         DBconnection.Close();
 
+
+    }
+
+    protected void Populate_Button_Click(object sender, EventArgs e)
+    {
+        SchoolName.Text = "Elkton High";
+        Age.Text = "01/29/1997";
+        GPA.Text = "3.89";
+        Experience.Text = "Intern at Cornerstone Consulting";
+        Skills.Text = "Coding in C#";
+        StudentEmail.Text = "torricre@dukes.com";
+        
 
     }
 }

@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="EditAccount.aspx.cs" Inherits="EditAccount" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FreeEditAccount.aspx.cs" Inherits="FreeEditAccount" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
+        <style type="text/css">
         .auto-style1 {
             position: relative;
             width: 100%;
@@ -18,7 +18,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <script runat="server">
+     <script runat="server">
        
 
     </script>
@@ -43,20 +43,18 @@
                         <li class="has-children">
                         <a href="#">Job Postings</a>
                         <ul class="dropdown arrow-top">
-                        <li><a href="JobPostingForm.aspx">Post an Opportunity</a></li>
-                        <li><a href="ViewPostingForm.aspx">View Your Postings</a></li>
+                        <li><a href="FreeJobPostingForm.aspx">Post an Opportunity</a></li>
+                        <li><a href="FreeViewPostingForm.aspx">View Your Postings</a></li>
                         </ul>
-						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="ReviewApplicants.aspx">Review Applicants</a></li>
+
+                        <li><a href="FreeReviewApplicants.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
                         <a href="CUED-InHomeAccountForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="AccountInformationForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+                          <li><a href="FreeAccountInformation.aspx">Account Information</a></li>
+
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -79,7 +77,9 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
           
-   
+            
+     
+			  <form>
   <div class="form-group">
   </div>				  
   <div class="form-group">
@@ -272,10 +272,13 @@
     <label for="Password">Password</label>
         <br />
     <asp:TextBox 
-        ID="PasswordOne" 
+        ID="PasswordOne"
+        type="password"
+        PasswordOneChar ="*"
         runat="server"
         placeholder="Enter Password"
         Width="727px">
+      
     </asp:TextBox>
           
         
@@ -307,6 +310,8 @@
         <br />
     <asp:TextBox 
         ID="PasswordTwo" 
+        type ="password"
+        PasswordTwoChar="*"
         runat="server"
         placeholder="Confirm Password"
         Width="727px">
@@ -357,7 +362,8 @@
     <label for="Answer">Answer: </label>
     <br />
     <asp:TextBox 
-        ID="TextBoxAnswer" 
+        ID="TextBoxAnswer"
+        TextBoxAnswerChar ="*"
         runat="server"
         placeholder="Answer"
         Width="727px">
@@ -506,9 +512,5 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-
-
 </asp:Content>
-
-
 

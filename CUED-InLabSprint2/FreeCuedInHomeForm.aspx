@@ -37,7 +37,12 @@
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
                         <ul class="site-menu js-clone-nav d-none d-lg-block">
-                        <li><a href="FreeJobPostingLandingForm.aspx">Job Posting</a></li>
+                         <li class="has-children">
+                        <a href="#">Job Postings</a>
+                        <ul class="dropdown arrow-top">
+                        <li><a href="FreeJobPostingForm.aspx">Post an Opportunity</a></li>
+                        <li><a href="FreeViewPostingForm.aspx">View Your Postings</a></li>
+                        </ul>
                         <li><a href="FreeCuedInHomeForm.aspx">Review Applicants</a></li>
                         <li><a href="FreeCuedInHomeForm.aspx">About</a></li>
 
@@ -45,9 +50,6 @@
                         <a href="FreeAccountInformation.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
                           <li><a href="FreeAccountInformation.aspx">Account Information</a></li>
-                          <li><a href="FreeCuedInHomeForm.aspx">Applicants</a></li>
-                          <li><a href="FreeJobPostingLandingForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>

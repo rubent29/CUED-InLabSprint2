@@ -54,18 +54,20 @@
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
                          <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
+                        <li class="has-children">
+                        <a href="#">Job Postings</a>
+                        <ul class="dropdown arrow-top">
+                          <li><a href="JobPostingForm.aspx">Post an Opportunity</a></li>
+                          <li><a href="ViewPostingForm.aspx">View Your Postings</a></li>
+                        </ul>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
                         <li><a href="MasterPageForm.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="AccountInformationForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
                           <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
