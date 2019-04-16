@@ -155,18 +155,8 @@
       <asp:Label ID="Question" runat="server" Text="Label"></asp:Label>
   </div>
 
-<div class="form-group">
-  </div>
-<div class="form-group">
-  </div>
- <div class="form-group">
-  </div>
- <div class="form-group">
-  </div>	
-
-
-&nbsp;    
-
+                <br />
+              <asp:Button ID="EditButton" runat="server" Text="Edit Information" OnClick="EditButton_Click" />
               
           </div>
 

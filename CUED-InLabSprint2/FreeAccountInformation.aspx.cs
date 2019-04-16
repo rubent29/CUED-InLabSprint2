@@ -55,8 +55,10 @@ public partial class FreeAccountInformation : System.Web.UI.Page
         }
     }
 
-    protected void LoginAgainButton_Click(object sender, EventArgs e)
-    {
 
+    protected void EditButton_Click(object sender, EventArgs e)
+    {
+        //should this go right to the editaccountinfo page? this seems uneccessary 
+        Response.Redirect("EditAccountLoginForm.aspx");
     }
 }

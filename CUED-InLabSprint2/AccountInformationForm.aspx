@@ -67,7 +67,7 @@
                         <li><a href="CUED-InHomeAccountForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="AccountInformationForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
                           <li><a href="AccountInformationForm.aspx">Account Information</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
@@ -159,18 +159,8 @@
       <asp:Label ID="Question" runat="server" Text="Label"></asp:Label>
   </div>
 
-<div class="form-group">
-  </div>
-<div class="form-group">
-  </div>
- <div class="form-group">
-  </div>
- <div class="form-group">
-  </div>	
-
-
-&nbsp;    
-
+   <br />
+              <asp:Button ID="EditButton" runat="server" Text="Edit Information" OnClick="EditButton_Click" />
               
           </div>
 
