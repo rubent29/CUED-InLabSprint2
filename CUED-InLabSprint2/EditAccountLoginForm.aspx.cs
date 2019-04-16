@@ -49,32 +49,14 @@ public partial class EditAccountLoginForm : System.Web.UI.Page
                     reader.Close();
 
 
-
-
+                    Response.Redirect("EditAccount.aspx");
+                    sc.Close();
 
                     lblStatus.Text = "Success!";
 
                     sc.Close();
                     sc.Open();
                     //Redirect premium accounts to premium pages and free to free pages based on tier
-
-                    String tier = "Select (Tier) from [dbo].[Employer] where CompanyEmail = @Username";
-
-                    System.Data.SqlClient.SqlCommand tierFinder = new System.Data.SqlClient.SqlCommand(tier, sc);
-                    tierFinder.Parameters.AddWithValue("@Username", Username.Text);
-                    String accountTier = Convert.ToString(tierFinder.ExecuteScalar());
-                    if (accountTier == "Premium")
-                    {
-                        Response.Redirect("EditAccount.aspx");
-                        sc.Close();
-                    }
-                    else
-                    {
-                        Response.Redirect("EditAccount.aspx");
-                        sc.Close();
-                    }
-
-
 
 
                     System.Data.SqlClient.SqlCommand getUsername = new System.Data.SqlClient.SqlCommand();

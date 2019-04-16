@@ -187,6 +187,12 @@
     class="btn btn-primary rounded text-white px-4"
     runat="server" Text="Submit" OnClick="Insert_Button_Click"  ValidationGroup="SubmitGroup" />
 
+           &nbsp   
+          <asp:Button 
+    ID="Populate_Button" 
+    class="btn btn-primary rounded text-white px-4"
+    runat="server" Text="Populate" OnClick="Populate_Button_Click" />
+
               
 </asp:Content>
 
