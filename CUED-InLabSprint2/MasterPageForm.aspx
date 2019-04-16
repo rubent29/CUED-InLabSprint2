@@ -232,7 +232,7 @@
           <div class="col-md-6 text-center mb-4">
             <div class="border p-4 text-with-icon">
               <span class="icon display-4 mb-4 d-block text-primary"></span>
-				<i class="fa fa-search" style="font-size:48px;margin-bottom:20px;;color:#81c341;"></i>
+				<i class="fa fa-search" style="font-size:48px;margin-bottom:20px;color:#81c341;"></i>
               <h2 class="h5">Search</h2>
               <p>Search for students to view their basic information.</p>
               <p><a href="#">Learn More</a></p>
