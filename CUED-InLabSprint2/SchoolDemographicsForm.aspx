@@ -22,20 +22,14 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
     
-    
-    
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
     
-  </head>
-<%--  <body style="background-image: url('images/bg.jpg');">--%>
-  
   <div class="site-wrap">
 
-    
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -45,9 +39,7 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
-    
-    
-     
+  
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -185,9 +177,6 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-
-  </body>
-
 
 
 </asp:Content>

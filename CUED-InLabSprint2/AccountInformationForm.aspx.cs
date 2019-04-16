@@ -57,7 +57,8 @@ public partial class AccountInformationForm : System.Web.UI.Page
             connection.Close();
         }
     }
-    protected void LoginAgainButton_Click(object sender, EventArgs e)
+   
+    protected void EditButton_Click(object sender, EventArgs e)
     {
         //should this go right to the editaccountinfo page? this seems uneccessary 
         Response.Redirect("EditAccountLoginForm.aspx");
