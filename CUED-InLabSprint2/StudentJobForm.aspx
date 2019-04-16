@@ -102,9 +102,7 @@
 <div class="form-group">
     </div>
 <div class="form-group">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="AwsDataSource" Height="150px" Width="16px" DataKeyNames="PostingID,EmployerID1">
-        <Columns>
-            <asp:BoundField DataField="EmployerID" HeaderText="EmployerID" SortExpression="EmployerID" />
+    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
 
 
 
