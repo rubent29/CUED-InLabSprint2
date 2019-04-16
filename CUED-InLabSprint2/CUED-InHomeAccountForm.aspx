@@ -55,7 +55,7 @@
                           <li><a href="AccountInformationForm.aspx">Account Information</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
                           <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Subscription</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>

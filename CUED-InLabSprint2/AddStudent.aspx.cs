@@ -26,6 +26,10 @@ public partial class AddStudent1 : System.Web.UI.Page
             try
             {
                 DBconnection.ConnectionString = ConnectionString;
+                if ((HttpContext.Current.Request.UrlReferrer == null))
+                {
+                    Response.Redirect("LoginForm.aspx");
+                }
             }
 
             catch (Exception)

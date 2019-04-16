@@ -72,9 +72,15 @@
          <div class="container"> 
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1>CUED-In</h1>
-              <span class="caption d-block text-black">Career <strong>Focused.</strong> Community <strong>Centered.</strong></span>
+              
                           <h1><strong>
+                <asp:Label ID="Label1"
+                    AutoSize="False"
+                    TextAlign="MiddleCenter"
+                    Dock="Fill"
+                    runat="server" 
+                    CssClass="auto-style1" 
+                    Text="Label"></asp:Label>
                          <asp:Button 
                     ID="UpgradeTodayButton" 
                     runat="server" 
