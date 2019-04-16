@@ -15,12 +15,19 @@ public partial class StudentAccountInformationForm : System.Web.UI.Page
     string LastUpdatedBy = "Ruben Torrico";
     string LastUpdated = DateTime.Today.ToString();
 
+
+
     //open sql connection: use webconfig
     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
 
     String ConnectionString = "server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
     protected void Page_Load(object sender, EventArgs e)
     {
+        if ((HttpContext.Current.Request.UrlReferrer == null))
+        {
+            Response.Redirect("LoginForm.aspx");
+        }
+
         string email = Session["Test"].ToString();
         //going to set labels using this session variable for the user email
 
