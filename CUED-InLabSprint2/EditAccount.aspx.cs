@@ -66,13 +66,16 @@ public partial class EditAccount : System.Web.UI.Page
 
     protected void SaveChanges_Button_Click(object sender, EventArgs e)
     {
+        System.Data.SqlClient.SqlCommand updateEmployer = new System.Data.SqlClient.SqlCommand();
+        updateEmployer.Connection = connection;
+
         string email = Session["Test"].ToString();
 
         connection.Open();
-        string updateQuery = "UPDATE Employer SET FirstName = @newFirstName, LastName = @newLastName, CompanyName = @newCompanyName, StreetAddress = @newStreetAddress" +
-            ", City = @newCity, State = @newState, ZipCode = @newZipcode, Country = @newCountry, Password = @newPasswordOne, PasswordConfirmation = @newPasswordTwo" +
-            ", SecurityQuestion = @newQuestion, SecurityAnswer = @newAnswer, LastUpdatedBy = @newLastUpdatedBy, LastUpdated = @newLastUpdated WHERE CompanyEmail = '" + email + "';";
-        SqlCommand updateEmployer = new SqlCommand(updateQuery, connection);
+        updateEmployer.CommandText = "UPDATE [dbo].[Employer] SET [FirstName] = @newFirstName, [LastName] = @newLastName, [CompanyName] = @newCompanyName, [StreetAddress] = @newStreetAddress" +
+                            ", [City] = @newCity, [State] = @newState, [ZipCode] = @newZipcode, [Country] = @newCountry, [Password] = @newPasswordOne, [PasswordConfirmation] = @newPasswordTwo" +
+                            ", [SecurityQuestion] = @newQuestion, [SecurityAnswer] = @newAnswer, [LastUpdatedBy] = @newLastUpdatedBy, [LastUpdated] = @newLastUpdated WHERE CompanyEmail = '" + email + "'";
+
         updateEmployer.Parameters.AddWithValue("@newFirstName", HttpUtility.HtmlEncode(FirstName.Text));
         updateEmployer.Parameters.AddWithValue("@newLastName", HttpUtility.HtmlEncode(LastName.Text));
         updateEmployer.Parameters.AddWithValue("@newCompanyName", HttpUtility.HtmlEncode(CompanyName.Text));
@@ -85,11 +88,8 @@ public partial class EditAccount : System.Web.UI.Page
         updateEmployer.Parameters.AddWithValue("@newPasswordTwo", HttpUtility.HtmlEncode(PasswordTwo.Text));
         updateEmployer.Parameters.AddWithValue("@newQuestion", HttpUtility.HtmlEncode(TextBoxQuestion.Text));
         updateEmployer.Parameters.AddWithValue("@newAnswer", HttpUtility.HtmlEncode(TextBoxAnswer.Text));
-        updateEmployer.Parameters.AddWithValue("@newLastUpdatedBy", HttpUtility.HtmlEncode(LastUpdatedBy));
+        updateEmployer.Parameters.AddWithValue("@newLastUpdatedBy", HttpUtility.HtmlEncode("Cole"));
         updateEmployer.Parameters.AddWithValue("@newLastUpdated", HttpUtility.HtmlEncode(LastUpdated));
-
-
-
 
         //shows the currency name has been edited
         updateEmployer.ExecuteNonQuery();

@@ -29,7 +29,7 @@ public partial class FreeViewPostingForm : System.Web.UI.Page
 
         using (SqlConnection con = new SqlConnection(constr))
         {
-            using (SqlCommand cmd = new SqlCommand("select postingid, jobtitle, JobType, Location, paystatus, JobDescription, DateCreated, GPA, Age from jobposting where employerid = (select EmployerID from employer where CompanyEmail = '" + email + "');"))
+            using (SqlCommand cmd = new SqlCommand("SELECT JobTitle, JobType, Location, Paystatus, JobDescription, DateCreated, Deadline, GPA, Age from JobPosting where EmployerID = (select EmployerID from Employer where CompanyEmail = '" + email + "');"))
             //just need to fix this sql command so that it doesn't show employer id or last updated info
             using (SqlDataAdapter sda = new SqlDataAdapter())
             {

@@ -52,13 +52,14 @@ public partial class JobPostingForm : System.Web.UI.Page
     protected void Insert_Button_Click(object sender, EventArgs e)
     {
         string email = Session["Test"].ToString();
-
+      
         DBconnection.Open();
 
         JobPosting posting = new JobPosting(HttpUtility.HtmlEncode(JobTitle.Text.Trim()), HttpUtility.HtmlEncode(JobType.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.SelectedItem.Text.Trim()),
                             HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(PayStatus.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(JobDescription.Text.Trim()),
                             HttpUtility.HtmlEncode(DateCreated), HttpUtility.HtmlEncode(Deadline.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated),
                             double.Parse(HttpUtility.HtmlEncode(MinGPA.Text.Trim())), int.Parse(HttpUtility.HtmlEncode(MinAge.Text.Trim())));
+
 
         System.Data.SqlClient.SqlCommand MaxPosting = new System.Data.SqlClient.SqlCommand();
         MaxPosting.Connection = DBconnection;
@@ -70,8 +71,8 @@ public partial class JobPostingForm : System.Web.UI.Page
         //modify for common app: might need to create class
 
         string student = "insert into [dbo].[JobPosting] values (@jobTitle, @jobType, @companyName, @location, @payStatus, @jobDescription, @dateCreated, @deadline, @EmployerID, @Gpa, @Age, @lastUpdatedBy, @lastUpdated)";
-    SqlCommand insertJobPosting = new SqlCommand(student, DBconnection);
-    insertJobPosting.Parameters.AddWithValue("@jobTitle", posting.getJobTitle());
+        SqlCommand insertJobPosting = new SqlCommand(student, DBconnection);
+        insertJobPosting.Parameters.AddWithValue("@jobTitle", posting.getJobTitle());
         insertJobPosting.Parameters.AddWithValue("@jobType", posting.getJobType());
         insertJobPosting.Parameters.AddWithValue("@companyName", posting.getCompanyName());
         insertJobPosting.Parameters.AddWithValue("@location", posting.getLocation());
