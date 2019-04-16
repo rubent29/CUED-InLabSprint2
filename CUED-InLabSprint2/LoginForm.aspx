@@ -45,9 +45,7 @@
                             placeholder="Username"
                             runat="server">
                         </asp:TextBox>
-             
-                        
-         
+
 
 <%--						<input class="input100" type="text" name="username" placeholder="Username">--%>
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>

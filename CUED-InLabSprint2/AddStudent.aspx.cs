@@ -48,11 +48,9 @@ public partial class AddStudent1 : System.Web.UI.Page
         if (userNameNum > 0)
         {
             //checks if name and code exists
-            EmailLabel.Text = "Email Unavailable";
+            labelStatus.Text = "Email Unavailable";
         }
-
-
-
+   
 
         DBconnection.Close();
         int age = agecalc();

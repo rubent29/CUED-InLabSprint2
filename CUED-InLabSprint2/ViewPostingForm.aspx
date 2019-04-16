@@ -69,7 +69,7 @@
                           <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
-                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -98,7 +98,7 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
 
-<form>
+
 <div class="form-group">
     </div>				  
 <div class="form-group">
@@ -106,9 +106,9 @@
 <div class="form-group">
 
 
-<asp:GridView ID="GridView1" runat="server"></asp:GridView>
-
+<asp:GridView ID="GridView1" runat="server" Height="16px" Width="16px"></asp:GridView>
     
+
 <div class="form-group">
      </div>
 <div class="form-group">
@@ -203,7 +203,6 @@
 
   <script src="js/main.js"></script>
 
-  </body>
 
 
 

@@ -44,15 +44,7 @@
       </div>
     </div>
   
- 
-    <div class="site-blocks-cover inner-page" style="background-image: url(https://d1r2jio0ygi9fo.cloudfront.net/uploads/2017/10/group-of-students-join-hands.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-7 text-center" data-aos="fade">
-          <h1>Fill Out Your Application</h1>
-          <span class="caption d-block text-white">Find Your Career</span>
-        </div>
-      </div>
-    </div>  
+
 
     <div class="py-5 bg-light">
       <div class="container">
@@ -141,11 +133,16 @@
         ForeColor="Red" 
         ValidationGroup="SubmitGroup" 
         ControlToValidate="Skills"></asp:RequiredFieldValidator>
+        <br />
+
+                <asp:FileUpload ID="FileUpload1" runat="server" />
 
  </div>
 <div class="form-group">
     <label for="StudentEmail">Email (that businesses may contact you at)</label>
+
     <br />
+
     <asp:TextBox 
         ID="StudentEmail" 
         runat="server"

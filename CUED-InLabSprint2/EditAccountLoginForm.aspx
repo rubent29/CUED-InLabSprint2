@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <script runat="server">
+
+<%--    <script runat="server">
 
         protected void Login_Click(object sender, EventArgs e)
         {
@@ -31,7 +32,7 @@
                     }
  
 
-     </script>
+     </script>--%>
 
     	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
