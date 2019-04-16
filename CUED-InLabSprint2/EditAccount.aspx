@@ -81,7 +81,7 @@
   <div class="form-group">
   </div>				  
   <div class="form-group">
-    <label for="FirstName">First Name</label>
+    <label for="FirstNameLbl">First Name</label>
       <br />
     <asp:TextBox 
         ID="FirstName" 
@@ -99,7 +99,7 @@
 
   </div>
 <div class="form-group">
-    <label for="LastName">Last Name</label>
+    <label for="LastNameLbl">Last Name</label>
     <br />
     <asp:TextBox 
         ID="LastName" 
@@ -118,7 +118,7 @@
 
   </div>
 <div class="form-group">
-    <label for="CompanyName">Company Name</label>
+    <label for="CompName">Company Name</label>
     <br />
     <asp:TextBox 
         ID="CompanyName" 
