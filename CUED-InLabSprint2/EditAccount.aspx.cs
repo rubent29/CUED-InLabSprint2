@@ -30,7 +30,7 @@ public partial class EditAccount : System.Web.UI.Page
             connection.Open();
 
             string cmd = "select * from employer where companyemail = '" + email + "';";
-            //use session variable irl: rn just testing w cole
+            //use session variable irl
 
             SqlDataAdapter adp = new SqlDataAdapter();
             adp.SelectCommand = new SqlCommand(cmd, connection);
@@ -53,7 +53,7 @@ public partial class EditAccount : System.Web.UI.Page
                 ZipCode.Text = ds.Tables[0].Rows[0].Field<string>(9); //zip
                 TextBoxQuestion.Text = ds.Tables[0].Rows[0].Field<string>(10); //country
                 TextBoxAnswer.Text = ds.Tables[0].Rows[0].Field<string>(11); //zip
-                                                                      //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
+               //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
 
             }
 
