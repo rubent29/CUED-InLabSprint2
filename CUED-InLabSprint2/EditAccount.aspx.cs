@@ -65,10 +65,13 @@ public partial class EditAccount : System.Web.UI.Page
     }
 
     protected void SaveChanges_Button_Click(object sender, EventArgs e)
+        
     {
+        string email = Session["Test"].ToString();
+
         //updates currency table with values that were inputted
         connection.Open();
-        string updateQuery = "UPDATE Employer SET  FirstName = @newFirstName WHERE CompanyEmail = @CompanyEmail";
+        string updateQuery = "UPDATE Employer SET  FirstName = @newFirstName WHERE CompanyEmail = '" + email + "';";
         SqlCommand updateEmployer = new SqlCommand(updateQuery, connection);
         updateEmployer.Parameters.AddWithValue("@newFirstName", HttpUtility.HtmlEncode(FirstName.Text));
 
