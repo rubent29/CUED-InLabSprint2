@@ -52,8 +52,8 @@ public partial class EditAccount : System.Web.UI.Page
                 Country.Text = ds.Tables[0].Rows[0].Field<string>(8); //country
                 ZipCode.Text = ds.Tables[0].Rows[0].Field<string>(9); //zip
                 TextBoxQuestion.Text = ds.Tables[0].Rows[0].Field<string>(10); //country
-                TextBoxAnswer.Text = ds.Tables[0].Rows[0].Field<string>(11); //zip
-                                                                      //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
+             
+             //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
 
             }
 
@@ -66,14 +66,17 @@ public partial class EditAccount : System.Web.UI.Page
 
     protected void SaveChanges_Button_Click(object sender, EventArgs e)
     {
-        //updates currency table with values that were inputted
+
+
         connection.Open();
-        string updateQuery = "UPDATE Employer SET  FirstName = @newFirstName WHERE CompanyEmail = @CompanyEmail";
+        string updateQuery = "UPDATE Employer SET FirstName = @newFirstName where CompanyEmail = '" + email +"'";
         SqlCommand updateEmployer = new SqlCommand(updateQuery, connection);
         updateEmployer.Parameters.AddWithValue("@newFirstName", HttpUtility.HtmlEncode(FirstName.Text));
+      
 
         //shows the currency name has been edited
         updateEmployer.ExecuteNonQuery();
+        Response.Redirect("CUED-InHomeAccountForm.aspx");
         EditLabel.Visible = false;
         Response.Write("<font size=7 color=green>All Your Data is Saved.</font>");
 
