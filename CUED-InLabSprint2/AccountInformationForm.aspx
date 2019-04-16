@@ -19,9 +19,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
    
-
-
-    
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
@@ -46,8 +43,7 @@
        
 
     </script>
-
-    <div class="site-wrap">
+<div class="site-wrap">
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -55,7 +51,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="auto-style1">
-                <h2 class="mb-0 site-logo"><a href="Cued-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
+              <h2 class="mb-0 site-logo"><a href="Cued-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -63,7 +59,7 @@
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
                    
-   <ul class="site-menu js-clone-nav d-none d-lg-block">
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
 
                         <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
