@@ -46,7 +46,7 @@
 
                         <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
+                        <li><a href="ReviewApplicants.aspx">Review Applicants</a></li>
                         <li><a href="CUED-InHomeAccountForm.aspx.aspx">About</a></li>
 
                         <li class="has-children">
