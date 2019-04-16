@@ -47,7 +47,7 @@
                         <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
                         <li><a href="ReviewApplicants.aspx">Review Applicants</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx.aspx">About</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
                         <a href="AccountInformationForm.aspx">Account     </a>
@@ -276,7 +276,7 @@
 					  <li><a href="CUED-InHomeAccountForm.aspx">Creating Community</a></li>
 					  <li><a href="CUED-InHomeAccountForm.aspx">Resources</a></li>
                       <li><a href="CUED-InHomeAccountForm.aspx">News</a></li>
-                      <li><a href="CUED-InHomeAccountForm.aspx">About</a></li>
+                      <li><a href="AboutUsForm.aspx">About</a></li>
                       <li><a href="JobPostingForm.aspx">Job Postings</a></li>
                   </ul>
 				  
