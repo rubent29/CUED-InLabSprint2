@@ -1,45 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FreeAccountInformation.aspx.cs" Inherits="FreeAccountInformation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-        <style type="text/css">
-        .auto-style4 {
-            width: 3px;
-        }
-        .auto-style5 {
-            height: 29px;
-            width: 3px;
-        }
-        .auto-style6 {
-            width: 63%;
-            height: 560px;
-        }
-        .auto-style9 {
+         <style type="text/css">
+        .auto-style1 {
             position: relative;
             width: 100%;
             min-height: 1px;
             -webkit-box-flex: 0;
-            -ms-flex: 0 0 33.33333%;
-            flex: 0 0 33.33333%;
-            max-width: 33.33333%;
-            left: 881px;
-            top: -503px;
-            margin-top: 0px;
+            -ms-flex: 0 0 16.66667%;
+            flex: 0 0 16.66667%;
+            max-width: 16.66667%;
+            left: 0px;
+            top: 0px;
             padding-left: 15px;
             padding-right: 15px;
-        }
-        .auto-style10 {
-            width: 189px;
-        }
-        .auto-style11 {
-            width: 675px;
-        }
-        .auto-style12 {
-            height: 29px;
-            width: 189px;
-        }
-        .auto-style13 {
-            height: 29px;
-            width: 675px;
         }
     </style>
 </asp:Content>
@@ -127,148 +101,75 @@
     </div>
 
 
- 
-
     <div class="py-5 bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-8 mb-5">
 
-                <table class="auto-style6">
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-            </td>
-            <td class="auto-style11">
-                &nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="FNLabel" runat="server" Text="FirstName: "></asp:Label>
-            </td>
-            <td class="auto-style11">
-                <asp:Label ID="FirstNameLabel" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style5">
-                </td>
-            <td class="auto-style12">
-                <asp:Label ID="LNLabel" runat="server" Text="Last Name:"></asp:Label>
-            </td>
-            <td class="auto-style13">
-                <asp:Label ID="Label17" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style5">
-                </td>
-            <td class="auto-style12">
-                <asp:Label ID="CompanyNameLabel" runat="server" Text="Company Name: "></asp:Label>
-            </td>
-            <td class="auto-style13">
-                <asp:Label ID="CompNameLabel" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="Label27" runat="server" Text="Company Email: "></asp:Label>
-            </td>
-            <td class="auto-style11">
-                <asp:Label ID="CompEmailLabel" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style5">
-                </td>
-            <td class="auto-style12">
-                <asp:Label ID="Label7" runat="server" Text="Street Address: "></asp:Label>
-            </td>
-            <td class="auto-style13">
-                <asp:Label ID="Label19" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="Label8" runat="server" Text="City: "></asp:Label>
-            </td>
-            <td class="auto-style11">
-                <asp:Label ID="Label20" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style5">
-                </td>
-            <td class="auto-style12">
-                <asp:Label ID="Label9" runat="server" Text="State: "></asp:Label>
-            </td>
-            <td class="auto-style13">
-                <asp:Label ID="Label21" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="Label10" runat="server" Text="Country: "></asp:Label>
-            </td>
-            <td class="auto-style11">
-                <asp:Label ID="Label22" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="Label11" runat="server" Text="Zip Code: "></asp:Label>
-            </td>
-            <td class="auto-style11">
-                <asp:Label ID="Label23" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
+         <div class="form-group">
+    <label for="FirstName">First Name</label>
+  
+      <asp:Label ID="FirstName" runat="server" Text="Label"></asp:Label>
+
+  </div>
+<div class="form-group">
+    <label for="LastName">Last Name</label>
+ 
+    <asp:Label ID="LastName" runat="server" Text="Label"></asp:Label>
+
+  </div>
+
+<div class="form-group">
+    <label for="CompanyName">Company Name</label>
+    <asp:Label ID="CompanyName" runat="server" Text="Label"></asp:Label>
+
+ </div>
+
+<div class="form-group">
+    <label for="CompanyEmail">Company Email</label>
+    <asp:Label ID="CompanyEmail" runat="server" Text="Label"></asp:Label>
+
+ </div>
+              
+<div class="form-group">
+    <label for="StreetAddress">Street Address</label>
+    <asp:Label ID="StreetAddress" runat="server" Text="Label"></asp:Label>
+
+  </div>
+
+	<div class="form-group">
+    <label for="City">City</label>
+
+        <asp:Label ID="City" runat="server" Text="Label"></asp:Label>
+
+    </div>
+
+	<div class="form-group">
+    <label for="State">State</label>
+     
+        <asp:Label ID="State" runat="server" Text="Label"></asp:Label>
+
+  </div>
+
+	<div class="form-group">
+    <label for="ZipCodeInput">Zipcode</label>
+     
+        <asp:Label ID="ZipCode" runat="server" Text="Label"></asp:Label>
+  </div>  
+
+  <div class="form-group">
+    <label for="Country">Country</label>
+   <asp:Label ID="Country" runat="server" Text="Label"></asp:Label>
+
+  </div>
+
+  <div class="form-group">
+    <label for="Question">Security Question</label>
+      <asp:Label ID="Question" runat="server" Text="Label"></asp:Label>
+  </div>
 
 
-
-                &nbsp;</td>
-            <td class="auto-style10">
-                <%--<asp:Label ID="Label14" runat="server" Text="Security Question: "></asp:Label>--%>
-            </td>
-            <td class="auto-style11">
-              <%--  <asp:Label ID="Label26" runat="server" Text="Label"></asp:Label>--%>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <%--<asp:Label ID="Label29" runat="server" Text="Security Answer: "></asp:Label>--%>
-            </td>
-            <td class="auto-style11">
-                <%--<asp:Label ID="Label30" runat="server" Text="Label"></asp:Label>--%>
-
-
-
-    <asp:Button 
-        ID="LoginAgainButton" 
-        runat="server" 
-        Text="Log In Again to Edit" 
-        OnClick="LoginAgainButton_Click" />
-
-
-               
-            </td>
-        </tr>
-    </table>
-                         <div class="auto-style9">
+            <div class="auto-style9">
             <div class="p-4 mb-3 bg-white">
               <h3 class="h5 text-black mb-3">Contact Info</h3>
               <p class="mb-0 font-weight-bold">Address</p>
@@ -283,14 +184,17 @@
             </div>
 
           </div>
-
+ <%--                <asp:Button 
+        ID="LoginAgainButton" 
+        runat="server" 
+        Text="Log In Again to Edit" 
+        OnClick="LoginAgainButton_Click" />--%>
 
 
           </div>
         </div>
       </div>
     </div>
-
 
 
   
@@ -372,7 +276,7 @@
 
   <script src="js/main.js"></script>
 
-  </body>
+
 
 
 </asp:Content>

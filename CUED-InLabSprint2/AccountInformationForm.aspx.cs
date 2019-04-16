@@ -38,16 +38,18 @@ public partial class AccountInformationForm : System.Web.UI.Page
             {
                 //set all the labels
 
-                FirstNameLabel.Text = ds.Tables[0].Rows[0].Field<string>(1); //sets first name label
-                Label17.Text = ds.Tables[0].Rows[0].Field<string>(2); //last name
-                CompNameLabel.Text = ds.Tables[0].Rows[0].Field<string>(3); //company
-                CompEmailLabel.Text = ds.Tables[0].Rows[0].Field<string>(4); //email used
-                Label19.Text = ds.Tables[0].Rows[0].Field<string>(5); //address
-                Label20.Text = ds.Tables[0].Rows[0].Field<string>(6); //city
-                Label21.Text = ds.Tables[0].Rows[0].Field<string>(7); //state
-                Label22.Text = ds.Tables[0].Rows[0].Field<string>(8); //country
-                Label23.Text = ds.Tables[0].Rows[0].Field<string>(9); //zip
-                                                                      //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
+                FirstName.Text = ds.Tables[0].Rows[0].Field<string>(1); //sets first name label
+                LastName.Text = ds.Tables[0].Rows[0].Field<string>(2); //last name
+                CompanyName.Text = ds.Tables[0].Rows[0].Field<string>(3); //company
+                CompanyEmail.Text = ds.Tables[0].Rows[0].Field<string>(4); //email used
+                StreetAddress.Text = ds.Tables[0].Rows[0].Field<string>(5); //address
+                City.Text = ds.Tables[0].Rows[0].Field<string>(6); //city
+                State.Text = ds.Tables[0].Rows[0].Field<string>(7); //state
+                Country.Text = ds.Tables[0].Rows[0].Field<string>(8); //country
+                ZipCode.Text = ds.Tables[0].Rows[0].Field<string>(9); //zip
+                Question.Text = ds.Tables[0].Rows[0].Field<string>(10); //zip
+
+                //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
 
             }
 
