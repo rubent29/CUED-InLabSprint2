@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="JobPostingLandingForm.aspx.cs" Inherits="JobPostingLandingForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+           <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+                 }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
       <div class="site-wrap">
@@ -22,13 +27,13 @@
                       <li class="has-children">
                         <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
+                        <li><a href="ReviewApplicants.aspx">Review Applicants</a></li>
                         <li><a href="CUED-InHomeAccountForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="AccountInformationForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
+                          <li><a href="AccountInformationForm.aspx">Account Information</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
                           <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Subscription</a></li>
@@ -65,13 +70,10 @@
                 Text="View Your Posting" 
                 OnClick="ViewYourPosting_Click" />
             </span>
-        &nbsp;</div>
+       </div>
       </div>
     </div>  
 
-
-
-    
 
    <footer class="site-footer">
       <div class="container">

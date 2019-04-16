@@ -72,9 +72,15 @@
          <div class="container"> 
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1>CUED-In</h1>
-              <span class="caption d-block text-black">Career <strong>Focused.</strong> Community <strong>Centered.</strong></span>
+              
                           <h1><strong>
+                <asp:Label ID="Label1"
+                    AutoSize="False"
+                    TextAlign="MiddleCenter"
+                    Dock="Fill"
+                    runat="server" 
+                    CssClass="auto-style1" 
+                    Text="Label"></asp:Label>
                          <asp:Button 
                     ID="UpgradeTodayButton" 
                     runat="server" 
@@ -282,7 +288,7 @@
             <h3 class="footer-heading mb-4 text-white">About</h3>
 			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
 <p>Email: info@cued-in.com</p>
-            <p><a href="CUED-InHomeAccountForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+            <p><a href="FreeCuedInHomeAccountForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
   

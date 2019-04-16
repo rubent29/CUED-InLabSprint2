@@ -38,7 +38,7 @@
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
 
                         <li><a href="FreeJobPostingLandingForm.aspx">Job Posting</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
+                        <li><a href="ReviewApplicants.aspx">Review Applicants</a></li>
                         <li><a href="FreeCuedInHomeForm.aspx">About</a></li>
 
                         <li class="has-children">

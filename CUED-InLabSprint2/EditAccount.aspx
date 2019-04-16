@@ -43,7 +43,7 @@
 
                         <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
+                        <li><a href="ReviewApplicants.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
@@ -81,7 +81,7 @@
   <div class="form-group">
   </div>				  
   <div class="form-group">
-    <label for="FirstName">First Name</label>
+    <label for="FirstNameLbl">First Name</label>
       <br />
     <asp:TextBox 
         ID="FirstName" 
@@ -99,7 +99,7 @@
 
   </div>
 <div class="form-group">
-    <label for="LastName">Last Name</label>
+    <label for="LastNameLbl">Last Name</label>
     <br />
     <asp:TextBox 
         ID="LastName" 
@@ -118,7 +118,7 @@
 
   </div>
 <div class="form-group">
-    <label for="CompanyName">Company Name</label>
+    <label for="CompName">Company Name</label>
     <br />
     <asp:TextBox 
         ID="CompanyName" 
@@ -257,7 +257,7 @@
 
   </div>  
   <div class="form-group">
-    <label for="countrySelect">Country</label>&nbsp;
+    <label for="countrySelect">Country</label>
       <br />
       <asp:DropDownList ID="Country" runat="server">
           <asp:ListItem>United States</asp:ListItem>

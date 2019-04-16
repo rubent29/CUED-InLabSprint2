@@ -30,7 +30,7 @@ public partial class EditAccount : System.Web.UI.Page
             connection.Open();
 
             string cmd = "select * from employer where companyemail = '" + email + "';";
-            //use session variable irl
+            //use session variable irl: rn just testing w cole
 
             SqlDataAdapter adp = new SqlDataAdapter();
             adp.SelectCommand = new SqlCommand(cmd, connection);
@@ -52,8 +52,8 @@ public partial class EditAccount : System.Web.UI.Page
                 Country.Text = ds.Tables[0].Rows[0].Field<string>(8); //country
                 ZipCode.Text = ds.Tables[0].Rows[0].Field<string>(9); //zip
                 TextBoxQuestion.Text = ds.Tables[0].Rows[0].Field<string>(10); //country
-                TextBoxAnswer.Text = ds.Tables[0].Rows[0].Field<string>(11); //zip
-               //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
+             
+             //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
 
             }
 
@@ -65,80 +65,40 @@ public partial class EditAccount : System.Web.UI.Page
     }
 
     protected void SaveChanges_Button_Click(object sender, EventArgs e)
-        
     {
         string email = Session["Test"].ToString();
 
-        //updates currency table with values that were inputted
         connection.Open();
-        string updateQuery = "UPDATE Employer SET  FirstName = @newFirstName WHERE CompanyEmail = '" + email + "';";
+        string updateQuery = "UPDATE Employer SET FirstName = @newFirstName, LastName = @newLastName, CompanyName = @newCompanyName, StreetAddress = @newStreetAddress" +
+            ", City = @newCity, State = @newState, ZipCode = @newZipcode, Country = @newCountry, Password = @newPasswordOne, PasswordConfirmation = @newPasswordTwo" +
+            ", SecurityQuestion = @newQuestion, SecurityAnswer = @newAnswer, LastUpdatedBy = @newLastUpdatedBy, LastUpdated = @newLastUpdated WHERE CompanyEmail = '" + email + "';";
         SqlCommand updateEmployer = new SqlCommand(updateQuery, connection);
         updateEmployer.Parameters.AddWithValue("@newFirstName", HttpUtility.HtmlEncode(FirstName.Text));
+        updateEmployer.Parameters.AddWithValue("@newLastName", HttpUtility.HtmlEncode(LastName.Text));
+        updateEmployer.Parameters.AddWithValue("@newCompanyName", HttpUtility.HtmlEncode(CompanyName.Text));
+        updateEmployer.Parameters.AddWithValue("@newStreetAddress", HttpUtility.HtmlEncode(StreetAddress.Text));
+        updateEmployer.Parameters.AddWithValue("@newCity", HttpUtility.HtmlEncode(City.Text));
+        updateEmployer.Parameters.AddWithValue("@newState", HttpUtility.HtmlEncode(State.Text));
+        updateEmployer.Parameters.AddWithValue("@newZipcode", HttpUtility.HtmlEncode(ZipCode.Text));
+        updateEmployer.Parameters.AddWithValue("@newCountry", HttpUtility.HtmlEncode(Country.SelectedItem.Text));
+        updateEmployer.Parameters.AddWithValue("@newPasswordOne", HttpUtility.HtmlEncode(PasswordOne.Text));
+        updateEmployer.Parameters.AddWithValue("@newPasswordTwo", HttpUtility.HtmlEncode(PasswordTwo.Text));
+        updateEmployer.Parameters.AddWithValue("@newQuestion", HttpUtility.HtmlEncode(TextBoxQuestion.Text));
+        updateEmployer.Parameters.AddWithValue("@newAnswer", HttpUtility.HtmlEncode(TextBoxAnswer.Text));
+        updateEmployer.Parameters.AddWithValue("@newLastUpdatedBy", HttpUtility.HtmlEncode(LastUpdatedBy));
+        updateEmployer.Parameters.AddWithValue("@newLastUpdated", HttpUtility.HtmlEncode(LastUpdated));
+
+
+
 
         //shows the currency name has been edited
         updateEmployer.ExecuteNonQuery();
+        Response.Redirect("CUED-InHomeAccountForm.aspx");
         EditLabel.Visible = false;
         Response.Write("<font size=7 color=green>All Your Data is Saved.</font>");
 
     }
 
-    //code that was in the aspx? not sure if it belongs there
-
-    //protected void Page_Load(object sender, EventArgs e)
-    //{
-    //    if (!IsPostBack)
-    //    {
-    //        string strUsers = "";
-    //        if (Request.Cookies["edit"] != null)
-    //            strUsers = Request.Cookies["edit"]["companyEmail"].ToString();
-
-    //        SqlConnection DBconnection = new SqlConnection("server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;");
-    //        SqlCommand cmd = new SqlCommand(string.Format("select * from Employer where companyEmail ='{0}'", strUsers), DBconnection);
-    //        SqlDataReader reader;
-
-    //        DBconnection.Open();
-    //        reader = cmd.ExecuteReader();
-    //        if (reader.Read())
-    //        {
-    //            FirstName.Text = reader[1].ToString();
-    //            LastName.Text = reader[2].ToString();
-    //            CompanyName.Text = reader[3].ToString();
-    //            CompanyEmail.Text = reader[4].ToString();
-    //            StreetAddress.Text = reader[5].ToString();
-    //            City.Text = reader[6].ToString();
-    //            State.Text = reader[7].ToString();
-    //            Country.Text = reader[8].ToString();
-    //            ZipCode.Text = reader[9].ToString();
-    //            PasswordOne.Text = reader[11].ToString();
-    //            PasswordTwo.Text = reader[12].ToString();
-    //            TextBoxQuestion.Text = reader[13].ToString();
-    //            TextBoxAnswer.Text = reader[14].ToString();
-    //        }
-    //        else
-    //            Response.Redirect("AccountInformation.aspx");
-    //        DBconnection.Close();
-    //    }
-    //}
-
-    //protected void SaveChanges_Button_Click(object sender, EventArgs e)
-    //{
-    //    string LastUpdatedBy = "Ruben Torrico";
-    //    string LastUpdated = DateTime.Today.ToString();
-
-    //    SqlConnection conn = new SqlConnection("Data Source=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;Initial Catalog=CuedIn;Persist Security Info=True;User ID=admin;Password=dukedog19");
-    //    SqlCommand cmd = new SqlCommand(String.Format("update employer set FirstName = '{1}', LastName = '{2}', CompanyName = '{3}', CompanyEmail = '{4}', StreetAddress = '{5}', City = '{6}', State = '{7}', Country = '{8}', ZipCode = '{9}', Password = '{11}', PasswordConfirmation = '{12}', SecurityQuestion = '{13}', SecurityAnswer = '{14}'", HttpUtility.HtmlEncode(FirstName.Text.Trim()), HttpUtility.HtmlEncode(LastName.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.Text.Trim()),
-    //                                HttpUtility.HtmlEncode(CompanyEmail.Text.Trim()), HttpUtility.HtmlEncode(StreetAddress.Text.Trim()), HttpUtility.HtmlEncode(City.Text.Trim()),
-    //                                HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(Country.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(ZipCode.Text.Trim()),
-    //                                HttpUtility.HtmlEncode(PasswordOne.Text.Trim()), HttpUtility.HtmlEncode(PasswordTwo.Text.Trim()), HttpUtility.HtmlEncode(TextBoxQuestion.Text.Trim()), HttpUtility.HtmlEncode(TextBoxAnswer.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated)), conn);
-    //    conn.Open();
-
-
-    //    cmd.ExecuteNonQuery();
-    //    conn.Close();
-    //    EditLabel.Visible = false;
-    //    Response.Write("<font size=7 color=green>All Your Data is Saved.</font>");
-
-    //}
-
+    
 
 }

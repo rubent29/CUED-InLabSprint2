@@ -26,7 +26,7 @@
                         <a href="StudentLandingForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">               
                             <li><a href="StudentAccountInformationForm.aspx">Account Information</a></li>
-     
+                            <li><a href="StudentJobForm.aspx">Job Postings</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>

@@ -27,9 +27,7 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-    
-  </head>
-  <body>
+
   
   <div class="site-wrap">
 
@@ -62,7 +60,7 @@
 
                         <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
+                        <li><a href="ReviewApplicants.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
@@ -339,9 +337,6 @@
 
   <script src="js/main.js"></script>
 
-  </body>
-
-</html>
 
 </asp:Content>
 

@@ -1,15 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SchoolDemographicsForm.aspx.cs" Inherits="SchoolDemographics" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ReviewApplicants.aspx.cs" Inherits="ReviewApplicants" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
+
+       <style type="text/css">
         .auto-style1 {
             text-align: center;
-        }
+                 }
     </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -22,14 +24,20 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
     
+    
+    
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
     
+
+<%--  <body style="background-image: url('images/bg.jpg');">--%>
+  
   <div class="site-wrap">
 
+    
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -39,7 +47,9 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
-  
+    
+    
+     
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -82,24 +92,19 @@
     </div>
   
  
-    <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_b1_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
-          <h1 class="auto-style1">School Demographics</h1>
-          <span class="caption d-block text-white"></span>
+          <h1 class="auto-style1">Review Applicants</h1>
+                <br />
+                <asp:GridView ID="GridView2" runat="server">
+                </asp:GridView>
+
         </div>
       </div>
     </div>  
 
-    <div class="py-5 bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-8 mb-5">
-          <div class='tableauPlaceholder' id='viz1554150312594' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CuedInTableauPage&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CuedInTableauPage&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CuedInTableauPage&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1554150312594');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-          </div>
-        </div>
-      </div>
-    </div>
+ 
 
     <footer class="site-footer">
       <div class="container">
@@ -107,7 +112,6 @@
         <div class="row">
           <div class="col-md-4">
             <h3 class="footer-heading mb-4 text-white">About</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam, placeat amet.</p>
             <p><a href="#" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
@@ -177,6 +181,8 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
+
+  </body>
 
 
 </asp:Content>
