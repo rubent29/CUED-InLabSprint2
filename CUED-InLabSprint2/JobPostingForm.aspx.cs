@@ -45,6 +45,8 @@ public partial class JobPostingForm : System.Web.UI.Page
         PayStatus.SelectedValue = "Paid";
         JobDescription.Text = "Carpenter assistant needed and must be 16 years old to apply. ";
         Deadline.Text = "03/29/2019";
+        MinAge.Text = "17";
+        MinGPA.Text = "3.0";
     }
 
     protected void Insert_Button_Click(object sender, EventArgs e)

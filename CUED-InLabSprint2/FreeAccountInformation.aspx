@@ -167,7 +167,7 @@
             <td class="auto-style5">
                 </td>
             <td class="auto-style12">
-                <asp:Label ID="CompanyNameLabel" runat="server" Text="CompanyName: "></asp:Label>
+                <asp:Label ID="CompanyNameLabel" runat="server" Text="Company Name: "></asp:Label>
             </td>
             <td class="auto-style13">
                 <asp:Label ID="CompNameLabel" runat="server" Text="Label"></asp:Label>
@@ -187,7 +187,7 @@
             <td class="auto-style5">
                 </td>
             <td class="auto-style12">
-                <asp:Label ID="Label7" runat="server" Text="StreetAddress: "></asp:Label>
+                <asp:Label ID="Label7" runat="server" Text="Street Address: "></asp:Label>
             </td>
             <td class="auto-style13">
                 <asp:Label ID="Label19" runat="server" Text="Label"></asp:Label>
