@@ -1,45 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AccountInformationForm.aspx.cs" Inherits="AccountInformationForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .auto-style4 {
-            width: 3px;
-        }
-        .auto-style5 {
-            height: 29px;
-            width: 3px;
-        }
-        .auto-style6 {
-            width: 63%;
-            height: 560px;
-        }
-        .auto-style9 {
+       <style type="text/css">
+        .auto-style1 {
             position: relative;
             width: 100%;
             min-height: 1px;
             -webkit-box-flex: 0;
-            -ms-flex: 0 0 33.33333%;
-            flex: 0 0 33.33333%;
-            max-width: 33.33333%;
-            left: 881px;
-            top: -503px;
-            margin-top: 0px;
+            -ms-flex: 0 0 16.66667%;
+            flex: 0 0 16.66667%;
+            max-width: 16.66667%;
+            left: 0px;
+            top: 0px;
             padding-left: 15px;
             padding-right: 15px;
-        }
-        .auto-style10 {
-            width: 189px;
-        }
-        .auto-style11 {
-            width: 675px;
-        }
-        .auto-style12 {
-            height: 29px;
-            width: 189px;
-        }
-        .auto-style13 {
-            height: 29px;
-            width: 675px;
         }
     </style>
 </asp:Content>
@@ -68,57 +42,46 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-    
-  </head>
-<%--  <body style="background-image: url('images/bg.jpg');">--%>
-  
-  <div class="site-wrap">
+  <script runat="server">
+       
 
-    
+    </script>
 
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
-    
-    
-     
+    <div class="site-wrap">
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
         <div class="site-navbar bg-light">
           <div class="py-1">
             <div class="row align-items-center">
-              <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
+              <div class="auto-style1">
+                <h2 class="mb-0 site-logo"><a href="Cued-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
                   <div class="container">
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
-                  <ul class="site-menu js-clone-nav d-none d-lg-block">
+                   
+   <ul class="site-menu js-clone-nav d-none d-lg-block">
 
                         <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
                         <li><a href="CUED-InHomeAccountForm.aspx">Review Applicants</a></li>
-                        <li><a href="CUED-InHomeAccountForm.aspx">About</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
                         <a href="CUED-InHomeAccountForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
+                          <li><a href="AccountInformationForm.aspx">Account Information</a></li>
                           <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
-                          <li><a href="CUED-InHomeAccountForm.aspx">Subscription</a></li>
+                          <li><a href="JobPostingLandingForm.aspx">Job Postings</a></li>
+                          <li><a href="SubscriptionForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
 					  </ul> 
+
                   </div>
                 </nav>
               </div>
@@ -127,150 +90,95 @@
         </div>
       </div>
     </div>
+  
 
-
- 
 
     <div class="py-5 bg-light">
       <div class="container">
         <div class="row">
+       
           <div class="col-md-12 col-lg-8 mb-5">
+   
+  <div class="form-group">
+  </div>				  
+  <div class="form-group">
+    <label for="FirstName">First Name</label>
+  
+      <asp:Label ID="FirstName" runat="server" Text="Label"></asp:Label>
 
-                <table class="auto-style6">
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-            </td>
-            <td class="auto-style11">
-                &nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="FNLabel" runat="server" Text="FirstName: "></asp:Label>
-            </td>
-            <td class="auto-style11">
-                <asp:Label ID="FirstNameLabel" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style5">
-                </td>
-            <td class="auto-style12">
-                <asp:Label ID="LNLabel" runat="server" Text="Last Name:"></asp:Label>
-            </td>
-            <td class="auto-style13">
-                <asp:Label ID="Label17" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style5">
-                </td>
-            <td class="auto-style12">
-                <asp:Label ID="CompanyNameLabel" runat="server" Text="CompanyName: "></asp:Label>
-            </td>
-            <td class="auto-style13">
-                <asp:Label ID="CompNameLabel" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="Label27" runat="server" Text="Company Email: "></asp:Label>
-            </td>
-            <td class="auto-style11">
-                <asp:Label ID="CompEmailLabel" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style5">
-                </td>
-            <td class="auto-style12">
-                <asp:Label ID="Label7" runat="server" Text="StreetAddress: "></asp:Label>
-            </td>
-            <td class="auto-style13">
-                <asp:Label ID="Label19" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="Label8" runat="server" Text="City: "></asp:Label>
-            </td>
-            <td class="auto-style11">
-                <asp:Label ID="Label20" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style5">
-                </td>
-            <td class="auto-style12">
-                <asp:Label ID="Label9" runat="server" Text="State: "></asp:Label>
-            </td>
-            <td class="auto-style13">
-                <asp:Label ID="Label21" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="Label10" runat="server" Text="Country: "></asp:Label>
-            </td>
-            <td class="auto-style11">
-                <asp:Label ID="Label22" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="Label11" runat="server" Text="Zip Code: "></asp:Label>
-            </td>
-            <td class="auto-style11">
-                <asp:Label ID="Label23" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
+  </div>
+<div class="form-group">
+    <label for="LastName">Last Name</label>
+ 
+    <asp:Label ID="LastName" runat="server" Text="Label"></asp:Label>
+
+  </div>
+
+<div class="form-group">
+    <label for="CompanyName">Company Name</label>
+    <asp:Label ID="CompanyName" runat="server" Text="Label"></asp:Label>
+
+ </div>
+
+<div class="form-group">
+    <label for="CompanyEmail">Company Email</label>
+    <asp:Label ID="CompanyEmail" runat="server" Text="Label"></asp:Label>
+
+ </div>
+              
+<div class="form-group">
+    <label for="StreetAddress">Street Address</label>
+    <asp:Label ID="StreetAddress" runat="server" Text="Label"></asp:Label>
+
+  </div>
+
+	<div class="form-group">
+    <label for="City">City</label>
+
+        <asp:Label ID="City" runat="server" Text="Label"></asp:Label>
+
+    </div>
+
+	<div class="form-group">
+    <label for="State">State</label>
+     
+        <asp:Label ID="State" runat="server" Text="Label"></asp:Label>
+
+  </div>
+
+	<div class="form-group">
+    <label for="ZipCodeInput">Zipcode</label>
+     
+        <asp:Label ID="ZipCode" runat="server" Text="Label"></asp:Label>
+  </div>  
+
+  <div class="form-group">
+    <label for="Country">Country</label>
+   <asp:Label ID="Country" runat="server" Text="Label"></asp:Label>
+
+  </div>
+
+  <div class="form-group">
+    <label for="Question">Security Question</label>
+      <asp:Label ID="Question" runat="server" Text="Label"></asp:Label>
+  </div>
+
+<div class="form-group">
+  </div>
+<div class="form-group">
+  </div>
+ <div class="form-group">
+  </div>
+ <div class="form-group">
+  </div>	
 
 
+&nbsp;    
 
-                &nbsp;</td>
-            <td class="auto-style10">
-                <%--<asp:Label ID="Label14" runat="server" Text="Security Question: "></asp:Label>--%>
-            </td>
-            <td class="auto-style11">
-              <%--  <asp:Label ID="Label26" runat="server" Text="Label"></asp:Label>--%>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                &nbsp;</td>
-            <td class="auto-style10">
-                <%--<asp:Label ID="Label29" runat="server" Text="Security Answer: "></asp:Label>--%>
-            </td>
-            <td class="auto-style11">
-                <%--<asp:Label ID="Label30" runat="server" Text="Label"></asp:Label>--%>
+              
+          </div>
 
-
-
-    <asp:Button 
-        ID="LoginAgainButton" 
-        runat="server" 
-        Text="Log In Again to Edit" 
-        OnClick="LoginAgainButton_Click" />
-
-
-               
-            </td>
-        </tr>
-    </table>
-                         <div class="auto-style9">
+          <div class="col-lg-4">
             <div class="p-4 mb-3 bg-white">
               <h3 class="h5 text-black mb-3">Contact Info</h3>
               <p class="mb-0 font-weight-bold">Address</p>
@@ -283,50 +191,43 @@
               <p class="mb-0"><a href="#">info@cued-in.com</a></p>
 
             </div>
-
-          </div>
-
-
-
+            
+            
           </div>
         </div>
       </div>
     </div>
 
+    
 
-
-  
-
-        <footer class="site-footer">
+   <footer class="site-footer">
       <div class="container">
-
+        
         <div class="row">
           <div class="col-md-4">
             <h3 class="footer-heading mb-4 text-white">About</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam, placeat amet.</p>
-            <p><a href="#" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+			  <p>We are located in the Shenandoah Valley of Virginia.</p><br>
+<p>Email: info@cued-in.com</p>
+            <p><a href="MasterPageForm.aspx" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                 <ul class="list-unstyled">
+					  <li><a href="MasterPageForm.aspx">Creating Community</a></li>
+					  <li><a href="MasterPageForm.aspx">Resources</a></li>
+                      <li><a href="MasterPageForm.aspx">News</a></li>
+                      <li><a href="AboutUsForMasterPageForm.aspx">About</a></li>
                   </ul>
+				  
+				  
+				  
               </div>
               <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Program</h3>
+                <h3 class="footer-heading mb-4 text-white"></h3>
                   <ul class="list-unstyled">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+							<li><a href="EmployerForm.aspx">Employer</a></li>
                   </ul>
               </div>
             </div>
@@ -337,10 +238,9 @@
             <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
               <div class="col-md-12">
                 <p>
-                  <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                  <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                  <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                  <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
+                  <a href="https://www.facebook.com/cuedin/" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/cued__in" class="p-2"><span class="icon-twitter"></span></a>
+                  <a href="https://www.youtube.com/channel/UCVUOkypjiJHzMEo0oSHiPNw" class="p-2"><span class="icon-youtube"></span></a>
 
                 </p>
               </div>
@@ -358,7 +258,7 @@
         </div>
       </div>
     </footer>
-  </div>
+
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -373,9 +273,6 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
-
-  </body>
-
 
 
 

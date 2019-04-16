@@ -69,7 +69,7 @@ public partial class EditAccount : System.Web.UI.Page
 
 
         connection.Open();
-        string updateQuery = "UPDATE Employer SET FirstName = @newFirstName where CompanyEmail = '" + email +"'";
+        string updateQuery = "UPDATE Employer SET FirstName = @newFirstName where CompanyEmail = @email";
         SqlCommand updateEmployer = new SqlCommand(updateQuery, connection);
         updateEmployer.Parameters.AddWithValue("@newFirstName", HttpUtility.HtmlEncode(FirstName.Text));
       

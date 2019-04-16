@@ -73,8 +73,7 @@
   </div>				  
   <div class="form-group">
     <label for="FirstName">First Name</label>
-      <br />
-
+   
       <asp:Label ID="FirstName" runat="server" Text="Label"></asp:Label>
 
 
@@ -82,7 +81,7 @@
   </div>
 <div class="form-group">
     <label for="LastName">Last Name</label>
-    <br />
+
 
     <asp:Label ID="LastName" runat="server" Text="Label"></asp:Label>
 
@@ -91,7 +90,7 @@
   </div>
 <div class="form-group">
     <label for="MiddleName">Middle Name</label>
-    <br />
+  
  
     <asp:Label ID="MiddleName" runat="server" Text="Label"></asp:Label>
 
@@ -99,7 +98,7 @@
  </div>
 <div class="form-group">
     <label for="Email">Email</label>
-    <br />
+
 
     <asp:Label ID="Email" runat="server" Text="Label"></asp:Label>
 
@@ -107,21 +106,21 @@
  </div>		
 <div class="form-group">
     <label for="StreetAddress">Street Address</label>
-    <br />
+  
 
     <asp:Label ID="StreetAddress" runat="server" Text="Label"></asp:Label>
 
   </div>
 	<div class="form-group">
     <label for="City">City</label>
-        <br />
+  
 
         <asp:Label ID="City" runat="server" Text="Label"></asp:Label>
 
     </div>
 	<div class="form-group">
     <label for="State">State</label>
-        <br />
+
 
         <asp:Label ID="State" runat="server" Text="Label"></asp:Label>
 
@@ -129,37 +128,33 @@
   </div>
 	<div class="form-group">
     <label for="ZipCodeInput">Zipcode</label>
-        <br />
+
 
         <asp:Label ID="ZipCode" runat="server" Text="Label"></asp:Label>
 
- 
-
   </div>  
+
   <div class="form-group">
     <label for="countrySelect">Country</label>&nbsp;
-      <br />
-
       <asp:Label ID="Country" runat="server" Text="Label"></asp:Label>
-
         </div>
 
                 <div class="form-group">
     <label for="DateOfBirth">Date of Birth</label>
-      <br />
+      
                     <asp:Label ID="DOB" runat="server" Text="Label"></asp:Label>
 
   </div>
 <div class="form-group">
     <label for="Age">Age </label>
-    <br />
 
     <asp:Label ID="Age" runat="server" Text="Label"></asp:Label>
+
 
   </div>
 	<div class="form-group">
     <label for="Password">Password</label>
-        <br />
+    
     <asp:TextBox 
         ID="PasswordOne" 
         runat="server"
@@ -169,9 +164,10 @@
           
 
           </div>
+
 	<div class="form-group">
     <label for="Password">Confirm Password</label>
-        <br />
+
     <asp:TextBox 
         ID="PasswordTwo" 
         runat="server"

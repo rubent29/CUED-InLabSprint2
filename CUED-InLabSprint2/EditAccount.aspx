@@ -257,7 +257,7 @@
 
   </div>  
   <div class="form-group">
-    <label for="countrySelect">Country</label>&nbsp;
+    <label for="countrySelect">Country</label>
       <br />
       <asp:DropDownList ID="Country" runat="server">
           <asp:ListItem>United States</asp:ListItem>
