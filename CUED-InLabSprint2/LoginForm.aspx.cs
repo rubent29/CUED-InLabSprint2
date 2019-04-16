@@ -114,7 +114,53 @@ protected void Login_Click(object sender, EventArgs e)
 
 
 
-    }
+            System.Data.SqlClient.SqlCommand findStuPass = new System.Data.SqlClient.SqlCommand();
+            findStuPass.Connection = sc;
+            // SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
+            findStuPass.CommandText = "select Password from Student where Email = @Username";
+            findStuPass.Parameters.Add(new SqlParameter("@Username", Username.Text));
+            sc.Close();
+            sc.Open();
+            SqlDataReader stuReader = findStuPass.ExecuteReader();
+
+            if (stuReader.HasRows) // if the username exists, it will continue
+            {
+                while (stuReader.Read()) // this will read the single record that matches the entered username
+                {
+                    string storedHash = stuReader["Password"].ToString(); // store the database password into this variable
+
+                    if (PasswordHash.ValidatePassword(Password.Text, storedHash)) // if the entered password matches what is stored, it will show success
+                    {
+
+                        Session["UserSession"] = Username.Text;
+                        stuReader.Close();
+
+                        lblStatus.Text = "Success!";
+
+                        sc.Close();
+                        //sc.Open();
+
+                        System.Data.SqlClient.SqlCommand getStuUser = new System.Data.SqlClient.SqlCommand();
+                        getStuUser.Connection = sc;
+                        sc.Open();
+                        getStuUser.CommandText = "Select Email from Student where Email = @Username";
+                        getStuUser.Parameters.AddWithValue("@Username", HttpUtility.HtmlEncode(Username.Text));
+                        Session["Username"] = getStuUser.ExecuteScalar();
+                        sc.Close();
+                        Response.Redirect("StudentLandingForm.aspx");
+                    }
+                    else
+                        lblStatus.Text = "Password is wrong.";
+                }
+            }
+            else // if the username doesn't exist, it will show failure
+                lblStatus.Text = "Login failed.";
+
+            sc.Close();
+
+
+
+        }
 }
 
 protected void CreateAccount_Click(object sender, EventArgs e)
@@ -129,52 +175,6 @@ protected void ForgetPasswordLink_Click(object sender, EventArgs e)
 {
 
     Response.Redirect("ForgotPassword.aspx");
-
-
-
-        //System.Data.SqlClient.SqlCommand findStuPass = new System.Data.SqlClient.SqlCommand();
-        //findStuPass.Connection = sc;
-        //// SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
-        //findStuPass.CommandText = "select Password from Account where Username = @Username";
-        //findStuPass.Parameters.Add(new SqlParameter("@Username", Username.Text));
-        //sc.Close();
-        //sc.Open();
-        //SqlDataReader stuReader = findStuPass.ExecuteReader();
-
-        //if (stuReader.HasRows) // if the username exists, it will continue
-        //{
-        //    while (stuReader.Read()) // this will read the single record that matches the entered username
-        //    {
-        //        string storedHash = stuReader["Password"].ToString(); // store the database password into this variable
-
-        //        if (PasswordHash.ValidatePassword(Password.Text, storedHash)) // if the entered password matches what is stored, it will show success
-        //        {
-
-        //            Session["UserSession"] = Username.Text;
-        //            stuReader.Close();
-
-        //            lblStatus.Text = "Success!";
-
-        //            sc.Close();
-        //            sc.Open();
-
-        //            System.Data.SqlClient.SqlCommand getStuUser = new System.Data.SqlClient.SqlCommand();
-        //            getStuUser.Connection = sc;
-        //            sc.Open();
-        //            getStuUser.CommandText = "Select Email from Student where Email = @Username";
-        //            getStuUser.Parameters.AddWithValue("@Username", HttpUtility.HtmlEncode(Username.Text));
-        //            Session["Username"] = getStuUser.ExecuteScalar();
-        //            sc.Close();
-        //            Response.Redirect("StudentLandingForm.aspx");
-        //        }
-        //        else
-        //            lblStatus.Text = "Password is wrong.";
-        //    }
-        //}
-        //else // if the username doesn't exist, it will show failure
-        //    lblStatus.Text = "Login failed.";
-
-        //sc.Close();
 
     }
 }
