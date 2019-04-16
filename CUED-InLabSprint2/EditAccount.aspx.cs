@@ -66,7 +66,7 @@ public partial class EditAccount : System.Web.UI.Page
 
     protected void SaveChanges_Button_Click(object sender, EventArgs e)
     {
-
+        string email = Session["Test"].ToString();
 
         connection.Open();
         string updateQuery = "UPDATE Employer SET FirstName = @newFirstName where CompanyEmail = '" + email +"'";
