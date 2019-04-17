@@ -104,12 +104,18 @@
 <div class="form-group">
      </div>
 <div class="form-group">
+    <asp:Label ID="SelectLabel" runat="server" Text="Please select the posting ID of the job you wish to apply for:"></asp:Label>
+   
      </div>
 <div class="form-group">
+    <div>
+    </div>
     </div>
 <div class="form-group">
+    <asp:TextBox ID="TextBox1" runat="server" Width="47px"></asp:TextBox><div></div>
+     <asp:Button ID="Button1" runat="server" Text="Apply" OnClick="Button1_Click" />
     </div>	
-
+     <asp:Label ID="SuccessLabel" runat="server" Text=""></asp:Label>
 
 </form>
 
