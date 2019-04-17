@@ -76,7 +76,7 @@
                         <li class="has-children">
                         <a href="FreeAccountInformation.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="FreeAccountInformation">Account Information</a></li>
+                          <li><a href="FreeAccountInformation.aspx">Account Information</a></li>
 
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
@@ -140,7 +140,7 @@
                   </ul>
               </div>
               <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Program</h3>
+                <h3 class="footer-heading mb-4 text-white"></h3>
                   <ul class="list-unstyled">
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
