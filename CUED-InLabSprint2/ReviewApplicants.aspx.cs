@@ -71,7 +71,7 @@ public partial class ReviewApplicants : System.Web.UI.Page
                 {
                     sda.Fill(dt);
                     GridView1.DataSource = dt;
-                    GridView1.DataBind(); //why isn't this working????
+                    GridView1.DataBind(); 
                 }
             }
         }

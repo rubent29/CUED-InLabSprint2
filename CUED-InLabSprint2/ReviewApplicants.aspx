@@ -90,7 +90,7 @@
             <asp:TextBox ID="ID" runat="server" Width="44px"></asp:TextBox>
             <div></div>
             <asp:Button ID="Button1" runat="server" Text="Select" OnClick="Button1_Click" />
-            <asp:GridView ID="GridView3" runat="server"></asp:GridView>
+
             
       </div>
     </div>  
