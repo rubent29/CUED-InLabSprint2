@@ -51,39 +51,40 @@ public partial class JobPostingForm : System.Web.UI.Page
 
     protected void Insert_Button_Click(object sender, EventArgs e)
     {
-        string email = Session["FirstName"].ToString(); //Changed FirstName from Test
-      
         DBconnection.Open();
-
-        JobPosting posting = new JobPosting(HttpUtility.HtmlEncode(JobTitle.Text.Trim()), HttpUtility.HtmlEncode(JobType.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.SelectedItem.Text.Trim()),
-                            HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(PayStatus.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(JobDescription.Text.Trim()),
-                            HttpUtility.HtmlEncode(DateCreated), HttpUtility.HtmlEncode(Deadline.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated),
-                            double.Parse(HttpUtility.HtmlEncode(MinGPA.Text.Trim())), int.Parse(HttpUtility.HtmlEncode(MinAge.Text.Trim())));
+        string email = Session["Test"].ToString(); //Changed FirstName from Test
 
 
         System.Data.SqlClient.SqlCommand MaxPosting = new System.Data.SqlClient.SqlCommand();
         MaxPosting.Connection = DBconnection;
-        string empID = "Select (EmployerID) from [dbo].[Employer] where employerid = (select EmployerID from employer where CompanyEmail = '" + email + "');";
+
+        string empID = "Select (EmployerID) from [dbo].[Employer] where CompanyEmail = '" + email + "'";
         SqlCommand empIDFinder = new SqlCommand(empID, DBconnection);
         int EmployerID = Convert.ToInt32(empIDFinder.ExecuteScalar());
 
+        empIDFinder.ExecuteNonQuery();
+
+        JobPosting posting = new JobPosting(HttpUtility.HtmlEncode(JobTitle.Text.Trim()), HttpUtility.HtmlEncode(JobType.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.SelectedItem.Text.Trim()),
+                        HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(PayStatus.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(JobDescription.Text.Trim()),
+                        HttpUtility.HtmlEncode(DateCreated), HttpUtility.HtmlEncode(Deadline.Text.Trim()), double.Parse(HttpUtility.HtmlEncode(MinGPA.Text.Trim())),
+                        int.Parse(HttpUtility.HtmlEncode(MinAge.Text.Trim())), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
 
 
-        string student = "insert into [dbo].[JobPosting] values (@jobTitle, @jobType, @companyName, @location, @payStatus, @jobDescription, @dateCreated, @deadline, @EmployerID, @Gpa, @Age, @lastUpdatedBy, @lastUpdated)";
-        SqlCommand insertJobPosting = new SqlCommand(student, DBconnection);
-        insertJobPosting.Parameters.AddWithValue("@jobTitle", posting.getJobTitle());
-        insertJobPosting.Parameters.AddWithValue("@jobType", posting.getJobType());
-        insertJobPosting.Parameters.AddWithValue("@companyName", posting.getCompanyName());
-        insertJobPosting.Parameters.AddWithValue("@location", posting.getLocation());
-        insertJobPosting.Parameters.AddWithValue("@payStatus", posting.getPayStatus());
-        insertJobPosting.Parameters.AddWithValue("@jobDescription", posting.getJobDescription());
-        insertJobPosting.Parameters.AddWithValue("@dateCreated", posting.getDateCreated());
-        insertJobPosting.Parameters.AddWithValue("@deadline", posting.getDeadline());
-        insertJobPosting.Parameters.AddWithValue("@EmployerID", EmployerID); 
-        insertJobPosting.Parameters.AddWithValue("@Gpa", posting.getGPA());
-        insertJobPosting.Parameters.AddWithValue("@Age", posting.getAge());
-        insertJobPosting.Parameters.AddWithValue("@lastUpdatedBy", posting.getLastUpdatedBy());
-        insertJobPosting.Parameters.AddWithValue("@lastUpdated", posting.getLastUpdated());
+    string student = "insert into [dbo].[JobPosting] values (@jobTitle, @jobType, @companyName, @location, @payStatus, @jobDescription, @dateCreated, @deadline, @EmployerID, @Gpa, @Age, @lastUpdatedBy, @lastUpdated)";
+    SqlCommand insertJobPosting = new SqlCommand(student, DBconnection);
+    insertJobPosting.Parameters.AddWithValue("@jobTitle", posting.getJobTitle());
+    insertJobPosting.Parameters.AddWithValue("@jobType", posting.getJobType());
+    insertJobPosting.Parameters.AddWithValue("@companyName", posting.getCompanyName());
+    insertJobPosting.Parameters.AddWithValue("@location", posting.getLocation());
+    insertJobPosting.Parameters.AddWithValue("@payStatus", posting.getPayStatus());
+    insertJobPosting.Parameters.AddWithValue("@jobDescription", posting.getJobDescription());
+    insertJobPosting.Parameters.AddWithValue("@dateCreated", posting.getDateCreated());
+    insertJobPosting.Parameters.AddWithValue("@deadline", posting.getDeadline());
+    insertJobPosting.Parameters.AddWithValue("@EmployerID", EmployerID);
+    insertJobPosting.Parameters.AddWithValue("@Gpa", posting.getGPA());
+    insertJobPosting.Parameters.AddWithValue("@Age", posting.getAge());
+    insertJobPosting.Parameters.AddWithValue("@lastUpdatedBy", posting.getLastUpdatedBy());
+    insertJobPosting.Parameters.AddWithValue("@lastUpdated", posting.getLastUpdated());
 
 
             insertJobPosting.ExecuteNonQuery();

@@ -8,25 +8,21 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-
 public partial class ViewPostingForm : System.Web.UI.Page
 {
     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
     protected void Page_Load(object sender, EventArgs e)
     {
-
         if ((HttpContext.Current.Request.UrlReferrer == null))
         {
             Response.Redirect("LoginForm.aspx");
         }
         BindGrid();
-        
-
     }
 
     public void BindGrid()
     {
-        string email = Session["username"].ToString(); //Changed FirstName from Test
+        string email = Session["Test"].ToString(); //Changed FirstName from Test
 
         string constr = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
 

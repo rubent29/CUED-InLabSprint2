@@ -27,8 +27,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     
-  </head>
-  <body>
+  
   
   <div class="site-wrap">
 
@@ -99,7 +98,19 @@
 <div class="form-group">
     </div>
 <div class="form-group">
-    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <AlternatingRowStyle BackColor="White" />
+        <EditRowStyle BackColor="#2461BF" />
+        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#EFF3FB" />
+        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+    </asp:GridView>
     </div>
 <div class="form-group">
      </div>
@@ -112,8 +123,8 @@
     </div>
     </div>
 <div class="form-group">
-    <asp:TextBox ID="TextBox1" runat="server" Width="47px"></asp:TextBox><div></div>
-     <asp:Button ID="Button1" runat="server" Text="Apply" OnClick="Button1_Click" />
+    <asp:TextBox ID="PostingID" runat="server" Width="47px"></asp:TextBox><div></div>
+     <asp:Button ID="Button1" runat="server" Text="Apply" OnClick="Submit_Click" />
     </div>	
      <asp:Label ID="SuccessLabel" runat="server" Text=""></asp:Label>
 

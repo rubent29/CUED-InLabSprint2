@@ -27,8 +27,8 @@ public class JobPosting
     public static int numOfPostings;
 
     public JobPosting(String jobTitle, String jobType, String companyName, String city, String state,
-                                       String payStatus, String jobDescription, String dateCreated, String deadline,
-                                       String LastUpdatedBy, String LastUpdated, double GPA, int age)
+                                       String payStatus, String jobDescription, String dateCreated, String deadline, double GPA,int age,
+                                       String LastUpdatedBy, String LastUpdated)
     {
         setPostingID(numOfPostings);
         setJobTitle(jobTitle);

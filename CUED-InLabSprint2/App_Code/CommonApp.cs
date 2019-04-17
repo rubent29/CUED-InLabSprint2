@@ -21,7 +21,7 @@ public class CommonApp
 
     public static int numOfApps;
 
-    public CommonApp(String school, String date, Double GPA, String experience, String skills, String email, int studentID, String LastUpdatedBy, String LastUpdated)
+    public CommonApp(String school, String date, Double GPA, String experience, String skills, String email, String LastUpdatedBy, String LastUpdated)
     {
         setCommonAppID(numOfApps);
         setSchool(school);

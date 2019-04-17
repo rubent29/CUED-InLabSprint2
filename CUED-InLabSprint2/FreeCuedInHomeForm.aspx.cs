@@ -9,14 +9,14 @@ public partial class FreeCuedInHomeForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if ((HttpContext.Current.Request.UrlReferrer == null))
-        //{
-        //    Response.Redirect("LoginForm.aspx");
-        //}
+        if ((HttpContext.Current.Request.UrlReferrer == null))
+        {
+            Response.Redirect("LoginForm.aspx");
+        }
         Label1.BackColor = System.Drawing.Color.Transparent;
         if (Session["Test"] != null)
         {
-            Label1.Text = "Welcome, " + (Session["Test"].ToString());
+            Label1.Text = "Welcome, " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();
         }
         else if (Session["CreateUser"] != null)
         {

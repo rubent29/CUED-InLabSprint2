@@ -57,7 +57,7 @@
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
 
                         <li class="has-children">
-                        <a href="#">Job Postings</a>
+                        <a href="JobPostingForm.aspx">Job Postings</a>
                         <ul class="dropdown arrow-top">
                           <li><a href="JobPostingForm.aspx">Post an Opportunity</a></li>
                           <li><a href="ViewPostingForm.aspx">View Your Postings</a></li>
@@ -84,14 +84,14 @@
     </div>
   
  
-    <div class="site-blocks-cover inner-page" style="background-image: url(images/hero_b1_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+ <%--   <div class="site-blocks-cover inner-page" style="" data-aos="fade" data-stellar-background-ratio="0.5">--%>
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
           <h1 class="auto-style1">School Demographics</h1>
           <span class="caption d-block text-white"></span>
         </div>
       </div>
-    </div>  
+<%--        </div>--%>
 
     <div class="py-5 bg-light">
       <div class="container">

@@ -59,7 +59,7 @@
                         <ul class="site-menu js-clone-nav d-none d-lg-block">
 
                         <li class="has-children">
-                        <a href="#">Job Postings</a>
+                        <a href="JobPostingForm.aspx">Job Postings</a>
                         <ul class="dropdown arrow-top">
                           <li><a href="JobPostingForm.aspx">Post an Opportunity</a></li>
                           <li><a href="ViewPostingForm.aspx">View Your Postings</a></li>
@@ -100,9 +100,8 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
 
-			  <form>
-  <div class="form-group">
-  </div>				  
+		
+			  
   <div class="form-group">
     <label for="JobTitle">Job Title</label>
       <br />
@@ -112,6 +111,13 @@
         placeholder="Job Title"
         Width="727px">
     </asp:TextBox>
+
+      <asp:RequiredFieldValidator 
+          ID="JobTitleValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="JobTitle" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
 
   </div>
 <div class="form-group">
@@ -128,6 +134,7 @@
                 </asp:DropDownList>
 
   </div>
+
 <div class="form-group">
     <label for="CompanyName">Company Name</label>
     <br />
@@ -156,6 +163,13 @@
         Width="727px">
     </asp:TextBox>
 
+    <asp:RequiredFieldValidator 
+          ID="CityRequiredFieldValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="City" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
+
     </div>
 	<div class="form-group">
     <label for="State">State</label>
@@ -166,6 +180,13 @@
         placeholder="State"
         Width="727px">
     </asp:TextBox>
+
+       <asp:RequiredFieldValidator 
+          ID="StateRequiredFieldValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="State" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
 
   </div>
 	<div class="form-group">
@@ -187,6 +208,13 @@
         Width="727px">
     </asp:TextBox>
 
+          <asp:RequiredFieldValidator 
+          ID="JobDescRequiredFieldValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="JobDescription" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
+
         </div>
 	<div class="form-group">
     <label for="Deadline">Deadline</label>
@@ -197,6 +225,13 @@
         placeholder="MM/DD/YYYY"
         Width="727px">
     </asp:TextBox>
+
+     <asp:RequiredFieldValidator 
+          ID="DeadlineRequiredFieldValidator1" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="Deadline" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
           </div>
 
 <div class="form-group">
@@ -212,6 +247,14 @@
         placeholder="0"
         Width="727px">
     </asp:TextBox>
+
+   <asp:RequiredFieldValidator 
+          ID="AgeRequiredFieldValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="MinAge" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
+
           </div>
  <div class="form-group">
     <label for="JobRequirements">Minimum GPA (if none please enter 0.0)</label>
@@ -221,13 +264,16 @@
         runat="server"
         placeholder="0.0"
         Width="727px"></asp:TextBox>
+
+
+          <asp:RequiredFieldValidator 
+          ID="GPARequiredFieldValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="MinGPA" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
+
           </div>
-<div class="form-group">
-  </div>
- <div class="form-group">
-  </div>
- <div class="form-group">
-  </div>	
 
 
 <asp:Button 

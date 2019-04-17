@@ -49,7 +49,7 @@
 
                         <ul class="site-menu js-clone-nav d-none d-lg-block">
                         <li class="has-children">
-                        <a href="#">Job Postings</a>
+                        <a href="JobPostingForm.aspx">Job Postings</a>
                         <ul class="dropdown arrow-top">
                           <li><a href="JobPostingForm.aspx">Post an Opportunity</a></li>
                           <li><a href="ViewPostingForm.aspx">View Your Postings</a></li>
@@ -59,9 +59,9 @@
                         <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="CUED-InHomeAccountForm.aspx">Account     </a>
+                        <a href="AccountInformationForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
+                          <li><a href="AccountInformationForm.aspx">Account Information</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -97,7 +97,7 @@
     ID="GridView2"
     runat="server" 
     Height="58px" 
-    Width="129px" CellPadding="4" ForeColor="#333333" GridLines="None">
+    Width="1125px" CellPadding="4" ForeColor="#333333">
     <AlternatingRowStyle BackColor="White" />
     <EditRowStyle BackColor="#2461BF" />
     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

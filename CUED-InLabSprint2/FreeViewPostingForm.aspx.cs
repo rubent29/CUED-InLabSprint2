@@ -18,7 +18,6 @@ public partial class FreeViewPostingForm : System.Web.UI.Page
             Response.Redirect("LoginForm.aspx");
         }
         BindGrid();
-
     }
 
     public void BindGrid()
