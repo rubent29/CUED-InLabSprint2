@@ -100,24 +100,26 @@
 						</label>
 					</div>
 
-					<div class="container-login100-form-btn">
+					<div class="container-login100-form-btn  login-btn-bg">
 				        <asp:Button ID="Login" 
                             runat="server" 
-                            class="login100-form-btn"
+                            class="login100-form-btn text-white"
                             Text="Login" OnClick="Login_Click" 
                             ValidationGroup="LoginGroup" />
 					</div>
-                	<div class="text-center p-t-90">
-						<a class="txt1" href="#">
+                	<div class="text-center p-t-90 ">
+						<a class="txt1 " href="#">
                             <asp:LinkButton 
                                 ID="CreateAccount" 
-                                runat="server" 
+                                runat="server"
+                                class="text-white"
                                 OnClick="CreateAccount_Click">Create Account
                             </asp:LinkButton>
                                     <br />
                             <asp:LinkButton 
                                 ID="ForgetPasswordLink" 
                                 runat="server" 
+                                class="text-white"
                                 OnClick="ForgetPasswordLink_Click">	Forgot Password?
                             </asp:LinkButton>
                           

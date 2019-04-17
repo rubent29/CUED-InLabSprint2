@@ -133,6 +133,12 @@ a {
 	border-color: white;
 	background-color: transparent;
 }
+.cued-img {
+    padding-top: 100px; 
+}
+.text-blue {
+    color: 102b3f;
+}
 
 .bg-black {
   background: #000; }
