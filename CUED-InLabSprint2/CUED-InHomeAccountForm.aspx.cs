@@ -38,17 +38,17 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //string firstName = Session["firstName"].ToString();
         //Label1.Text = "Welcome, " + firstName;
 
-
+        
         if (Session["Test"] != null)
         {
-            Label1.Text = "Welcome, " + (Session["Test"].ToString());
+            Label1.Text = "Welcome, " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString();
         }
         else if (Session["CreateUser"] != null)
         {
             Label1.Text = "Welcome, " + (Session["CreateUser"].ToString());
         }
 
-        Label1.Text = "Welcome, " + (Session["Test"].ToString());
+        //Label1.Text = "Welcome, " + (Session["Test"].ToString());
 
 
         //if (Session["Username"] != null) // || Session["LastName"] != null)

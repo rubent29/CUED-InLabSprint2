@@ -19,7 +19,10 @@ public partial class AccountInformationForm : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
     {
-
+            if ((HttpContext.Current.Request.UrlReferrer == null))
+            {
+                Response.Redirect("LoginForm.aspx");
+            }
             string email = Session["Test"].ToString();
             //going to set labels using this session variable for the user email
 
