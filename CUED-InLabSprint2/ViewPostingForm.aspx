@@ -33,8 +33,6 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
     
-    
-     
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -92,11 +90,6 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
 
-
-<div class="form-group">
-    </div>				  
-<div class="form-group">
-    </div>
 <div class="form-group">
 
 
@@ -119,14 +112,7 @@
 </asp:GridView>
   </div>
 
-<div class="form-group">
-     </div>
-<div class="form-group">
-     </div>
-<div class="form-group">
-    </div>
-<div class="form-group">
-    </div>	
+
 
 
 
