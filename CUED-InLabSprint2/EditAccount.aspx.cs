@@ -23,51 +23,53 @@ public partial class EditAccount : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         {
-       
-            string email = Session["Test"].ToString();
-            //going to set labels using this session variable for the user email
-
-            connection.Open();
-
-            string cmd = "select * from employer where companyemail = '" + email + "';";
-            //use session variable irl: rn just testing w cole
-
-            SqlDataAdapter adp = new SqlDataAdapter();
-            adp.SelectCommand = new SqlCommand(cmd, connection);
-            DataSet ds = new DataSet();
-            adp.Fill(ds);
-
-
-            if (ds.Tables[0].Rows.Count > 0)
+            if (!IsPostBack)
             {
-                //set all the labels
+                string email = Session["Test"].ToString();
+                //going to set labels using this session variable for the user email
 
-                FirstName.Text = ds.Tables[0].Rows[0].Field<string>(1); //sets first name label
-                LastName.Text = ds.Tables[0].Rows[0].Field<string>(2); //last name
-                CompanyName.Text = ds.Tables[0].Rows[0].Field<string>(3); //company
-                CompanyEmail.Text = ds.Tables[0].Rows[0].Field<string>(4); //email used
-                StreetAddress.Text = ds.Tables[0].Rows[0].Field<string>(5); //address
-                City.Text = ds.Tables[0].Rows[0].Field<string>(6); //city
-                State.Text = ds.Tables[0].Rows[0].Field<string>(7); //state
-                Country.Text = ds.Tables[0].Rows[0].Field<string>(8); //country
-                ZipCode.Text = ds.Tables[0].Rows[0].Field<string>(9); //zip
-                TextBoxQuestion.Text = ds.Tables[0].Rows[0].Field<string>(10); //country
-             
-             //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
+                connection.Open();
 
+                string cmd = "select * from employer where companyemail = '" + email + "';";
+                //use session variable irl: rn just testing w cole
+
+                SqlDataAdapter adp = new SqlDataAdapter();
+                adp.SelectCommand = new SqlCommand(cmd, connection);
+                DataSet ds = new DataSet();
+                adp.Fill(ds);
+
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    //set all the labels
+
+                    FirstName.Text = ds.Tables[0].Rows[0].Field<string>(1); //sets first name label
+                    LastName.Text = ds.Tables[0].Rows[0].Field<string>(2); //last name
+                    CompanyName.Text = ds.Tables[0].Rows[0].Field<string>(3); //company
+                    CompanyEmail.Text = ds.Tables[0].Rows[0].Field<string>(4); //email used
+                    StreetAddress.Text = ds.Tables[0].Rows[0].Field<string>(5); //address
+                    City.Text = ds.Tables[0].Rows[0].Field<string>(6); //city
+                    State.Text = ds.Tables[0].Rows[0].Field<string>(7); //state
+                    Country.Text = ds.Tables[0].Rows[0].Field<string>(8); //country
+                    ZipCode.Text = ds.Tables[0].Rows[0].Field<string>(9); //zip
+                    TextBoxQuestion.Text = ds.Tables[0].Rows[0].Field<string>(10); //country
+
+                    //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
+
+                }
+
+
+                connection.Close();
             }
-
-
-            connection.Close();
         }
-
 
     }
 
     protected void SaveChanges_Button_Click(object sender, EventArgs e)
     {
+
         System.Data.SqlClient.SqlCommand updateEmployer = new System.Data.SqlClient.SqlCommand();
-      updateEmployer.Connection = connection;
+        updateEmployer.Connection = connection;
 
         string email = Session["Test"].ToString();  
 
@@ -82,21 +84,50 @@ public partial class EditAccount : System.Web.UI.Page
         updateEmployer.Parameters.AddWithValue("@newState", HttpUtility.HtmlEncode(State.Text));
         updateEmployer.Parameters.AddWithValue("@newZipcode", HttpUtility.HtmlEncode(ZipCode.Text));
         updateEmployer.Parameters.AddWithValue("@newCountry", HttpUtility.HtmlEncode(Country.SelectedItem.Text));
-        updateEmployer.Parameters.AddWithValue("@newPasswordOne", HttpUtility.HtmlEncode(PasswordOne.Text));
-        updateEmployer.Parameters.AddWithValue("@newPasswordTwo", HttpUtility.HtmlEncode(PasswordTwo.Text));
+        updateEmployer.Parameters.AddWithValue("@newPasswordOne", HttpUtility.HtmlEncode(PasswordHash.HashPassword(PasswordOne.Text)));
+        updateEmployer.Parameters.AddWithValue("@newPasswordTwo", HttpUtility.HtmlEncode(PasswordHash.HashPassword(PasswordTwo.Text)));
         updateEmployer.Parameters.AddWithValue("@newQuestion", HttpUtility.HtmlEncode(TextBoxQuestion.Text));
-        updateEmployer.Parameters.AddWithValue("@newAnswer", HttpUtility.HtmlEncode(TextBoxAnswer.Text));
-        updateEmployer.Parameters.AddWithValue("@newLastUpdatedBy", HttpUtility.HtmlEncode("Cole"));
+        updateEmployer.Parameters.AddWithValue("@newAnswer", HttpUtility.HtmlEncode(PasswordHash.HashPassword(TextBoxAnswer.Text)));
+        updateEmployer.Parameters.AddWithValue("@newLastUpdatedBy", HttpUtility.HtmlEncode(LastUpdatedBy));
         updateEmployer.Parameters.AddWithValue("@newLastUpdated", HttpUtility.HtmlEncode(LastUpdated));
 
         //shows the currency name has been edited
         updateEmployer.ExecuteNonQuery();
-        Response.Redirect("CUED-InHomeAccountForm.aspx");
-        EditLabel.Visible = false;
-        Response.Write("<font size=7 color=green>All Your Data is Saved.</font>");
+        if (IsPostBack)
+        {
+            Response.Redirect("CUED-InHomeAccountForm.aspx");
+        }
 
     }
 
     
 
 }
+
+//string email = Session["Test"].ToString();
+//SqlConnection con1 = new SqlConnection("Data Source=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;Initial Catalog=CuedIn;Persist Security Info=True;");
+//DataTable dt = new DataTable();
+//con1.Open();
+
+//SqlDataReader myReader = null;
+//SqlCommand myCommand = new SqlCommand("select * from Employer where companyemail = '" + email + "'", con1);
+
+
+//    myReader = myCommand.ExecuteReader();
+
+//while (myReader.Read())
+//{
+
+//    FirstName.Text = (myReader["FirstName"].ToString()); //sets first name label
+//    LastName.Text = (myReader["LastName"].ToString()); //last name
+//    CompanyName.Text = (myReader["CompanyName"].ToString()); //company
+//    CompanyEmail.Text = (myReader["CompanyEmail"].ToString());//email used
+//    StreetAddress.Text = (myReader["StreetAddress"].ToString()); //address
+//    City.Text = (myReader["City"].ToString()); //city
+//    State.Text = (myReader["State"].ToString()); //state
+//    Country.SelectedItem.Text = (myReader["Country"].ToString()); //country
+//    ZipCode.Text = (myReader["ZipCode"].ToString()); //zip
+//    TextBoxQuestion.Text = (myReader["SecurityQuestion"].ToString()); //country
+
+//}
+//con1.Close();
