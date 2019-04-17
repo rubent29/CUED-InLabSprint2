@@ -43,7 +43,32 @@ protected void Page_Load(object sender, EventArgs e)
             sc.ConnectionString = @"server=cuedinsprint2.cfe6p3jbjixj.us-east-1.rds.amazonaws.com;database=CuedIn;uid=admin;password=dukedog19;";
             lblStatus.Text = "Database Connection Successful";
 
+            SqlCommand cmd = new SqlCommand("Select count(*) from Account where username = @username AND password = @password", sc); //this needs to be a parameterized query
+            cmd.Parameters.AddWithValue("@username", Username.Text);
+            cmd.Parameters.AddWithValue("@password", Password.Text);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            sc.Open();
+            int i = cmd.ExecuteNonQuery();
+            sc.Close();
+            if (dt.Rows.Count > 0)
+            {
+                sc.Open();
+                Session["username"] = Username.Text;
+                cmd.CommandText = "Select FirstName from Employer where CompanyEmail = @Username";
+                string fname = (string)cmd.ExecuteScalar();
+                HttpContext.Current.Session["FirstName"] = fname;
 
+                sc.Close();
+
+                sc.Open();
+                cmd.CommandText = "Select LastName from Employer where CompanyEmail = @Username";
+                string lname = (string)cmd.ExecuteScalar();
+                Session["LastName"] = lname;
+                sc.Close();
+
+            }
 
             Session["Test"] = Username.Text;
 
