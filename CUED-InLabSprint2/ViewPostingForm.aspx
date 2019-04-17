@@ -94,7 +94,7 @@
 
 
 <asp:GridView 
-    ID="GridView1"
+    ID="GridView2"
     runat="server" 
     Height="58px" 
     Width="1125px" CellPadding="4" ForeColor="#333333">
@@ -111,7 +111,7 @@
     <SortedDescendingHeaderStyle BackColor="#4870BE" />
 </asp:GridView>
   </div>
-
+              <asp:GridView ID="GridView1" runat="server"></asp:GridView>
 
 
 
