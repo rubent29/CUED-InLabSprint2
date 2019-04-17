@@ -51,7 +51,7 @@ public partial class JobPostingForm : System.Web.UI.Page
 
     protected void Insert_Button_Click(object sender, EventArgs e)
     {
-        string email = Session["Test"].ToString();
+        string email = Session["FirstName"].ToString(); //Changed FirstName from Test
       
         DBconnection.Open();
 
