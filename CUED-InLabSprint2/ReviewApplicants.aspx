@@ -66,12 +66,7 @@
 
                   <ul class="site-menu js-clone-nav d-none d-lg-block">
 
-                        <li class="has-children">
-                        <a href="#">Job Postings</a>
-                        <ul class="dropdown arrow-top">
-                          <li><a href="JobPostingForm.aspx">Post an Opportunity</a></li>
-                          <li><a href="ViewPostingForm.aspx">View Your Postings</a></li>
-                        </ul>
+                        <li><a href="JobPostingLandingForm.aspx">Job Posting</a></li>
 						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
                         <li><a href="ReviewApplicants.aspx">Review Applicants</a></li>
                         <li><a href="AboutUsForm.aspx">About</a></li>
@@ -80,6 +75,9 @@
                         <a href="CUED-InHomeAccountForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
                           <li><a href="CUED-InHomeAccountForm.aspx">Account Information</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Applicants</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Job Postings</a></li>
+                          <li><a href="CUED-InHomeAccountForm.aspx">Subscription</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -99,21 +97,15 @@
         <div class="col-md-7 text-center" data-aos="fade">
           <h1 class="auto-style1">Review Applicants</h1>
                 <br />
-                <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
-                    <AlternatingRowStyle BackColor="White" />
-                    <EditRowStyle BackColor="#2461BF" />
-                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#EFF3FB" />
-                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                <asp:GridView ID="GridView2" runat="server">
                 </asp:GridView>
 
-        </div>
+            <asp:Label ID="Label1" runat="server" Text="To View Applicants for Specific Post, Enter Posting ID here:"></asp:Label>
+            <asp:TextBox ID="ID" runat="server" Width="44px"></asp:TextBox>
+            <div></div>
+            <asp:Button ID="Button1" runat="server" Text="Select" OnClick="Button1_Click" />
+            <asp:GridView ID="GridView3" runat="server"></asp:GridView>
+            
       </div>
     </div>  
 

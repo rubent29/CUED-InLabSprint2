@@ -67,7 +67,7 @@ public partial class EditAccount : System.Web.UI.Page
     protected void SaveChanges_Button_Click(object sender, EventArgs e)
     {
         System.Data.SqlClient.SqlCommand updateEmployer = new System.Data.SqlClient.SqlCommand();
-      updateEmployer.Connection = connection;
+        updateEmployer.Connection = connection;
 
         string email = Session["Test"].ToString();  
 
@@ -91,7 +91,7 @@ public partial class EditAccount : System.Web.UI.Page
 
         //shows the currency name has been edited
         updateEmployer.ExecuteNonQuery();
-        Response.Redirect("CUED-InHomeAccountForm.aspx");
+       // Response.Redirect("CUED-InHomeAccountForm.aspx"); //commented out just to test
         EditLabel.Visible = false;
         Response.Write("<font size=7 color=green>All Your Data is Saved.</font>");
 
