@@ -40,7 +40,7 @@ public partial class ReviewApplicants : System.Web.UI.Page
             Response.Redirect("LoginForm.aspx");
         }
 
-        int i = Convert.ToInt32(ID.Text);
+        int i = Convert.ToInt32(DropDownList1.SelectedValue);
 
         string command = "select c.School, c.DOB, c.gpa, c.Experience, c.Skills, c.Email " +
             "from CommonApp c, JobApplications j " +

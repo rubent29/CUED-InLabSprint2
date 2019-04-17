@@ -27,8 +27,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     
-  </head>
-  <body>
+  
   
   <div class="site-wrap">
 
@@ -124,8 +123,8 @@
     </div>
     </div>
 <div class="form-group">
-    <asp:TextBox ID="TextBox1" runat="server" Width="47px"></asp:TextBox><div></div>
-     <asp:Button ID="Button1" runat="server" Text="Apply" OnClick="Button1_Click" />
+    <asp:TextBox ID="PostingID" runat="server" Width="47px"></asp:TextBox><div></div>
+     <asp:Button ID="Button1" runat="server" Text="Apply" OnClick="Submit_Click" />
     </div>	
      <asp:Label ID="SuccessLabel" runat="server" Text=""></asp:Label>
 
