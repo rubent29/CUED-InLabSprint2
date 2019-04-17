@@ -97,6 +97,7 @@ public partial class FreeEditAccount : System.Web.UI.Page
 
         //shows the currency name has been edited
         updateEmployer.ExecuteNonQuery();
+        connection.Close();
         if (IsPostBack)
         {
             Response.Redirect("CUED-InHomeAccountForm.aspx");
