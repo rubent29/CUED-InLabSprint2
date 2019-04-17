@@ -83,7 +83,7 @@
         <div class="col-md-7 text-center" data-aos="fade">
           <h1 class="auto-style1">Review Applicants</h1>
                 <br />
-                <asp:GridView ID="GridView2" runat="server">
+                <asp:GridView ID="GridView1" runat="server">
                 </asp:GridView>
 
             <asp:Label ID="Label1" runat="server" Text="To View Applicants for Specific Post, Enter Posting ID here:"></asp:Label>
