@@ -110,9 +110,9 @@
     <SortedDescendingCellStyle BackColor="#E9EBEF" />
     <SortedDescendingHeaderStyle BackColor="#4870BE" />
 </asp:GridView>
-  </div>
-              <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-
+  
+            
+</div>
 
 
 

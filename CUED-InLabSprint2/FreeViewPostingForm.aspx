@@ -87,7 +87,7 @@
     </div>
   
  
-    <div class="site-blocks-cover inner-page" style="background-image: url();" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="spacer inner-page" style="background-image: url();" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
           <h1>View Your Posts</h1>
@@ -107,7 +107,7 @@
 <div class="form-group">
     </div>
 <div class="form-group">
-    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" Height="58px" Width="1125px">
         <AlternatingRowStyle BackColor="White" />
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

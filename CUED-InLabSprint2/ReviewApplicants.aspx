@@ -110,6 +110,7 @@
     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
             <br />
+
     <div class="align-item-center posting-btn">
             <asp:Label ID="Label1" runat="server" Text="To View Applicants for Specific Post, Enter Posting ID here:"></asp:Label>
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="JobTitle" DataValueField="PostingID"></asp:DropDownList>

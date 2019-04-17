@@ -92,12 +92,20 @@
     </div>
   
  
-    <div class="site-blocks-cover inner-page" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="spacer inner-page" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
           <h1 class="auto-style1">Review Applicants</h1>
                 <br />
-                <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+            </div>
+          </div>
+        </div>
+ <div class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-8 mb-5">
+<div class="form-group">
+                <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" Height="58px" Width="1125px">
                     <AlternatingRowStyle BackColor="White" />
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -110,6 +118,11 @@
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
+    </div>
+              </div>
+            </div>
+          </div>
+     </div>
 
         </div>
       </div>
