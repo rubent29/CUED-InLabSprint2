@@ -102,7 +102,7 @@
     <asp:TextBox 
         ID="MiddleName" 
         runat="server"
-        placeholder="Company Name"
+        placeholder="Middle Name"
         Width="727px">
     </asp:TextBox>
 
@@ -121,7 +121,7 @@
     <asp:TextBox 
         ID="StudentEmail" 
         runat="server"
-        placeholder="Company Email"
+        placeholder="Email"
         Width="727px">
     </asp:TextBox>
 
