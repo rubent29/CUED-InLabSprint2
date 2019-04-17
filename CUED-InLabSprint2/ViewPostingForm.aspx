@@ -97,7 +97,7 @@
     ID="GridView1"
     runat="server" 
     Height="58px" 
-    Width="129px" CellPadding="4" ForeColor="#333333" GridLines="None">
+    Width="129px" CellPadding="4" ForeColor="#333333">
     <AlternatingRowStyle BackColor="White" />
     <EditRowStyle BackColor="#2461BF" />
     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

@@ -72,7 +72,6 @@ protected void Page_Load(object sender, EventArgs e)
 
             Session["Test"] = Username.Text;
 
-
             System.Data.SqlClient.SqlCommand findPass = new System.Data.SqlClient.SqlCommand();
             findPass.Connection = sc;
             // SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
@@ -137,8 +136,6 @@ protected void Page_Load(object sender, EventArgs e)
 
             sc.Close();
 
-
-
             System.Data.SqlClient.SqlCommand findStuPass = new System.Data.SqlClient.SqlCommand();
             findStuPass.Connection = sc;
             // SELECT PASSWORD STRING WHERE THE ENTERED USERNAME MATCHES
@@ -180,11 +177,7 @@ protected void Page_Load(object sender, EventArgs e)
             }
             else // if the username doesn't exist, it will show failure
                 lblStatus.Text = "Login failed.";
-
             sc.Close();
-
-
-
         }
     }
 
@@ -294,17 +287,12 @@ protected void Page_Load(object sender, EventArgs e)
 
     protected void CreateAccount_Click(object sender, EventArgs e)
     {
-
-
         Response.Redirect("SubscriptionTierForm.aspx");
-
     }
 
     protected void ForgetPasswordLink_Click(object sender, EventArgs e)
-{
-
+    {
     //Response.Redirect("ForgotPassword.aspx");
-
     }
 }
 
