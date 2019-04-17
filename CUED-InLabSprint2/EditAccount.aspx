@@ -19,7 +19,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <script runat="server">
-       
+
 
     </script>
 
@@ -275,6 +275,7 @@
         ID="PasswordOne" 
         runat="server"
         placeholder="Enter Password"
+        Type ="Password"
         Width="727px">
     </asp:TextBox>
           
@@ -309,8 +310,10 @@
         ID="PasswordTwo" 
         runat="server"
         placeholder="Confirm Password"
+        Type ="Password"
         Width="727px">
     </asp:TextBox>
+
         <asp:RequiredFieldValidator 
             ID="Password2Validator" 
             runat="server" 
@@ -360,6 +363,7 @@
         ID="TextBoxAnswer" 
         runat="server"
         placeholder="Answer"
+        Type ="Password"
         Width="727px">
     </asp:TextBox>
 

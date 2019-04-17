@@ -7,13 +7,11 @@
             text-align: center;
                  }
     </style>
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -21,23 +19,13 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-    
-    
-    
+   
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/style.css">
     
-
-<%--  <body style="background-image: url('images/bg.jpg');">--%>
-  
   <div class="site-wrap">
-
-    
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -48,8 +36,6 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
     
-    
-     
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -187,7 +173,6 @@
 
   <script src="js/main.js"></script>
 
-  </body>
 
 
 </asp:Content>
