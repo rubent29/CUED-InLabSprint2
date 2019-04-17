@@ -28,7 +28,7 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
 
 
         Label1.BackColor = System.Drawing.Color.Transparent;
-     /*   Label1.Text = "Welcome, " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString(); *///UNCOMMENT OR FIX THIS GIVING ERROR
+        /*   Label1.Text = "Welcome, " + Session["FirstName"].ToString() + " " + Session["LastName"].ToString(); *///UNCOMMENT OR FIX THIS GIVING ERROR
 
         //if(Session["Test"] != null)
         //{
@@ -39,16 +39,16 @@ public partial class CUED_InHomeForm : System.Web.UI.Page
         //Label1.Text = "Welcome, " + firstName;
 
 
-        //if(Session["Test"] != null)
-        //{
-        //    Label1.Text = "Welcome, " + (Session["Test"].ToString());
-        //}
-        //else if(Session["CreateUser"] != null)
-        //{
-        //    Label1.Text = "Welcome, " + (Session["CreateUser"].ToString());
-        //}
+        if (Session["Test"] != null)
+        {
+            Label1.Text = "Welcome, " + (Session["Test"].ToString());
+        }
+        else if (Session["CreateUser"] != null)
+        {
+            Label1.Text = "Welcome, " + (Session["CreateUser"].ToString());
+        }
 
-        //Label1.Text = "Welcome, " + (Session["Test"].ToString());
+        Label1.Text = "Welcome, " + (Session["Test"].ToString());
 
 
         //if (Session["Username"] != null) // || Session["LastName"] != null)
