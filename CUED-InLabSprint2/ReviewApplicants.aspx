@@ -101,7 +101,8 @@
                 </asp:GridView>
             <br />
             <asp:Label ID="Label1" runat="server" Text="To View Applicants for Specific Post, Enter Posting ID here:"></asp:Label>
-            <asp:TextBox ID="ID" runat="server" Width="44px"></asp:TextBox>
+            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="JobTitle" DataValueField="PostingID"></asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" SelectCommand="Select PostingID, JobTitle from JobPosting where EmployerID = (select EmployerID from Employer where CompanyEmail = 'premium@jmu.edu')"></asp:SqlDataSource>
             <div></div>
             <asp:Button ID="Button1" runat="server" Text="Select" OnClick="Button1_Click" />
             <asp:GridView ID="GridView3" runat="server"></asp:GridView>

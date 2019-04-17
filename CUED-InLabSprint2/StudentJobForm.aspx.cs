@@ -10,6 +10,10 @@ using System.Configuration;
 
 public partial class StudentJobForm : System.Web.UI.Page
 {
+
+    string LastUpdatedBy = "Ruben Torrico";
+    string LastUpdated = DateTime.Today.ToString();
+
     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -51,11 +55,31 @@ public partial class StudentJobForm : System.Web.UI.Page
         }
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Submit_Click(object sender, EventArgs e)
     {
-        //get posting id number from textbox
-        //get studentid from session variable
-        //these two should go into jobapplications table
-        
+        connection.Open();
+        string email = Session["Test"].ToString();
+
+        System.Data.SqlClient.SqlCommand MaxPosting = new System.Data.SqlClient.SqlCommand();
+        MaxPosting.Connection = connection;
+
+        string CommonAppID = "Select (CommonAppID) from [dbo].[CommonApp] where Email = '" + email + "'";
+        SqlCommand CappIDFinder = new SqlCommand(CommonAppID, connection);
+        int CappID = Convert.ToInt32(CappIDFinder.ExecuteScalar());
+
+        CappIDFinder.ExecuteNonQuery();
+
+        string student = "insert into [dbo].[JobApplications] values (@PostingID, @CommonAppID,@lastUpdatedBy, @lastUpdated)";
+        SqlCommand insertJobPosting = new SqlCommand(student, connection);
+        insertJobPosting.Parameters.AddWithValue("@PostingID", PostingID.Text);
+        insertJobPosting.Parameters.AddWithValue("@CommonAppID", CappID);
+        insertJobPosting.Parameters.AddWithValue("@lastUpdatedBy", LastUpdatedBy);
+        insertJobPosting.Parameters.AddWithValue("@lastUpdated", LastUpdated);
+
+        insertJobPosting.ExecuteNonQuery();
+        SuccessLabel.Text = "Application Submitted";
+
+        connection.Close();
+
     }
 }
