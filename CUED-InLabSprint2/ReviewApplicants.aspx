@@ -85,7 +85,7 @@
                 <br />
                 <asp:GridView ID="GridView1" runat="server">
                 </asp:GridView>
-
+            <br />
             <asp:Label ID="Label1" runat="server" Text="To View Applicants for Specific Post, Enter Posting ID here:"></asp:Label>
             <asp:TextBox ID="ID" runat="server" Width="44px"></asp:TextBox>
             <div></div>

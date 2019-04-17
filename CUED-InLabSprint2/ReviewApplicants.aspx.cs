@@ -42,7 +42,6 @@ public partial class ReviewApplicants : System.Web.UI.Page
 
         int i = Convert.ToInt32(ID.Text);
 
-
         string command = "select c.School, c.DOB, c.gpa, c.Experience, c.Skills, c.Email " +
             "from CommonApp c, JobApplications j " +
             "where j.PostingID = " + i + "and c.CommonAppID = j.CommonAppID";

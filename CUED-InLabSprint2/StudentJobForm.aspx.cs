@@ -27,13 +27,13 @@ public partial class StudentJobForm : System.Web.UI.Page
 
     public void BindGrid()
     {
-        string email = Session["Test"].ToString();
+        //string email = Session["Test"].ToString();
 
         string constr = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
 
         using (SqlConnection con = new SqlConnection(constr))
         {
-            using (SqlCommand cmd = new SqlCommand("select jobtitle, JobType, CompanyName, Location, paystatus, JobDescription, Deadline, GPA, Age from jobposting"))
+            using (SqlCommand cmd = new SqlCommand("select jobtitle, JobType, CompanyName, Location, paystatus, JobDescription, Deadline, GPA, Age from jobposting "))
 
             //just need to fix this sql command: show all job postings
 
@@ -56,7 +56,6 @@ public partial class StudentJobForm : System.Web.UI.Page
         //get posting id number from textbox
         //get studentid from session variable
         //these two should go into jobapplications table
-
         
     }
 }

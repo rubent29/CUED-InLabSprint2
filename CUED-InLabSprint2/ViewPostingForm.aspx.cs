@@ -26,7 +26,7 @@ public partial class ViewPostingForm : System.Web.UI.Page
 
     public void BindGrid()
     {
-        string email = Session["FirstName"].ToString(); //Changed FirstName from Test
+        string email = Session["Test"].ToString(); //Changed FirstName from Test
 
         string constr = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
 
