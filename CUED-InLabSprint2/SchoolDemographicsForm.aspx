@@ -85,8 +85,8 @@
   
  
  <%--   <div class="site-blocks-cover inner-page" style="" data-aos="fade" data-stellar-background-ratio="0.5">--%>
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-7 text-center" data-aos="fade">
+      <div class="row align-items-left justify-content-left">
+        <div class="col-md-7 text-left" data-aos="fade">
           <h1 class="auto-style1">School Demographics</h1>
           <span class="caption d-block text-white"></span>
         </div>

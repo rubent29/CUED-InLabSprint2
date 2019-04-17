@@ -76,7 +76,7 @@
     </div>
   
  
-    <div class="site-blocks-cover inner-page" style="background-image: url();" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="spacer inner-page" style="background-image: url();" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
           <h1>View Your Posts</h1>
