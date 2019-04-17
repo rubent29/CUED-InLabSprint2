@@ -233,9 +233,7 @@ protected void Page_Load(object sender, EventArgs e)
     //                        {
     //                            Session["Username"] = read.GetName(0);
     //                        }
-
-
-
+    
 
     //                        lblStatus.Text = "Success!";
     //                        Session["LoggedIn"] = true;
@@ -245,10 +243,13 @@ protected void Page_Load(object sender, EventArgs e)
     //                        System.Data.SqlClient.SqlCommand getUsername = new System.Data.SqlClient.SqlCommand();
     //                        getUsername.Connection = sc;
     //                        sc.Open();
+
     //                        getUsername.CommandText = "Select Username from Account where Username = @Username";
     //                        getUsername.Parameters.AddWithValue("@Username", Username.Text);
     //                        Session["Username"] = getUsername.ExecuteScalar();
     //                        sc.Close();
+
+
     //                    }
     //                    else
     //                        lblStatus.Text = "Password is wrong.";

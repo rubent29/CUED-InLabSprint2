@@ -51,14 +51,13 @@ public partial class JobPostingForm : System.Web.UI.Page
 
     protected void Insert_Button_Click(object sender, EventArgs e)
     {
-        string email = Session["FirstName"].ToString(); //Changed FirstName from Test
-      
+        string email = Session["Test"].ToString(); //Changed FirstName from Test
         DBconnection.Open();
 
         JobPosting posting = new JobPosting(HttpUtility.HtmlEncode(JobTitle.Text.Trim()), HttpUtility.HtmlEncode(JobType.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.SelectedItem.Text.Trim()),
                             HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(PayStatus.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(JobDescription.Text.Trim()),
-                            HttpUtility.HtmlEncode(DateCreated), HttpUtility.HtmlEncode(Deadline.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated),
-                            double.Parse(HttpUtility.HtmlEncode(MinGPA.Text.Trim())), int.Parse(HttpUtility.HtmlEncode(MinAge.Text.Trim())));
+                            HttpUtility.HtmlEncode(DateCreated), HttpUtility.HtmlEncode(Deadline.Text.Trim()), double.Parse(HttpUtility.HtmlEncode(MinGPA.Text.Trim())), int.Parse(HttpUtility.HtmlEncode(MinAge.Text.Trim())),
+                            HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
 
 
         System.Data.SqlClient.SqlCommand MaxPosting = new System.Data.SqlClient.SqlCommand();

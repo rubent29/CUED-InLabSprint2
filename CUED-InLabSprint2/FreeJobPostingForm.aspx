@@ -99,9 +99,8 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
 
-			  <form>
-  <div class="form-group">
-  </div>				  
+	
+ 			  
   <div class="form-group">
     <label for="JobTitle">Job Title</label>
       <br />
@@ -111,6 +110,13 @@
         placeholder="Job Title"
         Width="727px">
     </asp:TextBox>
+
+      <asp:RequiredFieldValidator 
+          ID="JobTitleValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="JobTitle" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
 
   </div>
 <div class="form-group">
@@ -127,6 +133,7 @@
                 </asp:DropDownList>
 
   </div>
+
 <div class="form-group">
     <label for="CompanyName">Company Name</label>
     <br />
@@ -155,6 +162,13 @@
         Width="727px">
     </asp:TextBox>
 
+    <asp:RequiredFieldValidator 
+          ID="CityRequiredFieldValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="City" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
+
     </div>
 	<div class="form-group">
     <label for="State">State</label>
@@ -165,6 +179,13 @@
         placeholder="State"
         Width="727px">
     </asp:TextBox>
+
+       <asp:RequiredFieldValidator 
+          ID="StateRequiredFieldValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="State" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
 
   </div>
 	<div class="form-group">
@@ -186,6 +207,13 @@
         Width="727px">
     </asp:TextBox>
 
+          <asp:RequiredFieldValidator 
+          ID="JobDescRequiredFieldValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="JobDescription" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
+
         </div>
 	<div class="form-group">
     <label for="Deadline">Deadline</label>
@@ -196,6 +224,13 @@
         placeholder="MM/DD/YYYY"
         Width="727px">
     </asp:TextBox>
+
+     <asp:RequiredFieldValidator 
+          ID="DeadlineRequiredFieldValidator1" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="Deadline" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
           </div>
 
 <div class="form-group">
@@ -208,9 +243,17 @@
     <asp:TextBox 
         ID="MinAge" 
         runat="server"
-        placeholder="MM/DD/YYYY"
+        placeholder="0"
         Width="727px">
     </asp:TextBox>
+
+   <asp:RequiredFieldValidator 
+          ID="AgeRequiredFieldValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="MinAge" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
+
           </div>
  <div class="form-group">
     <label for="JobRequirements">Minimum GPA (if none please enter 0.0)</label>
@@ -218,28 +261,37 @@
     <asp:TextBox 
         ID="MinGPA" 
         runat="server"
-        placeholder="MM/DD/YYYY"
+        placeholder="0.0"
         Width="727px"></asp:TextBox>
+
+
+          <asp:RequiredFieldValidator 
+          ID="GPARequiredFieldValidator" 
+          runat="server" 
+          ErrorMessage="Required" 
+          ControlToValidate="MinGPA" 
+          ForeColor="Red" ValidationGroup="SubmitGroup"></asp:RequiredFieldValidator>
+
           </div>
-<div class="form-group">
-  </div>
- <div class="form-group">
-  </div>
- <div class="form-group">
-  </div>	
+
+
+
+
+
+
 
 
 <asp:Button 
     ID="Insert_Button" 
     class="btn btn-primary rounded px-4"
-    runat="server" Text="Submit" OnClick="Insert_Button_Click" />
+    runat="server" Text="Submit" OnClick="Insert_Button_Click"  ValidationGroup="SubmitGroup" />
 
 &nbsp;    
 <asp:Button 
     ID="Populate" 
     class="btn btn-primary rounded px-4"
     runat="server" Text="Populate" OnClick="Populate_Button_Click" />
-</form>
+
 
           </div>
 

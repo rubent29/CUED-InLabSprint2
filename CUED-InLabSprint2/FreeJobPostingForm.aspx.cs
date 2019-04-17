@@ -39,6 +39,8 @@ protected void Page_Load(object sender, EventArgs e)
 
 protected void Populate_Button_Click(object sender, EventArgs e)
 {
+     
+
     JobTitle.Text = "Carpenter Assistant";
     JobType.SelectedValue = "Full-TIme";
     City.Text = "Harrisonburg";
@@ -50,21 +52,19 @@ protected void Populate_Button_Click(object sender, EventArgs e)
 
 protected void Insert_Button_Click(object sender, EventArgs e)
 {
-
+    string email = Session["Test"].ToString(); //Changed FirstName from Test
     DBconnection.Open();
 
     JobPosting posting = new JobPosting(HttpUtility.HtmlEncode(JobTitle.Text.Trim()), HttpUtility.HtmlEncode(JobType.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.SelectedItem.Text.Trim()),
                         HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(PayStatus.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(JobDescription.Text.Trim()),
-                        HttpUtility.HtmlEncode(DateCreated), HttpUtility.HtmlEncode(Deadline.Text.Trim()), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated),
-                        double.Parse(HttpUtility.HtmlEncode(MinGPA.Text.Trim())), int.Parse(HttpUtility.HtmlEncode(MinAge.Text.Trim())));
+                        HttpUtility.HtmlEncode(DateCreated), HttpUtility.HtmlEncode(Deadline.Text.Trim()),double.Parse(HttpUtility.HtmlEncode(MinGPA.Text.Trim())), 
+                        int.Parse(HttpUtility.HtmlEncode(MinAge.Text.Trim())),HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
 
-    //System.Data.SqlClient.SqlCommand MaxPosting = new System.Data.SqlClient.SqlCommand();
-    //MaxPosting.Connection = DBconnection;
-    //string empID = "Select (EmployerID) from [dbo].[Employer] where EmployerID =  (Select Max(EmployerID) from [dbo].[JobPosting])";
-    //SqlCommand empIDFinder = new SqlCommand(empID, DBconnection);
-    //int EmployerID = Convert.ToInt32(empIDFinder.ExecuteScalar());
-
-
+        System.Data.SqlClient.SqlCommand MaxPosting = new System.Data.SqlClient.SqlCommand();
+        MaxPosting.Connection = DBconnection;
+        string empID = "Select (EmployerID) from [dbo].[Employer] where EmployerID =  (Select Max(EmployerID) from [dbo].[JobPosting])";
+        SqlCommand empIDFinder = new SqlCommand(empID, DBconnection);
+        int EmployerID = Convert.ToInt32(empIDFinder.ExecuteScalar());
 
 
     string student = "insert into [dbo].[JobPosting] values (@jobTitle, @jobType, @companyName, @location, @payStatus, @jobDescription, @dateCreated, @deadline, @EmployerID, @Gpa, @Age, @lastUpdatedBy, @lastUpdated)";
@@ -77,7 +77,7 @@ protected void Insert_Button_Click(object sender, EventArgs e)
     insertJobPosting.Parameters.AddWithValue("@jobDescription", posting.getJobDescription());
     insertJobPosting.Parameters.AddWithValue("@dateCreated", posting.getDateCreated());
     insertJobPosting.Parameters.AddWithValue("@deadline", posting.getDeadline());
-    insertJobPosting.Parameters.AddWithValue("@EmployerID", CompanyName.SelectedValue);
+    insertJobPosting.Parameters.AddWithValue("@EmployerID", EmployerID);
     insertJobPosting.Parameters.AddWithValue("@Gpa", posting.getGPA());
     insertJobPosting.Parameters.AddWithValue("@Age", posting.getAge());
     insertJobPosting.Parameters.AddWithValue("@lastUpdatedBy", posting.getLastUpdatedBy());
@@ -85,7 +85,7 @@ protected void Insert_Button_Click(object sender, EventArgs e)
 
 
     insertJobPosting.ExecuteNonQuery();
-    Response.Redirect("ViewPostingForm.aspx", false);
+    Response.Redirect("FreeViewPostingForm.aspx", false);
 
     DBconnection.Close();
 }
