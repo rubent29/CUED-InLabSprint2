@@ -99,13 +99,13 @@
         <div class="col-md-7 text-center" data-aos="fade">
           <h1 class="auto-style1">Review Applicants</h1>
                 <br />
-                <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <asp:GridView ID="GridView2" runat="server" CellPadding="4" CellSpacing="5" ForeColor="#333333" Width="937px">
                     <AlternatingRowStyle BackColor="White" />
                     <EditRowStyle BackColor="#2461BF" />
-                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <FooterStyle Width="10%" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle Width="10%" BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#EFF3FB" />
+                    <RowStyle Width="10%" BackColor="#EFF3FB" />
                     <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                     <SortedAscendingCellStyle BackColor="#F5F7FB" />
                     <SortedAscendingHeaderStyle BackColor="#6D95E1" />

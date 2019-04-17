@@ -25,7 +25,7 @@ public partial class ReviewApplicants : System.Web.UI.Page
 
     public void BindGrid()
     {
-        string email = Session["Test"].ToString();
+        string email = Session["FirstName"].ToString(); //changed FirstName from Test
 
         string constr = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
 
