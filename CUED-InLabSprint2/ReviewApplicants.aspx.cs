@@ -22,8 +22,11 @@ public partial class ReviewApplicants : System.Web.UI.Page
             Response.Redirect("LoginForm.aspx");
         }
 
+        string email = Session["Test"].ToString();
         string allcommand = "select School, DOB, GPA, Experience, Skills, Email from CommonApp";
+        string selectcommand = "Select PostingID, JobTitle from JobPosting where EmployerID = (select EmployerID from Employer where CompanyEmail = '" + email + "');";
 
+        BindList(selectcommand);
         BindGrid(allcommand);
 
 
@@ -75,4 +78,33 @@ public partial class ReviewApplicants : System.Web.UI.Page
             }
         }
     }
+
+    public void BindList(string command)
+
+        //this needs to populate the dropdown 
+    {
+        string email = Session["Test"].ToString(); //Changed FirstName from Test
+
+        string constr = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+
+        using (SqlConnection con = new SqlConnection(constr))
+        {
+            using (SqlCommand cmd = new SqlCommand(command))
+            
+            using (SqlDataAdapter sda = new SqlDataAdapter())
+            {
+                cmd.Connection = con;
+                sda.SelectCommand = cmd;
+                using (DataTable dt = new DataTable())
+                {
+                    sda.Fill(dt);
+                    DropDownList1.DataSource = dt;
+                    DropDownList1.DataTextField = "JobTitle";
+                    DropDownList1.DataValueField = "PostingID";
+                    DropDownList1.DataBind();
+                }
+            }
+        }
+    }
+
 }
