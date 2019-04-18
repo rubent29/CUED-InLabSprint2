@@ -113,8 +113,10 @@
 
     <div class="align-item-center posting-btn">
             <asp:Label ID="Label1" runat="server" Text="To View Applicants for Specific Post, Enter Posting ID here:"></asp:Label>
-            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="JobTitle" DataValueField="PostingID"></asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" SelectCommand="Select PostingID, JobTitle from JobPosting where EmployerID = (select EmployerID from Employer where CompanyEmail = 'premium@jmu.edu')"></asp:SqlDataSource>
+<%--            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="JobTitle" DataValueField="PostingID"></asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" SelectCommand="Select PostingID, JobTitle from JobPosting where EmployerID = (select EmployerID from Employer where CompanyEmail = 'premium@jmu.edu')"></asp:SqlDataSource>--%>
+            <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+            
             <div></div>
         <br />
             <asp:Button ID="Button1" runat="server" Text="Select"  class="btn btn-primary rounded px-4" OnClick="Button1_Click" />
