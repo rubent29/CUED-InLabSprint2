@@ -124,12 +124,9 @@
           </div>
      </div>
 
-        </div>
-      </div>
-    </div>  
-
- 
-
+  
+   
+    
  <footer class="site-footer">
       <div class="container">
         
@@ -177,6 +174,9 @@
       </div>
     </footer>
   </div>
+ 
+
+ 
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
