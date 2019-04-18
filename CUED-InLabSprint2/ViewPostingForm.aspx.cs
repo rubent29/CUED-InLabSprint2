@@ -37,8 +37,8 @@ public partial class ViewPostingForm : System.Web.UI.Page
                 using (DataTable dt = new DataTable())
                 {
                     sda.Fill(dt);
-                    GridView1.DataSource = dt;
-                    GridView1.DataBind();
+                    GridView2.DataSource = dt;
+                    GridView2.DataBind();
                 }
             }
         }

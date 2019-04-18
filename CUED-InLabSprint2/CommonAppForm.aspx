@@ -6,6 +6,10 @@
             left: 0px;
             top: 0px;
         }
+        .auto-style2 {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -55,9 +59,12 @@
           <div class="auto-style1">
      <div class="form-group">
   </div>				  
-  <div class="form-group">
-    <label for="SchoolName">School Name</label>
-      <br />
+  <div class="auto-style2">
+    <label for="SchoolName">
+      <div class="text-left">
+          School Name</div>
+      </label>
+      &nbsp;<br />
     <asp:TextBox 
         ID="SchoolName" 
         runat="server"
@@ -74,7 +81,7 @@
 
  
   </div>
-   <div class="form-group">
+   <div class="auto-style2">
     <label for="Age"> Date of Birth (if prefer not to answer please enter 0)</label>
         <br />
     <asp:TextBox 
@@ -83,7 +90,7 @@
         placeholder="MM/DD/YYYY"
         Width="131px"></asp:TextBox>
           </div>
- <div class="form-group">
+ <div class="auto-style2">
     <label for="GPA">Minimum GPA (if none please enter 0.0)</label>
         <br />
     <asp:TextBox 
@@ -192,6 +199,8 @@
     ID="Populate_Button" 
     class="btn btn-primary rounded text-white px-4"
     runat="server" Text="Populate" OnClick="Populate_Button_Click" />
+
+
 
               
 </asp:Content>

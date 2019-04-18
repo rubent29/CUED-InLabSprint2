@@ -81,12 +81,22 @@
     </div>
   
  
-    <div class="site-blocks-cover inner-page" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="spacer inner-page" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
           <h1 class="auto-style1">Review Applicants</h1>
                 <br />
-                <asp:GridView ID="GridView1" runat="server" Height="58px" Width="129px" CellPadding="4" ForeColor="#333333">
+             </div>
+    </div>  
+        </div>
+ <div class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+       
+          <div class="col-md-12 col-lg-8 mb-5">
+
+<div class="form-group">
+                <asp:GridView ID="GridView1" runat="server" Height="58px" Width="1125px" CellPadding="4" ForeColor="#333333">
     <AlternatingRowStyle BackColor="White" />
     <EditRowStyle BackColor="#2461BF" />
     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -100,6 +110,8 @@
     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
             <br />
+
+    <div class="align-item-center posting-btn">
             <asp:Label ID="Label1" runat="server" Text="To View Applicants for Specific Post, Enter Posting ID here:"></asp:Label>
 <%--            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="JobTitle" DataValueField="PostingID"></asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CuedInConnectionString %>" SelectCommand="Select PostingID, JobTitle from JobPosting where EmployerID = (select EmployerID from Employer where CompanyEmail = 'premium@jmu.edu')"></asp:SqlDataSource>--%>
@@ -107,60 +119,31 @@
             
             <div></div>
             <asp:Button ID="Button1" runat="server" Text="Select" OnClick="Button1_Click" />
-
-            
-      </div>
-    </div>  
+            <asp:GridView ID="GridView3" runat="server"></asp:GridView>
+          
         </div>
-
-       </div>
-<div class="form-group">
-  </div>
-<div class="form-group">
-  </div>
- <div class="form-group">
-  </div>
- <div class="form-group">
-  </div>	
+           </div>
+              </div>
+            </div>
+          </div>
+     </div>
+     
 
 
- 
-
-    <footer class="site-footer">
+ <footer class="site-footer">
       <div class="container">
-
         <div class="row">
           <div class="col-md-4">
-            <h3 class="footer-heading mb-4 text-white">About</h3>
-            <p><a href="#" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                  </ul>
               </div>
               <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Program</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                  </ul>
+                <h3 class="footer-heading mb-4 text-white"></h3>
               </div>
             </div>
           </div>
-
-          
           <div class="col-md-2">
             <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
               <div class="col-md-12">
@@ -169,7 +152,6 @@
                   <a href="#" class="p-2"><span class="icon-twitter"></span></a>
                   <a href="#" class="p-2"><span class="icon-instagram"></span></a>
                   <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
-
                 </p>
               </div>
           </div>
@@ -187,6 +169,7 @@
       </div>
     </footer>
   </div>
+  
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

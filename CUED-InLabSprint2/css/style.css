@@ -139,9 +139,17 @@ a {
 .text-blue {
     color: 102b3f;
 }
+.auto-style1 {
+    text-align: center;
+    padding-top: 20px;
+}
+.posting-btn {
+   margin-left:50%;
+}
 
 .bg-black {
-  background: #000; }
+    background: #000;
+}
 
 .form-control {
   height: 47px; }
@@ -542,6 +550,71 @@ a {
                 padding-left: 60px; }
 
 /* Blocks */
+
+
+
+.spacer {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+    .spacer.overlay {
+        position: relative;
+    }
+
+        .spacer.overlay:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+    .spacer, .spacer .row {
+        min-height: 300px;
+        height: calc(100vh);
+    }
+
+        .spacer.inner-page, .spacer.inner-page .row {
+            min-height: 300px;
+            height: calc(40vh);
+        }
+
+
+        .spacer h1 {
+            font-weight: 900;
+            color: #81c341;
+            text-transform: uppercase;
+            font-size: 3rem;
+        }
+
+            .spacer h1 strong {
+                font-weight: 900;
+            }
+
+@media (min-width: 768px) {
+    .spacer h1 {
+        font-size: 6rem;
+        font-weight: 900;
+        line-height: 1.2;
+    }
+}
+
+.spacer p {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.spacer .intro-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+<!-- -->
+
 .site-blocks-cover {
   background-size: cover;
   background-repeat: no-repeat;
@@ -622,7 +695,7 @@ a {
 
 .text-white{
 	color: lightgray;
-    left: 0px;
+    left: -14px;
 }
 .text-white-opacity-5 {
   color: rgba(255, 255, 255, 0.5); }

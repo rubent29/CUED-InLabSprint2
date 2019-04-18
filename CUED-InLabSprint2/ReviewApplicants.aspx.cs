@@ -45,7 +45,7 @@ public partial class ReviewApplicants : System.Web.UI.Page
 
         int i = Convert.ToInt32(DropDownList1.SelectedValue);
 
-        string command = "select c.School, c.DOB, c.gpa, c.Experience, c.Skills, c.Email " +
+        string command = "select c.School, c.DOB, c.GPA, c.Experience, c.Skills, c.Email " +
             "from CommonApp c, JobApplications j " +
             "where j.PostingID = " + i + "and c.CommonAppID = j.CommonAppID";
         //need to work out sql here
