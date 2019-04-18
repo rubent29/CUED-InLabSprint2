@@ -162,7 +162,7 @@
   </div>
 
    <br />
-              <asp:Button ID="EditButton" runat="server" Text="Edit Information" OnClick="EditButton_Click" />
+              <asp:Button ID="EditButton" runat="server" Text="Edit Information"  class="btn btn-primary rounded px-4" OnClick="EditButton_Click" />
               
           </div>
 

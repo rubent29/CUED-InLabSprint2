@@ -59,7 +59,7 @@ public partial class StudentAccountInformationForm : System.Web.UI.Page
             ZipCode.Text = ds.Tables[0].Rows[0].Field<string>(8); //zip
             //DOB.Text = ds.Tables[0].Rows[0].Field<string>(11); //DOB
             //Age.Text = ds.Tables[0].Rows[0].Field<string>(12); //Age
-                                                                         //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
+                                                               //not showing employer id or any password or security question stuff (just seemed unneccessary but we can use this logic to add them in pretty easily)
 
         }
 

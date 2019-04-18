@@ -67,7 +67,7 @@ protected void Insert_Button_Click(object sender, EventArgs e)
             insertEmployer.Parameters.AddWithValue("@passwordOne", PasswordHash.HashPassword(emp.getPasswordOne()));
             insertEmployer.Parameters.AddWithValue("@passwordTwo", PasswordHash.HashPassword(emp.getPasswordTwo()));
             insertEmployer.Parameters.AddWithValue("@question", emp.getQuestion());
-            insertEmployer.Parameters.AddWithValue("@answer", emp.getAnswer());
+            insertEmployer.Parameters.AddWithValue("@answer", PasswordHash.HashPassword(emp.getAnswer()));
             insertEmployer.Parameters.AddWithValue("@lastUpdatedBy", emp.getLastUpdatedBy());
             insertEmployer.Parameters.AddWithValue("@lastUpdated", emp.getLastUpdated());
 

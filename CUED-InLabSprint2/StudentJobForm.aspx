@@ -124,7 +124,8 @@
     </div>
 <div class="form-group">
     <asp:TextBox ID="PostingID" runat="server" Width="47px"></asp:TextBox><div></div>
-     <asp:Button ID="Button1" runat="server" Text="Apply" OnClick="Submit_Click" />
+    <br />
+     <asp:Button ID="Button1" runat="server" Text="Apply" class="btn btn-primary rounded px-4" OnClick="Submit_Click" />
     </div>	
      <asp:Label ID="SuccessLabel" runat="server" Text=""></asp:Label>
 

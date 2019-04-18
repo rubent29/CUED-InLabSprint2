@@ -136,45 +136,13 @@
   </div>  
 
   <div class="form-group">
-    <label for="countrySelect">Country</label>&nbsp;
+    <label for="countrySelect">Country</label>
       <asp:Label ID="Country" runat="server" Text="Label"></asp:Label>
         </div>
 
-                <div class="form-group">
-    <label for="DateOfBirth">Date of Birth</label>
-      
-                    <asp:Label ID="DOB" runat="server" Text="Label"></asp:Label>
 
-  </div>
-<div class="form-group">
-    <label for="Age">Age </label>
+<div />
 
-    <asp:Label ID="Age" runat="server" Text="Label"></asp:Label>
-
-
-  </div>
-	<div class="form-group">
-    <label for="Password">Password</label>
-    
-    <asp:TextBox 
-        ID="PasswordOne" 
-        runat="server"
-        placeholder="Enter Password"
-        Width="727px">
-    </asp:TextBox>
-          
-
-          </div>
-
-	<div class="form-group">
-    <label for="Password">Confirm Password</label>
-
-    <asp:TextBox 
-        ID="PasswordTwo" 
-        runat="server"
-        placeholder="Confirm Password"
-        Width="727px">
-    </asp:TextBox>
 
 
 <%--  <div class="form-group">
