@@ -103,11 +103,11 @@
               <h4>Free Tier</h4>
               <h2>$0.00/Mo.</h2>
               <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
+                <li><b>Post Job Opportunities</b></li>
+                <li><b>View Job Postings</b></li>
+                <li><b>Track Your Applicants</b></li>
+                <li>            </li>
+                <li>            </li>
               </ul>
                 <br />
               <div class="table_btn">
@@ -129,10 +129,10 @@
               <h2>$4.99/Mo.</h2>
               <ul class="list-unstyled">
                 <li><b>All Benefits of Free Tier</b></li>
-                <li><b>Track Your Applicants</b></li>
+                <li><b>Track Specific Applicants</b></li>
                 <li><b>View School Demographics</b> </li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
+                <li>            </li>
+                <li>            </li>
               </ul>
           
                 <br />
@@ -163,46 +163,21 @@
         </div>
     </div>
    
-        </div>
 
-
-    <footer class="site-footer">
+   <footer class="site-footer">
       <div class="container">
-        
-
         <div class="row">
           <div class="col-md-4">
-            <h3 class="footer-heading mb-4 text-white">About</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam, placeat amet.</p>
-            <p><a href="#" class="btn btn-primary rounded text-white px-4">Read More</a></p>
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                  </ul>
               </div>
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white"></h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                  </ul>
               </div>
             </div>
           </div>
-
-          
           <div class="col-md-2">
             <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
               <div class="col-md-12">
@@ -211,7 +186,6 @@
                   <a href="#" class="p-2"><span class="icon-twitter"></span></a>
                   <a href="#" class="p-2"><span class="icon-instagram"></span></a>
                   <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
-
                 </p>
               </div>
           </div>
