@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="JobPostingForm.aspx.cs" Inherits="JobPostingForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="EditPosting.aspx.cs" Inherits="EditPosting" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -277,9 +277,9 @@
 
 
 <asp:Button 
-    ID="Insert_Button" 
+    ID="Update_Button" 
     class="btn btn-primary rounded px-4"
-    runat="server" Text="Submit" OnClick="Insert_Button_Click" />
+    runat="server" Text="Update" OnClick="Update_Button_Click" />
 
 &nbsp;    
 <asp:Button 

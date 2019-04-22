@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FreeViewPostingForm.aspx.cs" Inherits="FreeViewPostingForm" %>
 
+<script runat="server">
+
+   
+</script>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -9,7 +15,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -17,18 +22,11 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-   
-    
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/style.css">
-    
-  
-  
+
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -40,8 +38,6 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
     
-    
-     
     <div class="site-navbar-wrap js-site-navbar bg-dark">
       
       <div class="container">
@@ -49,7 +45,7 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="FreeCuedInHomeForm.aspx">CUED<strong>-In</strong></a></h2>
+                <h2 class="mb-0 site-logo"><a href="CUED-InHomeAccountForm.aspx">CUED<strong>-In</strong></a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
@@ -57,22 +53,20 @@
                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
                         <ul class="site-menu js-clone-nav d-none d-lg-block">
-
-                         <li class="has-children">
-                        <a href="#">Job Postings</a>
+                        <li class="has-children">
+                        <a href="JobPostingForm.aspx">Job Postings</a>
                         <ul class="dropdown arrow-top">
-                        <li><a href="FreeJobPostingForm.aspx">Post an Opportunity</a></li>
-                        <li><a href="FreeViewPostingForm.aspx">View Your Postings</a></li>
+                          <li><a href="JobPostingForm.aspx">Post an Opportunity</a></li>
+                          <li><a href="ViewPostingForm.aspx">View Your Postings</a></li>
                         </ul>
-                             
-                        <li><a href="FreeReviewApplicants.aspx">Review Applicants</a></li>
-                        <li><a href="AboutUsFreeForm.aspx">About</a></li>
+						<li><a href="SchoolDemographicsForm.aspx">School Demographics</a></li>
+                        <li><a href="ReviewApplicants.aspx">Review Applicants</a></li>
+                        <li><a href="AboutUsForm.aspx">About</a></li>
 
                         <li class="has-children">
-                        <a href="FreeAccountInformation.aspx">Account     </a>
+                        <a href="AccountInformationForm.aspx">Account     </a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="FreeAccountInformation.aspx">Account Information</a></li>
-
+                          <li><a href="AccountInformationForm.aspx">Account Information</a></li>
                             <li><a href="MasterPageForm.aspx">Log Out</a></li>
                         </ul>
                          <li><a href="#"></a></li>
@@ -101,37 +95,33 @@
        
           <div class="col-md-12 col-lg-8 mb-5">
 
-
 <div class="form-group">
-    </div>				  
-<div class="form-group">
-    </div>
-<div class="form-group">
-    <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" Height="58px" Width="1125px">
-        <AlternatingRowStyle BackColor="White" />
-        <EditRowStyle BackColor="#2461BF" />
-        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#EFF3FB" />
-        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#F5F7FB" />
-        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-        <SortedDescendingCellStyle BackColor="#E9EBEF" />
-        <SortedDescendingHeaderStyle BackColor="#4870BE" />
-    </asp:GridView>
-    </div>
-<div class="form-group">
-     </div>
-<div class="form-group">
-     </div>
-<div class="form-group">
-    </div>
-<div class="form-group">
-    </div>	
 
 
-</form>
+<asp:GridView 
+    ID="GridView2"
+    runat="server" 
+    Height="58px" 
+    Width="1125px" CellPadding="4" ForeColor="#333333">
+    <AlternatingRowStyle BackColor="White" />
+    <EditRowStyle BackColor="#2461BF" />
+    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+    <RowStyle BackColor="#EFF3FB" />
+    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+</asp:GridView>
+    <asp:Label ID="Label1" runat="server" Text="Please Enter PostingID of the Opportunity You Wish to Edit:     "></asp:Label>
+    <asp:TextBox ID="TextBox1" runat="server" Width="37px"></asp:TextBox>
+    <asp:Button ID="Button1" runat="server" Text="Select" OnClick="Button1_Click" /> 
+</div>
+
+
+
 
           </div>
 
@@ -141,25 +131,17 @@
     </div>
 
     
-
-<footer class="site-footer">
+ <footer class="site-footer">
       <div class="container">
-        
-
         <div class="row">
           <div class="col-md-4">
           </div>
           <div class="col-md-5 ml-auto">
             <div class="row">
               <div class="col-md-6">
-
-
-
-  
               </div>
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white"></h3>
-
               </div>
             </div>
           </div>
@@ -171,7 +153,6 @@
                   <a href="#" class="p-2"><span class="icon-twitter"></span></a>
                   <a href="#" class="p-2"><span class="icon-instagram"></span></a>
                   <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
-
                 </p>
               </div>
           </div>
@@ -190,7 +171,6 @@
     </footer>
   </div>
 
-
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
@@ -206,5 +186,9 @@
   <script src="js/main.js"></script>
 
 
+
+
+
 </asp:Content>
+
 

@@ -28,7 +28,7 @@ public partial class ViewPostingForm : System.Web.UI.Page
 
         using (SqlConnection con = new SqlConnection(constr))
         {
-            using (SqlCommand cmd = new SqlCommand("SELECT JobTitle, JobType, Location, Paystatus, JobDescription, DateCreated, Deadline, GPA, Age from JobPosting where EmployerID = (select EmployerID from Employer where CompanyEmail = '" + email + "');"))
+            using (SqlCommand cmd = new SqlCommand("SELECT PostingID, JobTitle, JobType, Location, Paystatus, JobDescription, DateCreated, Deadline, GPA, Age from JobPosting where EmployerID = (select EmployerID from Employer where CompanyEmail = '" + email + "');"))
             //just need to fix this sql command so that it doesn't show employer id or last updated info
             using (SqlDataAdapter sda = new SqlDataAdapter())
             {
@@ -42,6 +42,12 @@ public partial class ViewPostingForm : System.Web.UI.Page
                 }
             }
         }
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Session["PostingID"] = TextBox1.Text;
+        Response.Redirect("EditPosting.aspx");
     }
 }
 

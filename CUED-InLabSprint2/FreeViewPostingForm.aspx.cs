@@ -22,13 +22,13 @@ public partial class FreeViewPostingForm : System.Web.UI.Page
 
     public void BindGrid()
     {
-        string email = Session["Test"].ToString();
+        string email = Session["Test"].ToString(); //Changed FirstName from Test
 
         string constr = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
 
         using (SqlConnection con = new SqlConnection(constr))
         {
-            using (SqlCommand cmd = new SqlCommand("SELECT JobTitle, JobType, Location, Paystatus, JobDescription, DateCreated, Deadline, GPA, Age from JobPosting where EmployerID = (select EmployerID from Employer where CompanyEmail = '" + email + "');"))
+            using (SqlCommand cmd = new SqlCommand("SELECT PostingID, JobTitle, JobType, Location, Paystatus, JobDescription, DateCreated, Deadline, GPA, Age from JobPosting where EmployerID = (select EmployerID from Employer where CompanyEmail = '" + email + "');"))
             //just need to fix this sql command so that it doesn't show employer id or last updated info
             using (SqlDataAdapter sda = new SqlDataAdapter())
             {
@@ -37,12 +37,18 @@ public partial class FreeViewPostingForm : System.Web.UI.Page
                 using (DataTable dt = new DataTable())
                 {
                     sda.Fill(dt);
-                    GridView1.DataSource = dt;
-                    GridView1.DataBind();
+                    GridView2.DataSource = dt;
+                    GridView2.DataBind();
                 }
             }
         }
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Session["PostingID"] = TextBox1.Text;
+        Response.Redirect("EditPosting.aspx");
+    }
 }
 
-  
+

@@ -65,12 +65,12 @@ public partial class JobPostingForm : System.Web.UI.Page
         empIDFinder.ExecuteNonQuery();
 
         JobPosting posting = new JobPosting(HttpUtility.HtmlEncode(JobTitle.Text.Trim()), HttpUtility.HtmlEncode(JobType.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(CompanyName.SelectedItem.Text.Trim()),
-                        HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(PayStatus.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(JobDescription.Text.Trim()),
-                        HttpUtility.HtmlEncode(DateCreated), HttpUtility.HtmlEncode(Deadline.Text.Trim()), double.Parse(HttpUtility.HtmlEncode(MinGPA.Text.Trim())),
-                        int.Parse(HttpUtility.HtmlEncode(MinAge.Text.Trim())), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
+                            HttpUtility.HtmlEncode(City.Text.Trim()), HttpUtility.HtmlEncode(State.Text.Trim()), HttpUtility.HtmlEncode(PayStatus.SelectedItem.Text.Trim()), HttpUtility.HtmlEncode(JobDescription.Text.Trim()),
+                            HttpUtility.HtmlEncode(DateCreated), HttpUtility.HtmlEncode(Deadline.Text.Trim()), double.Parse(HttpUtility.HtmlEncode(MinGPA.Text.Trim())),
+                            int.Parse(HttpUtility.HtmlEncode(MinAge.Text.Trim())), HttpUtility.HtmlEncode(LastUpdatedBy), HttpUtility.HtmlEncode(LastUpdated));
 
 
-    string student = "insert into [dbo].[JobPosting] values (@jobTitle, @jobType, @companyName, @location, @payStatus, @jobDescription, @dateCreated, @deadline, @EmployerID, @Gpa, @Age, @lastUpdatedBy, @lastUpdated)";
+        string student = "insert into [dbo].[JobPosting] values (@jobTitle, @jobType, @companyName, @location, @payStatus, @jobDescription, @dateCreated, @deadline, @EmployerID, @Gpa, @Age, @lastUpdatedBy, @lastUpdated)";
     SqlCommand insertJobPosting = new SqlCommand(student, DBconnection);
     insertJobPosting.Parameters.AddWithValue("@jobTitle", posting.getJobTitle());
     insertJobPosting.Parameters.AddWithValue("@jobType", posting.getJobType());
