@@ -112,7 +112,7 @@
 </asp:GridView>
     <asp:Label ID="Label1" runat="server" Text="Please Enter PostingID of the Opportunity You Wish to Edit:     "></asp:Label>
     <asp:TextBox ID="TextBox1" runat="server" Width="37px"></asp:TextBox>
-    <asp:Button ID="Button1" runat="server" Text="Select" />
+    <asp:Button ID="Button1" runat="server" Text="Select" OnClick="Button1_Click" />
 </div>
 
 
