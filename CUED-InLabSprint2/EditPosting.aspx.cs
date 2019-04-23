@@ -103,7 +103,7 @@ public partial class EditPosting : System.Web.UI.Page
         connection.Close();
         if (IsPostBack)
         {
-            Response.Redirect("CUED-InHomeAccountForm.aspx");
+            Response.Redirect("ViewPostingForm.aspx");
         }
 
     }
